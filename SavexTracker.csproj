@@ -72,6 +72,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="custom classes\GradientPanelRound.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="database\Crud.cs" />
     <Compile Include="forms\Form1.cs">
       <SubType>Form</SubType>
