@@ -30,11 +30,14 @@
         {       
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.roundedPanel5 = new RoundedPanel();
-            this.roundedPanel4 = new RoundedPanel();
             this.roundedPanel6 = new RoundedPanel();
-            this.roundedPanel3 = new RoundedPanel();
-            this.roundedPanel2 = new RoundedPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
@@ -48,6 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.gradientPanelRound1 = new GradientPanelRound();
+            this.materialListBox1 = new MaterialSkin.Controls.MaterialListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.gradientPanelRound2 = new GradientPanelRound();
             this.gradientPanelRound3 = new GradientPanelRound();
@@ -70,8 +74,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
-            this.materialListBox1 = new MaterialSkin.Controls.MaterialListBox();
+            this.gradientPanelRound5 = new GradientPanelRound();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.gradientPanelRound6 = new GradientPanelRound();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.roundedPanel6.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.roundedPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,65 +95,111 @@
             this.roundedPanel11.SuspendLayout();
             this.roundedPanel10.SuspendLayout();
             this.roundedPanel9.SuspendLayout();
+            this.gradientPanelRound5.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.gradientPanelRound6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
+            this.panel1.Controls.Add(this.gradientPanelRound6);
+            this.panel1.Controls.Add(this.flowLayoutPanel2);
+            this.panel1.Controls.Add(this.gradientPanelRound5);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.roundedPanel5);
-            this.panel1.Controls.Add(this.roundedPanel4);
             this.panel1.Controls.Add(this.roundedPanel6);
-            this.panel1.Controls.Add(this.roundedPanel3);
-            this.panel1.Controls.Add(this.roundedPanel2);
             this.panel1.Location = new System.Drawing.Point(289, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 862);
             this.panel1.TabIndex = 0;
             // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.label14.Location = new System.Drawing.Point(133, 29);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(115, 65);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "My";
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.label15.Location = new System.Drawing.Point(133, 83);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(202, 65);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "Record";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(28, 28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Noto Sans Black", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label12.Location = new System.Drawing.Point(421, 1);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(432, 114);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "2025";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Noto Sans", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label13.Location = new System.Drawing.Point(404, 99);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(432, 87);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "July";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // roundedPanel5
             // 
             this.roundedPanel5.BackColor = System.Drawing.Color.White;
             this.roundedPanel5.BorderRadius = 40;
-            this.roundedPanel5.Location = new System.Drawing.Point(354, 277);
+            this.roundedPanel5.Location = new System.Drawing.Point(349, 288);
             this.roundedPanel5.Name = "roundedPanel5";
-            this.roundedPanel5.Size = new System.Drawing.Size(293, 100);
+            this.roundedPanel5.Size = new System.Drawing.Size(479, 545);
             this.roundedPanel5.TabIndex = 5;
-            // 
-            // roundedPanel4
-            // 
-            this.roundedPanel4.BackColor = System.Drawing.Color.White;
-            this.roundedPanel4.BorderRadius = 40;
-            this.roundedPanel4.Location = new System.Drawing.Point(32, 277);
-            this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.Size = new System.Drawing.Size(293, 100);
-            this.roundedPanel4.TabIndex = 3;
             // 
             // roundedPanel6
             // 
             this.roundedPanel6.BackColor = System.Drawing.Color.White;
             this.roundedPanel6.BorderRadius = 40;
-            this.roundedPanel6.Location = new System.Drawing.Point(354, 144);
+            this.roundedPanel6.Controls.Add(this.flowLayoutPanel1);
+            this.roundedPanel6.Location = new System.Drawing.Point(28, 282);
             this.roundedPanel6.Name = "roundedPanel6";
-            this.roundedPanel6.Size = new System.Drawing.Size(293, 100);
+            this.roundedPanel6.Size = new System.Drawing.Size(293, 551);
             this.roundedPanel6.TabIndex = 4;
             // 
-            // roundedPanel3
+            // flowLayoutPanel1
             // 
-            this.roundedPanel3.BackColor = System.Drawing.Color.White;
-            this.roundedPanel3.BorderRadius = 40;
-            this.roundedPanel3.Location = new System.Drawing.Point(32, 144);
-            this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.Size = new System.Drawing.Size(293, 100);
-            this.roundedPanel3.TabIndex = 2;
-            // 
-            // roundedPanel2
-            // 
-            this.roundedPanel2.BackColor = System.Drawing.Color.White;
-            this.roundedPanel2.BorderRadius = 40;
-            this.roundedPanel2.Location = new System.Drawing.Point(32, 27);
-            this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.Size = new System.Drawing.Size(793, 55);
-            this.roundedPanel2.TabIndex = 1;
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 23);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(293, 503);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // rjCircularPictureBox1
             // 
@@ -339,6 +398,23 @@
             this.gradientPanelRound1.Name = "gradientPanelRound1";
             this.gradientPanelRound1.Size = new System.Drawing.Size(326, 399);
             this.gradientPanelRound1.TabIndex = 6;
+            // 
+            // materialListBox1
+            // 
+            this.materialListBox1.BackColor = System.Drawing.Color.White;
+            this.materialListBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.materialListBox1.Depth = 0;
+            this.materialListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialListBox1.Location = new System.Drawing.Point(26, 72);
+            this.materialListBox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialListBox1.Name = "materialListBox1";
+            this.materialListBox1.SelectedIndex = -1;
+            this.materialListBox1.SelectedItem = null;
+            this.materialListBox1.ShowBorder = false;
+            this.materialListBox1.ShowScrollBar = true;
+            this.materialListBox1.Size = new System.Drawing.Size(274, 302);
+            this.materialListBox1.Style = MaterialSkin.Controls.MaterialListBox.ListBoxStyle.ThreeLine;
+            this.materialListBox1.TabIndex = 10;
             // 
             // label11
             // 
@@ -571,7 +647,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(152, 37);
             this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "1000";
+            this.textBox3.Text = "----";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // roundedPanel10
@@ -593,7 +669,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(152, 37);
             this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "1000";
+            this.textBox2.Text = "----";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // roundedPanel9
@@ -615,7 +691,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(246, 51);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "1000";
+            this.textBox1.Text = "----";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // roundedPanel1
@@ -640,22 +716,83 @@
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
             // 
-            // materialListBox1
+            // gradientPanelRound5
             // 
-            this.materialListBox1.BackColor = System.Drawing.Color.White;
-            this.materialListBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.materialListBox1.Depth = 0;
-            this.materialListBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialListBox1.Location = new System.Drawing.Point(26, 72);
-            this.materialListBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialListBox1.Name = "materialListBox1";
-            this.materialListBox1.SelectedIndex = -1;
-            this.materialListBox1.SelectedItem = null;
-            this.materialListBox1.ShowBorder = false;
-            this.materialListBox1.ShowScrollBar = true;
-            this.materialListBox1.Size = new System.Drawing.Size(274, 302);
-            this.materialListBox1.Style = MaterialSkin.Controls.MaterialListBox.ListBoxStyle.ThreeLine;
-            this.materialListBox1.TabIndex = 10;
+            this.gradientPanelRound5.BorderRadius = 20;
+            this.gradientPanelRound5.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound5.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound5.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound5.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound5.Color5 = System.Drawing.Color.White;
+            this.gradientPanelRound5.Controls.Add(this.label16);
+            this.gradientPanelRound5.GradientAngle = 90F;
+            this.gradientPanelRound5.Location = new System.Drawing.Point(28, 213);
+            this.gradientPanelRound5.Name = "gradientPanelRound5";
+            this.gradientPanelRound5.Size = new System.Drawing.Size(293, 66);
+            this.gradientPanelRound5.TabIndex = 14;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel2.Controls.Add(this.panel3);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(349, 305);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(479, 503);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(287, 500);
+            this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(473, 500);
+            this.panel3.TabIndex = 1;
+            // 
+            // gradientPanelRound6
+            // 
+            this.gradientPanelRound6.BorderRadius = 20;
+            this.gradientPanelRound6.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound6.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound6.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound6.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound6.Color5 = System.Drawing.Color.White;
+            this.gradientPanelRound6.Controls.Add(this.label17);
+            this.gradientPanelRound6.GradientAngle = 90F;
+            this.gradientPanelRound6.Location = new System.Drawing.Point(349, 213);
+            this.gradientPanelRound6.Name = "gradientPanelRound6";
+            this.gradientPanelRound6.Size = new System.Drawing.Size(479, 66);
+            this.gradientPanelRound6.TabIndex = 15;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Noto Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label16.Location = new System.Drawing.Point(112, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(61, 32);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Save";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Noto Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label17.Location = new System.Drawing.Point(195, 13);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(98, 32);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "Expense";
             // 
             // Form1
             // 
@@ -689,6 +826,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.roundedPanel6.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.roundedPanel7.ResumeLayout(false);
             this.roundedPanel7.PerformLayout();
@@ -707,6 +847,11 @@
             this.roundedPanel10.PerformLayout();
             this.roundedPanel9.ResumeLayout(false);
             this.roundedPanel9.PerformLayout();
+            this.gradientPanelRound5.ResumeLayout(false);
+            this.gradientPanelRound5.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.gradientPanelRound6.ResumeLayout(false);
+            this.gradientPanelRound6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -716,10 +861,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private RoundedPanel roundedPanel5;
-        private RoundedPanel roundedPanel4;
         private RoundedPanel roundedPanel6;
-        private RoundedPanel roundedPanel3;
-        private RoundedPanel roundedPanel2;
         private RoundedPanel roundedPanel7;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private RJCodeAdvance.RJControls.RJButton rjButton1;
@@ -756,6 +898,19 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private MaterialSkin.Controls.MaterialListBox materialListBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private GradientPanelRound gradientPanelRound5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private GradientPanelRound gradientPanelRound6;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }
 
