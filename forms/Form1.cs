@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SavexTracker
 {
-    public partial class Form1 : Form
+    public partial class Form1 : BlurredRoundedForm
     {
         public Form1()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
