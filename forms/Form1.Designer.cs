@@ -41,6 +41,9 @@
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
             this.roundedPanel7 = new RoundedPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rjButton10 = new RJCodeAdvance.RJControls.RJButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
@@ -53,15 +56,18 @@
             this.rjButton5 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton7 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton8 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton10 = new RJCodeAdvance.RJControls.RJButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.gradientPanelRound4 = new GradientPanelRound();
+            this.roundedPanel1 = new RoundedPanel();
+            this.roundedPanel8 = new RoundedPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.roundedPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gradientPanelRound2.SuspendLayout();
             this.gradientPanelRound3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,26 +131,28 @@
             // rjCircularPictureBox1
             // 
             this.rjCircularPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.rjCircularPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjCircularPictureBox1.BackgroundImage")));
             this.rjCircularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.White;
             this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.White;
             this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
+            this.rjCircularPictureBox1.BorderSize = 0;
             this.rjCircularPictureBox1.GradientAngle = 50F;
             this.rjCircularPictureBox1.Location = new System.Drawing.Point(27, 25);
             this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(41, 41);
+            this.rjCircularPictureBox1.Size = new System.Drawing.Size(45, 45);
             this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rjCircularPictureBox1.TabIndex = 2;
             this.rjCircularPictureBox1.TabStop = false;
+            this.rjCircularPictureBox1.Click += new System.EventHandler(this.rjCircularPictureBox1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Smooth Circulars", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(72, 25);
+            this.label1.Location = new System.Drawing.Point(75, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 37);
             this.label1.TabIndex = 3;
@@ -212,15 +220,59 @@
             this.roundedPanel7.Controls.Add(this.label4);
             this.roundedPanel7.Controls.Add(this.pictureBox1);
             this.roundedPanel7.Controls.Add(this.rjButton10);
-            this.roundedPanel7.Location = new System.Drawing.Point(27, 567);
+            this.roundedPanel7.Location = new System.Drawing.Point(27, 584);
             this.roundedPanel7.Name = "roundedPanel7";
             this.roundedPanel7.Size = new System.Drawing.Size(237, 274);
             this.roundedPanel7.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Noto Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(34, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(174, 46);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Go premium to unlock\r\nmonthly tracker\r\n";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(55, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // rjButton10
+            // 
+            this.rjButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.rjButton10.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.rjButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton10.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton10.BorderRadius = 18;
+            this.rjButton10.BorderSize = 0;
+            this.rjButton10.FlatAppearance.BorderSize = 0;
+            this.rjButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton10.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton10.ForeColor = System.Drawing.Color.White;
+            this.rjButton10.Location = new System.Drawing.Point(23, 187);
+            this.rjButton10.Name = "rjButton10";
+            this.rjButton10.Size = new System.Drawing.Size(189, 62);
+            this.rjButton10.TabIndex = 12;
+            this.rjButton10.Text = "Upgrade";
+            this.rjButton10.TextColor = System.Drawing.Color.White;
+            this.rjButton10.UseVisualStyleBackColor = false;
+            this.rjButton10.Click += new System.EventHandler(this.rjButton10_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label2.Location = new System.Drawing.Point(28, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 29);
@@ -232,6 +284,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label3.Location = new System.Drawing.Point(28, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 29);
@@ -266,9 +319,9 @@
             this.gradientPanelRound1.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
             this.gradientPanelRound1.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.gradientPanelRound1.GradientAngle = 25F;
-            this.gradientPanelRound1.Location = new System.Drawing.Point(1169, 420);
+            this.gradientPanelRound1.Location = new System.Drawing.Point(1169, 459);
             this.gradientPanelRound1.Name = "gradientPanelRound1";
-            this.gradientPanelRound1.Size = new System.Drawing.Size(326, 247);
+            this.gradientPanelRound1.Size = new System.Drawing.Size(326, 399);
             this.gradientPanelRound1.TabIndex = 6;
             // 
             // gradientPanelRound2
@@ -293,11 +346,11 @@
             // 
             this.gradientPanelRound3.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanelRound3.BorderRadius = 20;
-            this.gradientPanelRound3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.gradientPanelRound3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.gradientPanelRound3.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.gradientPanelRound3.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.gradientPanelRound3.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.gradientPanelRound3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound3.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound3.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound3.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.gradientPanelRound3.Controls.Add(this.label6);
             this.gradientPanelRound3.Controls.Add(this.label7);
             this.gradientPanelRound3.Controls.Add(this.rjButton6);
@@ -311,6 +364,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label6.Location = new System.Drawing.Point(28, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 29);
@@ -321,6 +375,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label7.Location = new System.Drawing.Point(28, 24);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 29);
@@ -329,8 +384,8 @@
             // 
             // rjButton6
             // 
-            this.rjButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.rjButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.rjButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.rjButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
             this.rjButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton6.BackgroundImage")));
             this.rjButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rjButton6.BorderColor = System.Drawing.Color.White;
@@ -358,7 +413,7 @@
             this.rjButton5.FlatAppearance.BorderSize = 0;
             this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton5.ForeColor = System.Drawing.Color.White;
-            this.rjButton5.Location = new System.Drawing.Point(27, 362);
+            this.rjButton5.Location = new System.Drawing.Point(27, 367);
             this.rjButton5.Name = "rjButton5";
             this.rjButton5.Size = new System.Drawing.Size(50, 50);
             this.rjButton5.TabIndex = 9;
@@ -396,55 +451,84 @@
             this.rjButton8.FlatAppearance.BorderSize = 0;
             this.rjButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton8.ForeColor = System.Drawing.Color.White;
-            this.rjButton8.Location = new System.Drawing.Point(27, 491);
+            this.rjButton8.Location = new System.Drawing.Point(27, 486);
             this.rjButton8.Name = "rjButton8";
             this.rjButton8.Size = new System.Drawing.Size(50, 50);
             this.rjButton8.TabIndex = 11;
             this.rjButton8.TextColor = System.Drawing.Color.White;
             this.rjButton8.UseVisualStyleBackColor = false;
             // 
-            // rjButton10
+            // label5
             // 
-            this.rjButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.rjButton10.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.rjButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton10.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton10.BorderRadius = 18;
-            this.rjButton10.BorderSize = 0;
-            this.rjButton10.FlatAppearance.BorderSize = 0;
-            this.rjButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton10.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton10.ForeColor = System.Drawing.Color.White;
-            this.rjButton10.Location = new System.Drawing.Point(23, 187);
-            this.rjButton10.Name = "rjButton10";
-            this.rjButton10.Size = new System.Drawing.Size(189, 62);
-            this.rjButton10.TabIndex = 12;
-            this.rjButton10.Text = "Upgrade";
-            this.rjButton10.TextColor = System.Drawing.Color.White;
-            this.rjButton10.UseVisualStyleBackColor = false;
-            this.rjButton10.Click += new System.EventHandler(this.rjButton10_Click);
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(79, 382);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 23);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Dashboard";
             // 
-            // pictureBox1
+            // label8
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.label8.Location = new System.Drawing.Point(79, 441);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 23);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Search";
             // 
-            // label4
+            // label9
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 46);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Go premium to unlock\r\nmonthly tracker\r\n";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.label9.Location = new System.Drawing.Point(79, 500);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 23);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "My Record";
+            // 
+            // gradientPanelRound4
+            // 
+            this.gradientPanelRound4.BorderRadius = 20;
+            this.gradientPanelRound4.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound4.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound4.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound4.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound4.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound4.GradientAngle = 25F;
+            this.gradientPanelRound4.Location = new System.Drawing.Point(1169, 117);
+            this.gradientPanelRound4.Name = "gradientPanelRound4";
+            this.gradientPanelRound4.Size = new System.Drawing.Size(326, 247);
+            this.gradientPanelRound4.TabIndex = 7;
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.BackColor = System.Drawing.Color.White;
+            this.roundedPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundedPanel1.BackgroundImage")));
+            this.roundedPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundedPanel1.BorderRadius = 50;
+            this.roundedPanel1.Location = new System.Drawing.Point(1195, 67);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Size = new System.Drawing.Size(100, 100);
+            this.roundedPanel1.TabIndex = 6;
+            // 
+            // roundedPanel8
+            // 
+            this.roundedPanel8.BackColor = System.Drawing.Color.White;
+            this.roundedPanel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundedPanel8.BackgroundImage")));
+            this.roundedPanel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundedPanel8.BorderRadius = 50;
+            this.roundedPanel8.Location = new System.Drawing.Point(1195, 409);
+            this.roundedPanel8.Name = "roundedPanel8";
+            this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
+            this.roundedPanel8.TabIndex = 7;
             // 
             // Form1
             // 
@@ -453,6 +537,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.BorderColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1520, 911);
+            this.Controls.Add(this.roundedPanel8);
+            this.Controls.Add(this.roundedPanel1);
+            this.Controls.Add(this.gradientPanelRound4);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.rjButton8);
             this.Controls.Add(this.rjButton7);
             this.Controls.Add(this.rjButton5);
@@ -466,6 +556,7 @@
             this.Controls.Add(this.rjCircularPictureBox1);
             this.Controls.Add(this.roundedPanel7);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -474,11 +565,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.roundedPanel7.ResumeLayout(false);
             this.roundedPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gradientPanelRound2.ResumeLayout(false);
             this.gradientPanelRound2.PerformLayout();
             this.gradientPanelRound3.ResumeLayout(false);
             this.gradientPanelRound3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,6 +604,12 @@
         private RJCodeAdvance.RJControls.RJButton rjButton10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private GradientPanelRound gradientPanelRound4;
+        private RoundedPanel roundedPanel1;
+        private RoundedPanel roundedPanel8;
     }
 }
 

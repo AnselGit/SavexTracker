@@ -51,5 +51,10 @@ namespace SavexTracker
         {
 
         }
+
+        private void rjCircularPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
