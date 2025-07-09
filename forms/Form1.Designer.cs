@@ -32,6 +32,7 @@ namespace SavexTracker
         {       
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new RJCodeAdvance.RJControls.RJButton();
             this.label14 = new System.Windows.Forms.Label();
             this.gradientPanelRound6 = new GradientPanelRound();
             this.roundedPanel4 = new RoundedPanel();
@@ -44,11 +45,9 @@ namespace SavexTracker
             this.label17 = new System.Windows.Forms.Label();
             this.gradientPanelRound5 = new GradientPanelRound();
             this.pnlSave = new RoundedPanel();
+            this.tblSave = new System.Windows.Forms.TableLayoutPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tblSave = new System.Windows.Forms.TableLayoutPanel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -89,7 +88,6 @@ namespace SavexTracker
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
-            this.btnRefresh = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -97,8 +95,6 @@ namespace SavexTracker
             this.panel3.SuspendLayout();
             this.gradientPanelRound5.SuspendLayout();
             this.pnlSave.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.roundedPanel7.SuspendLayout();
@@ -126,6 +122,27 @@ namespace SavexTracker
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 862);
             this.panel1.TabIndex = 0;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnRefresh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.BorderColor = System.Drawing.Color.White;
+            this.btnRefresh.BorderRadius = 33;
+            this.btnRefresh.BorderSize = 0;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(695, 28);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(133, 65);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.TextColor = System.Drawing.Color.White;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label14
             // 
@@ -287,13 +304,26 @@ namespace SavexTracker
             // 
             this.pnlSave.BackColor = System.Drawing.Color.White;
             this.pnlSave.BorderRadius = 60;
+            this.pnlSave.Controls.Add(this.tblSave);
             this.pnlSave.Controls.Add(this.label19);
             this.pnlSave.Controls.Add(this.label18);
-            this.pnlSave.Controls.Add(this.flowLayoutPanel1);
             this.pnlSave.Location = new System.Drawing.Point(4, 60);
             this.pnlSave.Name = "pnlSave";
             this.pnlSave.Size = new System.Drawing.Size(284, 535);
             this.pnlSave.TabIndex = 10;
+            // 
+            // tblSave
+            // 
+            this.tblSave.AutoScroll = true;
+            this.tblSave.ColumnCount = 2;
+            this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.88189F));
+            this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.11811F));
+            this.tblSave.Location = new System.Drawing.Point(15, 39);
+            this.tblSave.Name = "tblSave";
+            this.tblSave.RowCount = 1;
+            this.tblSave.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39F));
+            this.tblSave.Size = new System.Drawing.Size(254, 475);
+            this.tblSave.TabIndex = 13;
             // 
             // label19
             // 
@@ -318,37 +348,6 @@ namespace SavexTracker
             this.label18.Size = new System.Drawing.Size(46, 24);
             this.label18.TabIndex = 11;
             this.label18.Text = "Date";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 32);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(281, 503);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.WrapContents = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.tblSave);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 1200);
-            this.panel2.TabIndex = 0;
-            // 
-            // tblSave
-            // 
-            this.tblSave.ColumnCount = 2;
-            this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.35021F));
-            this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.64979F));
-            this.tblSave.Location = new System.Drawing.Point(15, 4);
-            this.tblSave.Name = "tblSave";
-            this.tblSave.RowCount = 1;
-            this.tblSave.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39F));
-            this.tblSave.Size = new System.Drawing.Size(237, 44);
-            this.tblSave.TabIndex = 13;
             // 
             // label16
             // 
@@ -911,27 +910,6 @@ namespace SavexTracker
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnRefresh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRefresh.BorderColor = System.Drawing.Color.White;
-            this.btnRefresh.BorderRadius = 33;
-            this.btnRefresh.BorderSize = 0;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(695, 28);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(133, 65);
-            this.btnRefresh.TabIndex = 16;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.TextColor = System.Drawing.Color.White;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -973,8 +951,6 @@ namespace SavexTracker
             this.gradientPanelRound5.PerformLayout();
             this.pnlSave.ResumeLayout(false);
             this.pnlSave.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.roundedPanel7.ResumeLayout(false);
@@ -1057,8 +1033,6 @@ namespace SavexTracker
         private System.Windows.Forms.Panel panel3;
         private RJCodeAdvance.RJControls.RJTextBox n1;
         private RJCodeAdvance.RJControls.RJTextBox ea1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tblSave;
         private RJCodeAdvance.RJControls.RJButton btnRefresh;
     }

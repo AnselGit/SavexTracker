@@ -14,6 +14,7 @@ namespace SavexTracker
         public Form1()
         {
             InitializeComponent();
+            LoadSavingsToPanel();
         }
 
         private void EnsureDatabaseAndTable()
@@ -70,10 +71,10 @@ namespace SavexTracker
 
         private async void btnRefresh_Click(object sender, EventArgs e)
         {
-            btnRefresh.Text = "Refreshing...";
+            btnRefresh.Text = "Refreshing";
             btnRefresh.Enabled = false;
 
-            LoadSavingsToPanel(); // your custom control loading logic
+            LoadSavingsToPanel(); 
 
             await Task.Delay(500); // short delay
             btnRefresh.Text = "Refresh";
@@ -82,7 +83,11 @@ namespace SavexTracker
 
         private void LoadSavingsToPanel()
         {
-            pnlSave.Controls.Clear(); // or tblSave.Controls.Clear() if using TableLayoutPanel
+            // Ensure table layout is ready
+            tblSave.Controls.Clear();
+            tblSave.RowStyles.Clear();
+            tblSave.RowCount = 0;
+            tblSave.AutoScroll = true; // Allow scrolling if rows overflow
 
             string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
             string connStr = $"Data Source={dbPath};Version=3;";
@@ -99,13 +104,10 @@ namespace SavexTracker
 
                     while (reader.Read())
                     {
-                        string dateText = reader["timestamp"].ToString();
-                        string amountText = "₱" + reader["amount"].ToString();
-
                         var dateBox = new RJCodeAdvance.RJControls.RJTextBox
                         {
                             Name = reader["txtNameDate"].ToString(),
-                            Texts = dateText,                            
+                            Texts = reader["timestamp"].ToString(),                            
                             BackColor = Color.White,
                             BorderColor = Color.FromArgb(224, 224, 224),
                             BorderFocusColor = Color.MediumSlateBlue,
@@ -114,13 +116,14 @@ namespace SavexTracker
                             ForeColor = Color.Silver,
                             UnderlinedStyle = true,
                             Size = new Size(90, 35),
+                            Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point),
                             Margin = new Padding(5)
                         };
 
                         var amtBox = new RJCodeAdvance.RJControls.RJTextBox
                         {
                             Name = reader["txtNameAmount"].ToString(),
-                            Texts = amountText,                            
+                            Texts = "₱" + reader["amount"].ToString(),                            
                             BackColor = Color.White,
                             BorderColor = Color.FromArgb(224, 224, 224),
                             BorderFocusColor = Color.MediumSlateBlue,
@@ -129,15 +132,17 @@ namespace SavexTracker
                             ForeColor = Color.FromArgb(64, 64, 64),
                             UnderlinedStyle = true,
                             Size = new Size(131, 35),
+                            Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point),
                             Margin = new Padding(5)
                         };
 
-                        tblSave.RowCount++;
+                        // Add a new row style to allow growth
                         tblSave.RowStyles.Add(new RowStyle(SizeType.AutoSize));
                         tblSave.Controls.Add(dateBox, 0, row);
                         tblSave.Controls.Add(amtBox, 1, row);
 
                         row++;
+                        tblSave.RowCount = row; // Ensure row count matches
                     }
                 }
             }
