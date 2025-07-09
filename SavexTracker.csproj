@@ -66,6 +66,7 @@
     </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -81,7 +82,16 @@
     <Compile Include="custom classes\GradientPanelRound.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="custom classes\translucent.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="database\Crud.cs" />
+    <Compile Include="forms\addSavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\addSavings.Designer.cs">
+      <DependentUpon>addSavings.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +106,9 @@
     <Compile Include="custom classes\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="forms\addSavings.resx">
+      <DependentUpon>addSavings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

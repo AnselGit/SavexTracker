@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SavexTracker.forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -218,6 +219,13 @@ namespace SavexTracker
         {
 
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            addSavings addForm = new addSavings();
+            addForm.ShowDialog(); // Modal — pauses until form is closed
+        }
+
     }
     public class VerticalFlowPanel : FlowLayoutPanel
     {
