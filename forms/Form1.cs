@@ -17,6 +17,8 @@ namespace SavexTracker
             InitializeComponent();            
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -62,4 +64,17 @@ namespace SavexTracker
 
         }
     }
+    public class VerticalFlowPanel : FlowLayoutPanel
+    {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.Style &= ~0x00100000; // WS_HSCROLL = 0x00100000
+                return cp;
+            }
+        }
+    }
+
 }
