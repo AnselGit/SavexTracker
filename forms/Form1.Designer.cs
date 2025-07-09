@@ -473,7 +473,7 @@
             this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rjCircularPictureBox1.TabIndex = 2;
             this.rjCircularPictureBox1.TabStop = false;
-            this.rjCircularPictureBox1.Click += new System.EventHandler(this.rjCircularPictureBox1_Click);
+            //this.rjCircularPictureBox1.Click += new System.EventHandler(this.rjCircularPictureBox1_Click);
             // 
             // label1
             // 
@@ -485,7 +485,7 @@
             this.label1.Size = new System.Drawing.Size(107, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "SAVEX";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // rjButton2
             // 
@@ -504,6 +504,7 @@
             this.rjButton2.TabIndex = 1;
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton3
             // 
@@ -540,6 +541,7 @@
             this.rjButton4.TabIndex = 5;
             this.rjButton4.TextColor = System.Drawing.Color.White;
             this.rjButton4.UseVisualStyleBackColor = false;
+            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
             // 
             // roundedPanel7
             // 
@@ -595,7 +597,7 @@
             this.rjButton10.Text = "Upgrade";
             this.rjButton10.TextColor = System.Drawing.Color.White;
             this.rjButton10.UseVisualStyleBackColor = false;
-            this.rjButton10.Click += new System.EventHandler(this.rjButton10_Click);
+            //this.rjButton10.Click += new System.EventHandler(this.rjButton10_Click);
             // 
             // label2
             // 
@@ -607,7 +609,7 @@
             this.label2.Size = new System.Drawing.Size(109, 29);
             this.label2.TabIndex = 7;
             this.label2.Text = "To Savings";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -1016,7 +1018,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            //this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.gradientPanelRound6.ResumeLayout(false);
             this.gradientPanelRound6.PerformLayout();

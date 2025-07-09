@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SavexTracker.forms
 {
-    public partial class addSavings : BlurredRoundedForm
+    public partial class addSavings : Form
     {
         public addSavings()
         {
@@ -19,8 +19,8 @@ namespace SavexTracker.forms
 
         private void addSavings_Load(object sender, EventArgs e)
         {
-
-        }
+            lbl_date.Text = DateTime.Now.ToString("MM/dd/yy");
+        }        
 
         private void label3_Click(object sender, EventArgs e)
         {
