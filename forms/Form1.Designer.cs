@@ -37,30 +37,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rjTextBox25 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox26 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox27 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox28 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox29 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox30 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox31 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox32 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox33 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox34 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox35 = new RJCodeAdvance.RJControls.RJTextBox();
             this.rjTextBox36 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox37 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox38 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox39 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox40 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox41 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox42 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox43 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox44 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox45 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox46 = new RJCodeAdvance.RJControls.RJTextBox();
             this.rjTextBox47 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox48 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.gradientPanelRound5 = new GradientPanelRound();
             this.roundedPanel3 = new RoundedPanel();
@@ -68,54 +46,24 @@
             this.label18 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjTextBox49 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox50 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox51 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox52 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox53 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox54 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox55 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox56 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox57 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox58 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox59 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox60 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox61 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox62 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox63 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox64 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox65 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox66 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox67 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox68 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox69 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox70 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox71 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox72 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox21 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox22 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox23 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox24 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox17 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox18 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox19 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox20 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox15 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox16 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox14 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox13 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox9 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox10 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox11 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox12 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox5 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox6 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox7 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox8 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox3 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox4 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d12 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d11 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d10 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d9 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d8 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d7 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d6 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d5 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d4 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d3 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa5 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa6 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa3 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa4 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa2 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -158,58 +106,50 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
-            this.rjTextBox73 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox74 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox75 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox76 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox77 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox78 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox79 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox80 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox81 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox82 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox83 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox84 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox85 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox86 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox87 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox88 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox89 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox90 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox91 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox92 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox93 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox94 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox95 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox96 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox97 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox98 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox99 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox100 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox101 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox102 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox103 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox104 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox105 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox106 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox107 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox108 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox109 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox110 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox111 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox112 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox113 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox114 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox115 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox116 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox117 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox118 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox119 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox120 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox121 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox122 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox123 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox124 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d24 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d23 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d22 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d21 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d20 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d19 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d18 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d17 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d16 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d15 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d14 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d13 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d31 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d30 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d29 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d28 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d27 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d26 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.d25 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa11 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa12 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa9 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa10 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa7 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa8 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa23 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa24 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa21 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa22 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa19 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa20 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa17 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa18 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa15 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa16 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa13 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa14 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa30 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa31 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa28 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa29 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa26 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa27 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.sa25 = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -285,7 +225,7 @@
             this.roundedPanel4.Controls.Add(this.flowLayoutPanel2);
             this.roundedPanel4.Location = new System.Drawing.Point(5, 60);
             this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.Size = new System.Drawing.Size(468, 560);
+            this.roundedPanel4.Size = new System.Drawing.Size(468, 535);
             this.roundedPanel4.TabIndex = 11;
             // 
             // label20
@@ -324,314 +264,12 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.rjTextBox111);
-            this.panel3.Controls.Add(this.rjTextBox87);
-            this.panel3.Controls.Add(this.rjTextBox112);
-            this.panel3.Controls.Add(this.rjTextBox25);
-            this.panel3.Controls.Add(this.rjTextBox113);
-            this.panel3.Controls.Add(this.rjTextBox88);
-            this.panel3.Controls.Add(this.rjTextBox114);
-            this.panel3.Controls.Add(this.rjTextBox26);
-            this.panel3.Controls.Add(this.rjTextBox115);
-            this.panel3.Controls.Add(this.rjTextBox89);
-            this.panel3.Controls.Add(this.rjTextBox116);
-            this.panel3.Controls.Add(this.rjTextBox27);
-            this.panel3.Controls.Add(this.rjTextBox117);
-            this.panel3.Controls.Add(this.rjTextBox118);
-            this.panel3.Controls.Add(this.rjTextBox90);
-            this.panel3.Controls.Add(this.rjTextBox119);
-            this.panel3.Controls.Add(this.rjTextBox28);
-            this.panel3.Controls.Add(this.rjTextBox120);
-            this.panel3.Controls.Add(this.rjTextBox91);
-            this.panel3.Controls.Add(this.rjTextBox121);
-            this.panel3.Controls.Add(this.rjTextBox29);
-            this.panel3.Controls.Add(this.rjTextBox122);
-            this.panel3.Controls.Add(this.rjTextBox92);
-            this.panel3.Controls.Add(this.rjTextBox123);
-            this.panel3.Controls.Add(this.rjTextBox30);
-            this.panel3.Controls.Add(this.rjTextBox124);
-            this.panel3.Controls.Add(this.rjTextBox93);
-            this.panel3.Controls.Add(this.rjTextBox31);
-            this.panel3.Controls.Add(this.rjTextBox94);
-            this.panel3.Controls.Add(this.rjTextBox32);
-            this.panel3.Controls.Add(this.rjTextBox95);
-            this.panel3.Controls.Add(this.rjTextBox33);
-            this.panel3.Controls.Add(this.rjTextBox96);
-            this.panel3.Controls.Add(this.rjTextBox34);
-            this.panel3.Controls.Add(this.rjTextBox97);
-            this.panel3.Controls.Add(this.rjTextBox35);
-            this.panel3.Controls.Add(this.rjTextBox98);
-            this.panel3.Controls.Add(this.rjTextBox99);
             this.panel3.Controls.Add(this.rjTextBox36);
-            this.panel3.Controls.Add(this.rjTextBox100);
-            this.panel3.Controls.Add(this.rjTextBox37);
-            this.panel3.Controls.Add(this.rjTextBox101);
-            this.panel3.Controls.Add(this.rjTextBox38);
-            this.panel3.Controls.Add(this.rjTextBox102);
-            this.panel3.Controls.Add(this.rjTextBox39);
-            this.panel3.Controls.Add(this.rjTextBox103);
-            this.panel3.Controls.Add(this.rjTextBox40);
-            this.panel3.Controls.Add(this.rjTextBox104);
-            this.panel3.Controls.Add(this.rjTextBox41);
-            this.panel3.Controls.Add(this.rjTextBox105);
-            this.panel3.Controls.Add(this.rjTextBox42);
-            this.panel3.Controls.Add(this.rjTextBox106);
-            this.panel3.Controls.Add(this.rjTextBox43);
-            this.panel3.Controls.Add(this.rjTextBox107);
-            this.panel3.Controls.Add(this.rjTextBox44);
-            this.panel3.Controls.Add(this.rjTextBox108);
-            this.panel3.Controls.Add(this.rjTextBox45);
-            this.panel3.Controls.Add(this.rjTextBox109);
-            this.panel3.Controls.Add(this.rjTextBox46);
-            this.panel3.Controls.Add(this.rjTextBox110);
             this.panel3.Controls.Add(this.rjTextBox47);
-            this.panel3.Controls.Add(this.rjTextBox48);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(440, 1200);
             this.panel3.TabIndex = 0;
-            // 
-            // rjTextBox25
-            // 
-            this.rjTextBox25.BackColor = System.Drawing.Color.White;
-            this.rjTextBox25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox25.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox25.BorderRadius = 0;
-            this.rjTextBox25.BorderSize = 1;
-            this.rjTextBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox25.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox25.Location = new System.Drawing.Point(120, 390);
-            this.rjTextBox25.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox25.Multiline = false;
-            this.rjTextBox25.Name = "rjTextBox25";
-            this.rjTextBox25.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox25.PasswordChar = false;
-            this.rjTextBox25.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox25.PlaceholderText = "";
-            this.rjTextBox25.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox25.TabIndex = 23;
-            this.rjTextBox25.Texts = "Note...";
-            this.rjTextBox25.UnderlinedStyle = true;
-            // 
-            // rjTextBox26
-            // 
-            this.rjTextBox26.BackColor = System.Drawing.Color.White;
-            this.rjTextBox26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox26.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox26.BorderRadius = 0;
-            this.rjTextBox26.BorderSize = 1;
-            this.rjTextBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox26.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox26.Location = new System.Drawing.Point(120, 355);
-            this.rjTextBox26.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox26.Multiline = false;
-            this.rjTextBox26.Name = "rjTextBox26";
-            this.rjTextBox26.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox26.PasswordChar = false;
-            this.rjTextBox26.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox26.PlaceholderText = "";
-            this.rjTextBox26.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox26.TabIndex = 22;
-            this.rjTextBox26.Texts = "Note...";
-            this.rjTextBox26.UnderlinedStyle = true;
-            // 
-            // rjTextBox27
-            // 
-            this.rjTextBox27.BackColor = System.Drawing.Color.White;
-            this.rjTextBox27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox27.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox27.BorderRadius = 0;
-            this.rjTextBox27.BorderSize = 1;
-            this.rjTextBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox27.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox27.Location = new System.Drawing.Point(120, 320);
-            this.rjTextBox27.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox27.Multiline = false;
-            this.rjTextBox27.Name = "rjTextBox27";
-            this.rjTextBox27.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox27.PasswordChar = false;
-            this.rjTextBox27.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox27.PlaceholderText = "";
-            this.rjTextBox27.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox27.TabIndex = 21;
-            this.rjTextBox27.Texts = "Note...";
-            this.rjTextBox27.UnderlinedStyle = true;
-            // 
-            // rjTextBox28
-            // 
-            this.rjTextBox28.BackColor = System.Drawing.Color.White;
-            this.rjTextBox28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox28.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox28.BorderRadius = 0;
-            this.rjTextBox28.BorderSize = 1;
-            this.rjTextBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox28.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox28.Location = new System.Drawing.Point(120, 285);
-            this.rjTextBox28.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox28.Multiline = false;
-            this.rjTextBox28.Name = "rjTextBox28";
-            this.rjTextBox28.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox28.PasswordChar = false;
-            this.rjTextBox28.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox28.PlaceholderText = "";
-            this.rjTextBox28.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox28.TabIndex = 20;
-            this.rjTextBox28.Texts = "Note...";
-            this.rjTextBox28.UnderlinedStyle = true;
-            // 
-            // rjTextBox29
-            // 
-            this.rjTextBox29.BackColor = System.Drawing.Color.White;
-            this.rjTextBox29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox29.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox29.BorderRadius = 0;
-            this.rjTextBox29.BorderSize = 1;
-            this.rjTextBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox29.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox29.Location = new System.Drawing.Point(120, 249);
-            this.rjTextBox29.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox29.Multiline = false;
-            this.rjTextBox29.Name = "rjTextBox29";
-            this.rjTextBox29.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox29.PasswordChar = false;
-            this.rjTextBox29.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox29.PlaceholderText = "";
-            this.rjTextBox29.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox29.TabIndex = 19;
-            this.rjTextBox29.Texts = "Note...";
-            this.rjTextBox29.UnderlinedStyle = true;
-            // 
-            // rjTextBox30
-            // 
-            this.rjTextBox30.BackColor = System.Drawing.Color.White;
-            this.rjTextBox30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox30.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox30.BorderRadius = 0;
-            this.rjTextBox30.BorderSize = 1;
-            this.rjTextBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox30.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox30.Location = new System.Drawing.Point(120, 214);
-            this.rjTextBox30.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox30.Multiline = false;
-            this.rjTextBox30.Name = "rjTextBox30";
-            this.rjTextBox30.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox30.PasswordChar = false;
-            this.rjTextBox30.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox30.PlaceholderText = "";
-            this.rjTextBox30.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox30.TabIndex = 18;
-            this.rjTextBox30.Texts = "Note...";
-            this.rjTextBox30.UnderlinedStyle = true;
-            // 
-            // rjTextBox31
-            // 
-            this.rjTextBox31.BackColor = System.Drawing.Color.White;
-            this.rjTextBox31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox31.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox31.BorderRadius = 0;
-            this.rjTextBox31.BorderSize = 1;
-            this.rjTextBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox31.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox31.Location = new System.Drawing.Point(120, 179);
-            this.rjTextBox31.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox31.Multiline = false;
-            this.rjTextBox31.Name = "rjTextBox31";
-            this.rjTextBox31.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox31.PasswordChar = false;
-            this.rjTextBox31.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox31.PlaceholderText = "";
-            this.rjTextBox31.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox31.TabIndex = 17;
-            this.rjTextBox31.Texts = "Note...";
-            this.rjTextBox31.UnderlinedStyle = true;
-            // 
-            // rjTextBox32
-            // 
-            this.rjTextBox32.BackColor = System.Drawing.Color.White;
-            this.rjTextBox32.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox32.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox32.BorderRadius = 0;
-            this.rjTextBox32.BorderSize = 1;
-            this.rjTextBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox32.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox32.Location = new System.Drawing.Point(120, 144);
-            this.rjTextBox32.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox32.Multiline = false;
-            this.rjTextBox32.Name = "rjTextBox32";
-            this.rjTextBox32.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox32.PasswordChar = false;
-            this.rjTextBox32.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox32.PlaceholderText = "";
-            this.rjTextBox32.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox32.TabIndex = 16;
-            this.rjTextBox32.Texts = "Note...";
-            this.rjTextBox32.UnderlinedStyle = true;
-            // 
-            // rjTextBox33
-            // 
-            this.rjTextBox33.BackColor = System.Drawing.Color.White;
-            this.rjTextBox33.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox33.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox33.BorderRadius = 0;
-            this.rjTextBox33.BorderSize = 1;
-            this.rjTextBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox33.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox33.Location = new System.Drawing.Point(120, 109);
-            this.rjTextBox33.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox33.Multiline = false;
-            this.rjTextBox33.Name = "rjTextBox33";
-            this.rjTextBox33.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox33.PasswordChar = false;
-            this.rjTextBox33.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox33.PlaceholderText = "";
-            this.rjTextBox33.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox33.TabIndex = 15;
-            this.rjTextBox33.Texts = "Note...";
-            this.rjTextBox33.UnderlinedStyle = true;
-            // 
-            // rjTextBox34
-            // 
-            this.rjTextBox34.BackColor = System.Drawing.Color.White;
-            this.rjTextBox34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox34.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox34.BorderRadius = 0;
-            this.rjTextBox34.BorderSize = 1;
-            this.rjTextBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox34.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox34.Location = new System.Drawing.Point(120, 74);
-            this.rjTextBox34.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox34.Multiline = false;
-            this.rjTextBox34.Name = "rjTextBox34";
-            this.rjTextBox34.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox34.PasswordChar = false;
-            this.rjTextBox34.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox34.PlaceholderText = "";
-            this.rjTextBox34.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox34.TabIndex = 14;
-            this.rjTextBox34.Texts = "Note...";
-            this.rjTextBox34.UnderlinedStyle = true;
-            // 
-            // rjTextBox35
-            // 
-            this.rjTextBox35.BackColor = System.Drawing.Color.White;
-            this.rjTextBox35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox35.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox35.BorderRadius = 0;
-            this.rjTextBox35.BorderSize = 1;
-            this.rjTextBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox35.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox35.Location = new System.Drawing.Point(120, 39);
-            this.rjTextBox35.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox35.Multiline = false;
-            this.rjTextBox35.Name = "rjTextBox35";
-            this.rjTextBox35.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox35.PasswordChar = false;
-            this.rjTextBox35.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox35.PlaceholderText = "";
-            this.rjTextBox35.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox35.TabIndex = 13;
-            this.rjTextBox35.Texts = "Note...";
-            this.rjTextBox35.UnderlinedStyle = true;
             // 
             // rjTextBox36
             // 
@@ -650,230 +288,10 @@
             this.rjTextBox36.PasswordChar = false;
             this.rjTextBox36.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox36.PlaceholderText = "";
-            this.rjTextBox36.Size = new System.Drawing.Size(326, 35);
+            this.rjTextBox36.Size = new System.Drawing.Size(316, 35);
             this.rjTextBox36.TabIndex = 12;
             this.rjTextBox36.Texts = "Note...";
             this.rjTextBox36.UnderlinedStyle = true;
-            // 
-            // rjTextBox37
-            // 
-            this.rjTextBox37.BackColor = System.Drawing.Color.White;
-            this.rjTextBox37.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox37.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox37.BorderRadius = 0;
-            this.rjTextBox37.BorderSize = 1;
-            this.rjTextBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox37.Location = new System.Drawing.Point(13, 355);
-            this.rjTextBox37.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox37.Multiline = false;
-            this.rjTextBox37.Name = "rjTextBox37";
-            this.rjTextBox37.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox37.PasswordChar = false;
-            this.rjTextBox37.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox37.PlaceholderText = "";
-            this.rjTextBox37.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox37.TabIndex = 10;
-            this.rjTextBox37.Texts = "$ 1000";
-            this.rjTextBox37.UnderlinedStyle = true;
-            // 
-            // rjTextBox38
-            // 
-            this.rjTextBox38.BackColor = System.Drawing.Color.White;
-            this.rjTextBox38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox38.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox38.BorderRadius = 0;
-            this.rjTextBox38.BorderSize = 1;
-            this.rjTextBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox38.Location = new System.Drawing.Point(13, 390);
-            this.rjTextBox38.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox38.Multiline = false;
-            this.rjTextBox38.Name = "rjTextBox38";
-            this.rjTextBox38.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox38.PasswordChar = false;
-            this.rjTextBox38.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox38.PlaceholderText = "";
-            this.rjTextBox38.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox38.TabIndex = 11;
-            this.rjTextBox38.Texts = "$ 1000";
-            this.rjTextBox38.UnderlinedStyle = true;
-            // 
-            // rjTextBox39
-            // 
-            this.rjTextBox39.BackColor = System.Drawing.Color.White;
-            this.rjTextBox39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox39.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox39.BorderRadius = 0;
-            this.rjTextBox39.BorderSize = 1;
-            this.rjTextBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox39.Location = new System.Drawing.Point(13, 285);
-            this.rjTextBox39.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox39.Multiline = false;
-            this.rjTextBox39.Name = "rjTextBox39";
-            this.rjTextBox39.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox39.PasswordChar = false;
-            this.rjTextBox39.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox39.PlaceholderText = "";
-            this.rjTextBox39.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox39.TabIndex = 8;
-            this.rjTextBox39.Texts = "$ 1000";
-            this.rjTextBox39.UnderlinedStyle = true;
-            // 
-            // rjTextBox40
-            // 
-            this.rjTextBox40.BackColor = System.Drawing.Color.White;
-            this.rjTextBox40.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox40.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox40.BorderRadius = 0;
-            this.rjTextBox40.BorderSize = 1;
-            this.rjTextBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox40.Location = new System.Drawing.Point(13, 320);
-            this.rjTextBox40.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox40.Multiline = false;
-            this.rjTextBox40.Name = "rjTextBox40";
-            this.rjTextBox40.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox40.PasswordChar = false;
-            this.rjTextBox40.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox40.PlaceholderText = "";
-            this.rjTextBox40.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox40.TabIndex = 9;
-            this.rjTextBox40.Texts = "$ 1000";
-            this.rjTextBox40.UnderlinedStyle = true;
-            // 
-            // rjTextBox41
-            // 
-            this.rjTextBox41.BackColor = System.Drawing.Color.White;
-            this.rjTextBox41.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox41.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox41.BorderRadius = 0;
-            this.rjTextBox41.BorderSize = 1;
-            this.rjTextBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox41.Location = new System.Drawing.Point(13, 214);
-            this.rjTextBox41.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox41.Multiline = false;
-            this.rjTextBox41.Name = "rjTextBox41";
-            this.rjTextBox41.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox41.PasswordChar = false;
-            this.rjTextBox41.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox41.PlaceholderText = "";
-            this.rjTextBox41.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox41.TabIndex = 6;
-            this.rjTextBox41.Texts = "$ 1000";
-            this.rjTextBox41.UnderlinedStyle = true;
-            // 
-            // rjTextBox42
-            // 
-            this.rjTextBox42.BackColor = System.Drawing.Color.White;
-            this.rjTextBox42.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox42.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox42.BorderRadius = 0;
-            this.rjTextBox42.BorderSize = 1;
-            this.rjTextBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox42.Location = new System.Drawing.Point(13, 249);
-            this.rjTextBox42.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox42.Multiline = false;
-            this.rjTextBox42.Name = "rjTextBox42";
-            this.rjTextBox42.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox42.PasswordChar = false;
-            this.rjTextBox42.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox42.PlaceholderText = "";
-            this.rjTextBox42.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox42.TabIndex = 7;
-            this.rjTextBox42.Texts = "$ 1000";
-            this.rjTextBox42.UnderlinedStyle = true;
-            // 
-            // rjTextBox43
-            // 
-            this.rjTextBox43.BackColor = System.Drawing.Color.White;
-            this.rjTextBox43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox43.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox43.BorderRadius = 0;
-            this.rjTextBox43.BorderSize = 1;
-            this.rjTextBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox43.Location = new System.Drawing.Point(13, 144);
-            this.rjTextBox43.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox43.Multiline = false;
-            this.rjTextBox43.Name = "rjTextBox43";
-            this.rjTextBox43.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox43.PasswordChar = false;
-            this.rjTextBox43.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox43.PlaceholderText = "";
-            this.rjTextBox43.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox43.TabIndex = 4;
-            this.rjTextBox43.Texts = "$ 1000";
-            this.rjTextBox43.UnderlinedStyle = true;
-            // 
-            // rjTextBox44
-            // 
-            this.rjTextBox44.BackColor = System.Drawing.Color.White;
-            this.rjTextBox44.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox44.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox44.BorderRadius = 0;
-            this.rjTextBox44.BorderSize = 1;
-            this.rjTextBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox44.Location = new System.Drawing.Point(13, 179);
-            this.rjTextBox44.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox44.Multiline = false;
-            this.rjTextBox44.Name = "rjTextBox44";
-            this.rjTextBox44.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox44.PasswordChar = false;
-            this.rjTextBox44.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox44.PlaceholderText = "";
-            this.rjTextBox44.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox44.TabIndex = 5;
-            this.rjTextBox44.Texts = "$ 1000";
-            this.rjTextBox44.UnderlinedStyle = true;
-            // 
-            // rjTextBox45
-            // 
-            this.rjTextBox45.BackColor = System.Drawing.Color.White;
-            this.rjTextBox45.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox45.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox45.BorderRadius = 0;
-            this.rjTextBox45.BorderSize = 1;
-            this.rjTextBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox45.Location = new System.Drawing.Point(13, 74);
-            this.rjTextBox45.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox45.Multiline = false;
-            this.rjTextBox45.Name = "rjTextBox45";
-            this.rjTextBox45.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox45.PasswordChar = false;
-            this.rjTextBox45.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox45.PlaceholderText = "";
-            this.rjTextBox45.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox45.TabIndex = 2;
-            this.rjTextBox45.Texts = "$ 1000";
-            this.rjTextBox45.UnderlinedStyle = true;
-            // 
-            // rjTextBox46
-            // 
-            this.rjTextBox46.BackColor = System.Drawing.Color.White;
-            this.rjTextBox46.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox46.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox46.BorderRadius = 0;
-            this.rjTextBox46.BorderSize = 1;
-            this.rjTextBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox46.Location = new System.Drawing.Point(13, 109);
-            this.rjTextBox46.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox46.Multiline = false;
-            this.rjTextBox46.Name = "rjTextBox46";
-            this.rjTextBox46.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox46.PasswordChar = false;
-            this.rjTextBox46.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox46.PlaceholderText = "";
-            this.rjTextBox46.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox46.TabIndex = 3;
-            this.rjTextBox46.Texts = "$ 1000";
-            this.rjTextBox46.UnderlinedStyle = true;
             // 
             // rjTextBox47
             // 
@@ -896,28 +314,6 @@
             this.rjTextBox47.TabIndex = 0;
             this.rjTextBox47.Texts = "$ 1000";
             this.rjTextBox47.UnderlinedStyle = true;
-            // 
-            // rjTextBox48
-            // 
-            this.rjTextBox48.BackColor = System.Drawing.Color.White;
-            this.rjTextBox48.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox48.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox48.BorderRadius = 0;
-            this.rjTextBox48.BorderSize = 1;
-            this.rjTextBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox48.Location = new System.Drawing.Point(13, 39);
-            this.rjTextBox48.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox48.Multiline = false;
-            this.rjTextBox48.Name = "rjTextBox48";
-            this.rjTextBox48.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox48.PasswordChar = false;
-            this.rjTextBox48.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox48.PlaceholderText = "";
-            this.rjTextBox48.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox48.TabIndex = 1;
-            this.rjTextBox48.Texts = "$ 1000";
-            this.rjTextBox48.UnderlinedStyle = true;
             // 
             // label17
             // 
@@ -957,7 +353,7 @@
             this.roundedPanel3.Controls.Add(this.flowLayoutPanel1);
             this.roundedPanel3.Location = new System.Drawing.Point(4, 60);
             this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.Size = new System.Drawing.Size(284, 560);
+            this.roundedPanel3.Size = new System.Drawing.Size(284, 535);
             this.roundedPanel3.TabIndex = 10;
             // 
             // label19
@@ -991,1134 +387,480 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 32);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(284, 503);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(281, 503);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.rjTextBox73);
-            this.panel2.Controls.Add(this.rjTextBox49);
-            this.panel2.Controls.Add(this.rjTextBox74);
-            this.panel2.Controls.Add(this.rjTextBox50);
-            this.panel2.Controls.Add(this.rjTextBox75);
-            this.panel2.Controls.Add(this.rjTextBox51);
-            this.panel2.Controls.Add(this.rjTextBox76);
-            this.panel2.Controls.Add(this.rjTextBox52);
-            this.panel2.Controls.Add(this.rjTextBox77);
-            this.panel2.Controls.Add(this.rjTextBox53);
-            this.panel2.Controls.Add(this.rjTextBox78);
-            this.panel2.Controls.Add(this.rjTextBox54);
-            this.panel2.Controls.Add(this.rjTextBox79);
-            this.panel2.Controls.Add(this.rjTextBox55);
-            this.panel2.Controls.Add(this.rjTextBox80);
-            this.panel2.Controls.Add(this.rjTextBox56);
-            this.panel2.Controls.Add(this.rjTextBox81);
-            this.panel2.Controls.Add(this.rjTextBox57);
-            this.panel2.Controls.Add(this.rjTextBox82);
-            this.panel2.Controls.Add(this.rjTextBox58);
-            this.panel2.Controls.Add(this.rjTextBox83);
-            this.panel2.Controls.Add(this.rjTextBox59);
-            this.panel2.Controls.Add(this.rjTextBox84);
-            this.panel2.Controls.Add(this.rjTextBox60);
-            this.panel2.Controls.Add(this.rjTextBox85);
-            this.panel2.Controls.Add(this.rjTextBox61);
-            this.panel2.Controls.Add(this.rjTextBox86);
-            this.panel2.Controls.Add(this.rjTextBox62);
-            this.panel2.Controls.Add(this.rjTextBox63);
-            this.panel2.Controls.Add(this.rjTextBox64);
-            this.panel2.Controls.Add(this.rjTextBox65);
-            this.panel2.Controls.Add(this.rjTextBox66);
-            this.panel2.Controls.Add(this.rjTextBox67);
-            this.panel2.Controls.Add(this.rjTextBox68);
-            this.panel2.Controls.Add(this.rjTextBox69);
-            this.panel2.Controls.Add(this.rjTextBox70);
-            this.panel2.Controls.Add(this.rjTextBox71);
-            this.panel2.Controls.Add(this.rjTextBox72);
-            this.panel2.Controls.Add(this.rjTextBox21);
-            this.panel2.Controls.Add(this.rjTextBox22);
-            this.panel2.Controls.Add(this.rjTextBox23);
-            this.panel2.Controls.Add(this.rjTextBox24);
-            this.panel2.Controls.Add(this.rjTextBox17);
-            this.panel2.Controls.Add(this.rjTextBox18);
-            this.panel2.Controls.Add(this.rjTextBox19);
-            this.panel2.Controls.Add(this.rjTextBox20);
-            this.panel2.Controls.Add(this.rjTextBox15);
-            this.panel2.Controls.Add(this.rjTextBox16);
-            this.panel2.Controls.Add(this.rjTextBox14);
-            this.panel2.Controls.Add(this.rjTextBox13);
-            this.panel2.Controls.Add(this.rjTextBox9);
-            this.panel2.Controls.Add(this.rjTextBox10);
-            this.panel2.Controls.Add(this.rjTextBox11);
-            this.panel2.Controls.Add(this.rjTextBox12);
-            this.panel2.Controls.Add(this.rjTextBox5);
-            this.panel2.Controls.Add(this.rjTextBox6);
-            this.panel2.Controls.Add(this.rjTextBox7);
-            this.panel2.Controls.Add(this.rjTextBox8);
-            this.panel2.Controls.Add(this.rjTextBox3);
-            this.panel2.Controls.Add(this.rjTextBox4);
-            this.panel2.Controls.Add(this.rjTextBox1);
-            this.panel2.Controls.Add(this.rjTextBox2);
+            this.panel2.Controls.Add(this.sa30);
+            this.panel2.Controls.Add(this.sa23);
+            this.panel2.Controls.Add(this.sa31);
+            this.panel2.Controls.Add(this.sa24);
+            this.panel2.Controls.Add(this.sa28);
+            this.panel2.Controls.Add(this.sa21);
+            this.panel2.Controls.Add(this.sa29);
+            this.panel2.Controls.Add(this.sa22);
+            this.panel2.Controls.Add(this.sa26);
+            this.panel2.Controls.Add(this.sa19);
+            this.panel2.Controls.Add(this.sa27);
+            this.panel2.Controls.Add(this.sa20);
+            this.panel2.Controls.Add(this.sa25);
+            this.panel2.Controls.Add(this.sa17);
+            this.panel2.Controls.Add(this.sa18);
+            this.panel2.Controls.Add(this.sa15);
+            this.panel2.Controls.Add(this.sa16);
+            this.panel2.Controls.Add(this.sa13);
+            this.panel2.Controls.Add(this.sa14);
+            this.panel2.Controls.Add(this.d29);
+            this.panel2.Controls.Add(this.d22);
+            this.panel2.Controls.Add(this.d16);
+            this.panel2.Controls.Add(this.d10);
+            this.panel2.Controls.Add(this.d4);
+            this.panel2.Controls.Add(this.sa11);
+            this.panel2.Controls.Add(this.d31);
+            this.panel2.Controls.Add(this.sa12);
+            this.panel2.Controls.Add(this.d24);
+            this.panel2.Controls.Add(this.sa9);
+            this.panel2.Controls.Add(this.d30);
+            this.panel2.Controls.Add(this.sa10);
+            this.panel2.Controls.Add(this.d12);
+            this.panel2.Controls.Add(this.sa7);
+            this.panel2.Controls.Add(this.sa8);
+            this.panel2.Controls.Add(this.d23);
+            this.panel2.Controls.Add(this.d28);
+            this.panel2.Controls.Add(this.d11);
+            this.panel2.Controls.Add(this.d27);
+            this.panel2.Controls.Add(this.d26);
+            this.panel2.Controls.Add(this.d25);
+            this.panel2.Controls.Add(this.d21);
+            this.panel2.Controls.Add(this.d9);
+            this.panel2.Controls.Add(this.d20);
+            this.panel2.Controls.Add(this.d8);
+            this.panel2.Controls.Add(this.d19);
+            this.panel2.Controls.Add(this.d7);
+            this.panel2.Controls.Add(this.d18);
+            this.panel2.Controls.Add(this.d6);
+            this.panel2.Controls.Add(this.d17);
+            this.panel2.Controls.Add(this.d5);
+            this.panel2.Controls.Add(this.d15);
+            this.panel2.Controls.Add(this.d3);
+            this.panel2.Controls.Add(this.d14);
+            this.panel2.Controls.Add(this.d2);
+            this.panel2.Controls.Add(this.d13);
+            this.panel2.Controls.Add(this.d1);
+            this.panel2.Controls.Add(this.sa5);
+            this.panel2.Controls.Add(this.sa6);
+            this.panel2.Controls.Add(this.sa3);
+            this.panel2.Controls.Add(this.sa4);
+            this.panel2.Controls.Add(this.sa1);
+            this.panel2.Controls.Add(this.sa2);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(260, 1200);
+            this.panel2.Size = new System.Drawing.Size(255, 1200);
             this.panel2.TabIndex = 0;
             // 
-            // rjTextBox49
-            // 
-            this.rjTextBox49.BackColor = System.Drawing.Color.White;
-            this.rjTextBox49.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox49.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox49.BorderRadius = 0;
-            this.rjTextBox49.BorderSize = 1;
-            this.rjTextBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox49.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox49.Location = new System.Drawing.Point(13, 813);
-            this.rjTextBox49.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox49.Multiline = false;
-            this.rjTextBox49.Name = "rjTextBox49";
-            this.rjTextBox49.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox49.PasswordChar = false;
-            this.rjTextBox49.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox49.PlaceholderText = "";
-            this.rjTextBox49.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox49.TabIndex = 47;
-            this.rjTextBox49.Texts = "00/00/00";
-            this.rjTextBox49.UnderlinedStyle = true;
-            // 
-            // rjTextBox50
-            // 
-            this.rjTextBox50.BackColor = System.Drawing.Color.White;
-            this.rjTextBox50.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox50.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox50.BorderRadius = 0;
-            this.rjTextBox50.BorderSize = 1;
-            this.rjTextBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox50.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox50.Location = new System.Drawing.Point(13, 778);
-            this.rjTextBox50.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox50.Multiline = false;
-            this.rjTextBox50.Name = "rjTextBox50";
-            this.rjTextBox50.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox50.PasswordChar = false;
-            this.rjTextBox50.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox50.PlaceholderText = "";
-            this.rjTextBox50.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox50.TabIndex = 46;
-            this.rjTextBox50.Texts = "00/00/00";
-            this.rjTextBox50.UnderlinedStyle = true;
-            // 
-            // rjTextBox51
-            // 
-            this.rjTextBox51.BackColor = System.Drawing.Color.White;
-            this.rjTextBox51.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox51.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox51.BorderRadius = 0;
-            this.rjTextBox51.BorderSize = 1;
-            this.rjTextBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox51.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox51.Location = new System.Drawing.Point(13, 743);
-            this.rjTextBox51.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox51.Multiline = false;
-            this.rjTextBox51.Name = "rjTextBox51";
-            this.rjTextBox51.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox51.PasswordChar = false;
-            this.rjTextBox51.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox51.PlaceholderText = "";
-            this.rjTextBox51.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox51.TabIndex = 45;
-            this.rjTextBox51.Texts = "00/00/00";
-            this.rjTextBox51.UnderlinedStyle = true;
-            // 
-            // rjTextBox52
-            // 
-            this.rjTextBox52.BackColor = System.Drawing.Color.White;
-            this.rjTextBox52.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox52.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox52.BorderRadius = 0;
-            this.rjTextBox52.BorderSize = 1;
-            this.rjTextBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox52.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox52.Location = new System.Drawing.Point(13, 708);
-            this.rjTextBox52.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox52.Multiline = false;
-            this.rjTextBox52.Name = "rjTextBox52";
-            this.rjTextBox52.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox52.PasswordChar = false;
-            this.rjTextBox52.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox52.PlaceholderText = "";
-            this.rjTextBox52.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox52.TabIndex = 44;
-            this.rjTextBox52.Texts = "00/00/00";
-            this.rjTextBox52.UnderlinedStyle = true;
-            // 
-            // rjTextBox53
-            // 
-            this.rjTextBox53.BackColor = System.Drawing.Color.White;
-            this.rjTextBox53.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox53.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox53.BorderRadius = 0;
-            this.rjTextBox53.BorderSize = 1;
-            this.rjTextBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox53.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox53.Location = new System.Drawing.Point(13, 672);
-            this.rjTextBox53.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox53.Multiline = false;
-            this.rjTextBox53.Name = "rjTextBox53";
-            this.rjTextBox53.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox53.PasswordChar = false;
-            this.rjTextBox53.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox53.PlaceholderText = "";
-            this.rjTextBox53.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox53.TabIndex = 43;
-            this.rjTextBox53.Texts = "00/00/00";
-            this.rjTextBox53.UnderlinedStyle = true;
-            // 
-            // rjTextBox54
-            // 
-            this.rjTextBox54.BackColor = System.Drawing.Color.White;
-            this.rjTextBox54.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox54.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox54.BorderRadius = 0;
-            this.rjTextBox54.BorderSize = 1;
-            this.rjTextBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox54.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox54.Location = new System.Drawing.Point(13, 637);
-            this.rjTextBox54.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox54.Multiline = false;
-            this.rjTextBox54.Name = "rjTextBox54";
-            this.rjTextBox54.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox54.PasswordChar = false;
-            this.rjTextBox54.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox54.PlaceholderText = "";
-            this.rjTextBox54.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox54.TabIndex = 42;
-            this.rjTextBox54.Texts = "00/00/00";
-            this.rjTextBox54.UnderlinedStyle = true;
-            // 
-            // rjTextBox55
-            // 
-            this.rjTextBox55.BackColor = System.Drawing.Color.White;
-            this.rjTextBox55.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox55.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox55.BorderRadius = 0;
-            this.rjTextBox55.BorderSize = 1;
-            this.rjTextBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox55.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox55.Location = new System.Drawing.Point(13, 602);
-            this.rjTextBox55.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox55.Multiline = false;
-            this.rjTextBox55.Name = "rjTextBox55";
-            this.rjTextBox55.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox55.PasswordChar = false;
-            this.rjTextBox55.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox55.PlaceholderText = "";
-            this.rjTextBox55.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox55.TabIndex = 41;
-            this.rjTextBox55.Texts = "00/00/00";
-            this.rjTextBox55.UnderlinedStyle = true;
-            // 
-            // rjTextBox56
-            // 
-            this.rjTextBox56.BackColor = System.Drawing.Color.White;
-            this.rjTextBox56.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox56.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox56.BorderRadius = 0;
-            this.rjTextBox56.BorderSize = 1;
-            this.rjTextBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox56.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox56.Location = new System.Drawing.Point(13, 567);
-            this.rjTextBox56.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox56.Multiline = false;
-            this.rjTextBox56.Name = "rjTextBox56";
-            this.rjTextBox56.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox56.PasswordChar = false;
-            this.rjTextBox56.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox56.PlaceholderText = "";
-            this.rjTextBox56.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox56.TabIndex = 40;
-            this.rjTextBox56.Texts = "00/00/00";
-            this.rjTextBox56.UnderlinedStyle = true;
-            // 
-            // rjTextBox57
-            // 
-            this.rjTextBox57.BackColor = System.Drawing.Color.White;
-            this.rjTextBox57.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox57.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox57.BorderRadius = 0;
-            this.rjTextBox57.BorderSize = 1;
-            this.rjTextBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox57.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox57.Location = new System.Drawing.Point(13, 532);
-            this.rjTextBox57.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox57.Multiline = false;
-            this.rjTextBox57.Name = "rjTextBox57";
-            this.rjTextBox57.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox57.PasswordChar = false;
-            this.rjTextBox57.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox57.PlaceholderText = "";
-            this.rjTextBox57.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox57.TabIndex = 39;
-            this.rjTextBox57.Texts = "00/00/00";
-            this.rjTextBox57.UnderlinedStyle = true;
-            // 
-            // rjTextBox58
-            // 
-            this.rjTextBox58.BackColor = System.Drawing.Color.White;
-            this.rjTextBox58.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox58.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox58.BorderRadius = 0;
-            this.rjTextBox58.BorderSize = 1;
-            this.rjTextBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox58.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox58.Location = new System.Drawing.Point(13, 497);
-            this.rjTextBox58.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox58.Multiline = false;
-            this.rjTextBox58.Name = "rjTextBox58";
-            this.rjTextBox58.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox58.PasswordChar = false;
-            this.rjTextBox58.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox58.PlaceholderText = "";
-            this.rjTextBox58.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox58.TabIndex = 38;
-            this.rjTextBox58.Texts = "00/00/00";
-            this.rjTextBox58.UnderlinedStyle = true;
-            // 
-            // rjTextBox59
-            // 
-            this.rjTextBox59.BackColor = System.Drawing.Color.White;
-            this.rjTextBox59.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox59.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox59.BorderRadius = 0;
-            this.rjTextBox59.BorderSize = 1;
-            this.rjTextBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox59.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox59.Location = new System.Drawing.Point(13, 462);
-            this.rjTextBox59.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox59.Multiline = false;
-            this.rjTextBox59.Name = "rjTextBox59";
-            this.rjTextBox59.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox59.PasswordChar = false;
-            this.rjTextBox59.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox59.PlaceholderText = "";
-            this.rjTextBox59.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox59.TabIndex = 37;
-            this.rjTextBox59.Texts = "00/00/00";
-            this.rjTextBox59.UnderlinedStyle = true;
-            // 
-            // rjTextBox60
-            // 
-            this.rjTextBox60.BackColor = System.Drawing.Color.White;
-            this.rjTextBox60.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox60.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox60.BorderRadius = 0;
-            this.rjTextBox60.BorderSize = 1;
-            this.rjTextBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox60.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox60.Location = new System.Drawing.Point(13, 427);
-            this.rjTextBox60.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox60.Multiline = false;
-            this.rjTextBox60.Name = "rjTextBox60";
-            this.rjTextBox60.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox60.PasswordChar = false;
-            this.rjTextBox60.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox60.PlaceholderText = "";
-            this.rjTextBox60.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox60.TabIndex = 36;
-            this.rjTextBox60.Texts = "00/00/00";
-            this.rjTextBox60.UnderlinedStyle = true;
-            // 
-            // rjTextBox61
-            // 
-            this.rjTextBox61.BackColor = System.Drawing.Color.White;
-            this.rjTextBox61.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox61.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox61.BorderRadius = 0;
-            this.rjTextBox61.BorderSize = 1;
-            this.rjTextBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox61.Location = new System.Drawing.Point(115, 778);
-            this.rjTextBox61.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox61.Multiline = false;
-            this.rjTextBox61.Name = "rjTextBox61";
-            this.rjTextBox61.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox61.PasswordChar = false;
-            this.rjTextBox61.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox61.PlaceholderText = "";
-            this.rjTextBox61.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox61.TabIndex = 34;
-            this.rjTextBox61.Texts = "$ 1000";
-            this.rjTextBox61.UnderlinedStyle = true;
-            // 
-            // rjTextBox62
-            // 
-            this.rjTextBox62.BackColor = System.Drawing.Color.White;
-            this.rjTextBox62.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox62.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox62.BorderRadius = 0;
-            this.rjTextBox62.BorderSize = 1;
-            this.rjTextBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox62.Location = new System.Drawing.Point(115, 813);
-            this.rjTextBox62.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox62.Multiline = false;
-            this.rjTextBox62.Name = "rjTextBox62";
-            this.rjTextBox62.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox62.PasswordChar = false;
-            this.rjTextBox62.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox62.PlaceholderText = "";
-            this.rjTextBox62.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox62.TabIndex = 35;
-            this.rjTextBox62.Texts = "$ 1000";
-            this.rjTextBox62.UnderlinedStyle = true;
-            // 
-            // rjTextBox63
-            // 
-            this.rjTextBox63.BackColor = System.Drawing.Color.White;
-            this.rjTextBox63.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox63.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox63.BorderRadius = 0;
-            this.rjTextBox63.BorderSize = 1;
-            this.rjTextBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox63.Location = new System.Drawing.Point(115, 708);
-            this.rjTextBox63.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox63.Multiline = false;
-            this.rjTextBox63.Name = "rjTextBox63";
-            this.rjTextBox63.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox63.PasswordChar = false;
-            this.rjTextBox63.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox63.PlaceholderText = "";
-            this.rjTextBox63.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox63.TabIndex = 32;
-            this.rjTextBox63.Texts = "$ 1000";
-            this.rjTextBox63.UnderlinedStyle = true;
-            // 
-            // rjTextBox64
-            // 
-            this.rjTextBox64.BackColor = System.Drawing.Color.White;
-            this.rjTextBox64.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox64.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox64.BorderRadius = 0;
-            this.rjTextBox64.BorderSize = 1;
-            this.rjTextBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox64.Location = new System.Drawing.Point(115, 743);
-            this.rjTextBox64.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox64.Multiline = false;
-            this.rjTextBox64.Name = "rjTextBox64";
-            this.rjTextBox64.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox64.PasswordChar = false;
-            this.rjTextBox64.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox64.PlaceholderText = "";
-            this.rjTextBox64.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox64.TabIndex = 33;
-            this.rjTextBox64.Texts = "$ 1000";
-            this.rjTextBox64.UnderlinedStyle = true;
-            // 
-            // rjTextBox65
-            // 
-            this.rjTextBox65.BackColor = System.Drawing.Color.White;
-            this.rjTextBox65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox65.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox65.BorderRadius = 0;
-            this.rjTextBox65.BorderSize = 1;
-            this.rjTextBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox65.Location = new System.Drawing.Point(115, 637);
-            this.rjTextBox65.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox65.Multiline = false;
-            this.rjTextBox65.Name = "rjTextBox65";
-            this.rjTextBox65.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox65.PasswordChar = false;
-            this.rjTextBox65.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox65.PlaceholderText = "";
-            this.rjTextBox65.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox65.TabIndex = 30;
-            this.rjTextBox65.Texts = "$ 1000";
-            this.rjTextBox65.UnderlinedStyle = true;
-            // 
-            // rjTextBox66
-            // 
-            this.rjTextBox66.BackColor = System.Drawing.Color.White;
-            this.rjTextBox66.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox66.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox66.BorderRadius = 0;
-            this.rjTextBox66.BorderSize = 1;
-            this.rjTextBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox66.Location = new System.Drawing.Point(115, 672);
-            this.rjTextBox66.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox66.Multiline = false;
-            this.rjTextBox66.Name = "rjTextBox66";
-            this.rjTextBox66.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox66.PasswordChar = false;
-            this.rjTextBox66.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox66.PlaceholderText = "";
-            this.rjTextBox66.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox66.TabIndex = 31;
-            this.rjTextBox66.Texts = "$ 1000";
-            this.rjTextBox66.UnderlinedStyle = true;
-            // 
-            // rjTextBox67
-            // 
-            this.rjTextBox67.BackColor = System.Drawing.Color.White;
-            this.rjTextBox67.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox67.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox67.BorderRadius = 0;
-            this.rjTextBox67.BorderSize = 1;
-            this.rjTextBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox67.Location = new System.Drawing.Point(115, 567);
-            this.rjTextBox67.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox67.Multiline = false;
-            this.rjTextBox67.Name = "rjTextBox67";
-            this.rjTextBox67.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox67.PasswordChar = false;
-            this.rjTextBox67.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox67.PlaceholderText = "";
-            this.rjTextBox67.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox67.TabIndex = 28;
-            this.rjTextBox67.Texts = "$ 1000";
-            this.rjTextBox67.UnderlinedStyle = true;
-            // 
-            // rjTextBox68
-            // 
-            this.rjTextBox68.BackColor = System.Drawing.Color.White;
-            this.rjTextBox68.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox68.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox68.BorderRadius = 0;
-            this.rjTextBox68.BorderSize = 1;
-            this.rjTextBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox68.Location = new System.Drawing.Point(115, 602);
-            this.rjTextBox68.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox68.Multiline = false;
-            this.rjTextBox68.Name = "rjTextBox68";
-            this.rjTextBox68.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox68.PasswordChar = false;
-            this.rjTextBox68.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox68.PlaceholderText = "";
-            this.rjTextBox68.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox68.TabIndex = 29;
-            this.rjTextBox68.Texts = "$ 1000";
-            this.rjTextBox68.UnderlinedStyle = true;
-            // 
-            // rjTextBox69
-            // 
-            this.rjTextBox69.BackColor = System.Drawing.Color.White;
-            this.rjTextBox69.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox69.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox69.BorderRadius = 0;
-            this.rjTextBox69.BorderSize = 1;
-            this.rjTextBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox69.Location = new System.Drawing.Point(115, 497);
-            this.rjTextBox69.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox69.Multiline = false;
-            this.rjTextBox69.Name = "rjTextBox69";
-            this.rjTextBox69.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox69.PasswordChar = false;
-            this.rjTextBox69.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox69.PlaceholderText = "";
-            this.rjTextBox69.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox69.TabIndex = 26;
-            this.rjTextBox69.Texts = "$ 1000";
-            this.rjTextBox69.UnderlinedStyle = true;
-            // 
-            // rjTextBox70
-            // 
-            this.rjTextBox70.BackColor = System.Drawing.Color.White;
-            this.rjTextBox70.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox70.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox70.BorderRadius = 0;
-            this.rjTextBox70.BorderSize = 1;
-            this.rjTextBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox70.Location = new System.Drawing.Point(115, 532);
-            this.rjTextBox70.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox70.Multiline = false;
-            this.rjTextBox70.Name = "rjTextBox70";
-            this.rjTextBox70.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox70.PasswordChar = false;
-            this.rjTextBox70.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox70.PlaceholderText = "";
-            this.rjTextBox70.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox70.TabIndex = 27;
-            this.rjTextBox70.Texts = "$ 1000";
-            this.rjTextBox70.UnderlinedStyle = true;
-            // 
-            // rjTextBox71
-            // 
-            this.rjTextBox71.BackColor = System.Drawing.Color.White;
-            this.rjTextBox71.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox71.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox71.BorderRadius = 0;
-            this.rjTextBox71.BorderSize = 1;
-            this.rjTextBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox71.Location = new System.Drawing.Point(115, 427);
-            this.rjTextBox71.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox71.Multiline = false;
-            this.rjTextBox71.Name = "rjTextBox71";
-            this.rjTextBox71.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox71.PasswordChar = false;
-            this.rjTextBox71.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox71.PlaceholderText = "";
-            this.rjTextBox71.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox71.TabIndex = 24;
-            this.rjTextBox71.Texts = "$ 1000";
-            this.rjTextBox71.UnderlinedStyle = true;
-            // 
-            // rjTextBox72
-            // 
-            this.rjTextBox72.BackColor = System.Drawing.Color.White;
-            this.rjTextBox72.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox72.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox72.BorderRadius = 0;
-            this.rjTextBox72.BorderSize = 1;
-            this.rjTextBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox72.Location = new System.Drawing.Point(115, 462);
-            this.rjTextBox72.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox72.Multiline = false;
-            this.rjTextBox72.Name = "rjTextBox72";
-            this.rjTextBox72.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox72.PasswordChar = false;
-            this.rjTextBox72.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox72.PlaceholderText = "";
-            this.rjTextBox72.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox72.TabIndex = 25;
-            this.rjTextBox72.Texts = "$ 1000";
-            this.rjTextBox72.UnderlinedStyle = true;
-            // 
-            // rjTextBox21
-            // 
-            this.rjTextBox21.BackColor = System.Drawing.Color.White;
-            this.rjTextBox21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox21.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox21.BorderRadius = 0;
-            this.rjTextBox21.BorderSize = 1;
-            this.rjTextBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox21.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox21.Location = new System.Drawing.Point(13, 390);
-            this.rjTextBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox21.Multiline = false;
-            this.rjTextBox21.Name = "rjTextBox21";
-            this.rjTextBox21.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox21.PasswordChar = false;
-            this.rjTextBox21.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox21.PlaceholderText = "";
-            this.rjTextBox21.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox21.TabIndex = 23;
-            this.rjTextBox21.Texts = "00/00/00";
-            this.rjTextBox21.UnderlinedStyle = true;
-            // 
-            // rjTextBox22
-            // 
-            this.rjTextBox22.BackColor = System.Drawing.Color.White;
-            this.rjTextBox22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox22.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox22.BorderRadius = 0;
-            this.rjTextBox22.BorderSize = 1;
-            this.rjTextBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox22.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox22.Location = new System.Drawing.Point(13, 355);
-            this.rjTextBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox22.Multiline = false;
-            this.rjTextBox22.Name = "rjTextBox22";
-            this.rjTextBox22.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox22.PasswordChar = false;
-            this.rjTextBox22.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox22.PlaceholderText = "";
-            this.rjTextBox22.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox22.TabIndex = 22;
-            this.rjTextBox22.Texts = "00/00/00";
-            this.rjTextBox22.UnderlinedStyle = true;
-            // 
-            // rjTextBox23
-            // 
-            this.rjTextBox23.BackColor = System.Drawing.Color.White;
-            this.rjTextBox23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox23.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox23.BorderRadius = 0;
-            this.rjTextBox23.BorderSize = 1;
-            this.rjTextBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox23.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox23.Location = new System.Drawing.Point(13, 320);
-            this.rjTextBox23.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox23.Multiline = false;
-            this.rjTextBox23.Name = "rjTextBox23";
-            this.rjTextBox23.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox23.PasswordChar = false;
-            this.rjTextBox23.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox23.PlaceholderText = "";
-            this.rjTextBox23.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox23.TabIndex = 21;
-            this.rjTextBox23.Texts = "00/00/00";
-            this.rjTextBox23.UnderlinedStyle = true;
-            // 
-            // rjTextBox24
-            // 
-            this.rjTextBox24.BackColor = System.Drawing.Color.White;
-            this.rjTextBox24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox24.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox24.BorderRadius = 0;
-            this.rjTextBox24.BorderSize = 1;
-            this.rjTextBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox24.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox24.Location = new System.Drawing.Point(13, 285);
-            this.rjTextBox24.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox24.Multiline = false;
-            this.rjTextBox24.Name = "rjTextBox24";
-            this.rjTextBox24.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox24.PasswordChar = false;
-            this.rjTextBox24.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox24.PlaceholderText = "";
-            this.rjTextBox24.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox24.TabIndex = 20;
-            this.rjTextBox24.Texts = "00/00/00";
-            this.rjTextBox24.UnderlinedStyle = true;
-            // 
-            // rjTextBox17
-            // 
-            this.rjTextBox17.BackColor = System.Drawing.Color.White;
-            this.rjTextBox17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox17.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox17.BorderRadius = 0;
-            this.rjTextBox17.BorderSize = 1;
-            this.rjTextBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox17.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox17.Location = new System.Drawing.Point(13, 249);
-            this.rjTextBox17.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox17.Multiline = false;
-            this.rjTextBox17.Name = "rjTextBox17";
-            this.rjTextBox17.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox17.PasswordChar = false;
-            this.rjTextBox17.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox17.PlaceholderText = "";
-            this.rjTextBox17.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox17.TabIndex = 19;
-            this.rjTextBox17.Texts = "00/00/00";
-            this.rjTextBox17.UnderlinedStyle = true;
-            // 
-            // rjTextBox18
-            // 
-            this.rjTextBox18.BackColor = System.Drawing.Color.White;
-            this.rjTextBox18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox18.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox18.BorderRadius = 0;
-            this.rjTextBox18.BorderSize = 1;
-            this.rjTextBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox18.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox18.Location = new System.Drawing.Point(13, 214);
-            this.rjTextBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox18.Multiline = false;
-            this.rjTextBox18.Name = "rjTextBox18";
-            this.rjTextBox18.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox18.PasswordChar = false;
-            this.rjTextBox18.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox18.PlaceholderText = "";
-            this.rjTextBox18.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox18.TabIndex = 18;
-            this.rjTextBox18.Texts = "00/00/00";
-            this.rjTextBox18.UnderlinedStyle = true;
-            // 
-            // rjTextBox19
-            // 
-            this.rjTextBox19.BackColor = System.Drawing.Color.White;
-            this.rjTextBox19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox19.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox19.BorderRadius = 0;
-            this.rjTextBox19.BorderSize = 1;
-            this.rjTextBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox19.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox19.Location = new System.Drawing.Point(13, 179);
-            this.rjTextBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox19.Multiline = false;
-            this.rjTextBox19.Name = "rjTextBox19";
-            this.rjTextBox19.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox19.PasswordChar = false;
-            this.rjTextBox19.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox19.PlaceholderText = "";
-            this.rjTextBox19.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox19.TabIndex = 17;
-            this.rjTextBox19.Texts = "00/00/00";
-            this.rjTextBox19.UnderlinedStyle = true;
-            // 
-            // rjTextBox20
-            // 
-            this.rjTextBox20.BackColor = System.Drawing.Color.White;
-            this.rjTextBox20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox20.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox20.BorderRadius = 0;
-            this.rjTextBox20.BorderSize = 1;
-            this.rjTextBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox20.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox20.Location = new System.Drawing.Point(13, 144);
-            this.rjTextBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox20.Multiline = false;
-            this.rjTextBox20.Name = "rjTextBox20";
-            this.rjTextBox20.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox20.PasswordChar = false;
-            this.rjTextBox20.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox20.PlaceholderText = "";
-            this.rjTextBox20.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox20.TabIndex = 16;
-            this.rjTextBox20.Texts = "00/00/00";
-            this.rjTextBox20.UnderlinedStyle = true;
-            // 
-            // rjTextBox15
-            // 
-            this.rjTextBox15.BackColor = System.Drawing.Color.White;
-            this.rjTextBox15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox15.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox15.BorderRadius = 0;
-            this.rjTextBox15.BorderSize = 1;
-            this.rjTextBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox15.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox15.Location = new System.Drawing.Point(13, 109);
-            this.rjTextBox15.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox15.Multiline = false;
-            this.rjTextBox15.Name = "rjTextBox15";
-            this.rjTextBox15.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox15.PasswordChar = false;
-            this.rjTextBox15.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox15.PlaceholderText = "";
-            this.rjTextBox15.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox15.TabIndex = 15;
-            this.rjTextBox15.Texts = "00/00/00";
-            this.rjTextBox15.UnderlinedStyle = true;
-            // 
-            // rjTextBox16
-            // 
-            this.rjTextBox16.BackColor = System.Drawing.Color.White;
-            this.rjTextBox16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox16.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox16.BorderRadius = 0;
-            this.rjTextBox16.BorderSize = 1;
-            this.rjTextBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox16.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox16.Location = new System.Drawing.Point(13, 74);
-            this.rjTextBox16.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox16.Multiline = false;
-            this.rjTextBox16.Name = "rjTextBox16";
-            this.rjTextBox16.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox16.PasswordChar = false;
-            this.rjTextBox16.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox16.PlaceholderText = "";
-            this.rjTextBox16.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox16.TabIndex = 14;
-            this.rjTextBox16.Texts = "00/00/00";
-            this.rjTextBox16.UnderlinedStyle = true;
-            // 
-            // rjTextBox14
-            // 
-            this.rjTextBox14.BackColor = System.Drawing.Color.White;
-            this.rjTextBox14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox14.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox14.BorderRadius = 0;
-            this.rjTextBox14.BorderSize = 1;
-            this.rjTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox14.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox14.Location = new System.Drawing.Point(13, 39);
-            this.rjTextBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox14.Multiline = false;
-            this.rjTextBox14.Name = "rjTextBox14";
-            this.rjTextBox14.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox14.PasswordChar = false;
-            this.rjTextBox14.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox14.PlaceholderText = "";
-            this.rjTextBox14.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox14.TabIndex = 13;
-            this.rjTextBox14.Texts = "00/00/00";
-            this.rjTextBox14.UnderlinedStyle = true;
-            // 
-            // rjTextBox13
-            // 
-            this.rjTextBox13.BackColor = System.Drawing.Color.White;
-            this.rjTextBox13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox13.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox13.BorderRadius = 0;
-            this.rjTextBox13.BorderSize = 1;
-            this.rjTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox13.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox13.Location = new System.Drawing.Point(13, 4);
-            this.rjTextBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox13.Multiline = false;
-            this.rjTextBox13.Name = "rjTextBox13";
-            this.rjTextBox13.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox13.PasswordChar = false;
-            this.rjTextBox13.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox13.PlaceholderText = "";
-            this.rjTextBox13.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox13.TabIndex = 12;
-            this.rjTextBox13.Texts = "00/00/00";
-            this.rjTextBox13.UnderlinedStyle = true;
-            // 
-            // rjTextBox9
-            // 
-            this.rjTextBox9.BackColor = System.Drawing.Color.White;
-            this.rjTextBox9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox9.BorderRadius = 0;
-            this.rjTextBox9.BorderSize = 1;
-            this.rjTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox9.Location = new System.Drawing.Point(115, 355);
-            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox9.Multiline = false;
-            this.rjTextBox9.Name = "rjTextBox9";
-            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox9.PasswordChar = false;
-            this.rjTextBox9.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox9.PlaceholderText = "";
-            this.rjTextBox9.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox9.TabIndex = 10;
-            this.rjTextBox9.Texts = "$ 1000";
-            this.rjTextBox9.UnderlinedStyle = true;
-            // 
-            // rjTextBox10
-            // 
-            this.rjTextBox10.BackColor = System.Drawing.Color.White;
-            this.rjTextBox10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox10.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox10.BorderRadius = 0;
-            this.rjTextBox10.BorderSize = 1;
-            this.rjTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox10.Location = new System.Drawing.Point(115, 390);
-            this.rjTextBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox10.Multiline = false;
-            this.rjTextBox10.Name = "rjTextBox10";
-            this.rjTextBox10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox10.PasswordChar = false;
-            this.rjTextBox10.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox10.PlaceholderText = "";
-            this.rjTextBox10.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox10.TabIndex = 11;
-            this.rjTextBox10.Texts = "$ 1000";
-            this.rjTextBox10.UnderlinedStyle = true;
-            // 
-            // rjTextBox11
-            // 
-            this.rjTextBox11.BackColor = System.Drawing.Color.White;
-            this.rjTextBox11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox11.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox11.BorderRadius = 0;
-            this.rjTextBox11.BorderSize = 1;
-            this.rjTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox11.Location = new System.Drawing.Point(115, 285);
-            this.rjTextBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox11.Multiline = false;
-            this.rjTextBox11.Name = "rjTextBox11";
-            this.rjTextBox11.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox11.PasswordChar = false;
-            this.rjTextBox11.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox11.PlaceholderText = "";
-            this.rjTextBox11.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox11.TabIndex = 8;
-            this.rjTextBox11.Texts = "$ 1000";
-            this.rjTextBox11.UnderlinedStyle = true;
-            // 
-            // rjTextBox12
-            // 
-            this.rjTextBox12.BackColor = System.Drawing.Color.White;
-            this.rjTextBox12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox12.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox12.BorderRadius = 0;
-            this.rjTextBox12.BorderSize = 1;
-            this.rjTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox12.Location = new System.Drawing.Point(115, 320);
-            this.rjTextBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox12.Multiline = false;
-            this.rjTextBox12.Name = "rjTextBox12";
-            this.rjTextBox12.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox12.PasswordChar = false;
-            this.rjTextBox12.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox12.PlaceholderText = "";
-            this.rjTextBox12.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox12.TabIndex = 9;
-            this.rjTextBox12.Texts = "$ 1000";
-            this.rjTextBox12.UnderlinedStyle = true;
-            // 
-            // rjTextBox5
-            // 
-            this.rjTextBox5.BackColor = System.Drawing.Color.White;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox5.BorderRadius = 0;
-            this.rjTextBox5.BorderSize = 1;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox5.Location = new System.Drawing.Point(115, 214);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox5.PlaceholderText = "";
-            this.rjTextBox5.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox5.TabIndex = 6;
-            this.rjTextBox5.Texts = "$ 1000";
-            this.rjTextBox5.UnderlinedStyle = true;
-            // 
-            // rjTextBox6
-            // 
-            this.rjTextBox6.BackColor = System.Drawing.Color.White;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox6.BorderRadius = 0;
-            this.rjTextBox6.BorderSize = 1;
-            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox6.Location = new System.Drawing.Point(115, 249);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox6.PlaceholderText = "";
-            this.rjTextBox6.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox6.TabIndex = 7;
-            this.rjTextBox6.Texts = "$ 1000";
-            this.rjTextBox6.UnderlinedStyle = true;
-            // 
-            // rjTextBox7
-            // 
-            this.rjTextBox7.BackColor = System.Drawing.Color.White;
-            this.rjTextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox7.BorderRadius = 0;
-            this.rjTextBox7.BorderSize = 1;
-            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox7.Location = new System.Drawing.Point(115, 144);
-            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox7.Multiline = false;
-            this.rjTextBox7.Name = "rjTextBox7";
-            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox7.PlaceholderText = "";
-            this.rjTextBox7.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox7.TabIndex = 4;
-            this.rjTextBox7.Texts = "$ 1000";
-            this.rjTextBox7.UnderlinedStyle = true;
-            // 
-            // rjTextBox8
-            // 
-            this.rjTextBox8.BackColor = System.Drawing.Color.White;
-            this.rjTextBox8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox8.BorderRadius = 0;
-            this.rjTextBox8.BorderSize = 1;
-            this.rjTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox8.Location = new System.Drawing.Point(115, 179);
-            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox8.Multiline = false;
-            this.rjTextBox8.Name = "rjTextBox8";
-            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox8.PasswordChar = false;
-            this.rjTextBox8.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox8.PlaceholderText = "";
-            this.rjTextBox8.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox8.TabIndex = 5;
-            this.rjTextBox8.Texts = "$ 1000";
-            this.rjTextBox8.UnderlinedStyle = true;
-            // 
-            // rjTextBox3
-            // 
-            this.rjTextBox3.BackColor = System.Drawing.Color.White;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox3.BorderRadius = 0;
-            this.rjTextBox3.BorderSize = 1;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox3.Location = new System.Drawing.Point(115, 74);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox3.TabIndex = 2;
-            this.rjTextBox3.Texts = "$ 1000";
-            this.rjTextBox3.UnderlinedStyle = true;
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.BackColor = System.Drawing.Color.White;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 1;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox4.Location = new System.Drawing.Point(115, 109);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "";
-            this.rjTextBox4.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox4.TabIndex = 3;
-            this.rjTextBox4.Texts = "$ 1000";
-            this.rjTextBox4.UnderlinedStyle = true;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.White;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 1;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(115, 4);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox1.TabIndex = 0;
-            this.rjTextBox1.Texts = "$ 1000";
-            this.rjTextBox1.UnderlinedStyle = true;
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.White;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 1;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(115, 39);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox2.TabIndex = 1;
-            this.rjTextBox2.Texts = "$ 1000";
-            this.rjTextBox2.UnderlinedStyle = true;
+            // d12
+            // 
+            this.d12.BackColor = System.Drawing.Color.White;
+            this.d12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d12.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d12.BorderRadius = 0;
+            this.d12.BorderSize = 1;
+            this.d12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d12.ForeColor = System.Drawing.Color.Silver;
+            this.d12.Location = new System.Drawing.Point(13, 391);
+            this.d12.Margin = new System.Windows.Forms.Padding(4);
+            this.d12.Multiline = false;
+            this.d12.Name = "d12";
+            this.d12.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d12.PasswordChar = false;
+            this.d12.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d12.PlaceholderText = "";
+            this.d12.Size = new System.Drawing.Size(94, 35);
+            this.d12.TabIndex = 23;
+            this.d12.Texts = "00/00/00";
+            this.d12.UnderlinedStyle = true;
+            // 
+            // d11
+            // 
+            this.d11.BackColor = System.Drawing.Color.White;
+            this.d11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d11.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d11.BorderRadius = 0;
+            this.d11.BorderSize = 1;
+            this.d11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d11.ForeColor = System.Drawing.Color.Silver;
+            this.d11.Location = new System.Drawing.Point(13, 354);
+            this.d11.Margin = new System.Windows.Forms.Padding(4);
+            this.d11.Multiline = false;
+            this.d11.Name = "d11";
+            this.d11.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d11.PasswordChar = false;
+            this.d11.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d11.PlaceholderText = "";
+            this.d11.Size = new System.Drawing.Size(94, 35);
+            this.d11.TabIndex = 22;
+            this.d11.Texts = "00/00/00";
+            this.d11.UnderlinedStyle = true;
+            // 
+            // d10
+            // 
+            this.d10.BackColor = System.Drawing.Color.White;
+            this.d10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d10.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d10.BorderRadius = 0;
+            this.d10.BorderSize = 1;
+            this.d10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d10.ForeColor = System.Drawing.Color.Silver;
+            this.d10.Location = new System.Drawing.Point(13, 321);
+            this.d10.Margin = new System.Windows.Forms.Padding(4);
+            this.d10.Multiline = false;
+            this.d10.Name = "d10";
+            this.d10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d10.PasswordChar = false;
+            this.d10.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d10.PlaceholderText = "";
+            this.d10.Size = new System.Drawing.Size(94, 35);
+            this.d10.TabIndex = 21;
+            this.d10.Texts = "00/00/00";
+            this.d10.UnderlinedStyle = true;
+            // 
+            // d9
+            // 
+            this.d9.BackColor = System.Drawing.Color.White;
+            this.d9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d9.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d9.BorderRadius = 0;
+            this.d9.BorderSize = 1;
+            this.d9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d9.ForeColor = System.Drawing.Color.Silver;
+            this.d9.Location = new System.Drawing.Point(13, 286);
+            this.d9.Margin = new System.Windows.Forms.Padding(4);
+            this.d9.Multiline = false;
+            this.d9.Name = "d9";
+            this.d9.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d9.PasswordChar = false;
+            this.d9.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d9.PlaceholderText = "";
+            this.d9.Size = new System.Drawing.Size(94, 35);
+            this.d9.TabIndex = 20;
+            this.d9.Texts = "00/00/00";
+            this.d9.UnderlinedStyle = true;
+            // 
+            // d8
+            // 
+            this.d8.BackColor = System.Drawing.Color.White;
+            this.d8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d8.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d8.BorderRadius = 0;
+            this.d8.BorderSize = 1;
+            this.d8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d8.ForeColor = System.Drawing.Color.Silver;
+            this.d8.Location = new System.Drawing.Point(13, 251);
+            this.d8.Margin = new System.Windows.Forms.Padding(4);
+            this.d8.Multiline = false;
+            this.d8.Name = "d8";
+            this.d8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d8.PasswordChar = false;
+            this.d8.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d8.PlaceholderText = "";
+            this.d8.Size = new System.Drawing.Size(94, 35);
+            this.d8.TabIndex = 19;
+            this.d8.Texts = "00/00/00";
+            this.d8.UnderlinedStyle = true;
+            // 
+            // d7
+            // 
+            this.d7.BackColor = System.Drawing.Color.White;
+            this.d7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d7.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d7.BorderRadius = 0;
+            this.d7.BorderSize = 1;
+            this.d7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d7.ForeColor = System.Drawing.Color.Silver;
+            this.d7.Location = new System.Drawing.Point(13, 216);
+            this.d7.Margin = new System.Windows.Forms.Padding(4);
+            this.d7.Multiline = false;
+            this.d7.Name = "d7";
+            this.d7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d7.PasswordChar = false;
+            this.d7.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d7.PlaceholderText = "";
+            this.d7.Size = new System.Drawing.Size(94, 35);
+            this.d7.TabIndex = 18;
+            this.d7.Texts = "00/00/00";
+            this.d7.UnderlinedStyle = true;
+            // 
+            // d6
+            // 
+            this.d6.BackColor = System.Drawing.Color.White;
+            this.d6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d6.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d6.BorderRadius = 0;
+            this.d6.BorderSize = 1;
+            this.d6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d6.ForeColor = System.Drawing.Color.Silver;
+            this.d6.Location = new System.Drawing.Point(13, 179);
+            this.d6.Margin = new System.Windows.Forms.Padding(4);
+            this.d6.Multiline = false;
+            this.d6.Name = "d6";
+            this.d6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d6.PasswordChar = false;
+            this.d6.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d6.PlaceholderText = "";
+            this.d6.Size = new System.Drawing.Size(94, 35);
+            this.d6.TabIndex = 17;
+            this.d6.Texts = "00/00/00";
+            this.d6.UnderlinedStyle = true;
+            this.d6._TextChanged += new System.EventHandler(this.sd6__TextChanged);
+            // 
+            // d5
+            // 
+            this.d5.BackColor = System.Drawing.Color.White;
+            this.d5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d5.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d5.BorderRadius = 0;
+            this.d5.BorderSize = 1;
+            this.d5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d5.ForeColor = System.Drawing.Color.Silver;
+            this.d5.Location = new System.Drawing.Point(13, 142);
+            this.d5.Margin = new System.Windows.Forms.Padding(4);
+            this.d5.Multiline = false;
+            this.d5.Name = "d5";
+            this.d5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d5.PasswordChar = false;
+            this.d5.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d5.PlaceholderText = "";
+            this.d5.Size = new System.Drawing.Size(94, 35);
+            this.d5.TabIndex = 16;
+            this.d5.Texts = "00/00/00";
+            this.d5.UnderlinedStyle = true;
+            this.d5._TextChanged += new System.EventHandler(this.sd5__TextChanged);
+            // 
+            // d4
+            // 
+            this.d4.BackColor = System.Drawing.Color.White;
+            this.d4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d4.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d4.BorderRadius = 0;
+            this.d4.BorderSize = 1;
+            this.d4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d4.ForeColor = System.Drawing.Color.Silver;
+            this.d4.Location = new System.Drawing.Point(13, 109);
+            this.d4.Margin = new System.Windows.Forms.Padding(4);
+            this.d4.Multiline = false;
+            this.d4.Name = "d4";
+            this.d4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d4.PasswordChar = false;
+            this.d4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d4.PlaceholderText = "";
+            this.d4.Size = new System.Drawing.Size(94, 35);
+            this.d4.TabIndex = 15;
+            this.d4.Texts = "00/00/00";
+            this.d4.UnderlinedStyle = true;
+            this.d4._TextChanged += new System.EventHandler(this.sd4__TextChanged);
+            // 
+            // d3
+            // 
+            this.d3.BackColor = System.Drawing.Color.White;
+            this.d3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d3.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d3.BorderRadius = 0;
+            this.d3.BorderSize = 1;
+            this.d3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d3.ForeColor = System.Drawing.Color.Silver;
+            this.d3.Location = new System.Drawing.Point(13, 74);
+            this.d3.Margin = new System.Windows.Forms.Padding(4);
+            this.d3.Multiline = false;
+            this.d3.Name = "d3";
+            this.d3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d3.PasswordChar = false;
+            this.d3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d3.PlaceholderText = "";
+            this.d3.Size = new System.Drawing.Size(94, 35);
+            this.d3.TabIndex = 14;
+            this.d3.Texts = "00/00/00";
+            this.d3.UnderlinedStyle = true;
+            this.d3._TextChanged += new System.EventHandler(this.sd3__TextChanged);
+            // 
+            // d2
+            // 
+            this.d2.BackColor = System.Drawing.Color.White;
+            this.d2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d2.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d2.BorderRadius = 0;
+            this.d2.BorderSize = 1;
+            this.d2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d2.ForeColor = System.Drawing.Color.Silver;
+            this.d2.Location = new System.Drawing.Point(13, 39);
+            this.d2.Margin = new System.Windows.Forms.Padding(4);
+            this.d2.Multiline = false;
+            this.d2.Name = "d2";
+            this.d2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d2.PasswordChar = false;
+            this.d2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d2.PlaceholderText = "";
+            this.d2.Size = new System.Drawing.Size(94, 35);
+            this.d2.TabIndex = 13;
+            this.d2.Texts = "00/00/00";
+            this.d2.UnderlinedStyle = true;
+            this.d2._TextChanged += new System.EventHandler(this.sd2__TextChanged);
+            // 
+            // d1
+            // 
+            this.d1.BackColor = System.Drawing.Color.White;
+            this.d1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d1.BorderRadius = 0;
+            this.d1.BorderSize = 1;
+            this.d1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d1.ForeColor = System.Drawing.Color.Silver;
+            this.d1.Location = new System.Drawing.Point(13, 4);
+            this.d1.Margin = new System.Windows.Forms.Padding(4);
+            this.d1.Multiline = false;
+            this.d1.Name = "d1";
+            this.d1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d1.PasswordChar = false;
+            this.d1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d1.PlaceholderText = "";
+            this.d1.Size = new System.Drawing.Size(94, 35);
+            this.d1.TabIndex = 12;
+            this.d1.Texts = "00/00/00";
+            this.d1.UnderlinedStyle = true;
+            this.d1._TextChanged += new System.EventHandler(this.sd1__TextChanged);
+            // 
+            // sa5
+            // 
+            this.sa5.BackColor = System.Drawing.Color.White;
+            this.sa5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa5.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa5.BorderRadius = 0;
+            this.sa5.BorderSize = 1;
+            this.sa5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa5.Location = new System.Drawing.Point(115, 144);
+            this.sa5.Margin = new System.Windows.Forms.Padding(4);
+            this.sa5.Multiline = false;
+            this.sa5.Name = "sa5";
+            this.sa5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa5.PasswordChar = false;
+            this.sa5.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa5.PlaceholderText = "";
+            this.sa5.Size = new System.Drawing.Size(135, 35);
+            this.sa5.TabIndex = 4;
+            this.sa5.Texts = "$ 1000";
+            this.sa5.UnderlinedStyle = true;
+            // 
+            // sa6
+            // 
+            this.sa6.BackColor = System.Drawing.Color.White;
+            this.sa6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa6.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa6.BorderRadius = 0;
+            this.sa6.BorderSize = 1;
+            this.sa6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa6.Location = new System.Drawing.Point(115, 179);
+            this.sa6.Margin = new System.Windows.Forms.Padding(4);
+            this.sa6.Multiline = false;
+            this.sa6.Name = "sa6";
+            this.sa6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa6.PasswordChar = false;
+            this.sa6.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa6.PlaceholderText = "";
+            this.sa6.Size = new System.Drawing.Size(135, 35);
+            this.sa6.TabIndex = 5;
+            this.sa6.Texts = "$ 1000";
+            this.sa6.UnderlinedStyle = true;
+            // 
+            // sa3
+            // 
+            this.sa3.BackColor = System.Drawing.Color.White;
+            this.sa3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa3.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa3.BorderRadius = 0;
+            this.sa3.BorderSize = 1;
+            this.sa3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa3.Location = new System.Drawing.Point(115, 74);
+            this.sa3.Margin = new System.Windows.Forms.Padding(4);
+            this.sa3.Multiline = false;
+            this.sa3.Name = "sa3";
+            this.sa3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa3.PasswordChar = false;
+            this.sa3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa3.PlaceholderText = "";
+            this.sa3.Size = new System.Drawing.Size(135, 35);
+            this.sa3.TabIndex = 2;
+            this.sa3.Texts = "$ 1000";
+            this.sa3.UnderlinedStyle = true;
+            // 
+            // sa4
+            // 
+            this.sa4.BackColor = System.Drawing.Color.White;
+            this.sa4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa4.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa4.BorderRadius = 0;
+            this.sa4.BorderSize = 1;
+            this.sa4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa4.Location = new System.Drawing.Point(115, 109);
+            this.sa4.Margin = new System.Windows.Forms.Padding(4);
+            this.sa4.Multiline = false;
+            this.sa4.Name = "sa4";
+            this.sa4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa4.PasswordChar = false;
+            this.sa4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa4.PlaceholderText = "";
+            this.sa4.Size = new System.Drawing.Size(135, 35);
+            this.sa4.TabIndex = 3;
+            this.sa4.Texts = "$ 1000";
+            this.sa4.UnderlinedStyle = true;
+            // 
+            // sa1
+            // 
+            this.sa1.BackColor = System.Drawing.Color.White;
+            this.sa1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa1.BorderRadius = 0;
+            this.sa1.BorderSize = 1;
+            this.sa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa1.Location = new System.Drawing.Point(115, 4);
+            this.sa1.Margin = new System.Windows.Forms.Padding(4);
+            this.sa1.Multiline = false;
+            this.sa1.Name = "sa1";
+            this.sa1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa1.PasswordChar = false;
+            this.sa1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa1.PlaceholderText = "";
+            this.sa1.Size = new System.Drawing.Size(135, 35);
+            this.sa1.TabIndex = 0;
+            this.sa1.Texts = "$ 1000";
+            this.sa1.UnderlinedStyle = true;
+            // 
+            // sa2
+            // 
+            this.sa2.BackColor = System.Drawing.Color.White;
+            this.sa2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa2.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa2.BorderRadius = 0;
+            this.sa2.BorderSize = 1;
+            this.sa2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa2.Location = new System.Drawing.Point(115, 39);
+            this.sa2.Margin = new System.Windows.Forms.Padding(4);
+            this.sa2.Multiline = false;
+            this.sa2.Name = "sa2";
+            this.sa2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa2.PasswordChar = false;
+            this.sa2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa2.PlaceholderText = "";
+            this.sa2.Size = new System.Drawing.Size(135, 35);
+            this.sa2.TabIndex = 1;
+            this.sa2.Texts = "$ 1000";
+            this.sa2.UnderlinedStyle = true;
             // 
             // label16
             // 
@@ -2706,1149 +1448,973 @@
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
             // 
-            // rjTextBox73
-            // 
-            this.rjTextBox73.BackColor = System.Drawing.Color.White;
-            this.rjTextBox73.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox73.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox73.BorderRadius = 0;
-            this.rjTextBox73.BorderSize = 1;
-            this.rjTextBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox73.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox73.Location = new System.Drawing.Point(13, 1061);
-            this.rjTextBox73.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox73.Multiline = false;
-            this.rjTextBox73.Name = "rjTextBox73";
-            this.rjTextBox73.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox73.PasswordChar = false;
-            this.rjTextBox73.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox73.PlaceholderText = "";
-            this.rjTextBox73.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox73.TabIndex = 61;
-            this.rjTextBox73.Texts = "00/00/00";
-            this.rjTextBox73.UnderlinedStyle = true;
-            // 
-            // rjTextBox74
-            // 
-            this.rjTextBox74.BackColor = System.Drawing.Color.White;
-            this.rjTextBox74.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox74.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox74.BorderRadius = 0;
-            this.rjTextBox74.BorderSize = 1;
-            this.rjTextBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox74.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox74.Location = new System.Drawing.Point(13, 1026);
-            this.rjTextBox74.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox74.Multiline = false;
-            this.rjTextBox74.Name = "rjTextBox74";
-            this.rjTextBox74.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox74.PasswordChar = false;
-            this.rjTextBox74.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox74.PlaceholderText = "";
-            this.rjTextBox74.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox74.TabIndex = 60;
-            this.rjTextBox74.Texts = "00/00/00";
-            this.rjTextBox74.UnderlinedStyle = true;
-            // 
-            // rjTextBox75
-            // 
-            this.rjTextBox75.BackColor = System.Drawing.Color.White;
-            this.rjTextBox75.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox75.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox75.BorderRadius = 0;
-            this.rjTextBox75.BorderSize = 1;
-            this.rjTextBox75.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox75.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox75.Location = new System.Drawing.Point(13, 991);
-            this.rjTextBox75.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox75.Multiline = false;
-            this.rjTextBox75.Name = "rjTextBox75";
-            this.rjTextBox75.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox75.PasswordChar = false;
-            this.rjTextBox75.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox75.PlaceholderText = "";
-            this.rjTextBox75.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox75.TabIndex = 59;
-            this.rjTextBox75.Texts = "00/00/00";
-            this.rjTextBox75.UnderlinedStyle = true;
-            // 
-            // rjTextBox76
-            // 
-            this.rjTextBox76.BackColor = System.Drawing.Color.White;
-            this.rjTextBox76.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox76.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox76.BorderRadius = 0;
-            this.rjTextBox76.BorderSize = 1;
-            this.rjTextBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox76.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox76.Location = new System.Drawing.Point(13, 956);
-            this.rjTextBox76.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox76.Multiline = false;
-            this.rjTextBox76.Name = "rjTextBox76";
-            this.rjTextBox76.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox76.PasswordChar = false;
-            this.rjTextBox76.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox76.PlaceholderText = "";
-            this.rjTextBox76.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox76.TabIndex = 58;
-            this.rjTextBox76.Texts = "00/00/00";
-            this.rjTextBox76.UnderlinedStyle = true;
-            // 
-            // rjTextBox77
-            // 
-            this.rjTextBox77.BackColor = System.Drawing.Color.White;
-            this.rjTextBox77.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox77.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox77.BorderRadius = 0;
-            this.rjTextBox77.BorderSize = 1;
-            this.rjTextBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox77.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox77.Location = new System.Drawing.Point(13, 920);
-            this.rjTextBox77.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox77.Multiline = false;
-            this.rjTextBox77.Name = "rjTextBox77";
-            this.rjTextBox77.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox77.PasswordChar = false;
-            this.rjTextBox77.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox77.PlaceholderText = "";
-            this.rjTextBox77.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox77.TabIndex = 57;
-            this.rjTextBox77.Texts = "00/00/00";
-            this.rjTextBox77.UnderlinedStyle = true;
-            // 
-            // rjTextBox78
-            // 
-            this.rjTextBox78.BackColor = System.Drawing.Color.White;
-            this.rjTextBox78.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox78.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox78.BorderRadius = 0;
-            this.rjTextBox78.BorderSize = 1;
-            this.rjTextBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox78.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox78.Location = new System.Drawing.Point(13, 885);
-            this.rjTextBox78.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox78.Multiline = false;
-            this.rjTextBox78.Name = "rjTextBox78";
-            this.rjTextBox78.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox78.PasswordChar = false;
-            this.rjTextBox78.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox78.PlaceholderText = "";
-            this.rjTextBox78.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox78.TabIndex = 56;
-            this.rjTextBox78.Texts = "00/00/00";
-            this.rjTextBox78.UnderlinedStyle = true;
-            // 
-            // rjTextBox79
-            // 
-            this.rjTextBox79.BackColor = System.Drawing.Color.White;
-            this.rjTextBox79.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox79.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox79.BorderRadius = 0;
-            this.rjTextBox79.BorderSize = 1;
-            this.rjTextBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox79.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox79.Location = new System.Drawing.Point(13, 850);
-            this.rjTextBox79.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox79.Multiline = false;
-            this.rjTextBox79.Name = "rjTextBox79";
-            this.rjTextBox79.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox79.PasswordChar = false;
-            this.rjTextBox79.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox79.PlaceholderText = "";
-            this.rjTextBox79.Size = new System.Drawing.Size(94, 35);
-            this.rjTextBox79.TabIndex = 55;
-            this.rjTextBox79.Texts = "00/00/00";
-            this.rjTextBox79.UnderlinedStyle = true;
-            // 
-            // rjTextBox80
-            // 
-            this.rjTextBox80.BackColor = System.Drawing.Color.White;
-            this.rjTextBox80.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox80.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox80.BorderRadius = 0;
-            this.rjTextBox80.BorderSize = 1;
-            this.rjTextBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox80.Location = new System.Drawing.Point(115, 1026);
-            this.rjTextBox80.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox80.Multiline = false;
-            this.rjTextBox80.Name = "rjTextBox80";
-            this.rjTextBox80.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox80.PasswordChar = false;
-            this.rjTextBox80.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox80.PlaceholderText = "";
-            this.rjTextBox80.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox80.TabIndex = 53;
-            this.rjTextBox80.Texts = "$ 1000";
-            this.rjTextBox80.UnderlinedStyle = true;
-            // 
-            // rjTextBox81
-            // 
-            this.rjTextBox81.BackColor = System.Drawing.Color.White;
-            this.rjTextBox81.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox81.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox81.BorderRadius = 0;
-            this.rjTextBox81.BorderSize = 1;
-            this.rjTextBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox81.Location = new System.Drawing.Point(115, 1061);
-            this.rjTextBox81.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox81.Multiline = false;
-            this.rjTextBox81.Name = "rjTextBox81";
-            this.rjTextBox81.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox81.PasswordChar = false;
-            this.rjTextBox81.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox81.PlaceholderText = "";
-            this.rjTextBox81.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox81.TabIndex = 54;
-            this.rjTextBox81.Texts = "$ 1000";
-            this.rjTextBox81.UnderlinedStyle = true;
-            // 
-            // rjTextBox82
-            // 
-            this.rjTextBox82.BackColor = System.Drawing.Color.White;
-            this.rjTextBox82.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox82.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox82.BorderRadius = 0;
-            this.rjTextBox82.BorderSize = 1;
-            this.rjTextBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox82.Location = new System.Drawing.Point(115, 956);
-            this.rjTextBox82.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox82.Multiline = false;
-            this.rjTextBox82.Name = "rjTextBox82";
-            this.rjTextBox82.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox82.PasswordChar = false;
-            this.rjTextBox82.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox82.PlaceholderText = "";
-            this.rjTextBox82.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox82.TabIndex = 51;
-            this.rjTextBox82.Texts = "$ 1000";
-            this.rjTextBox82.UnderlinedStyle = true;
-            // 
-            // rjTextBox83
-            // 
-            this.rjTextBox83.BackColor = System.Drawing.Color.White;
-            this.rjTextBox83.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox83.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox83.BorderRadius = 0;
-            this.rjTextBox83.BorderSize = 1;
-            this.rjTextBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox83.Location = new System.Drawing.Point(115, 991);
-            this.rjTextBox83.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox83.Multiline = false;
-            this.rjTextBox83.Name = "rjTextBox83";
-            this.rjTextBox83.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox83.PasswordChar = false;
-            this.rjTextBox83.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox83.PlaceholderText = "";
-            this.rjTextBox83.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox83.TabIndex = 52;
-            this.rjTextBox83.Texts = "$ 1000";
-            this.rjTextBox83.UnderlinedStyle = true;
-            // 
-            // rjTextBox84
-            // 
-            this.rjTextBox84.BackColor = System.Drawing.Color.White;
-            this.rjTextBox84.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox84.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox84.BorderRadius = 0;
-            this.rjTextBox84.BorderSize = 1;
-            this.rjTextBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox84.Location = new System.Drawing.Point(115, 885);
-            this.rjTextBox84.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox84.Multiline = false;
-            this.rjTextBox84.Name = "rjTextBox84";
-            this.rjTextBox84.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox84.PasswordChar = false;
-            this.rjTextBox84.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox84.PlaceholderText = "";
-            this.rjTextBox84.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox84.TabIndex = 49;
-            this.rjTextBox84.Texts = "$ 1000";
-            this.rjTextBox84.UnderlinedStyle = true;
-            // 
-            // rjTextBox85
-            // 
-            this.rjTextBox85.BackColor = System.Drawing.Color.White;
-            this.rjTextBox85.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox85.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox85.BorderRadius = 0;
-            this.rjTextBox85.BorderSize = 1;
-            this.rjTextBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox85.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox85.Location = new System.Drawing.Point(115, 920);
-            this.rjTextBox85.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox85.Multiline = false;
-            this.rjTextBox85.Name = "rjTextBox85";
-            this.rjTextBox85.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox85.PasswordChar = false;
-            this.rjTextBox85.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox85.PlaceholderText = "";
-            this.rjTextBox85.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox85.TabIndex = 50;
-            this.rjTextBox85.Texts = "$ 1000";
-            this.rjTextBox85.UnderlinedStyle = true;
-            // 
-            // rjTextBox86
-            // 
-            this.rjTextBox86.BackColor = System.Drawing.Color.White;
-            this.rjTextBox86.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox86.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox86.BorderRadius = 0;
-            this.rjTextBox86.BorderSize = 1;
-            this.rjTextBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox86.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox86.Location = new System.Drawing.Point(115, 850);
-            this.rjTextBox86.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox86.Multiline = false;
-            this.rjTextBox86.Name = "rjTextBox86";
-            this.rjTextBox86.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox86.PasswordChar = false;
-            this.rjTextBox86.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox86.PlaceholderText = "";
-            this.rjTextBox86.Size = new System.Drawing.Size(150, 35);
-            this.rjTextBox86.TabIndex = 48;
-            this.rjTextBox86.Texts = "$ 1000";
-            this.rjTextBox86.UnderlinedStyle = true;
-            // 
-            // rjTextBox87
-            // 
-            this.rjTextBox87.BackColor = System.Drawing.Color.White;
-            this.rjTextBox87.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox87.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox87.BorderRadius = 0;
-            this.rjTextBox87.BorderSize = 1;
-            this.rjTextBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox87.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox87.Location = new System.Drawing.Point(120, 813);
-            this.rjTextBox87.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox87.Multiline = false;
-            this.rjTextBox87.Name = "rjTextBox87";
-            this.rjTextBox87.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox87.PasswordChar = false;
-            this.rjTextBox87.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox87.PlaceholderText = "";
-            this.rjTextBox87.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox87.TabIndex = 47;
-            this.rjTextBox87.Texts = "Note...";
-            this.rjTextBox87.UnderlinedStyle = true;
-            // 
-            // rjTextBox88
-            // 
-            this.rjTextBox88.BackColor = System.Drawing.Color.White;
-            this.rjTextBox88.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox88.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox88.BorderRadius = 0;
-            this.rjTextBox88.BorderSize = 1;
-            this.rjTextBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox88.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox88.Location = new System.Drawing.Point(120, 778);
-            this.rjTextBox88.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox88.Multiline = false;
-            this.rjTextBox88.Name = "rjTextBox88";
-            this.rjTextBox88.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox88.PasswordChar = false;
-            this.rjTextBox88.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox88.PlaceholderText = "";
-            this.rjTextBox88.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox88.TabIndex = 46;
-            this.rjTextBox88.Texts = "Note...";
-            this.rjTextBox88.UnderlinedStyle = true;
-            // 
-            // rjTextBox89
-            // 
-            this.rjTextBox89.BackColor = System.Drawing.Color.White;
-            this.rjTextBox89.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox89.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox89.BorderRadius = 0;
-            this.rjTextBox89.BorderSize = 1;
-            this.rjTextBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox89.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox89.Location = new System.Drawing.Point(120, 743);
-            this.rjTextBox89.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox89.Multiline = false;
-            this.rjTextBox89.Name = "rjTextBox89";
-            this.rjTextBox89.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox89.PasswordChar = false;
-            this.rjTextBox89.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox89.PlaceholderText = "";
-            this.rjTextBox89.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox89.TabIndex = 45;
-            this.rjTextBox89.Texts = "Note...";
-            this.rjTextBox89.UnderlinedStyle = true;
-            // 
-            // rjTextBox90
-            // 
-            this.rjTextBox90.BackColor = System.Drawing.Color.White;
-            this.rjTextBox90.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox90.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox90.BorderRadius = 0;
-            this.rjTextBox90.BorderSize = 1;
-            this.rjTextBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox90.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox90.Location = new System.Drawing.Point(120, 708);
-            this.rjTextBox90.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox90.Multiline = false;
-            this.rjTextBox90.Name = "rjTextBox90";
-            this.rjTextBox90.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox90.PasswordChar = false;
-            this.rjTextBox90.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox90.PlaceholderText = "";
-            this.rjTextBox90.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox90.TabIndex = 44;
-            this.rjTextBox90.Texts = "Note...";
-            this.rjTextBox90.UnderlinedStyle = true;
-            // 
-            // rjTextBox91
-            // 
-            this.rjTextBox91.BackColor = System.Drawing.Color.White;
-            this.rjTextBox91.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox91.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox91.BorderRadius = 0;
-            this.rjTextBox91.BorderSize = 1;
-            this.rjTextBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox91.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox91.Location = new System.Drawing.Point(120, 672);
-            this.rjTextBox91.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox91.Multiline = false;
-            this.rjTextBox91.Name = "rjTextBox91";
-            this.rjTextBox91.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox91.PasswordChar = false;
-            this.rjTextBox91.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox91.PlaceholderText = "";
-            this.rjTextBox91.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox91.TabIndex = 43;
-            this.rjTextBox91.Texts = "Note...";
-            this.rjTextBox91.UnderlinedStyle = true;
-            // 
-            // rjTextBox92
-            // 
-            this.rjTextBox92.BackColor = System.Drawing.Color.White;
-            this.rjTextBox92.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox92.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox92.BorderRadius = 0;
-            this.rjTextBox92.BorderSize = 1;
-            this.rjTextBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox92.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox92.Location = new System.Drawing.Point(120, 637);
-            this.rjTextBox92.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox92.Multiline = false;
-            this.rjTextBox92.Name = "rjTextBox92";
-            this.rjTextBox92.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox92.PasswordChar = false;
-            this.rjTextBox92.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox92.PlaceholderText = "";
-            this.rjTextBox92.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox92.TabIndex = 42;
-            this.rjTextBox92.Texts = "Note...";
-            this.rjTextBox92.UnderlinedStyle = true;
-            // 
-            // rjTextBox93
-            // 
-            this.rjTextBox93.BackColor = System.Drawing.Color.White;
-            this.rjTextBox93.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox93.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox93.BorderRadius = 0;
-            this.rjTextBox93.BorderSize = 1;
-            this.rjTextBox93.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox93.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox93.Location = new System.Drawing.Point(120, 602);
-            this.rjTextBox93.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox93.Multiline = false;
-            this.rjTextBox93.Name = "rjTextBox93";
-            this.rjTextBox93.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox93.PasswordChar = false;
-            this.rjTextBox93.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox93.PlaceholderText = "";
-            this.rjTextBox93.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox93.TabIndex = 41;
-            this.rjTextBox93.Texts = "Note...";
-            this.rjTextBox93.UnderlinedStyle = true;
-            // 
-            // rjTextBox94
-            // 
-            this.rjTextBox94.BackColor = System.Drawing.Color.White;
-            this.rjTextBox94.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox94.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox94.BorderRadius = 0;
-            this.rjTextBox94.BorderSize = 1;
-            this.rjTextBox94.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox94.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox94.Location = new System.Drawing.Point(120, 567);
-            this.rjTextBox94.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox94.Multiline = false;
-            this.rjTextBox94.Name = "rjTextBox94";
-            this.rjTextBox94.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox94.PasswordChar = false;
-            this.rjTextBox94.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox94.PlaceholderText = "";
-            this.rjTextBox94.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox94.TabIndex = 40;
-            this.rjTextBox94.Texts = "Note...";
-            this.rjTextBox94.UnderlinedStyle = true;
-            // 
-            // rjTextBox95
-            // 
-            this.rjTextBox95.BackColor = System.Drawing.Color.White;
-            this.rjTextBox95.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox95.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox95.BorderRadius = 0;
-            this.rjTextBox95.BorderSize = 1;
-            this.rjTextBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox95.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox95.Location = new System.Drawing.Point(120, 532);
-            this.rjTextBox95.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox95.Multiline = false;
-            this.rjTextBox95.Name = "rjTextBox95";
-            this.rjTextBox95.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox95.PasswordChar = false;
-            this.rjTextBox95.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox95.PlaceholderText = "";
-            this.rjTextBox95.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox95.TabIndex = 39;
-            this.rjTextBox95.Texts = "Note...";
-            this.rjTextBox95.UnderlinedStyle = true;
-            // 
-            // rjTextBox96
-            // 
-            this.rjTextBox96.BackColor = System.Drawing.Color.White;
-            this.rjTextBox96.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox96.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox96.BorderRadius = 0;
-            this.rjTextBox96.BorderSize = 1;
-            this.rjTextBox96.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox96.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox96.Location = new System.Drawing.Point(120, 497);
-            this.rjTextBox96.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox96.Multiline = false;
-            this.rjTextBox96.Name = "rjTextBox96";
-            this.rjTextBox96.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox96.PasswordChar = false;
-            this.rjTextBox96.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox96.PlaceholderText = "";
-            this.rjTextBox96.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox96.TabIndex = 38;
-            this.rjTextBox96.Texts = "Note...";
-            this.rjTextBox96.UnderlinedStyle = true;
-            // 
-            // rjTextBox97
-            // 
-            this.rjTextBox97.BackColor = System.Drawing.Color.White;
-            this.rjTextBox97.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox97.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox97.BorderRadius = 0;
-            this.rjTextBox97.BorderSize = 1;
-            this.rjTextBox97.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox97.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox97.Location = new System.Drawing.Point(120, 462);
-            this.rjTextBox97.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox97.Multiline = false;
-            this.rjTextBox97.Name = "rjTextBox97";
-            this.rjTextBox97.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox97.PasswordChar = false;
-            this.rjTextBox97.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox97.PlaceholderText = "";
-            this.rjTextBox97.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox97.TabIndex = 37;
-            this.rjTextBox97.Texts = "Note...";
-            this.rjTextBox97.UnderlinedStyle = true;
-            // 
-            // rjTextBox98
-            // 
-            this.rjTextBox98.BackColor = System.Drawing.Color.White;
-            this.rjTextBox98.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox98.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox98.BorderRadius = 0;
-            this.rjTextBox98.BorderSize = 1;
-            this.rjTextBox98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox98.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox98.Location = new System.Drawing.Point(120, 427);
-            this.rjTextBox98.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox98.Multiline = false;
-            this.rjTextBox98.Name = "rjTextBox98";
-            this.rjTextBox98.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox98.PasswordChar = false;
-            this.rjTextBox98.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox98.PlaceholderText = "";
-            this.rjTextBox98.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox98.TabIndex = 36;
-            this.rjTextBox98.Texts = "Note...";
-            this.rjTextBox98.UnderlinedStyle = true;
-            // 
-            // rjTextBox99
-            // 
-            this.rjTextBox99.BackColor = System.Drawing.Color.White;
-            this.rjTextBox99.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox99.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox99.BorderRadius = 0;
-            this.rjTextBox99.BorderSize = 1;
-            this.rjTextBox99.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox99.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox99.Location = new System.Drawing.Point(13, 778);
-            this.rjTextBox99.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox99.Multiline = false;
-            this.rjTextBox99.Name = "rjTextBox99";
-            this.rjTextBox99.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox99.PasswordChar = false;
-            this.rjTextBox99.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox99.PlaceholderText = "";
-            this.rjTextBox99.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox99.TabIndex = 34;
-            this.rjTextBox99.Texts = "$ 1000";
-            this.rjTextBox99.UnderlinedStyle = true;
-            // 
-            // rjTextBox100
-            // 
-            this.rjTextBox100.BackColor = System.Drawing.Color.White;
-            this.rjTextBox100.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox100.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox100.BorderRadius = 0;
-            this.rjTextBox100.BorderSize = 1;
-            this.rjTextBox100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox100.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox100.Location = new System.Drawing.Point(13, 813);
-            this.rjTextBox100.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox100.Multiline = false;
-            this.rjTextBox100.Name = "rjTextBox100";
-            this.rjTextBox100.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox100.PasswordChar = false;
-            this.rjTextBox100.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox100.PlaceholderText = "";
-            this.rjTextBox100.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox100.TabIndex = 35;
-            this.rjTextBox100.Texts = "$ 1000";
-            this.rjTextBox100.UnderlinedStyle = true;
-            // 
-            // rjTextBox101
-            // 
-            this.rjTextBox101.BackColor = System.Drawing.Color.White;
-            this.rjTextBox101.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox101.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox101.BorderRadius = 0;
-            this.rjTextBox101.BorderSize = 1;
-            this.rjTextBox101.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox101.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox101.Location = new System.Drawing.Point(13, 708);
-            this.rjTextBox101.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox101.Multiline = false;
-            this.rjTextBox101.Name = "rjTextBox101";
-            this.rjTextBox101.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox101.PasswordChar = false;
-            this.rjTextBox101.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox101.PlaceholderText = "";
-            this.rjTextBox101.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox101.TabIndex = 32;
-            this.rjTextBox101.Texts = "$ 1000";
-            this.rjTextBox101.UnderlinedStyle = true;
-            // 
-            // rjTextBox102
-            // 
-            this.rjTextBox102.BackColor = System.Drawing.Color.White;
-            this.rjTextBox102.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox102.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox102.BorderRadius = 0;
-            this.rjTextBox102.BorderSize = 1;
-            this.rjTextBox102.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox102.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox102.Location = new System.Drawing.Point(13, 743);
-            this.rjTextBox102.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox102.Multiline = false;
-            this.rjTextBox102.Name = "rjTextBox102";
-            this.rjTextBox102.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox102.PasswordChar = false;
-            this.rjTextBox102.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox102.PlaceholderText = "";
-            this.rjTextBox102.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox102.TabIndex = 33;
-            this.rjTextBox102.Texts = "$ 1000";
-            this.rjTextBox102.UnderlinedStyle = true;
-            // 
-            // rjTextBox103
-            // 
-            this.rjTextBox103.BackColor = System.Drawing.Color.White;
-            this.rjTextBox103.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox103.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox103.BorderRadius = 0;
-            this.rjTextBox103.BorderSize = 1;
-            this.rjTextBox103.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox103.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox103.Location = new System.Drawing.Point(13, 637);
-            this.rjTextBox103.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox103.Multiline = false;
-            this.rjTextBox103.Name = "rjTextBox103";
-            this.rjTextBox103.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox103.PasswordChar = false;
-            this.rjTextBox103.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox103.PlaceholderText = "";
-            this.rjTextBox103.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox103.TabIndex = 30;
-            this.rjTextBox103.Texts = "$ 1000";
-            this.rjTextBox103.UnderlinedStyle = true;
-            // 
-            // rjTextBox104
-            // 
-            this.rjTextBox104.BackColor = System.Drawing.Color.White;
-            this.rjTextBox104.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox104.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox104.BorderRadius = 0;
-            this.rjTextBox104.BorderSize = 1;
-            this.rjTextBox104.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox104.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox104.Location = new System.Drawing.Point(13, 672);
-            this.rjTextBox104.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox104.Multiline = false;
-            this.rjTextBox104.Name = "rjTextBox104";
-            this.rjTextBox104.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox104.PasswordChar = false;
-            this.rjTextBox104.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox104.PlaceholderText = "";
-            this.rjTextBox104.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox104.TabIndex = 31;
-            this.rjTextBox104.Texts = "$ 1000";
-            this.rjTextBox104.UnderlinedStyle = true;
-            // 
-            // rjTextBox105
-            // 
-            this.rjTextBox105.BackColor = System.Drawing.Color.White;
-            this.rjTextBox105.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox105.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox105.BorderRadius = 0;
-            this.rjTextBox105.BorderSize = 1;
-            this.rjTextBox105.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox105.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox105.Location = new System.Drawing.Point(13, 567);
-            this.rjTextBox105.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox105.Multiline = false;
-            this.rjTextBox105.Name = "rjTextBox105";
-            this.rjTextBox105.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox105.PasswordChar = false;
-            this.rjTextBox105.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox105.PlaceholderText = "";
-            this.rjTextBox105.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox105.TabIndex = 28;
-            this.rjTextBox105.Texts = "$ 1000";
-            this.rjTextBox105.UnderlinedStyle = true;
-            // 
-            // rjTextBox106
-            // 
-            this.rjTextBox106.BackColor = System.Drawing.Color.White;
-            this.rjTextBox106.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox106.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox106.BorderRadius = 0;
-            this.rjTextBox106.BorderSize = 1;
-            this.rjTextBox106.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox106.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox106.Location = new System.Drawing.Point(13, 602);
-            this.rjTextBox106.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox106.Multiline = false;
-            this.rjTextBox106.Name = "rjTextBox106";
-            this.rjTextBox106.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox106.PasswordChar = false;
-            this.rjTextBox106.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox106.PlaceholderText = "";
-            this.rjTextBox106.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox106.TabIndex = 29;
-            this.rjTextBox106.Texts = "$ 1000";
-            this.rjTextBox106.UnderlinedStyle = true;
-            // 
-            // rjTextBox107
-            // 
-            this.rjTextBox107.BackColor = System.Drawing.Color.White;
-            this.rjTextBox107.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox107.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox107.BorderRadius = 0;
-            this.rjTextBox107.BorderSize = 1;
-            this.rjTextBox107.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox107.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox107.Location = new System.Drawing.Point(13, 497);
-            this.rjTextBox107.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox107.Multiline = false;
-            this.rjTextBox107.Name = "rjTextBox107";
-            this.rjTextBox107.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox107.PasswordChar = false;
-            this.rjTextBox107.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox107.PlaceholderText = "";
-            this.rjTextBox107.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox107.TabIndex = 26;
-            this.rjTextBox107.Texts = "$ 1000";
-            this.rjTextBox107.UnderlinedStyle = true;
-            // 
-            // rjTextBox108
-            // 
-            this.rjTextBox108.BackColor = System.Drawing.Color.White;
-            this.rjTextBox108.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox108.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox108.BorderRadius = 0;
-            this.rjTextBox108.BorderSize = 1;
-            this.rjTextBox108.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox108.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox108.Location = new System.Drawing.Point(13, 532);
-            this.rjTextBox108.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox108.Multiline = false;
-            this.rjTextBox108.Name = "rjTextBox108";
-            this.rjTextBox108.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox108.PasswordChar = false;
-            this.rjTextBox108.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox108.PlaceholderText = "";
-            this.rjTextBox108.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox108.TabIndex = 27;
-            this.rjTextBox108.Texts = "$ 1000";
-            this.rjTextBox108.UnderlinedStyle = true;
-            // 
-            // rjTextBox109
-            // 
-            this.rjTextBox109.BackColor = System.Drawing.Color.White;
-            this.rjTextBox109.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox109.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox109.BorderRadius = 0;
-            this.rjTextBox109.BorderSize = 1;
-            this.rjTextBox109.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox109.Location = new System.Drawing.Point(13, 427);
-            this.rjTextBox109.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox109.Multiline = false;
-            this.rjTextBox109.Name = "rjTextBox109";
-            this.rjTextBox109.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox109.PasswordChar = false;
-            this.rjTextBox109.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox109.PlaceholderText = "";
-            this.rjTextBox109.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox109.TabIndex = 24;
-            this.rjTextBox109.Texts = "$ 1000";
-            this.rjTextBox109.UnderlinedStyle = true;
-            // 
-            // rjTextBox110
-            // 
-            this.rjTextBox110.BackColor = System.Drawing.Color.White;
-            this.rjTextBox110.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox110.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox110.BorderRadius = 0;
-            this.rjTextBox110.BorderSize = 1;
-            this.rjTextBox110.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox110.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox110.Location = new System.Drawing.Point(13, 462);
-            this.rjTextBox110.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox110.Multiline = false;
-            this.rjTextBox110.Name = "rjTextBox110";
-            this.rjTextBox110.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox110.PasswordChar = false;
-            this.rjTextBox110.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox110.PlaceholderText = "";
-            this.rjTextBox110.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox110.TabIndex = 25;
-            this.rjTextBox110.Texts = "$ 1000";
-            this.rjTextBox110.UnderlinedStyle = true;
-            // 
-            // rjTextBox111
-            // 
-            this.rjTextBox111.BackColor = System.Drawing.Color.White;
-            this.rjTextBox111.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox111.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox111.BorderRadius = 0;
-            this.rjTextBox111.BorderSize = 1;
-            this.rjTextBox111.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox111.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox111.Location = new System.Drawing.Point(120, 1061);
-            this.rjTextBox111.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox111.Multiline = false;
-            this.rjTextBox111.Name = "rjTextBox111";
-            this.rjTextBox111.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox111.PasswordChar = false;
-            this.rjTextBox111.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox111.PlaceholderText = "";
-            this.rjTextBox111.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox111.TabIndex = 61;
-            this.rjTextBox111.Texts = "Note...";
-            this.rjTextBox111.UnderlinedStyle = true;
-            // 
-            // rjTextBox112
-            // 
-            this.rjTextBox112.BackColor = System.Drawing.Color.White;
-            this.rjTextBox112.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox112.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox112.BorderRadius = 0;
-            this.rjTextBox112.BorderSize = 1;
-            this.rjTextBox112.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox112.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox112.Location = new System.Drawing.Point(120, 1026);
-            this.rjTextBox112.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox112.Multiline = false;
-            this.rjTextBox112.Name = "rjTextBox112";
-            this.rjTextBox112.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox112.PasswordChar = false;
-            this.rjTextBox112.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox112.PlaceholderText = "";
-            this.rjTextBox112.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox112.TabIndex = 60;
-            this.rjTextBox112.Texts = "Note...";
-            this.rjTextBox112.UnderlinedStyle = true;
-            // 
-            // rjTextBox113
-            // 
-            this.rjTextBox113.BackColor = System.Drawing.Color.White;
-            this.rjTextBox113.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox113.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox113.BorderRadius = 0;
-            this.rjTextBox113.BorderSize = 1;
-            this.rjTextBox113.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox113.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox113.Location = new System.Drawing.Point(120, 991);
-            this.rjTextBox113.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox113.Multiline = false;
-            this.rjTextBox113.Name = "rjTextBox113";
-            this.rjTextBox113.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox113.PasswordChar = false;
-            this.rjTextBox113.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox113.PlaceholderText = "";
-            this.rjTextBox113.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox113.TabIndex = 59;
-            this.rjTextBox113.Texts = "Note...";
-            this.rjTextBox113.UnderlinedStyle = true;
-            // 
-            // rjTextBox114
-            // 
-            this.rjTextBox114.BackColor = System.Drawing.Color.White;
-            this.rjTextBox114.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox114.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox114.BorderRadius = 0;
-            this.rjTextBox114.BorderSize = 1;
-            this.rjTextBox114.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox114.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox114.Location = new System.Drawing.Point(120, 956);
-            this.rjTextBox114.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox114.Multiline = false;
-            this.rjTextBox114.Name = "rjTextBox114";
-            this.rjTextBox114.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox114.PasswordChar = false;
-            this.rjTextBox114.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox114.PlaceholderText = "";
-            this.rjTextBox114.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox114.TabIndex = 58;
-            this.rjTextBox114.Texts = "Note...";
-            this.rjTextBox114.UnderlinedStyle = true;
-            // 
-            // rjTextBox115
-            // 
-            this.rjTextBox115.BackColor = System.Drawing.Color.White;
-            this.rjTextBox115.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox115.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox115.BorderRadius = 0;
-            this.rjTextBox115.BorderSize = 1;
-            this.rjTextBox115.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox115.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox115.Location = new System.Drawing.Point(120, 920);
-            this.rjTextBox115.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox115.Multiline = false;
-            this.rjTextBox115.Name = "rjTextBox115";
-            this.rjTextBox115.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox115.PasswordChar = false;
-            this.rjTextBox115.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox115.PlaceholderText = "";
-            this.rjTextBox115.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox115.TabIndex = 57;
-            this.rjTextBox115.Texts = "Note...";
-            this.rjTextBox115.UnderlinedStyle = true;
-            // 
-            // rjTextBox116
-            // 
-            this.rjTextBox116.BackColor = System.Drawing.Color.White;
-            this.rjTextBox116.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox116.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox116.BorderRadius = 0;
-            this.rjTextBox116.BorderSize = 1;
-            this.rjTextBox116.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox116.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox116.Location = new System.Drawing.Point(120, 885);
-            this.rjTextBox116.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox116.Multiline = false;
-            this.rjTextBox116.Name = "rjTextBox116";
-            this.rjTextBox116.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox116.PasswordChar = false;
-            this.rjTextBox116.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox116.PlaceholderText = "";
-            this.rjTextBox116.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox116.TabIndex = 56;
-            this.rjTextBox116.Texts = "Note...";
-            this.rjTextBox116.UnderlinedStyle = true;
-            // 
-            // rjTextBox117
-            // 
-            this.rjTextBox117.BackColor = System.Drawing.Color.White;
-            this.rjTextBox117.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox117.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox117.BorderRadius = 0;
-            this.rjTextBox117.BorderSize = 1;
-            this.rjTextBox117.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox117.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox117.Location = new System.Drawing.Point(120, 850);
-            this.rjTextBox117.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox117.Multiline = false;
-            this.rjTextBox117.Name = "rjTextBox117";
-            this.rjTextBox117.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox117.PasswordChar = false;
-            this.rjTextBox117.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox117.PlaceholderText = "";
-            this.rjTextBox117.Size = new System.Drawing.Size(326, 35);
-            this.rjTextBox117.TabIndex = 55;
-            this.rjTextBox117.Texts = "Note...";
-            this.rjTextBox117.UnderlinedStyle = true;
-            // 
-            // rjTextBox118
-            // 
-            this.rjTextBox118.BackColor = System.Drawing.Color.White;
-            this.rjTextBox118.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox118.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox118.BorderRadius = 0;
-            this.rjTextBox118.BorderSize = 1;
-            this.rjTextBox118.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox118.Location = new System.Drawing.Point(13, 1026);
-            this.rjTextBox118.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox118.Multiline = false;
-            this.rjTextBox118.Name = "rjTextBox118";
-            this.rjTextBox118.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox118.PasswordChar = false;
-            this.rjTextBox118.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox118.PlaceholderText = "";
-            this.rjTextBox118.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox118.TabIndex = 53;
-            this.rjTextBox118.Texts = "$ 1000";
-            this.rjTextBox118.UnderlinedStyle = true;
-            // 
-            // rjTextBox119
-            // 
-            this.rjTextBox119.BackColor = System.Drawing.Color.White;
-            this.rjTextBox119.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox119.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox119.BorderRadius = 0;
-            this.rjTextBox119.BorderSize = 1;
-            this.rjTextBox119.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox119.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox119.Location = new System.Drawing.Point(13, 1061);
-            this.rjTextBox119.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox119.Multiline = false;
-            this.rjTextBox119.Name = "rjTextBox119";
-            this.rjTextBox119.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox119.PasswordChar = false;
-            this.rjTextBox119.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox119.PlaceholderText = "";
-            this.rjTextBox119.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox119.TabIndex = 54;
-            this.rjTextBox119.Texts = "$ 1000";
-            this.rjTextBox119.UnderlinedStyle = true;
-            // 
-            // rjTextBox120
-            // 
-            this.rjTextBox120.BackColor = System.Drawing.Color.White;
-            this.rjTextBox120.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox120.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox120.BorderRadius = 0;
-            this.rjTextBox120.BorderSize = 1;
-            this.rjTextBox120.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox120.Location = new System.Drawing.Point(13, 956);
-            this.rjTextBox120.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox120.Multiline = false;
-            this.rjTextBox120.Name = "rjTextBox120";
-            this.rjTextBox120.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox120.PasswordChar = false;
-            this.rjTextBox120.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox120.PlaceholderText = "";
-            this.rjTextBox120.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox120.TabIndex = 51;
-            this.rjTextBox120.Texts = "$ 1000";
-            this.rjTextBox120.UnderlinedStyle = true;
-            // 
-            // rjTextBox121
-            // 
-            this.rjTextBox121.BackColor = System.Drawing.Color.White;
-            this.rjTextBox121.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox121.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox121.BorderRadius = 0;
-            this.rjTextBox121.BorderSize = 1;
-            this.rjTextBox121.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox121.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox121.Location = new System.Drawing.Point(13, 991);
-            this.rjTextBox121.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox121.Multiline = false;
-            this.rjTextBox121.Name = "rjTextBox121";
-            this.rjTextBox121.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox121.PasswordChar = false;
-            this.rjTextBox121.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox121.PlaceholderText = "";
-            this.rjTextBox121.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox121.TabIndex = 52;
-            this.rjTextBox121.Texts = "$ 1000";
-            this.rjTextBox121.UnderlinedStyle = true;
-            // 
-            // rjTextBox122
-            // 
-            this.rjTextBox122.BackColor = System.Drawing.Color.White;
-            this.rjTextBox122.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox122.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox122.BorderRadius = 0;
-            this.rjTextBox122.BorderSize = 1;
-            this.rjTextBox122.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox122.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox122.Location = new System.Drawing.Point(13, 885);
-            this.rjTextBox122.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox122.Multiline = false;
-            this.rjTextBox122.Name = "rjTextBox122";
-            this.rjTextBox122.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox122.PasswordChar = false;
-            this.rjTextBox122.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox122.PlaceholderText = "";
-            this.rjTextBox122.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox122.TabIndex = 49;
-            this.rjTextBox122.Texts = "$ 1000";
-            this.rjTextBox122.UnderlinedStyle = true;
-            // 
-            // rjTextBox123
-            // 
-            this.rjTextBox123.BackColor = System.Drawing.Color.White;
-            this.rjTextBox123.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox123.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox123.BorderRadius = 0;
-            this.rjTextBox123.BorderSize = 1;
-            this.rjTextBox123.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox123.Location = new System.Drawing.Point(13, 920);
-            this.rjTextBox123.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox123.Multiline = false;
-            this.rjTextBox123.Name = "rjTextBox123";
-            this.rjTextBox123.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox123.PasswordChar = false;
-            this.rjTextBox123.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox123.PlaceholderText = "";
-            this.rjTextBox123.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox123.TabIndex = 50;
-            this.rjTextBox123.Texts = "$ 1000";
-            this.rjTextBox123.UnderlinedStyle = true;
-            // 
-            // rjTextBox124
-            // 
-            this.rjTextBox124.BackColor = System.Drawing.Color.White;
-            this.rjTextBox124.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox124.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox124.BorderRadius = 0;
-            this.rjTextBox124.BorderSize = 1;
-            this.rjTextBox124.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox124.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox124.Location = new System.Drawing.Point(13, 850);
-            this.rjTextBox124.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox124.Multiline = false;
-            this.rjTextBox124.Name = "rjTextBox124";
-            this.rjTextBox124.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox124.PasswordChar = false;
-            this.rjTextBox124.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox124.PlaceholderText = "";
-            this.rjTextBox124.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox124.TabIndex = 48;
-            this.rjTextBox124.Texts = "$ 1000";
-            this.rjTextBox124.UnderlinedStyle = true;
+            // d24
+            // 
+            this.d24.BackColor = System.Drawing.Color.White;
+            this.d24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d24.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d24.BorderRadius = 0;
+            this.d24.BorderSize = 1;
+            this.d24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d24.ForeColor = System.Drawing.Color.Silver;
+            this.d24.Location = new System.Drawing.Point(13, 814);
+            this.d24.Margin = new System.Windows.Forms.Padding(4);
+            this.d24.Multiline = false;
+            this.d24.Name = "d24";
+            this.d24.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d24.PasswordChar = false;
+            this.d24.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d24.PlaceholderText = "";
+            this.d24.Size = new System.Drawing.Size(94, 35);
+            this.d24.TabIndex = 35;
+            this.d24.Texts = "00/00/00";
+            this.d24.UnderlinedStyle = true;
+            // 
+            // d23
+            // 
+            this.d23.BackColor = System.Drawing.Color.White;
+            this.d23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d23.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d23.BorderRadius = 0;
+            this.d23.BorderSize = 1;
+            this.d23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d23.ForeColor = System.Drawing.Color.Silver;
+            this.d23.Location = new System.Drawing.Point(13, 777);
+            this.d23.Margin = new System.Windows.Forms.Padding(4);
+            this.d23.Multiline = false;
+            this.d23.Name = "d23";
+            this.d23.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d23.PasswordChar = false;
+            this.d23.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d23.PlaceholderText = "";
+            this.d23.Size = new System.Drawing.Size(94, 35);
+            this.d23.TabIndex = 34;
+            this.d23.Texts = "00/00/00";
+            this.d23.UnderlinedStyle = true;
+            // 
+            // d22
+            // 
+            this.d22.BackColor = System.Drawing.Color.White;
+            this.d22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d22.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d22.BorderRadius = 0;
+            this.d22.BorderSize = 1;
+            this.d22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d22.ForeColor = System.Drawing.Color.Silver;
+            this.d22.Location = new System.Drawing.Point(13, 744);
+            this.d22.Margin = new System.Windows.Forms.Padding(4);
+            this.d22.Multiline = false;
+            this.d22.Name = "d22";
+            this.d22.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d22.PasswordChar = false;
+            this.d22.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d22.PlaceholderText = "";
+            this.d22.Size = new System.Drawing.Size(94, 35);
+            this.d22.TabIndex = 33;
+            this.d22.Texts = "00/00/00";
+            this.d22.UnderlinedStyle = true;
+            // 
+            // d21
+            // 
+            this.d21.BackColor = System.Drawing.Color.White;
+            this.d21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d21.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d21.BorderRadius = 0;
+            this.d21.BorderSize = 1;
+            this.d21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d21.ForeColor = System.Drawing.Color.Silver;
+            this.d21.Location = new System.Drawing.Point(13, 709);
+            this.d21.Margin = new System.Windows.Forms.Padding(4);
+            this.d21.Multiline = false;
+            this.d21.Name = "d21";
+            this.d21.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d21.PasswordChar = false;
+            this.d21.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d21.PlaceholderText = "";
+            this.d21.Size = new System.Drawing.Size(94, 35);
+            this.d21.TabIndex = 32;
+            this.d21.Texts = "00/00/00";
+            this.d21.UnderlinedStyle = true;
+            // 
+            // d20
+            // 
+            this.d20.BackColor = System.Drawing.Color.White;
+            this.d20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d20.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d20.BorderRadius = 0;
+            this.d20.BorderSize = 1;
+            this.d20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d20.ForeColor = System.Drawing.Color.Silver;
+            this.d20.Location = new System.Drawing.Point(13, 674);
+            this.d20.Margin = new System.Windows.Forms.Padding(4);
+            this.d20.Multiline = false;
+            this.d20.Name = "d20";
+            this.d20.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d20.PasswordChar = false;
+            this.d20.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d20.PlaceholderText = "";
+            this.d20.Size = new System.Drawing.Size(94, 35);
+            this.d20.TabIndex = 31;
+            this.d20.Texts = "00/00/00";
+            this.d20.UnderlinedStyle = true;
+            // 
+            // d19
+            // 
+            this.d19.BackColor = System.Drawing.Color.White;
+            this.d19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d19.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d19.BorderRadius = 0;
+            this.d19.BorderSize = 1;
+            this.d19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d19.ForeColor = System.Drawing.Color.Silver;
+            this.d19.Location = new System.Drawing.Point(13, 639);
+            this.d19.Margin = new System.Windows.Forms.Padding(4);
+            this.d19.Multiline = false;
+            this.d19.Name = "d19";
+            this.d19.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d19.PasswordChar = false;
+            this.d19.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d19.PlaceholderText = "";
+            this.d19.Size = new System.Drawing.Size(94, 35);
+            this.d19.TabIndex = 30;
+            this.d19.Texts = "00/00/00";
+            this.d19.UnderlinedStyle = true;
+            // 
+            // d18
+            // 
+            this.d18.BackColor = System.Drawing.Color.White;
+            this.d18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d18.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d18.BorderRadius = 0;
+            this.d18.BorderSize = 1;
+            this.d18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d18.ForeColor = System.Drawing.Color.Silver;
+            this.d18.Location = new System.Drawing.Point(13, 602);
+            this.d18.Margin = new System.Windows.Forms.Padding(4);
+            this.d18.Multiline = false;
+            this.d18.Name = "d18";
+            this.d18.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d18.PasswordChar = false;
+            this.d18.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d18.PlaceholderText = "";
+            this.d18.Size = new System.Drawing.Size(94, 35);
+            this.d18.TabIndex = 29;
+            this.d18.Texts = "00/00/00";
+            this.d18.UnderlinedStyle = true;
+            // 
+            // d17
+            // 
+            this.d17.BackColor = System.Drawing.Color.White;
+            this.d17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d17.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d17.BorderRadius = 0;
+            this.d17.BorderSize = 1;
+            this.d17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d17.ForeColor = System.Drawing.Color.Silver;
+            this.d17.Location = new System.Drawing.Point(13, 565);
+            this.d17.Margin = new System.Windows.Forms.Padding(4);
+            this.d17.Multiline = false;
+            this.d17.Name = "d17";
+            this.d17.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d17.PasswordChar = false;
+            this.d17.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d17.PlaceholderText = "";
+            this.d17.Size = new System.Drawing.Size(94, 35);
+            this.d17.TabIndex = 28;
+            this.d17.Texts = "00/00/00";
+            this.d17.UnderlinedStyle = true;
+            // 
+            // d16
+            // 
+            this.d16.BackColor = System.Drawing.Color.White;
+            this.d16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d16.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d16.BorderRadius = 0;
+            this.d16.BorderSize = 1;
+            this.d16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d16.ForeColor = System.Drawing.Color.Silver;
+            this.d16.Location = new System.Drawing.Point(13, 532);
+            this.d16.Margin = new System.Windows.Forms.Padding(4);
+            this.d16.Multiline = false;
+            this.d16.Name = "d16";
+            this.d16.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d16.PasswordChar = false;
+            this.d16.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d16.PlaceholderText = "";
+            this.d16.Size = new System.Drawing.Size(94, 35);
+            this.d16.TabIndex = 27;
+            this.d16.Texts = "00/00/00";
+            this.d16.UnderlinedStyle = true;
+            // 
+            // d15
+            // 
+            this.d15.BackColor = System.Drawing.Color.White;
+            this.d15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d15.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d15.BorderRadius = 0;
+            this.d15.BorderSize = 1;
+            this.d15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d15.ForeColor = System.Drawing.Color.Silver;
+            this.d15.Location = new System.Drawing.Point(13, 497);
+            this.d15.Margin = new System.Windows.Forms.Padding(4);
+            this.d15.Multiline = false;
+            this.d15.Name = "d15";
+            this.d15.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d15.PasswordChar = false;
+            this.d15.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d15.PlaceholderText = "";
+            this.d15.Size = new System.Drawing.Size(94, 35);
+            this.d15.TabIndex = 26;
+            this.d15.Texts = "00/00/00";
+            this.d15.UnderlinedStyle = true;
+            // 
+            // d14
+            // 
+            this.d14.BackColor = System.Drawing.Color.White;
+            this.d14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d14.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d14.BorderRadius = 0;
+            this.d14.BorderSize = 1;
+            this.d14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d14.ForeColor = System.Drawing.Color.Silver;
+            this.d14.Location = new System.Drawing.Point(13, 462);
+            this.d14.Margin = new System.Windows.Forms.Padding(4);
+            this.d14.Multiline = false;
+            this.d14.Name = "d14";
+            this.d14.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d14.PasswordChar = false;
+            this.d14.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d14.PlaceholderText = "";
+            this.d14.Size = new System.Drawing.Size(94, 35);
+            this.d14.TabIndex = 25;
+            this.d14.Texts = "00/00/00";
+            this.d14.UnderlinedStyle = true;
+            // 
+            // d13
+            // 
+            this.d13.BackColor = System.Drawing.Color.White;
+            this.d13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d13.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d13.BorderRadius = 0;
+            this.d13.BorderSize = 1;
+            this.d13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d13.ForeColor = System.Drawing.Color.Silver;
+            this.d13.Location = new System.Drawing.Point(13, 427);
+            this.d13.Margin = new System.Windows.Forms.Padding(4);
+            this.d13.Multiline = false;
+            this.d13.Name = "d13";
+            this.d13.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d13.PasswordChar = false;
+            this.d13.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d13.PlaceholderText = "";
+            this.d13.Size = new System.Drawing.Size(94, 35);
+            this.d13.TabIndex = 24;
+            this.d13.Texts = "00/00/00";
+            this.d13.UnderlinedStyle = true;
+            // 
+            // d31
+            // 
+            this.d31.BackColor = System.Drawing.Color.White;
+            this.d31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d31.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d31.BorderRadius = 0;
+            this.d31.BorderSize = 1;
+            this.d31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d31.ForeColor = System.Drawing.Color.Silver;
+            this.d31.Location = new System.Drawing.Point(13, 1063);
+            this.d31.Margin = new System.Windows.Forms.Padding(4);
+            this.d31.Multiline = false;
+            this.d31.Name = "d31";
+            this.d31.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d31.PasswordChar = false;
+            this.d31.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d31.PlaceholderText = "";
+            this.d31.Size = new System.Drawing.Size(94, 35);
+            this.d31.TabIndex = 42;
+            this.d31.Texts = "00/00/00";
+            this.d31.UnderlinedStyle = true;
+            // 
+            // d30
+            // 
+            this.d30.BackColor = System.Drawing.Color.White;
+            this.d30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d30.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d30.BorderRadius = 0;
+            this.d30.BorderSize = 1;
+            this.d30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d30.ForeColor = System.Drawing.Color.Silver;
+            this.d30.Location = new System.Drawing.Point(13, 1026);
+            this.d30.Margin = new System.Windows.Forms.Padding(4);
+            this.d30.Multiline = false;
+            this.d30.Name = "d30";
+            this.d30.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d30.PasswordChar = false;
+            this.d30.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d30.PlaceholderText = "";
+            this.d30.Size = new System.Drawing.Size(94, 35);
+            this.d30.TabIndex = 41;
+            this.d30.Texts = "00/00/00";
+            this.d30.UnderlinedStyle = true;
+            // 
+            // d29
+            // 
+            this.d29.BackColor = System.Drawing.Color.White;
+            this.d29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d29.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d29.BorderRadius = 0;
+            this.d29.BorderSize = 1;
+            this.d29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d29.ForeColor = System.Drawing.Color.Silver;
+            this.d29.Location = new System.Drawing.Point(13, 993);
+            this.d29.Margin = new System.Windows.Forms.Padding(4);
+            this.d29.Multiline = false;
+            this.d29.Name = "d29";
+            this.d29.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d29.PasswordChar = false;
+            this.d29.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d29.PlaceholderText = "";
+            this.d29.Size = new System.Drawing.Size(94, 35);
+            this.d29.TabIndex = 40;
+            this.d29.Texts = "00/00/00";
+            this.d29.UnderlinedStyle = true;
+            // 
+            // d28
+            // 
+            this.d28.BackColor = System.Drawing.Color.White;
+            this.d28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d28.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d28.BorderRadius = 0;
+            this.d28.BorderSize = 1;
+            this.d28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d28.ForeColor = System.Drawing.Color.Silver;
+            this.d28.Location = new System.Drawing.Point(13, 958);
+            this.d28.Margin = new System.Windows.Forms.Padding(4);
+            this.d28.Multiline = false;
+            this.d28.Name = "d28";
+            this.d28.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d28.PasswordChar = false;
+            this.d28.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d28.PlaceholderText = "";
+            this.d28.Size = new System.Drawing.Size(94, 35);
+            this.d28.TabIndex = 39;
+            this.d28.Texts = "00/00/00";
+            this.d28.UnderlinedStyle = true;
+            // 
+            // d27
+            // 
+            this.d27.BackColor = System.Drawing.Color.White;
+            this.d27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d27.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d27.BorderRadius = 0;
+            this.d27.BorderSize = 1;
+            this.d27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d27.ForeColor = System.Drawing.Color.Silver;
+            this.d27.Location = new System.Drawing.Point(13, 923);
+            this.d27.Margin = new System.Windows.Forms.Padding(4);
+            this.d27.Multiline = false;
+            this.d27.Name = "d27";
+            this.d27.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d27.PasswordChar = false;
+            this.d27.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d27.PlaceholderText = "";
+            this.d27.Size = new System.Drawing.Size(94, 35);
+            this.d27.TabIndex = 38;
+            this.d27.Texts = "00/00/00";
+            this.d27.UnderlinedStyle = true;
+            // 
+            // d26
+            // 
+            this.d26.BackColor = System.Drawing.Color.White;
+            this.d26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d26.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d26.BorderRadius = 0;
+            this.d26.BorderSize = 1;
+            this.d26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d26.ForeColor = System.Drawing.Color.Silver;
+            this.d26.Location = new System.Drawing.Point(13, 888);
+            this.d26.Margin = new System.Windows.Forms.Padding(4);
+            this.d26.Multiline = false;
+            this.d26.Name = "d26";
+            this.d26.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d26.PasswordChar = false;
+            this.d26.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d26.PlaceholderText = "";
+            this.d26.Size = new System.Drawing.Size(94, 35);
+            this.d26.TabIndex = 37;
+            this.d26.Texts = "00/00/00";
+            this.d26.UnderlinedStyle = true;
+            // 
+            // d25
+            // 
+            this.d25.BackColor = System.Drawing.Color.White;
+            this.d25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.d25.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.d25.BorderRadius = 0;
+            this.d25.BorderSize = 1;
+            this.d25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d25.ForeColor = System.Drawing.Color.Silver;
+            this.d25.Location = new System.Drawing.Point(13, 851);
+            this.d25.Margin = new System.Windows.Forms.Padding(4);
+            this.d25.Multiline = false;
+            this.d25.Name = "d25";
+            this.d25.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.d25.PasswordChar = false;
+            this.d25.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.d25.PlaceholderText = "";
+            this.d25.Size = new System.Drawing.Size(94, 35);
+            this.d25.TabIndex = 36;
+            this.d25.Texts = "00/00/00";
+            this.d25.UnderlinedStyle = true;
+            // 
+            // sa11
+            // 
+            this.sa11.BackColor = System.Drawing.Color.White;
+            this.sa11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa11.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa11.BorderRadius = 0;
+            this.sa11.BorderSize = 1;
+            this.sa11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa11.Location = new System.Drawing.Point(115, 356);
+            this.sa11.Margin = new System.Windows.Forms.Padding(4);
+            this.sa11.Multiline = false;
+            this.sa11.Name = "sa11";
+            this.sa11.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa11.PasswordChar = false;
+            this.sa11.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa11.PlaceholderText = "";
+            this.sa11.Size = new System.Drawing.Size(135, 35);
+            this.sa11.TabIndex = 20;
+            this.sa11.Texts = "$ 1000";
+            this.sa11.UnderlinedStyle = true;
+            // 
+            // sa12
+            // 
+            this.sa12.BackColor = System.Drawing.Color.White;
+            this.sa12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa12.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa12.BorderRadius = 0;
+            this.sa12.BorderSize = 1;
+            this.sa12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa12.Location = new System.Drawing.Point(115, 391);
+            this.sa12.Margin = new System.Windows.Forms.Padding(4);
+            this.sa12.Multiline = false;
+            this.sa12.Name = "sa12";
+            this.sa12.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa12.PasswordChar = false;
+            this.sa12.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa12.PlaceholderText = "";
+            this.sa12.Size = new System.Drawing.Size(135, 35);
+            this.sa12.TabIndex = 21;
+            this.sa12.Texts = "$ 1000";
+            this.sa12.UnderlinedStyle = true;
+            // 
+            // sa9
+            // 
+            this.sa9.BackColor = System.Drawing.Color.White;
+            this.sa9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa9.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa9.BorderRadius = 0;
+            this.sa9.BorderSize = 1;
+            this.sa9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa9.Location = new System.Drawing.Point(115, 286);
+            this.sa9.Margin = new System.Windows.Forms.Padding(4);
+            this.sa9.Multiline = false;
+            this.sa9.Name = "sa9";
+            this.sa9.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa9.PasswordChar = false;
+            this.sa9.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa9.PlaceholderText = "";
+            this.sa9.Size = new System.Drawing.Size(135, 35);
+            this.sa9.TabIndex = 18;
+            this.sa9.Texts = "$ 1000";
+            this.sa9.UnderlinedStyle = true;
+            // 
+            // sa10
+            // 
+            this.sa10.BackColor = System.Drawing.Color.White;
+            this.sa10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa10.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa10.BorderRadius = 0;
+            this.sa10.BorderSize = 1;
+            this.sa10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa10.Location = new System.Drawing.Point(115, 321);
+            this.sa10.Margin = new System.Windows.Forms.Padding(4);
+            this.sa10.Multiline = false;
+            this.sa10.Name = "sa10";
+            this.sa10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa10.PasswordChar = false;
+            this.sa10.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa10.PlaceholderText = "";
+            this.sa10.Size = new System.Drawing.Size(135, 35);
+            this.sa10.TabIndex = 19;
+            this.sa10.Texts = "$ 1000";
+            this.sa10.UnderlinedStyle = true;
+            // 
+            // sa7
+            // 
+            this.sa7.BackColor = System.Drawing.Color.White;
+            this.sa7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa7.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa7.BorderRadius = 0;
+            this.sa7.BorderSize = 1;
+            this.sa7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa7.Location = new System.Drawing.Point(115, 216);
+            this.sa7.Margin = new System.Windows.Forms.Padding(4);
+            this.sa7.Multiline = false;
+            this.sa7.Name = "sa7";
+            this.sa7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa7.PasswordChar = false;
+            this.sa7.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa7.PlaceholderText = "";
+            this.sa7.Size = new System.Drawing.Size(135, 35);
+            this.sa7.TabIndex = 16;
+            this.sa7.Texts = "$ 1000";
+            this.sa7.UnderlinedStyle = true;
+            // 
+            // sa8
+            // 
+            this.sa8.BackColor = System.Drawing.Color.White;
+            this.sa8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa8.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa8.BorderRadius = 0;
+            this.sa8.BorderSize = 1;
+            this.sa8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa8.Location = new System.Drawing.Point(115, 251);
+            this.sa8.Margin = new System.Windows.Forms.Padding(4);
+            this.sa8.Multiline = false;
+            this.sa8.Name = "sa8";
+            this.sa8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa8.PasswordChar = false;
+            this.sa8.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa8.PlaceholderText = "";
+            this.sa8.Size = new System.Drawing.Size(135, 35);
+            this.sa8.TabIndex = 17;
+            this.sa8.Texts = "$ 1000";
+            this.sa8.UnderlinedStyle = true;
+            // 
+            // sa23
+            // 
+            this.sa23.BackColor = System.Drawing.Color.White;
+            this.sa23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa23.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa23.BorderRadius = 0;
+            this.sa23.BorderSize = 1;
+            this.sa23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa23.Location = new System.Drawing.Point(115, 779);
+            this.sa23.Margin = new System.Windows.Forms.Padding(4);
+            this.sa23.Multiline = false;
+            this.sa23.Name = "sa23";
+            this.sa23.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa23.PasswordChar = false;
+            this.sa23.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa23.PlaceholderText = "";
+            this.sa23.Size = new System.Drawing.Size(135, 35);
+            this.sa23.TabIndex = 53;
+            this.sa23.Texts = "$ 1000";
+            this.sa23.UnderlinedStyle = true;
+            // 
+            // sa24
+            // 
+            this.sa24.BackColor = System.Drawing.Color.White;
+            this.sa24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa24.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa24.BorderRadius = 0;
+            this.sa24.BorderSize = 1;
+            this.sa24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa24.Location = new System.Drawing.Point(115, 814);
+            this.sa24.Margin = new System.Windows.Forms.Padding(4);
+            this.sa24.Multiline = false;
+            this.sa24.Name = "sa24";
+            this.sa24.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa24.PasswordChar = false;
+            this.sa24.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa24.PlaceholderText = "";
+            this.sa24.Size = new System.Drawing.Size(135, 35);
+            this.sa24.TabIndex = 54;
+            this.sa24.Texts = "$ 1000";
+            this.sa24.UnderlinedStyle = true;
+            // 
+            // sa21
+            // 
+            this.sa21.BackColor = System.Drawing.Color.White;
+            this.sa21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa21.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa21.BorderRadius = 0;
+            this.sa21.BorderSize = 1;
+            this.sa21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa21.Location = new System.Drawing.Point(115, 709);
+            this.sa21.Margin = new System.Windows.Forms.Padding(4);
+            this.sa21.Multiline = false;
+            this.sa21.Name = "sa21";
+            this.sa21.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa21.PasswordChar = false;
+            this.sa21.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa21.PlaceholderText = "";
+            this.sa21.Size = new System.Drawing.Size(135, 35);
+            this.sa21.TabIndex = 51;
+            this.sa21.Texts = "$ 1000";
+            this.sa21.UnderlinedStyle = true;
+            // 
+            // sa22
+            // 
+            this.sa22.BackColor = System.Drawing.Color.White;
+            this.sa22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa22.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa22.BorderRadius = 0;
+            this.sa22.BorderSize = 1;
+            this.sa22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa22.Location = new System.Drawing.Point(115, 744);
+            this.sa22.Margin = new System.Windows.Forms.Padding(4);
+            this.sa22.Multiline = false;
+            this.sa22.Name = "sa22";
+            this.sa22.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa22.PasswordChar = false;
+            this.sa22.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa22.PlaceholderText = "";
+            this.sa22.Size = new System.Drawing.Size(135, 35);
+            this.sa22.TabIndex = 52;
+            this.sa22.Texts = "$ 1000";
+            this.sa22.UnderlinedStyle = true;
+            // 
+            // sa19
+            // 
+            this.sa19.BackColor = System.Drawing.Color.White;
+            this.sa19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa19.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa19.BorderRadius = 0;
+            this.sa19.BorderSize = 1;
+            this.sa19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa19.Location = new System.Drawing.Point(115, 639);
+            this.sa19.Margin = new System.Windows.Forms.Padding(4);
+            this.sa19.Multiline = false;
+            this.sa19.Name = "sa19";
+            this.sa19.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa19.PasswordChar = false;
+            this.sa19.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa19.PlaceholderText = "";
+            this.sa19.Size = new System.Drawing.Size(135, 35);
+            this.sa19.TabIndex = 49;
+            this.sa19.Texts = "$ 1000";
+            this.sa19.UnderlinedStyle = true;
+            // 
+            // sa20
+            // 
+            this.sa20.BackColor = System.Drawing.Color.White;
+            this.sa20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa20.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa20.BorderRadius = 0;
+            this.sa20.BorderSize = 1;
+            this.sa20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa20.Location = new System.Drawing.Point(115, 674);
+            this.sa20.Margin = new System.Windows.Forms.Padding(4);
+            this.sa20.Multiline = false;
+            this.sa20.Name = "sa20";
+            this.sa20.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa20.PasswordChar = false;
+            this.sa20.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa20.PlaceholderText = "";
+            this.sa20.Size = new System.Drawing.Size(135, 35);
+            this.sa20.TabIndex = 50;
+            this.sa20.Texts = "$ 1000";
+            this.sa20.UnderlinedStyle = true;
+            // 
+            // sa17
+            // 
+            this.sa17.BackColor = System.Drawing.Color.White;
+            this.sa17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa17.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa17.BorderRadius = 0;
+            this.sa17.BorderSize = 1;
+            this.sa17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa17.Location = new System.Drawing.Point(115, 567);
+            this.sa17.Margin = new System.Windows.Forms.Padding(4);
+            this.sa17.Multiline = false;
+            this.sa17.Name = "sa17";
+            this.sa17.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa17.PasswordChar = false;
+            this.sa17.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa17.PlaceholderText = "";
+            this.sa17.Size = new System.Drawing.Size(135, 35);
+            this.sa17.TabIndex = 47;
+            this.sa17.Texts = "$ 1000";
+            this.sa17.UnderlinedStyle = true;
+            // 
+            // sa18
+            // 
+            this.sa18.BackColor = System.Drawing.Color.White;
+            this.sa18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa18.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa18.BorderRadius = 0;
+            this.sa18.BorderSize = 1;
+            this.sa18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa18.Location = new System.Drawing.Point(115, 602);
+            this.sa18.Margin = new System.Windows.Forms.Padding(4);
+            this.sa18.Multiline = false;
+            this.sa18.Name = "sa18";
+            this.sa18.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa18.PasswordChar = false;
+            this.sa18.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa18.PlaceholderText = "";
+            this.sa18.Size = new System.Drawing.Size(135, 35);
+            this.sa18.TabIndex = 48;
+            this.sa18.Texts = "$ 1000";
+            this.sa18.UnderlinedStyle = true;
+            // 
+            // sa15
+            // 
+            this.sa15.BackColor = System.Drawing.Color.White;
+            this.sa15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa15.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa15.BorderRadius = 0;
+            this.sa15.BorderSize = 1;
+            this.sa15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa15.Location = new System.Drawing.Point(115, 497);
+            this.sa15.Margin = new System.Windows.Forms.Padding(4);
+            this.sa15.Multiline = false;
+            this.sa15.Name = "sa15";
+            this.sa15.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa15.PasswordChar = false;
+            this.sa15.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa15.PlaceholderText = "";
+            this.sa15.Size = new System.Drawing.Size(135, 35);
+            this.sa15.TabIndex = 45;
+            this.sa15.Texts = "$ 1000";
+            this.sa15.UnderlinedStyle = true;
+            // 
+            // sa16
+            // 
+            this.sa16.BackColor = System.Drawing.Color.White;
+            this.sa16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa16.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa16.BorderRadius = 0;
+            this.sa16.BorderSize = 1;
+            this.sa16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa16.Location = new System.Drawing.Point(115, 532);
+            this.sa16.Margin = new System.Windows.Forms.Padding(4);
+            this.sa16.Multiline = false;
+            this.sa16.Name = "sa16";
+            this.sa16.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa16.PasswordChar = false;
+            this.sa16.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa16.PlaceholderText = "";
+            this.sa16.Size = new System.Drawing.Size(135, 35);
+            this.sa16.TabIndex = 46;
+            this.sa16.Texts = "$ 1000";
+            this.sa16.UnderlinedStyle = true;
+            // 
+            // sa13
+            // 
+            this.sa13.BackColor = System.Drawing.Color.White;
+            this.sa13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa13.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa13.BorderRadius = 0;
+            this.sa13.BorderSize = 1;
+            this.sa13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa13.Location = new System.Drawing.Point(115, 427);
+            this.sa13.Margin = new System.Windows.Forms.Padding(4);
+            this.sa13.Multiline = false;
+            this.sa13.Name = "sa13";
+            this.sa13.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa13.PasswordChar = false;
+            this.sa13.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa13.PlaceholderText = "";
+            this.sa13.Size = new System.Drawing.Size(135, 35);
+            this.sa13.TabIndex = 43;
+            this.sa13.Texts = "$ 1000";
+            this.sa13.UnderlinedStyle = true;
+            // 
+            // sa14
+            // 
+            this.sa14.BackColor = System.Drawing.Color.White;
+            this.sa14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa14.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa14.BorderRadius = 0;
+            this.sa14.BorderSize = 1;
+            this.sa14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa14.Location = new System.Drawing.Point(115, 462);
+            this.sa14.Margin = new System.Windows.Forms.Padding(4);
+            this.sa14.Multiline = false;
+            this.sa14.Name = "sa14";
+            this.sa14.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa14.PasswordChar = false;
+            this.sa14.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa14.PlaceholderText = "";
+            this.sa14.Size = new System.Drawing.Size(135, 35);
+            this.sa14.TabIndex = 44;
+            this.sa14.Texts = "$ 1000";
+            this.sa14.UnderlinedStyle = true;
+            // 
+            // sa30
+            // 
+            this.sa30.BackColor = System.Drawing.Color.White;
+            this.sa30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa30.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa30.BorderRadius = 0;
+            this.sa30.BorderSize = 1;
+            this.sa30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa30.Location = new System.Drawing.Point(115, 1028);
+            this.sa30.Margin = new System.Windows.Forms.Padding(4);
+            this.sa30.Multiline = false;
+            this.sa30.Name = "sa30";
+            this.sa30.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa30.PasswordChar = false;
+            this.sa30.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa30.PlaceholderText = "";
+            this.sa30.Size = new System.Drawing.Size(135, 35);
+            this.sa30.TabIndex = 60;
+            this.sa30.Texts = "$ 1000";
+            this.sa30.UnderlinedStyle = true;
+            // 
+            // sa31
+            // 
+            this.sa31.BackColor = System.Drawing.Color.White;
+            this.sa31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa31.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa31.BorderRadius = 0;
+            this.sa31.BorderSize = 1;
+            this.sa31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa31.Location = new System.Drawing.Point(115, 1063);
+            this.sa31.Margin = new System.Windows.Forms.Padding(4);
+            this.sa31.Multiline = false;
+            this.sa31.Name = "sa31";
+            this.sa31.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa31.PasswordChar = false;
+            this.sa31.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa31.PlaceholderText = "";
+            this.sa31.Size = new System.Drawing.Size(135, 35);
+            this.sa31.TabIndex = 61;
+            this.sa31.Texts = "$ 1000";
+            this.sa31.UnderlinedStyle = true;
+            // 
+            // sa28
+            // 
+            this.sa28.BackColor = System.Drawing.Color.White;
+            this.sa28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa28.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa28.BorderRadius = 0;
+            this.sa28.BorderSize = 1;
+            this.sa28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa28.Location = new System.Drawing.Point(115, 958);
+            this.sa28.Margin = new System.Windows.Forms.Padding(4);
+            this.sa28.Multiline = false;
+            this.sa28.Name = "sa28";
+            this.sa28.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa28.PasswordChar = false;
+            this.sa28.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa28.PlaceholderText = "";
+            this.sa28.Size = new System.Drawing.Size(135, 35);
+            this.sa28.TabIndex = 58;
+            this.sa28.Texts = "$ 1000";
+            this.sa28.UnderlinedStyle = true;
+            // 
+            // sa29
+            // 
+            this.sa29.BackColor = System.Drawing.Color.White;
+            this.sa29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa29.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa29.BorderRadius = 0;
+            this.sa29.BorderSize = 1;
+            this.sa29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa29.Location = new System.Drawing.Point(115, 993);
+            this.sa29.Margin = new System.Windows.Forms.Padding(4);
+            this.sa29.Multiline = false;
+            this.sa29.Name = "sa29";
+            this.sa29.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa29.PasswordChar = false;
+            this.sa29.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa29.PlaceholderText = "";
+            this.sa29.Size = new System.Drawing.Size(135, 35);
+            this.sa29.TabIndex = 59;
+            this.sa29.Texts = "$ 1000";
+            this.sa29.UnderlinedStyle = true;
+            // 
+            // sa26
+            // 
+            this.sa26.BackColor = System.Drawing.Color.White;
+            this.sa26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa26.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa26.BorderRadius = 0;
+            this.sa26.BorderSize = 1;
+            this.sa26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa26.Location = new System.Drawing.Point(115, 888);
+            this.sa26.Margin = new System.Windows.Forms.Padding(4);
+            this.sa26.Multiline = false;
+            this.sa26.Name = "sa26";
+            this.sa26.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa26.PasswordChar = false;
+            this.sa26.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa26.PlaceholderText = "";
+            this.sa26.Size = new System.Drawing.Size(135, 35);
+            this.sa26.TabIndex = 56;
+            this.sa26.Texts = "$ 1000";
+            this.sa26.UnderlinedStyle = true;
+            // 
+            // sa27
+            // 
+            this.sa27.BackColor = System.Drawing.Color.White;
+            this.sa27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa27.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa27.BorderRadius = 0;
+            this.sa27.BorderSize = 1;
+            this.sa27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa27.Location = new System.Drawing.Point(115, 923);
+            this.sa27.Margin = new System.Windows.Forms.Padding(4);
+            this.sa27.Multiline = false;
+            this.sa27.Name = "sa27";
+            this.sa27.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa27.PasswordChar = false;
+            this.sa27.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa27.PlaceholderText = "";
+            this.sa27.Size = new System.Drawing.Size(135, 35);
+            this.sa27.TabIndex = 57;
+            this.sa27.Texts = "$ 1000";
+            this.sa27.UnderlinedStyle = true;
+            // 
+            // sa25
+            // 
+            this.sa25.BackColor = System.Drawing.Color.White;
+            this.sa25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sa25.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.sa25.BorderRadius = 0;
+            this.sa25.BorderSize = 1;
+            this.sa25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sa25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sa25.Location = new System.Drawing.Point(115, 851);
+            this.sa25.Margin = new System.Windows.Forms.Padding(4);
+            this.sa25.Multiline = false;
+            this.sa25.Name = "sa25";
+            this.sa25.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.sa25.PasswordChar = false;
+            this.sa25.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.sa25.PlaceholderText = "";
+            this.sa25.Size = new System.Drawing.Size(135, 35);
+            this.sa25.TabIndex = 55;
+            this.sa25.Texts = "$ 1000";
+            this.sa25.UnderlinedStyle = true;
             // 
             // Form1
             // 
@@ -3976,132 +2542,72 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel3;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox25;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox26;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox27;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox28;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox29;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox30;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox31;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox32;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox33;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox34;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox35;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox36;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox37;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox38;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox39;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox40;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox41;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox42;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox43;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox44;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox45;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox46;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox47;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox48;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox21;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox22;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox23;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox24;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox17;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox18;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox19;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox20;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox15;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox16;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox14;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox13;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox9;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox10;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox11;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox12;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox5;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox6;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox7;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox8;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox3;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox4;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox2;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox49;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox50;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox51;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox52;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox53;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox54;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox55;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox56;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox57;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox58;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox59;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox60;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox61;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox62;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox63;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox64;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox65;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox66;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox67;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox68;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox69;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox70;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox71;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox72;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox73;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox74;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox75;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox76;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox77;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox78;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox79;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox80;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox81;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox82;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox83;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox84;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox85;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox86;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox111;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox87;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox112;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox113;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox88;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox114;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox115;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox89;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox116;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox117;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox118;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox90;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox119;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox120;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox91;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox121;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox122;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox92;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox123;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox124;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox93;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox94;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox95;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox96;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox97;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox98;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox99;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox100;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox101;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox102;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox103;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox104;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox105;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox106;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox107;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox108;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox109;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox110;
+        private RJCodeAdvance.RJControls.RJTextBox d6;
+        private RJCodeAdvance.RJControls.RJTextBox d5;
+        private RJCodeAdvance.RJControls.RJTextBox d4;
+        private RJCodeAdvance.RJControls.RJTextBox d3;
+        private RJCodeAdvance.RJControls.RJTextBox d2;
+        private RJCodeAdvance.RJControls.RJTextBox d1;
+        private RJCodeAdvance.RJControls.RJTextBox sa5;
+        private RJCodeAdvance.RJControls.RJTextBox sa6;
+        private RJCodeAdvance.RJControls.RJTextBox sa3;
+        private RJCodeAdvance.RJControls.RJTextBox sa4;
+        private RJCodeAdvance.RJControls.RJTextBox sa1;
+        private RJCodeAdvance.RJControls.RJTextBox sa2;
+        private RJCodeAdvance.RJControls.RJTextBox d12;
+        private RJCodeAdvance.RJControls.RJTextBox d11;
+        private RJCodeAdvance.RJControls.RJTextBox d10;
+        private RJCodeAdvance.RJControls.RJTextBox d9;
+        private RJCodeAdvance.RJControls.RJTextBox d8;
+        private RJCodeAdvance.RJControls.RJTextBox d7;
+        private RJCodeAdvance.RJControls.RJTextBox d31;
+        private RJCodeAdvance.RJControls.RJTextBox d24;
+        private RJCodeAdvance.RJControls.RJTextBox d30;
+        private RJCodeAdvance.RJControls.RJTextBox d29;
+        private RJCodeAdvance.RJControls.RJTextBox d23;
+        private RJCodeAdvance.RJControls.RJTextBox d28;
+        private RJCodeAdvance.RJControls.RJTextBox d27;
+        private RJCodeAdvance.RJControls.RJTextBox d22;
+        private RJCodeAdvance.RJControls.RJTextBox d26;
+        private RJCodeAdvance.RJControls.RJTextBox d25;
+        private RJCodeAdvance.RJControls.RJTextBox d21;
+        private RJCodeAdvance.RJControls.RJTextBox d20;
+        private RJCodeAdvance.RJControls.RJTextBox d19;
+        private RJCodeAdvance.RJControls.RJTextBox d18;
+        private RJCodeAdvance.RJControls.RJTextBox d17;
+        private RJCodeAdvance.RJControls.RJTextBox d16;
+        private RJCodeAdvance.RJControls.RJTextBox d15;
+        private RJCodeAdvance.RJControls.RJTextBox d14;
+        private RJCodeAdvance.RJControls.RJTextBox d13;
+        private RJCodeAdvance.RJControls.RJTextBox sa23;
+        private RJCodeAdvance.RJControls.RJTextBox sa24;
+        private RJCodeAdvance.RJControls.RJTextBox sa21;
+        private RJCodeAdvance.RJControls.RJTextBox sa22;
+        private RJCodeAdvance.RJControls.RJTextBox sa19;
+        private RJCodeAdvance.RJControls.RJTextBox sa20;
+        private RJCodeAdvance.RJControls.RJTextBox sa17;
+        private RJCodeAdvance.RJControls.RJTextBox sa18;
+        private RJCodeAdvance.RJControls.RJTextBox sa15;
+        private RJCodeAdvance.RJControls.RJTextBox sa16;
+        private RJCodeAdvance.RJControls.RJTextBox sa13;
+        private RJCodeAdvance.RJControls.RJTextBox sa14;
+        private RJCodeAdvance.RJControls.RJTextBox sa11;
+        private RJCodeAdvance.RJControls.RJTextBox sa12;
+        private RJCodeAdvance.RJControls.RJTextBox sa9;
+        private RJCodeAdvance.RJControls.RJTextBox sa10;
+        private RJCodeAdvance.RJControls.RJTextBox sa7;
+        private RJCodeAdvance.RJControls.RJTextBox sa8;
+        private RJCodeAdvance.RJControls.RJTextBox sa30;
+        private RJCodeAdvance.RJControls.RJTextBox sa31;
+        private RJCodeAdvance.RJControls.RJTextBox sa28;
+        private RJCodeAdvance.RJControls.RJTextBox sa29;
+        private RJCodeAdvance.RJControls.RJTextBox sa26;
+        private RJCodeAdvance.RJControls.RJTextBox sa27;
+        private RJCodeAdvance.RJControls.RJTextBox sa25;
     }
 }
 
