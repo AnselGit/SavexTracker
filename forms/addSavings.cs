@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,5 +33,76 @@ namespace SavexTracker.forms
         {
             this.Close();
         }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            string folder = @"C:\Users\22-65\Desktop\School\SavexTracker\database";
+            Directory.CreateDirectory(folder);
+            string dbPath = Path.Combine(folder, "CRUD.db");
+            string connStr = $"Data Source={dbPath};Version=3;";
+
+            string amountText = txt_SA.Texts.Trim();
+            string dateText = lbl_date.Text.Trim();
+
+            if (string.IsNullOrEmpty(amountText) || string.IsNullOrEmpty(dateText))
+            {
+                MessageBox.Show("Please fill out both the amount and date.");
+                return;
+            }
+
+            if (amountText.StartsWith("₱"))
+                amountText = amountText.Substring(1);
+
+            if (!double.TryParse(amountText, out double amount))
+            {
+                MessageBox.Show("Invalid amount format.");
+                return;
+            }
+
+            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            {
+                conn.Open();
+
+                string createTableQuery = @"
+        CREATE TABLE IF NOT EXISTS savings (
+            sid INTEGER PRIMARY KEY AUTOINCREMENT,
+            txtNameDate TEXT,
+            txtNameAmount TEXT,
+            timestamp TEXT NOT NULL,
+            amount REAL NOT NULL
+        );";
+                using (SQLiteCommand createCmd = new SQLiteCommand(createTableQuery, conn))
+                {
+                    createCmd.ExecuteNonQuery();
+                }
+
+                // Get current index for naming
+                string countQuery = "SELECT COUNT(*) FROM savings";
+                int index = Convert.ToInt32(new SQLiteCommand(countQuery, conn).ExecuteScalar()) + 1;
+
+                string txtNameDate = $"n{index}";
+                string txtNameAmount = $"sa{index}";
+
+                string insertQuery = @"
+        INSERT INTO savings (txtNameDate, txtNameAmount, timestamp, amount)
+        VALUES (@txtNameDate, @txtNameAmount, @timestamp, @amount);";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@txtNameDate", txtNameDate);
+                    cmd.Parameters.AddWithValue("@txtNameAmount", txtNameAmount);
+                    cmd.Parameters.AddWithValue("@timestamp", dateText);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                conn.Close();
+            }
+
+            MessageBox.Show("Saved successfully!");
+            this.Close();
+        }
+
     }
 }

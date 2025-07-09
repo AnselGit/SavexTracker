@@ -34,10 +34,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.btn_save = new RJCodeAdvance.RJControls.RJButton();
             this.roundedPanel2 = new RoundedPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txt_SA = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
@@ -52,9 +52,9 @@
             this.roundedPanel1.Controls.Add(this.label4);
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.Controls.Add(this.rjButton2);
-            this.roundedPanel1.Controls.Add(this.rjButton1);
+            this.roundedPanel1.Controls.Add(this.btn_save);
             this.roundedPanel1.Controls.Add(this.roundedPanel2);
-            this.roundedPanel1.Controls.Add(this.rjTextBox1);
+            this.roundedPanel1.Controls.Add(this.txt_SA);
             this.roundedPanel1.Controls.Add(this.label3);
             this.roundedPanel1.Location = new System.Drawing.Point(12, 12);
             this.roundedPanel1.Name = "roundedPanel1";
@@ -64,11 +64,11 @@
             // lbl_date
             // 
             this.lbl_date.AutoSize = true;
-            this.lbl_date.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_date.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_date.Location = new System.Drawing.Point(496, 160);
+            this.lbl_date.Location = new System.Drawing.Point(448, 160);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(95, 29);
+            this.lbl_date.Size = new System.Drawing.Size(104, 32);
             this.lbl_date.TabIndex = 14;
             this.lbl_date.Text = "00/00/00";
             this.lbl_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,11 +76,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(457, 160);
+            this.label4.Location = new System.Drawing.Point(408, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 29);
+            this.label4.Size = new System.Drawing.Size(48, 32);
             this.label4.TabIndex = 13;
             this.label4.Text = "at -";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,24 +117,25 @@
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
-            // rjButton1
+            // btn_save
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 23;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(414, 255);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(217, 46);
-            this.rjButton1.TabIndex = 9;
-            this.rjButton1.Text = "Save now";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btn_save.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btn_save.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_save.BorderRadius = 23;
+            this.btn_save.BorderSize = 0;
+            this.btn_save.FlatAppearance.BorderSize = 0;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(414, 255);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(217, 46);
+            this.btn_save.TabIndex = 9;
+            this.btn_save.Text = "Save now";
+            this.btn_save.TextColor = System.Drawing.Color.White;
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // roundedPanel2
             // 
@@ -156,27 +157,27 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // rjTextBox1
+            // txt_SA
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.White;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.RoyalBlue;
-            this.rjTextBox1.BorderRadius = 23;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(414, 202);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(30, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.rjTextBox1.PlaceholderText = "Enter amount";
-            this.rjTextBox1.Size = new System.Drawing.Size(305, 46);
-            this.rjTextBox1.TabIndex = 8;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txt_SA.BackColor = System.Drawing.Color.White;
+            this.txt_SA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.txt_SA.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.txt_SA.BorderRadius = 0;
+            this.txt_SA.BorderSize = 3;
+            this.txt_SA.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_SA.Location = new System.Drawing.Point(414, 202);
+            this.txt_SA.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SA.Multiline = false;
+            this.txt_SA.Name = "txt_SA";
+            this.txt_SA.Padding = new System.Windows.Forms.Padding(30, 7, 10, 7);
+            this.txt_SA.PasswordChar = false;
+            this.txt_SA.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.txt_SA.PlaceholderText = "Enter amount";
+            this.txt_SA.Size = new System.Drawing.Size(305, 46);
+            this.txt_SA.TabIndex = 8;
+            this.txt_SA.Texts = "";
+            this.txt_SA.UnderlinedStyle = true;
             // 
             // label3
             // 
@@ -216,9 +217,9 @@
         private RoundedPanel roundedPanel1;
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private RJCodeAdvance.RJControls.RJTextBox txt_SA;
         private System.Windows.Forms.Label label3;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private RJCodeAdvance.RJControls.RJButton btn_save;
         private RJCodeAdvance.RJControls.RJButton rjButton2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

@@ -1,4 +1,6 @@
-﻿namespace SavexTracker
+﻿using System.Timers;
+
+namespace SavexTracker
 {
     partial class Form1
     {
@@ -41,19 +43,15 @@
             this.ea1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.gradientPanelRound5 = new GradientPanelRound();
-            this.roundedPanel3 = new RoundedPanel();
+            this.pnlSave = new RoundedPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tblSave = new System.Windows.Forms.TableLayoutPanel();
-            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
@@ -91,16 +89,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
+            this.btnRefresh = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.gradientPanelRound5.SuspendLayout();
-            this.roundedPanel3.SuspendLayout();
+            this.pnlSave.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tblSave.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.roundedPanel7.SuspendLayout();
@@ -118,13 +116,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
+            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.gradientPanelRound6);
             this.panel1.Controls.Add(this.gradientPanelRound5);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label13);
             this.panel1.Location = new System.Drawing.Point(289, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 862);
@@ -278,7 +275,7 @@
             this.gradientPanelRound5.Color3 = System.Drawing.Color.White;
             this.gradientPanelRound5.Color4 = System.Drawing.Color.White;
             this.gradientPanelRound5.Color5 = System.Drawing.Color.AliceBlue;
-            this.gradientPanelRound5.Controls.Add(this.roundedPanel3);
+            this.gradientPanelRound5.Controls.Add(this.pnlSave);
             this.gradientPanelRound5.Controls.Add(this.label16);
             this.gradientPanelRound5.GradientAngle = 90F;
             this.gradientPanelRound5.Location = new System.Drawing.Point(28, 213);
@@ -286,17 +283,17 @@
             this.gradientPanelRound5.Size = new System.Drawing.Size(293, 620);
             this.gradientPanelRound5.TabIndex = 14;
             // 
-            // roundedPanel3
+            // pnlSave
             // 
-            this.roundedPanel3.BackColor = System.Drawing.Color.White;
-            this.roundedPanel3.BorderRadius = 60;
-            this.roundedPanel3.Controls.Add(this.label19);
-            this.roundedPanel3.Controls.Add(this.label18);
-            this.roundedPanel3.Controls.Add(this.flowLayoutPanel1);
-            this.roundedPanel3.Location = new System.Drawing.Point(4, 60);
-            this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.Size = new System.Drawing.Size(284, 535);
-            this.roundedPanel3.TabIndex = 10;
+            this.pnlSave.BackColor = System.Drawing.Color.White;
+            this.pnlSave.BorderRadius = 60;
+            this.pnlSave.Controls.Add(this.label19);
+            this.pnlSave.Controls.Add(this.label18);
+            this.pnlSave.Controls.Add(this.flowLayoutPanel1);
+            this.pnlSave.Location = new System.Drawing.Point(4, 60);
+            this.pnlSave.Name = "pnlSave";
+            this.pnlSave.Size = new System.Drawing.Size(284, 535);
+            this.pnlSave.TabIndex = 10;
             // 
             // label19
             // 
@@ -346,58 +343,12 @@
             this.tblSave.ColumnCount = 2;
             this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.35021F));
             this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.64979F));
-            this.tblSave.Controls.Add(this.rjTextBox2, 0, 0);
-            this.tblSave.Controls.Add(this.rjTextBox1, 1, 0);
             this.tblSave.Location = new System.Drawing.Point(15, 4);
             this.tblSave.Name = "tblSave";
             this.tblSave.RowCount = 1;
             this.tblSave.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39F));
             this.tblSave.Size = new System.Drawing.Size(237, 44);
             this.tblSave.TabIndex = 13;
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.White;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 1;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.Silver;
-            this.rjTextBox2.Location = new System.Drawing.Point(4, 4);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(89, 35);
-            this.rjTextBox2.TabIndex = 16;
-            this.rjTextBox2.Texts = "00/00/00";
-            this.rjTextBox2.UnderlinedStyle = true;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.White;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 1;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(101, 4);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(131, 35);
-            this.rjTextBox1.TabIndex = 16;
-            this.rjTextBox1.Texts = "$ 1000";
-            this.rjTextBox1.UnderlinedStyle = true;
             // 
             // label16
             // 
@@ -432,30 +383,6 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Noto Sans Black", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label12.Location = new System.Drawing.Point(421, 1);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(432, 114);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "2025";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Noto Sans", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label13.Location = new System.Drawing.Point(404, 99);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(432, 87);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "July";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // rjCircularPictureBox1
             // 
             this.rjCircularPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
@@ -473,7 +400,6 @@
             this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rjCircularPictureBox1.TabIndex = 2;
             this.rjCircularPictureBox1.TabStop = false;
-            //this.rjCircularPictureBox1.Click += new System.EventHandler(this.rjCircularPictureBox1_Click);
             // 
             // label1
             // 
@@ -485,7 +411,6 @@
             this.label1.Size = new System.Drawing.Size(107, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "SAVEX";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // rjButton2
             // 
@@ -597,7 +522,6 @@
             this.rjButton10.Text = "Upgrade";
             this.rjButton10.TextColor = System.Drawing.Color.White;
             this.rjButton10.UseVisualStyleBackColor = false;
-            //this.rjButton10.Click += new System.EventHandler(this.rjButton10_Click);
             // 
             // label2
             // 
@@ -609,7 +533,6 @@
             this.label2.Size = new System.Drawing.Size(109, 29);
             this.label2.TabIndex = 7;
             this.label2.Text = "To Savings";
-            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -988,6 +911,27 @@
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnRefresh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.BorderColor = System.Drawing.Color.White;
+            this.btnRefresh.BorderRadius = 33;
+            this.btnRefresh.BorderSize = 0;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(695, 28);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(133, 65);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.TextColor = System.Drawing.Color.White;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1018,7 +962,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.gradientPanelRound6.ResumeLayout(false);
             this.gradientPanelRound6.PerformLayout();
@@ -1028,11 +971,10 @@
             this.panel3.ResumeLayout(false);
             this.gradientPanelRound5.ResumeLayout(false);
             this.gradientPanelRound5.PerformLayout();
-            this.roundedPanel3.ResumeLayout(false);
-            this.roundedPanel3.PerformLayout();
+            this.pnlSave.ResumeLayout(false);
+            this.pnlSave.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.tblSave.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.roundedPanel7.ResumeLayout(false);
@@ -1097,8 +1039,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private MaterialSkin.Controls.MaterialListBox materialListBox1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -1107,7 +1047,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private RoundedPanel roundedPanel2;
-        private RoundedPanel roundedPanel3;
+        private RoundedPanel pnlSave;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private RoundedPanel roundedPanel4;
@@ -1120,8 +1060,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tblSave;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox2;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private RJCodeAdvance.RJControls.RJButton btnRefresh;
     }
 }
 
