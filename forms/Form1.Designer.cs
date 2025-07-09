@@ -37,8 +37,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rjTextBox36 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox47 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.gradientPanelRound5 = new GradientPanelRound();
             this.roundedPanel3 = new RoundedPanel();
@@ -150,6 +150,66 @@
             this.sa26 = new RJCodeAdvance.RJControls.RJTextBox();
             this.sa27 = new RJCodeAdvance.RJControls.RJTextBox();
             this.sa25 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n4 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea4 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n3 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea3 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n8 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n6 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea8 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea6 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n7 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea7 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n5 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea5 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n16 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n12 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n14 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n10 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea16 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea12 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea14 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea10 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n15 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n11 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea15 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea11 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n13 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea13 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n9 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea9 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n24 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n20 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n22 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n18 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea24 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea20 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea22 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea18 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n23 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n19 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea23 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea19 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n21 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea21 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n17 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea17 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n28 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n30 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n26 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea28 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea30 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea26 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n31 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n27 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea31 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea27 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n29 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea29 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.n25 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.ea25 = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -264,56 +324,116 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.rjTextBox36);
-            this.panel3.Controls.Add(this.rjTextBox47);
+            this.panel3.Controls.Add(this.n24);
+            this.panel3.Controls.Add(this.n28);
+            this.panel3.Controls.Add(this.n16);
+            this.panel3.Controls.Add(this.n30);
+            this.panel3.Controls.Add(this.n20);
+            this.panel3.Controls.Add(this.n26);
+            this.panel3.Controls.Add(this.n8);
+            this.panel3.Controls.Add(this.n22);
+            this.panel3.Controls.Add(this.ea28);
+            this.panel3.Controls.Add(this.n12);
+            this.panel3.Controls.Add(this.ea30);
+            this.panel3.Controls.Add(this.n18);
+            this.panel3.Controls.Add(this.ea26);
+            this.panel3.Controls.Add(this.n4);
+            this.panel3.Controls.Add(this.n31);
+            this.panel3.Controls.Add(this.ea24);
+            this.panel3.Controls.Add(this.n27);
+            this.panel3.Controls.Add(this.n14);
+            this.panel3.Controls.Add(this.ea31);
+            this.panel3.Controls.Add(this.ea20);
+            this.panel3.Controls.Add(this.ea27);
+            this.panel3.Controls.Add(this.n6);
+            this.panel3.Controls.Add(this.n29);
+            this.panel3.Controls.Add(this.ea22);
+            this.panel3.Controls.Add(this.ea29);
+            this.panel3.Controls.Add(this.n10);
+            this.panel3.Controls.Add(this.n25);
+            this.panel3.Controls.Add(this.ea25);
+            this.panel3.Controls.Add(this.ea18);
+            this.panel3.Controls.Add(this.n2);
+            this.panel3.Controls.Add(this.n23);
+            this.panel3.Controls.Add(this.ea16);
+            this.panel3.Controls.Add(this.n19);
+            this.panel3.Controls.Add(this.ea8);
+            this.panel3.Controls.Add(this.ea23);
+            this.panel3.Controls.Add(this.ea12);
+            this.panel3.Controls.Add(this.ea19);
+            this.panel3.Controls.Add(this.ea4);
+            this.panel3.Controls.Add(this.n21);
+            this.panel3.Controls.Add(this.ea14);
+            this.panel3.Controls.Add(this.ea21);
+            this.panel3.Controls.Add(this.ea6);
+            this.panel3.Controls.Add(this.n17);
+            this.panel3.Controls.Add(this.ea17);
+            this.panel3.Controls.Add(this.ea10);
+            this.panel3.Controls.Add(this.ea2);
+            this.panel3.Controls.Add(this.n15);
+            this.panel3.Controls.Add(this.n7);
+            this.panel3.Controls.Add(this.n11);
+            this.panel3.Controls.Add(this.n3);
+            this.panel3.Controls.Add(this.ea15);
+            this.panel3.Controls.Add(this.ea7);
+            this.panel3.Controls.Add(this.ea11);
+            this.panel3.Controls.Add(this.ea3);
+            this.panel3.Controls.Add(this.n13);
+            this.panel3.Controls.Add(this.n5);
+            this.panel3.Controls.Add(this.ea13);
+            this.panel3.Controls.Add(this.ea5);
+            this.panel3.Controls.Add(this.n9);
+            this.panel3.Controls.Add(this.ea9);
+            this.panel3.Controls.Add(this.n1);
+            this.panel3.Controls.Add(this.ea1);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(440, 1200);
             this.panel3.TabIndex = 0;
             // 
-            // rjTextBox36
+            // n1
             // 
-            this.rjTextBox36.BackColor = System.Drawing.Color.White;
-            this.rjTextBox36.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox36.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox36.BorderRadius = 0;
-            this.rjTextBox36.BorderSize = 1;
-            this.rjTextBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox36.ForeColor = System.Drawing.Color.Gray;
-            this.rjTextBox36.Location = new System.Drawing.Point(120, 4);
-            this.rjTextBox36.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox36.Multiline = false;
-            this.rjTextBox36.Name = "rjTextBox36";
-            this.rjTextBox36.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox36.PasswordChar = false;
-            this.rjTextBox36.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox36.PlaceholderText = "";
-            this.rjTextBox36.Size = new System.Drawing.Size(316, 35);
-            this.rjTextBox36.TabIndex = 12;
-            this.rjTextBox36.Texts = "Note...";
-            this.rjTextBox36.UnderlinedStyle = true;
+            this.n1.BackColor = System.Drawing.Color.White;
+            this.n1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n1.BorderRadius = 0;
+            this.n1.BorderSize = 1;
+            this.n1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n1.ForeColor = System.Drawing.Color.Gray;
+            this.n1.Location = new System.Drawing.Point(120, 4);
+            this.n1.Margin = new System.Windows.Forms.Padding(4);
+            this.n1.Multiline = false;
+            this.n1.Name = "n1";
+            this.n1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n1.PasswordChar = false;
+            this.n1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n1.PlaceholderText = "";
+            this.n1.Size = new System.Drawing.Size(316, 35);
+            this.n1.TabIndex = 12;
+            this.n1.Texts = "Note...";
+            this.n1.UnderlinedStyle = true;
             // 
-            // rjTextBox47
+            // ea1
             // 
-            this.rjTextBox47.BackColor = System.Drawing.Color.White;
-            this.rjTextBox47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox47.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox47.BorderRadius = 0;
-            this.rjTextBox47.BorderSize = 1;
-            this.rjTextBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox47.Location = new System.Drawing.Point(13, 4);
-            this.rjTextBox47.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox47.Multiline = false;
-            this.rjTextBox47.Name = "rjTextBox47";
-            this.rjTextBox47.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox47.PasswordChar = false;
-            this.rjTextBox47.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox47.PlaceholderText = "";
-            this.rjTextBox47.Size = new System.Drawing.Size(99, 35);
-            this.rjTextBox47.TabIndex = 0;
-            this.rjTextBox47.Texts = "$ 1000";
-            this.rjTextBox47.UnderlinedStyle = true;
+            this.ea1.BackColor = System.Drawing.Color.White;
+            this.ea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea1.BorderRadius = 0;
+            this.ea1.BorderSize = 1;
+            this.ea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea1.Location = new System.Drawing.Point(13, 4);
+            this.ea1.Margin = new System.Windows.Forms.Padding(4);
+            this.ea1.Multiline = false;
+            this.ea1.Name = "ea1";
+            this.ea1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea1.PasswordChar = false;
+            this.ea1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea1.PlaceholderText = "";
+            this.ea1.Size = new System.Drawing.Size(99, 35);
+            this.ea1.TabIndex = 0;
+            this.ea1.Texts = "$ 1000";
+            this.ea1.UnderlinedStyle = true;
             // 
             // label17
             // 
@@ -2416,6 +2536,1326 @@
             this.sa25.Texts = "$ 1000";
             this.sa25.UnderlinedStyle = true;
             // 
+            // n2
+            // 
+            this.n2.BackColor = System.Drawing.Color.White;
+            this.n2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n2.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n2.BorderRadius = 0;
+            this.n2.BorderSize = 1;
+            this.n2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n2.ForeColor = System.Drawing.Color.Gray;
+            this.n2.Location = new System.Drawing.Point(120, 39);
+            this.n2.Margin = new System.Windows.Forms.Padding(4);
+            this.n2.Multiline = false;
+            this.n2.Name = "n2";
+            this.n2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n2.PasswordChar = false;
+            this.n2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n2.PlaceholderText = "";
+            this.n2.Size = new System.Drawing.Size(316, 35);
+            this.n2.TabIndex = 17;
+            this.n2.Texts = "Note...";
+            this.n2.UnderlinedStyle = true;
+            // 
+            // ea2
+            // 
+            this.ea2.BackColor = System.Drawing.Color.White;
+            this.ea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea2.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea2.BorderRadius = 0;
+            this.ea2.BorderSize = 1;
+            this.ea2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea2.Location = new System.Drawing.Point(13, 39);
+            this.ea2.Margin = new System.Windows.Forms.Padding(4);
+            this.ea2.Multiline = false;
+            this.ea2.Name = "ea2";
+            this.ea2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea2.PasswordChar = false;
+            this.ea2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea2.PlaceholderText = "";
+            this.ea2.Size = new System.Drawing.Size(99, 35);
+            this.ea2.TabIndex = 16;
+            this.ea2.Texts = "$ 1000";
+            this.ea2.UnderlinedStyle = true;
+            // 
+            // n4
+            // 
+            this.n4.BackColor = System.Drawing.Color.White;
+            this.n4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n4.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n4.BorderRadius = 0;
+            this.n4.BorderSize = 1;
+            this.n4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n4.ForeColor = System.Drawing.Color.Gray;
+            this.n4.Location = new System.Drawing.Point(120, 109);
+            this.n4.Margin = new System.Windows.Forms.Padding(4);
+            this.n4.Multiline = false;
+            this.n4.Name = "n4";
+            this.n4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n4.PasswordChar = false;
+            this.n4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n4.PlaceholderText = "";
+            this.n4.Size = new System.Drawing.Size(316, 35);
+            this.n4.TabIndex = 21;
+            this.n4.Texts = "Note...";
+            this.n4.UnderlinedStyle = true;
+            // 
+            // ea4
+            // 
+            this.ea4.BackColor = System.Drawing.Color.White;
+            this.ea4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea4.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea4.BorderRadius = 0;
+            this.ea4.BorderSize = 1;
+            this.ea4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea4.Location = new System.Drawing.Point(13, 109);
+            this.ea4.Margin = new System.Windows.Forms.Padding(4);
+            this.ea4.Multiline = false;
+            this.ea4.Name = "ea4";
+            this.ea4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea4.PasswordChar = false;
+            this.ea4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea4.PlaceholderText = "";
+            this.ea4.Size = new System.Drawing.Size(99, 35);
+            this.ea4.TabIndex = 20;
+            this.ea4.Texts = "$ 1000";
+            this.ea4.UnderlinedStyle = true;
+            // 
+            // n3
+            // 
+            this.n3.BackColor = System.Drawing.Color.White;
+            this.n3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n3.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n3.BorderRadius = 0;
+            this.n3.BorderSize = 1;
+            this.n3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n3.ForeColor = System.Drawing.Color.Gray;
+            this.n3.Location = new System.Drawing.Point(120, 74);
+            this.n3.Margin = new System.Windows.Forms.Padding(4);
+            this.n3.Multiline = false;
+            this.n3.Name = "n3";
+            this.n3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n3.PasswordChar = false;
+            this.n3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n3.PlaceholderText = "";
+            this.n3.Size = new System.Drawing.Size(316, 35);
+            this.n3.TabIndex = 19;
+            this.n3.Texts = "Note...";
+            this.n3.UnderlinedStyle = true;
+            // 
+            // ea3
+            // 
+            this.ea3.BackColor = System.Drawing.Color.White;
+            this.ea3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea3.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea3.BorderRadius = 0;
+            this.ea3.BorderSize = 1;
+            this.ea3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea3.Location = new System.Drawing.Point(13, 74);
+            this.ea3.Margin = new System.Windows.Forms.Padding(4);
+            this.ea3.Multiline = false;
+            this.ea3.Name = "ea3";
+            this.ea3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea3.PasswordChar = false;
+            this.ea3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea3.PlaceholderText = "";
+            this.ea3.Size = new System.Drawing.Size(99, 35);
+            this.ea3.TabIndex = 18;
+            this.ea3.Texts = "$ 1000";
+            this.ea3.UnderlinedStyle = true;
+            // 
+            // n8
+            // 
+            this.n8.BackColor = System.Drawing.Color.White;
+            this.n8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n8.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n8.BorderRadius = 0;
+            this.n8.BorderSize = 1;
+            this.n8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n8.ForeColor = System.Drawing.Color.Gray;
+            this.n8.Location = new System.Drawing.Point(120, 249);
+            this.n8.Margin = new System.Windows.Forms.Padding(4);
+            this.n8.Multiline = false;
+            this.n8.Name = "n8";
+            this.n8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n8.PasswordChar = false;
+            this.n8.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n8.PlaceholderText = "";
+            this.n8.Size = new System.Drawing.Size(316, 35);
+            this.n8.TabIndex = 29;
+            this.n8.Texts = "Note...";
+            this.n8.UnderlinedStyle = true;
+            // 
+            // n6
+            // 
+            this.n6.BackColor = System.Drawing.Color.White;
+            this.n6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n6.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n6.BorderRadius = 0;
+            this.n6.BorderSize = 1;
+            this.n6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n6.ForeColor = System.Drawing.Color.Gray;
+            this.n6.Location = new System.Drawing.Point(120, 179);
+            this.n6.Margin = new System.Windows.Forms.Padding(4);
+            this.n6.Multiline = false;
+            this.n6.Name = "n6";
+            this.n6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n6.PasswordChar = false;
+            this.n6.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n6.PlaceholderText = "";
+            this.n6.Size = new System.Drawing.Size(316, 35);
+            this.n6.TabIndex = 25;
+            this.n6.Texts = "Note...";
+            this.n6.UnderlinedStyle = true;
+            // 
+            // ea8
+            // 
+            this.ea8.BackColor = System.Drawing.Color.White;
+            this.ea8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea8.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea8.BorderRadius = 0;
+            this.ea8.BorderSize = 1;
+            this.ea8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea8.Location = new System.Drawing.Point(13, 249);
+            this.ea8.Margin = new System.Windows.Forms.Padding(4);
+            this.ea8.Multiline = false;
+            this.ea8.Name = "ea8";
+            this.ea8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea8.PasswordChar = false;
+            this.ea8.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea8.PlaceholderText = "";
+            this.ea8.Size = new System.Drawing.Size(99, 35);
+            this.ea8.TabIndex = 28;
+            this.ea8.Texts = "$ 1000";
+            this.ea8.UnderlinedStyle = true;
+            // 
+            // ea6
+            // 
+            this.ea6.BackColor = System.Drawing.Color.White;
+            this.ea6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea6.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea6.BorderRadius = 0;
+            this.ea6.BorderSize = 1;
+            this.ea6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea6.Location = new System.Drawing.Point(13, 179);
+            this.ea6.Margin = new System.Windows.Forms.Padding(4);
+            this.ea6.Multiline = false;
+            this.ea6.Name = "ea6";
+            this.ea6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea6.PasswordChar = false;
+            this.ea6.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea6.PlaceholderText = "";
+            this.ea6.Size = new System.Drawing.Size(99, 35);
+            this.ea6.TabIndex = 24;
+            this.ea6.Texts = "$ 1000";
+            this.ea6.UnderlinedStyle = true;
+            // 
+            // n7
+            // 
+            this.n7.BackColor = System.Drawing.Color.White;
+            this.n7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n7.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n7.BorderRadius = 0;
+            this.n7.BorderSize = 1;
+            this.n7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n7.ForeColor = System.Drawing.Color.Gray;
+            this.n7.Location = new System.Drawing.Point(120, 214);
+            this.n7.Margin = new System.Windows.Forms.Padding(4);
+            this.n7.Multiline = false;
+            this.n7.Name = "n7";
+            this.n7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n7.PasswordChar = false;
+            this.n7.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n7.PlaceholderText = "";
+            this.n7.Size = new System.Drawing.Size(316, 35);
+            this.n7.TabIndex = 27;
+            this.n7.Texts = "Note...";
+            this.n7.UnderlinedStyle = true;
+            // 
+            // ea7
+            // 
+            this.ea7.BackColor = System.Drawing.Color.White;
+            this.ea7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea7.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea7.BorderRadius = 0;
+            this.ea7.BorderSize = 1;
+            this.ea7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea7.Location = new System.Drawing.Point(13, 214);
+            this.ea7.Margin = new System.Windows.Forms.Padding(4);
+            this.ea7.Multiline = false;
+            this.ea7.Name = "ea7";
+            this.ea7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea7.PasswordChar = false;
+            this.ea7.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea7.PlaceholderText = "";
+            this.ea7.Size = new System.Drawing.Size(99, 35);
+            this.ea7.TabIndex = 26;
+            this.ea7.Texts = "$ 1000";
+            this.ea7.UnderlinedStyle = true;
+            // 
+            // n5
+            // 
+            this.n5.BackColor = System.Drawing.Color.White;
+            this.n5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n5.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n5.BorderRadius = 0;
+            this.n5.BorderSize = 1;
+            this.n5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n5.ForeColor = System.Drawing.Color.Gray;
+            this.n5.Location = new System.Drawing.Point(120, 144);
+            this.n5.Margin = new System.Windows.Forms.Padding(4);
+            this.n5.Multiline = false;
+            this.n5.Name = "n5";
+            this.n5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n5.PasswordChar = false;
+            this.n5.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n5.PlaceholderText = "";
+            this.n5.Size = new System.Drawing.Size(316, 35);
+            this.n5.TabIndex = 23;
+            this.n5.Texts = "Note...";
+            this.n5.UnderlinedStyle = true;
+            // 
+            // ea5
+            // 
+            this.ea5.BackColor = System.Drawing.Color.White;
+            this.ea5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea5.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea5.BorderRadius = 0;
+            this.ea5.BorderSize = 1;
+            this.ea5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea5.Location = new System.Drawing.Point(13, 144);
+            this.ea5.Margin = new System.Windows.Forms.Padding(4);
+            this.ea5.Multiline = false;
+            this.ea5.Name = "ea5";
+            this.ea5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea5.PasswordChar = false;
+            this.ea5.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea5.PlaceholderText = "";
+            this.ea5.Size = new System.Drawing.Size(99, 35);
+            this.ea5.TabIndex = 22;
+            this.ea5.Texts = "$ 1000";
+            this.ea5.UnderlinedStyle = true;
+            // 
+            // n16
+            // 
+            this.n16.BackColor = System.Drawing.Color.White;
+            this.n16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n16.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n16.BorderRadius = 0;
+            this.n16.BorderSize = 1;
+            this.n16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n16.ForeColor = System.Drawing.Color.Gray;
+            this.n16.Location = new System.Drawing.Point(120, 531);
+            this.n16.Margin = new System.Windows.Forms.Padding(4);
+            this.n16.Multiline = false;
+            this.n16.Name = "n16";
+            this.n16.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n16.PasswordChar = false;
+            this.n16.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n16.PlaceholderText = "";
+            this.n16.Size = new System.Drawing.Size(316, 35);
+            this.n16.TabIndex = 45;
+            this.n16.Texts = "Note...";
+            this.n16.UnderlinedStyle = true;
+            // 
+            // n12
+            // 
+            this.n12.BackColor = System.Drawing.Color.White;
+            this.n12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n12.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n12.BorderRadius = 0;
+            this.n12.BorderSize = 1;
+            this.n12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n12.ForeColor = System.Drawing.Color.Gray;
+            this.n12.Location = new System.Drawing.Point(120, 391);
+            this.n12.Margin = new System.Windows.Forms.Padding(4);
+            this.n12.Multiline = false;
+            this.n12.Name = "n12";
+            this.n12.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n12.PasswordChar = false;
+            this.n12.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n12.PlaceholderText = "";
+            this.n12.Size = new System.Drawing.Size(316, 35);
+            this.n12.TabIndex = 37;
+            this.n12.Texts = "Note...";
+            this.n12.UnderlinedStyle = true;
+            // 
+            // n14
+            // 
+            this.n14.BackColor = System.Drawing.Color.White;
+            this.n14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n14.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n14.BorderRadius = 0;
+            this.n14.BorderSize = 1;
+            this.n14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n14.ForeColor = System.Drawing.Color.Gray;
+            this.n14.Location = new System.Drawing.Point(120, 461);
+            this.n14.Margin = new System.Windows.Forms.Padding(4);
+            this.n14.Multiline = false;
+            this.n14.Name = "n14";
+            this.n14.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n14.PasswordChar = false;
+            this.n14.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n14.PlaceholderText = "";
+            this.n14.Size = new System.Drawing.Size(316, 35);
+            this.n14.TabIndex = 41;
+            this.n14.Texts = "Note...";
+            this.n14.UnderlinedStyle = true;
+            // 
+            // n10
+            // 
+            this.n10.BackColor = System.Drawing.Color.White;
+            this.n10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n10.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n10.BorderRadius = 0;
+            this.n10.BorderSize = 1;
+            this.n10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n10.ForeColor = System.Drawing.Color.Gray;
+            this.n10.Location = new System.Drawing.Point(120, 321);
+            this.n10.Margin = new System.Windows.Forms.Padding(4);
+            this.n10.Multiline = false;
+            this.n10.Name = "n10";
+            this.n10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n10.PasswordChar = false;
+            this.n10.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n10.PlaceholderText = "";
+            this.n10.Size = new System.Drawing.Size(316, 35);
+            this.n10.TabIndex = 33;
+            this.n10.Texts = "Note...";
+            this.n10.UnderlinedStyle = true;
+            // 
+            // ea16
+            // 
+            this.ea16.BackColor = System.Drawing.Color.White;
+            this.ea16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea16.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea16.BorderRadius = 0;
+            this.ea16.BorderSize = 1;
+            this.ea16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea16.Location = new System.Drawing.Point(13, 531);
+            this.ea16.Margin = new System.Windows.Forms.Padding(4);
+            this.ea16.Multiline = false;
+            this.ea16.Name = "ea16";
+            this.ea16.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea16.PasswordChar = false;
+            this.ea16.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea16.PlaceholderText = "";
+            this.ea16.Size = new System.Drawing.Size(99, 35);
+            this.ea16.TabIndex = 44;
+            this.ea16.Texts = "$ 1000";
+            this.ea16.UnderlinedStyle = true;
+            // 
+            // ea12
+            // 
+            this.ea12.BackColor = System.Drawing.Color.White;
+            this.ea12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea12.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea12.BorderRadius = 0;
+            this.ea12.BorderSize = 1;
+            this.ea12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea12.Location = new System.Drawing.Point(13, 391);
+            this.ea12.Margin = new System.Windows.Forms.Padding(4);
+            this.ea12.Multiline = false;
+            this.ea12.Name = "ea12";
+            this.ea12.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea12.PasswordChar = false;
+            this.ea12.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea12.PlaceholderText = "";
+            this.ea12.Size = new System.Drawing.Size(99, 35);
+            this.ea12.TabIndex = 36;
+            this.ea12.Texts = "$ 1000";
+            this.ea12.UnderlinedStyle = true;
+            // 
+            // ea14
+            // 
+            this.ea14.BackColor = System.Drawing.Color.White;
+            this.ea14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea14.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea14.BorderRadius = 0;
+            this.ea14.BorderSize = 1;
+            this.ea14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea14.Location = new System.Drawing.Point(13, 461);
+            this.ea14.Margin = new System.Windows.Forms.Padding(4);
+            this.ea14.Multiline = false;
+            this.ea14.Name = "ea14";
+            this.ea14.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea14.PasswordChar = false;
+            this.ea14.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea14.PlaceholderText = "";
+            this.ea14.Size = new System.Drawing.Size(99, 35);
+            this.ea14.TabIndex = 40;
+            this.ea14.Texts = "$ 1000";
+            this.ea14.UnderlinedStyle = true;
+            // 
+            // ea10
+            // 
+            this.ea10.BackColor = System.Drawing.Color.White;
+            this.ea10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea10.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea10.BorderRadius = 0;
+            this.ea10.BorderSize = 1;
+            this.ea10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea10.Location = new System.Drawing.Point(13, 321);
+            this.ea10.Margin = new System.Windows.Forms.Padding(4);
+            this.ea10.Multiline = false;
+            this.ea10.Name = "ea10";
+            this.ea10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea10.PasswordChar = false;
+            this.ea10.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea10.PlaceholderText = "";
+            this.ea10.Size = new System.Drawing.Size(99, 35);
+            this.ea10.TabIndex = 32;
+            this.ea10.Texts = "$ 1000";
+            this.ea10.UnderlinedStyle = true;
+            // 
+            // n15
+            // 
+            this.n15.BackColor = System.Drawing.Color.White;
+            this.n15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n15.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n15.BorderRadius = 0;
+            this.n15.BorderSize = 1;
+            this.n15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n15.ForeColor = System.Drawing.Color.Gray;
+            this.n15.Location = new System.Drawing.Point(120, 496);
+            this.n15.Margin = new System.Windows.Forms.Padding(4);
+            this.n15.Multiline = false;
+            this.n15.Name = "n15";
+            this.n15.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n15.PasswordChar = false;
+            this.n15.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n15.PlaceholderText = "";
+            this.n15.Size = new System.Drawing.Size(316, 35);
+            this.n15.TabIndex = 43;
+            this.n15.Texts = "Note...";
+            this.n15.UnderlinedStyle = true;
+            // 
+            // n11
+            // 
+            this.n11.BackColor = System.Drawing.Color.White;
+            this.n11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n11.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n11.BorderRadius = 0;
+            this.n11.BorderSize = 1;
+            this.n11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n11.ForeColor = System.Drawing.Color.Gray;
+            this.n11.Location = new System.Drawing.Point(120, 356);
+            this.n11.Margin = new System.Windows.Forms.Padding(4);
+            this.n11.Multiline = false;
+            this.n11.Name = "n11";
+            this.n11.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n11.PasswordChar = false;
+            this.n11.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n11.PlaceholderText = "";
+            this.n11.Size = new System.Drawing.Size(316, 35);
+            this.n11.TabIndex = 35;
+            this.n11.Texts = "Note...";
+            this.n11.UnderlinedStyle = true;
+            // 
+            // ea15
+            // 
+            this.ea15.BackColor = System.Drawing.Color.White;
+            this.ea15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea15.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea15.BorderRadius = 0;
+            this.ea15.BorderSize = 1;
+            this.ea15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea15.Location = new System.Drawing.Point(13, 496);
+            this.ea15.Margin = new System.Windows.Forms.Padding(4);
+            this.ea15.Multiline = false;
+            this.ea15.Name = "ea15";
+            this.ea15.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea15.PasswordChar = false;
+            this.ea15.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea15.PlaceholderText = "";
+            this.ea15.Size = new System.Drawing.Size(99, 35);
+            this.ea15.TabIndex = 42;
+            this.ea15.Texts = "$ 1000";
+            this.ea15.UnderlinedStyle = true;
+            // 
+            // ea11
+            // 
+            this.ea11.BackColor = System.Drawing.Color.White;
+            this.ea11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea11.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea11.BorderRadius = 0;
+            this.ea11.BorderSize = 1;
+            this.ea11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea11.Location = new System.Drawing.Point(13, 356);
+            this.ea11.Margin = new System.Windows.Forms.Padding(4);
+            this.ea11.Multiline = false;
+            this.ea11.Name = "ea11";
+            this.ea11.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea11.PasswordChar = false;
+            this.ea11.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea11.PlaceholderText = "";
+            this.ea11.Size = new System.Drawing.Size(99, 35);
+            this.ea11.TabIndex = 34;
+            this.ea11.Texts = "$ 1000";
+            this.ea11.UnderlinedStyle = true;
+            // 
+            // n13
+            // 
+            this.n13.BackColor = System.Drawing.Color.White;
+            this.n13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n13.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n13.BorderRadius = 0;
+            this.n13.BorderSize = 1;
+            this.n13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n13.ForeColor = System.Drawing.Color.Gray;
+            this.n13.Location = new System.Drawing.Point(120, 426);
+            this.n13.Margin = new System.Windows.Forms.Padding(4);
+            this.n13.Multiline = false;
+            this.n13.Name = "n13";
+            this.n13.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n13.PasswordChar = false;
+            this.n13.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n13.PlaceholderText = "";
+            this.n13.Size = new System.Drawing.Size(316, 35);
+            this.n13.TabIndex = 39;
+            this.n13.Texts = "Note...";
+            this.n13.UnderlinedStyle = true;
+            // 
+            // ea13
+            // 
+            this.ea13.BackColor = System.Drawing.Color.White;
+            this.ea13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea13.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea13.BorderRadius = 0;
+            this.ea13.BorderSize = 1;
+            this.ea13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea13.Location = new System.Drawing.Point(13, 426);
+            this.ea13.Margin = new System.Windows.Forms.Padding(4);
+            this.ea13.Multiline = false;
+            this.ea13.Name = "ea13";
+            this.ea13.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea13.PasswordChar = false;
+            this.ea13.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea13.PlaceholderText = "";
+            this.ea13.Size = new System.Drawing.Size(99, 35);
+            this.ea13.TabIndex = 38;
+            this.ea13.Texts = "$ 1000";
+            this.ea13.UnderlinedStyle = true;
+            // 
+            // n9
+            // 
+            this.n9.BackColor = System.Drawing.Color.White;
+            this.n9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n9.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n9.BorderRadius = 0;
+            this.n9.BorderSize = 1;
+            this.n9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n9.ForeColor = System.Drawing.Color.Gray;
+            this.n9.Location = new System.Drawing.Point(120, 286);
+            this.n9.Margin = new System.Windows.Forms.Padding(4);
+            this.n9.Multiline = false;
+            this.n9.Name = "n9";
+            this.n9.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n9.PasswordChar = false;
+            this.n9.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n9.PlaceholderText = "";
+            this.n9.Size = new System.Drawing.Size(316, 35);
+            this.n9.TabIndex = 31;
+            this.n9.Texts = "Note...";
+            this.n9.UnderlinedStyle = true;
+            // 
+            // ea9
+            // 
+            this.ea9.BackColor = System.Drawing.Color.White;
+            this.ea9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea9.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea9.BorderRadius = 0;
+            this.ea9.BorderSize = 1;
+            this.ea9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea9.Location = new System.Drawing.Point(13, 286);
+            this.ea9.Margin = new System.Windows.Forms.Padding(4);
+            this.ea9.Multiline = false;
+            this.ea9.Name = "ea9";
+            this.ea9.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea9.PasswordChar = false;
+            this.ea9.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea9.PlaceholderText = "";
+            this.ea9.Size = new System.Drawing.Size(99, 35);
+            this.ea9.TabIndex = 30;
+            this.ea9.Texts = "$ 1000";
+            this.ea9.UnderlinedStyle = true;
+            // 
+            // n24
+            // 
+            this.n24.BackColor = System.Drawing.Color.White;
+            this.n24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n24.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n24.BorderRadius = 0;
+            this.n24.BorderSize = 1;
+            this.n24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n24.ForeColor = System.Drawing.Color.Gray;
+            this.n24.Location = new System.Drawing.Point(120, 814);
+            this.n24.Margin = new System.Windows.Forms.Padding(4);
+            this.n24.Multiline = false;
+            this.n24.Name = "n24";
+            this.n24.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n24.PasswordChar = false;
+            this.n24.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n24.PlaceholderText = "";
+            this.n24.Size = new System.Drawing.Size(316, 35);
+            this.n24.TabIndex = 45;
+            this.n24.Texts = "Note...";
+            this.n24.UnderlinedStyle = true;
+            // 
+            // n20
+            // 
+            this.n20.BackColor = System.Drawing.Color.White;
+            this.n20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n20.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n20.BorderRadius = 0;
+            this.n20.BorderSize = 1;
+            this.n20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n20.ForeColor = System.Drawing.Color.Gray;
+            this.n20.Location = new System.Drawing.Point(120, 674);
+            this.n20.Margin = new System.Windows.Forms.Padding(4);
+            this.n20.Multiline = false;
+            this.n20.Name = "n20";
+            this.n20.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n20.PasswordChar = false;
+            this.n20.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n20.PlaceholderText = "";
+            this.n20.Size = new System.Drawing.Size(316, 35);
+            this.n20.TabIndex = 37;
+            this.n20.Texts = "Note...";
+            this.n20.UnderlinedStyle = true;
+            // 
+            // n22
+            // 
+            this.n22.BackColor = System.Drawing.Color.White;
+            this.n22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n22.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n22.BorderRadius = 0;
+            this.n22.BorderSize = 1;
+            this.n22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n22.ForeColor = System.Drawing.Color.Gray;
+            this.n22.Location = new System.Drawing.Point(120, 744);
+            this.n22.Margin = new System.Windows.Forms.Padding(4);
+            this.n22.Multiline = false;
+            this.n22.Name = "n22";
+            this.n22.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n22.PasswordChar = false;
+            this.n22.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n22.PlaceholderText = "";
+            this.n22.Size = new System.Drawing.Size(316, 35);
+            this.n22.TabIndex = 41;
+            this.n22.Texts = "Note...";
+            this.n22.UnderlinedStyle = true;
+            // 
+            // n18
+            // 
+            this.n18.BackColor = System.Drawing.Color.White;
+            this.n18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n18.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n18.BorderRadius = 0;
+            this.n18.BorderSize = 1;
+            this.n18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n18.ForeColor = System.Drawing.Color.Gray;
+            this.n18.Location = new System.Drawing.Point(120, 604);
+            this.n18.Margin = new System.Windows.Forms.Padding(4);
+            this.n18.Multiline = false;
+            this.n18.Name = "n18";
+            this.n18.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n18.PasswordChar = false;
+            this.n18.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n18.PlaceholderText = "";
+            this.n18.Size = new System.Drawing.Size(316, 35);
+            this.n18.TabIndex = 33;
+            this.n18.Texts = "Note...";
+            this.n18.UnderlinedStyle = true;
+            // 
+            // ea24
+            // 
+            this.ea24.BackColor = System.Drawing.Color.White;
+            this.ea24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea24.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea24.BorderRadius = 0;
+            this.ea24.BorderSize = 1;
+            this.ea24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea24.Location = new System.Drawing.Point(13, 814);
+            this.ea24.Margin = new System.Windows.Forms.Padding(4);
+            this.ea24.Multiline = false;
+            this.ea24.Name = "ea24";
+            this.ea24.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea24.PasswordChar = false;
+            this.ea24.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea24.PlaceholderText = "";
+            this.ea24.Size = new System.Drawing.Size(99, 35);
+            this.ea24.TabIndex = 44;
+            this.ea24.Texts = "$ 1000";
+            this.ea24.UnderlinedStyle = true;
+            // 
+            // ea20
+            // 
+            this.ea20.BackColor = System.Drawing.Color.White;
+            this.ea20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea20.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea20.BorderRadius = 0;
+            this.ea20.BorderSize = 1;
+            this.ea20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea20.Location = new System.Drawing.Point(13, 674);
+            this.ea20.Margin = new System.Windows.Forms.Padding(4);
+            this.ea20.Multiline = false;
+            this.ea20.Name = "ea20";
+            this.ea20.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea20.PasswordChar = false;
+            this.ea20.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea20.PlaceholderText = "";
+            this.ea20.Size = new System.Drawing.Size(99, 35);
+            this.ea20.TabIndex = 36;
+            this.ea20.Texts = "$ 1000";
+            this.ea20.UnderlinedStyle = true;
+            // 
+            // ea22
+            // 
+            this.ea22.BackColor = System.Drawing.Color.White;
+            this.ea22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea22.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea22.BorderRadius = 0;
+            this.ea22.BorderSize = 1;
+            this.ea22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea22.Location = new System.Drawing.Point(13, 744);
+            this.ea22.Margin = new System.Windows.Forms.Padding(4);
+            this.ea22.Multiline = false;
+            this.ea22.Name = "ea22";
+            this.ea22.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea22.PasswordChar = false;
+            this.ea22.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea22.PlaceholderText = "";
+            this.ea22.Size = new System.Drawing.Size(99, 35);
+            this.ea22.TabIndex = 40;
+            this.ea22.Texts = "$ 1000";
+            this.ea22.UnderlinedStyle = true;
+            // 
+            // ea18
+            // 
+            this.ea18.BackColor = System.Drawing.Color.White;
+            this.ea18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea18.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea18.BorderRadius = 0;
+            this.ea18.BorderSize = 1;
+            this.ea18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea18.Location = new System.Drawing.Point(13, 604);
+            this.ea18.Margin = new System.Windows.Forms.Padding(4);
+            this.ea18.Multiline = false;
+            this.ea18.Name = "ea18";
+            this.ea18.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea18.PasswordChar = false;
+            this.ea18.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea18.PlaceholderText = "";
+            this.ea18.Size = new System.Drawing.Size(99, 35);
+            this.ea18.TabIndex = 32;
+            this.ea18.Texts = "$ 1000";
+            this.ea18.UnderlinedStyle = true;
+            // 
+            // n23
+            // 
+            this.n23.BackColor = System.Drawing.Color.White;
+            this.n23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n23.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n23.BorderRadius = 0;
+            this.n23.BorderSize = 1;
+            this.n23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n23.ForeColor = System.Drawing.Color.Gray;
+            this.n23.Location = new System.Drawing.Point(120, 779);
+            this.n23.Margin = new System.Windows.Forms.Padding(4);
+            this.n23.Multiline = false;
+            this.n23.Name = "n23";
+            this.n23.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n23.PasswordChar = false;
+            this.n23.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n23.PlaceholderText = "";
+            this.n23.Size = new System.Drawing.Size(316, 35);
+            this.n23.TabIndex = 43;
+            this.n23.Texts = "Note...";
+            this.n23.UnderlinedStyle = true;
+            // 
+            // n19
+            // 
+            this.n19.BackColor = System.Drawing.Color.White;
+            this.n19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n19.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n19.BorderRadius = 0;
+            this.n19.BorderSize = 1;
+            this.n19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n19.ForeColor = System.Drawing.Color.Gray;
+            this.n19.Location = new System.Drawing.Point(120, 639);
+            this.n19.Margin = new System.Windows.Forms.Padding(4);
+            this.n19.Multiline = false;
+            this.n19.Name = "n19";
+            this.n19.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n19.PasswordChar = false;
+            this.n19.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n19.PlaceholderText = "";
+            this.n19.Size = new System.Drawing.Size(316, 35);
+            this.n19.TabIndex = 35;
+            this.n19.Texts = "Note...";
+            this.n19.UnderlinedStyle = true;
+            // 
+            // ea23
+            // 
+            this.ea23.BackColor = System.Drawing.Color.White;
+            this.ea23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea23.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea23.BorderRadius = 0;
+            this.ea23.BorderSize = 1;
+            this.ea23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea23.Location = new System.Drawing.Point(13, 779);
+            this.ea23.Margin = new System.Windows.Forms.Padding(4);
+            this.ea23.Multiline = false;
+            this.ea23.Name = "ea23";
+            this.ea23.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea23.PasswordChar = false;
+            this.ea23.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea23.PlaceholderText = "";
+            this.ea23.Size = new System.Drawing.Size(99, 35);
+            this.ea23.TabIndex = 42;
+            this.ea23.Texts = "$ 1000";
+            this.ea23.UnderlinedStyle = true;
+            // 
+            // ea19
+            // 
+            this.ea19.BackColor = System.Drawing.Color.White;
+            this.ea19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea19.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea19.BorderRadius = 0;
+            this.ea19.BorderSize = 1;
+            this.ea19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea19.Location = new System.Drawing.Point(13, 639);
+            this.ea19.Margin = new System.Windows.Forms.Padding(4);
+            this.ea19.Multiline = false;
+            this.ea19.Name = "ea19";
+            this.ea19.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea19.PasswordChar = false;
+            this.ea19.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea19.PlaceholderText = "";
+            this.ea19.Size = new System.Drawing.Size(99, 35);
+            this.ea19.TabIndex = 34;
+            this.ea19.Texts = "$ 1000";
+            this.ea19.UnderlinedStyle = true;
+            // 
+            // n21
+            // 
+            this.n21.BackColor = System.Drawing.Color.White;
+            this.n21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n21.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n21.BorderRadius = 0;
+            this.n21.BorderSize = 1;
+            this.n21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n21.ForeColor = System.Drawing.Color.Gray;
+            this.n21.Location = new System.Drawing.Point(120, 709);
+            this.n21.Margin = new System.Windows.Forms.Padding(4);
+            this.n21.Multiline = false;
+            this.n21.Name = "n21";
+            this.n21.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n21.PasswordChar = false;
+            this.n21.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n21.PlaceholderText = "";
+            this.n21.Size = new System.Drawing.Size(316, 35);
+            this.n21.TabIndex = 39;
+            this.n21.Texts = "Note...";
+            this.n21.UnderlinedStyle = true;
+            // 
+            // ea21
+            // 
+            this.ea21.BackColor = System.Drawing.Color.White;
+            this.ea21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea21.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea21.BorderRadius = 0;
+            this.ea21.BorderSize = 1;
+            this.ea21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea21.Location = new System.Drawing.Point(13, 709);
+            this.ea21.Margin = new System.Windows.Forms.Padding(4);
+            this.ea21.Multiline = false;
+            this.ea21.Name = "ea21";
+            this.ea21.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea21.PasswordChar = false;
+            this.ea21.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea21.PlaceholderText = "";
+            this.ea21.Size = new System.Drawing.Size(99, 35);
+            this.ea21.TabIndex = 38;
+            this.ea21.Texts = "$ 1000";
+            this.ea21.UnderlinedStyle = true;
+            // 
+            // n17
+            // 
+            this.n17.BackColor = System.Drawing.Color.White;
+            this.n17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n17.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n17.BorderRadius = 0;
+            this.n17.BorderSize = 1;
+            this.n17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n17.ForeColor = System.Drawing.Color.Gray;
+            this.n17.Location = new System.Drawing.Point(120, 569);
+            this.n17.Margin = new System.Windows.Forms.Padding(4);
+            this.n17.Multiline = false;
+            this.n17.Name = "n17";
+            this.n17.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n17.PasswordChar = false;
+            this.n17.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n17.PlaceholderText = "";
+            this.n17.Size = new System.Drawing.Size(316, 35);
+            this.n17.TabIndex = 31;
+            this.n17.Texts = "Note...";
+            this.n17.UnderlinedStyle = true;
+            // 
+            // ea17
+            // 
+            this.ea17.BackColor = System.Drawing.Color.White;
+            this.ea17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea17.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea17.BorderRadius = 0;
+            this.ea17.BorderSize = 1;
+            this.ea17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea17.Location = new System.Drawing.Point(13, 569);
+            this.ea17.Margin = new System.Windows.Forms.Padding(4);
+            this.ea17.Multiline = false;
+            this.ea17.Name = "ea17";
+            this.ea17.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea17.PasswordChar = false;
+            this.ea17.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea17.PlaceholderText = "";
+            this.ea17.Size = new System.Drawing.Size(99, 35);
+            this.ea17.TabIndex = 30;
+            this.ea17.Texts = "$ 1000";
+            this.ea17.UnderlinedStyle = true;
+            // 
+            // n28
+            // 
+            this.n28.BackColor = System.Drawing.Color.White;
+            this.n28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n28.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n28.BorderRadius = 0;
+            this.n28.BorderSize = 1;
+            this.n28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n28.ForeColor = System.Drawing.Color.Gray;
+            this.n28.Location = new System.Drawing.Point(120, 956);
+            this.n28.Margin = new System.Windows.Forms.Padding(4);
+            this.n28.Multiline = false;
+            this.n28.Name = "n28";
+            this.n28.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n28.PasswordChar = false;
+            this.n28.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n28.PlaceholderText = "";
+            this.n28.Size = new System.Drawing.Size(316, 35);
+            this.n28.TabIndex = 37;
+            this.n28.Texts = "Note...";
+            this.n28.UnderlinedStyle = true;
+            // 
+            // n30
+            // 
+            this.n30.BackColor = System.Drawing.Color.White;
+            this.n30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n30.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n30.BorderRadius = 0;
+            this.n30.BorderSize = 1;
+            this.n30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n30.ForeColor = System.Drawing.Color.Gray;
+            this.n30.Location = new System.Drawing.Point(120, 1026);
+            this.n30.Margin = new System.Windows.Forms.Padding(4);
+            this.n30.Multiline = false;
+            this.n30.Name = "n30";
+            this.n30.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n30.PasswordChar = false;
+            this.n30.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n30.PlaceholderText = "";
+            this.n30.Size = new System.Drawing.Size(316, 35);
+            this.n30.TabIndex = 41;
+            this.n30.Texts = "Note...";
+            this.n30.UnderlinedStyle = true;
+            // 
+            // n26
+            // 
+            this.n26.BackColor = System.Drawing.Color.White;
+            this.n26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n26.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n26.BorderRadius = 0;
+            this.n26.BorderSize = 1;
+            this.n26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n26.ForeColor = System.Drawing.Color.Gray;
+            this.n26.Location = new System.Drawing.Point(120, 886);
+            this.n26.Margin = new System.Windows.Forms.Padding(4);
+            this.n26.Multiline = false;
+            this.n26.Name = "n26";
+            this.n26.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n26.PasswordChar = false;
+            this.n26.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n26.PlaceholderText = "";
+            this.n26.Size = new System.Drawing.Size(316, 35);
+            this.n26.TabIndex = 33;
+            this.n26.Texts = "Note...";
+            this.n26.UnderlinedStyle = true;
+            // 
+            // ea28
+            // 
+            this.ea28.BackColor = System.Drawing.Color.White;
+            this.ea28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea28.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea28.BorderRadius = 0;
+            this.ea28.BorderSize = 1;
+            this.ea28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea28.Location = new System.Drawing.Point(13, 956);
+            this.ea28.Margin = new System.Windows.Forms.Padding(4);
+            this.ea28.Multiline = false;
+            this.ea28.Name = "ea28";
+            this.ea28.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea28.PasswordChar = false;
+            this.ea28.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea28.PlaceholderText = "";
+            this.ea28.Size = new System.Drawing.Size(99, 35);
+            this.ea28.TabIndex = 36;
+            this.ea28.Texts = "$ 1000";
+            this.ea28.UnderlinedStyle = true;
+            // 
+            // ea30
+            // 
+            this.ea30.BackColor = System.Drawing.Color.White;
+            this.ea30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea30.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea30.BorderRadius = 0;
+            this.ea30.BorderSize = 1;
+            this.ea30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea30.Location = new System.Drawing.Point(13, 1026);
+            this.ea30.Margin = new System.Windows.Forms.Padding(4);
+            this.ea30.Multiline = false;
+            this.ea30.Name = "ea30";
+            this.ea30.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea30.PasswordChar = false;
+            this.ea30.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea30.PlaceholderText = "";
+            this.ea30.Size = new System.Drawing.Size(99, 35);
+            this.ea30.TabIndex = 40;
+            this.ea30.Texts = "$ 1000";
+            this.ea30.UnderlinedStyle = true;
+            // 
+            // ea26
+            // 
+            this.ea26.BackColor = System.Drawing.Color.White;
+            this.ea26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea26.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea26.BorderRadius = 0;
+            this.ea26.BorderSize = 1;
+            this.ea26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea26.Location = new System.Drawing.Point(13, 886);
+            this.ea26.Margin = new System.Windows.Forms.Padding(4);
+            this.ea26.Multiline = false;
+            this.ea26.Name = "ea26";
+            this.ea26.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea26.PasswordChar = false;
+            this.ea26.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea26.PlaceholderText = "";
+            this.ea26.Size = new System.Drawing.Size(99, 35);
+            this.ea26.TabIndex = 32;
+            this.ea26.Texts = "$ 1000";
+            this.ea26.UnderlinedStyle = true;
+            // 
+            // n31
+            // 
+            this.n31.BackColor = System.Drawing.Color.White;
+            this.n31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n31.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n31.BorderRadius = 0;
+            this.n31.BorderSize = 1;
+            this.n31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n31.ForeColor = System.Drawing.Color.Gray;
+            this.n31.Location = new System.Drawing.Point(120, 1061);
+            this.n31.Margin = new System.Windows.Forms.Padding(4);
+            this.n31.Multiline = false;
+            this.n31.Name = "n31";
+            this.n31.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n31.PasswordChar = false;
+            this.n31.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n31.PlaceholderText = "";
+            this.n31.Size = new System.Drawing.Size(316, 35);
+            this.n31.TabIndex = 43;
+            this.n31.Texts = "Note...";
+            this.n31.UnderlinedStyle = true;
+            // 
+            // n27
+            // 
+            this.n27.BackColor = System.Drawing.Color.White;
+            this.n27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n27.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n27.BorderRadius = 0;
+            this.n27.BorderSize = 1;
+            this.n27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n27.ForeColor = System.Drawing.Color.Gray;
+            this.n27.Location = new System.Drawing.Point(120, 921);
+            this.n27.Margin = new System.Windows.Forms.Padding(4);
+            this.n27.Multiline = false;
+            this.n27.Name = "n27";
+            this.n27.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n27.PasswordChar = false;
+            this.n27.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n27.PlaceholderText = "";
+            this.n27.Size = new System.Drawing.Size(316, 35);
+            this.n27.TabIndex = 35;
+            this.n27.Texts = "Note...";
+            this.n27.UnderlinedStyle = true;
+            // 
+            // ea31
+            // 
+            this.ea31.BackColor = System.Drawing.Color.White;
+            this.ea31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea31.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea31.BorderRadius = 0;
+            this.ea31.BorderSize = 1;
+            this.ea31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea31.Location = new System.Drawing.Point(13, 1061);
+            this.ea31.Margin = new System.Windows.Forms.Padding(4);
+            this.ea31.Multiline = false;
+            this.ea31.Name = "ea31";
+            this.ea31.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea31.PasswordChar = false;
+            this.ea31.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea31.PlaceholderText = "";
+            this.ea31.Size = new System.Drawing.Size(99, 35);
+            this.ea31.TabIndex = 42;
+            this.ea31.Texts = "$ 1000";
+            this.ea31.UnderlinedStyle = true;
+            // 
+            // ea27
+            // 
+            this.ea27.BackColor = System.Drawing.Color.White;
+            this.ea27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea27.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea27.BorderRadius = 0;
+            this.ea27.BorderSize = 1;
+            this.ea27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea27.Location = new System.Drawing.Point(13, 921);
+            this.ea27.Margin = new System.Windows.Forms.Padding(4);
+            this.ea27.Multiline = false;
+            this.ea27.Name = "ea27";
+            this.ea27.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea27.PasswordChar = false;
+            this.ea27.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea27.PlaceholderText = "";
+            this.ea27.Size = new System.Drawing.Size(99, 35);
+            this.ea27.TabIndex = 34;
+            this.ea27.Texts = "$ 1000";
+            this.ea27.UnderlinedStyle = true;
+            // 
+            // n29
+            // 
+            this.n29.BackColor = System.Drawing.Color.White;
+            this.n29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n29.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n29.BorderRadius = 0;
+            this.n29.BorderSize = 1;
+            this.n29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n29.ForeColor = System.Drawing.Color.Gray;
+            this.n29.Location = new System.Drawing.Point(120, 991);
+            this.n29.Margin = new System.Windows.Forms.Padding(4);
+            this.n29.Multiline = false;
+            this.n29.Name = "n29";
+            this.n29.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n29.PasswordChar = false;
+            this.n29.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n29.PlaceholderText = "";
+            this.n29.Size = new System.Drawing.Size(316, 35);
+            this.n29.TabIndex = 39;
+            this.n29.Texts = "Note...";
+            this.n29.UnderlinedStyle = true;
+            // 
+            // ea29
+            // 
+            this.ea29.BackColor = System.Drawing.Color.White;
+            this.ea29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea29.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea29.BorderRadius = 0;
+            this.ea29.BorderSize = 1;
+            this.ea29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea29.Location = new System.Drawing.Point(13, 991);
+            this.ea29.Margin = new System.Windows.Forms.Padding(4);
+            this.ea29.Multiline = false;
+            this.ea29.Name = "ea29";
+            this.ea29.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea29.PasswordChar = false;
+            this.ea29.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea29.PlaceholderText = "";
+            this.ea29.Size = new System.Drawing.Size(99, 35);
+            this.ea29.TabIndex = 38;
+            this.ea29.Texts = "$ 1000";
+            this.ea29.UnderlinedStyle = true;
+            // 
+            // n25
+            // 
+            this.n25.BackColor = System.Drawing.Color.White;
+            this.n25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.n25.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.n25.BorderRadius = 0;
+            this.n25.BorderSize = 1;
+            this.n25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n25.ForeColor = System.Drawing.Color.Gray;
+            this.n25.Location = new System.Drawing.Point(120, 851);
+            this.n25.Margin = new System.Windows.Forms.Padding(4);
+            this.n25.Multiline = false;
+            this.n25.Name = "n25";
+            this.n25.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.n25.PasswordChar = false;
+            this.n25.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.n25.PlaceholderText = "";
+            this.n25.Size = new System.Drawing.Size(316, 35);
+            this.n25.TabIndex = 31;
+            this.n25.Texts = "Note...";
+            this.n25.UnderlinedStyle = true;
+            // 
+            // ea25
+            // 
+            this.ea25.BackColor = System.Drawing.Color.White;
+            this.ea25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ea25.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.ea25.BorderRadius = 0;
+            this.ea25.BorderSize = 1;
+            this.ea25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ea25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ea25.Location = new System.Drawing.Point(13, 851);
+            this.ea25.Margin = new System.Windows.Forms.Padding(4);
+            this.ea25.Multiline = false;
+            this.ea25.Name = "ea25";
+            this.ea25.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ea25.PasswordChar = false;
+            this.ea25.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ea25.PlaceholderText = "";
+            this.ea25.Size = new System.Drawing.Size(99, 35);
+            this.ea25.TabIndex = 30;
+            this.ea25.Texts = "$ 1000";
+            this.ea25.UnderlinedStyle = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2542,8 +3982,8 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel3;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox36;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox47;
+        private RJCodeAdvance.RJControls.RJTextBox n1;
+        private RJCodeAdvance.RJControls.RJTextBox ea1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private RJCodeAdvance.RJControls.RJTextBox d6;
@@ -2608,6 +4048,66 @@
         private RJCodeAdvance.RJControls.RJTextBox sa26;
         private RJCodeAdvance.RJControls.RJTextBox sa27;
         private RJCodeAdvance.RJControls.RJTextBox sa25;
+        private RJCodeAdvance.RJControls.RJTextBox n8;
+        private RJCodeAdvance.RJControls.RJTextBox n4;
+        private RJCodeAdvance.RJControls.RJTextBox n6;
+        private RJCodeAdvance.RJControls.RJTextBox n2;
+        private RJCodeAdvance.RJControls.RJTextBox ea8;
+        private RJCodeAdvance.RJControls.RJTextBox ea4;
+        private RJCodeAdvance.RJControls.RJTextBox ea6;
+        private RJCodeAdvance.RJControls.RJTextBox ea2;
+        private RJCodeAdvance.RJControls.RJTextBox n7;
+        private RJCodeAdvance.RJControls.RJTextBox n3;
+        private RJCodeAdvance.RJControls.RJTextBox ea7;
+        private RJCodeAdvance.RJControls.RJTextBox ea3;
+        private RJCodeAdvance.RJControls.RJTextBox n5;
+        private RJCodeAdvance.RJControls.RJTextBox ea5;
+        private RJCodeAdvance.RJControls.RJTextBox n24;
+        private RJCodeAdvance.RJControls.RJTextBox n28;
+        private RJCodeAdvance.RJControls.RJTextBox n16;
+        private RJCodeAdvance.RJControls.RJTextBox n30;
+        private RJCodeAdvance.RJControls.RJTextBox n20;
+        private RJCodeAdvance.RJControls.RJTextBox n26;
+        private RJCodeAdvance.RJControls.RJTextBox n22;
+        private RJCodeAdvance.RJControls.RJTextBox ea28;
+        private RJCodeAdvance.RJControls.RJTextBox n12;
+        private RJCodeAdvance.RJControls.RJTextBox ea30;
+        private RJCodeAdvance.RJControls.RJTextBox n18;
+        private RJCodeAdvance.RJControls.RJTextBox ea26;
+        private RJCodeAdvance.RJControls.RJTextBox n31;
+        private RJCodeAdvance.RJControls.RJTextBox ea24;
+        private RJCodeAdvance.RJControls.RJTextBox n27;
+        private RJCodeAdvance.RJControls.RJTextBox n14;
+        private RJCodeAdvance.RJControls.RJTextBox ea31;
+        private RJCodeAdvance.RJControls.RJTextBox ea20;
+        private RJCodeAdvance.RJControls.RJTextBox ea27;
+        private RJCodeAdvance.RJControls.RJTextBox n29;
+        private RJCodeAdvance.RJControls.RJTextBox ea22;
+        private RJCodeAdvance.RJControls.RJTextBox ea29;
+        private RJCodeAdvance.RJControls.RJTextBox n10;
+        private RJCodeAdvance.RJControls.RJTextBox n25;
+        private RJCodeAdvance.RJControls.RJTextBox ea25;
+        private RJCodeAdvance.RJControls.RJTextBox ea18;
+        private RJCodeAdvance.RJControls.RJTextBox n23;
+        private RJCodeAdvance.RJControls.RJTextBox ea16;
+        private RJCodeAdvance.RJControls.RJTextBox n19;
+        private RJCodeAdvance.RJControls.RJTextBox ea23;
+        private RJCodeAdvance.RJControls.RJTextBox ea12;
+        private RJCodeAdvance.RJControls.RJTextBox ea19;
+        private RJCodeAdvance.RJControls.RJTextBox n21;
+        private RJCodeAdvance.RJControls.RJTextBox ea14;
+        private RJCodeAdvance.RJControls.RJTextBox ea21;
+        private RJCodeAdvance.RJControls.RJTextBox n17;
+        private RJCodeAdvance.RJControls.RJTextBox ea17;
+        private RJCodeAdvance.RJControls.RJTextBox ea10;
+        private RJCodeAdvance.RJControls.RJTextBox n15;
+        private RJCodeAdvance.RJControls.RJTextBox n11;
+        private RJCodeAdvance.RJControls.RJTextBox ea15;
+        private RJCodeAdvance.RJControls.RJTextBox ea11;
+        private RJCodeAdvance.RJControls.RJTextBox n13;
+        private RJCodeAdvance.RJControls.RJTextBox ea13;
+        private RJCodeAdvance.RJControls.RJTextBox n9;
+        private RJCodeAdvance.RJControls.RJTextBox ea9;
     }
 }
 
