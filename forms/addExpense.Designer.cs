@@ -1,6 +1,6 @@
 ﻿namespace SavexTracker.forms
 {
-    partial class addSavings
+    partial class addExpense
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addSavings));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addExpense));
             this.roundedPanel1 = new RoundedPanel();
             this.lbl_date = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,11 +36,13 @@
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.btn_save = new RJCodeAdvance.RJControls.RJButton();
             this.roundedPanel2 = new RoundedPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_SA = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             this.roundedPanel1.Location = new System.Drawing.Point(12, 12);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(792, 334);
-            this.roundedPanel1.TabIndex = 0;
+            this.roundedPanel1.TabIndex = 2;
             // 
             // lbl_date
             // 
@@ -90,12 +92,12 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Noto Sans ExtraBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(401, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 73);
+            this.label1.Size = new System.Drawing.Size(311, 73);
             this.label1.TabIndex = 12;
-            this.label1.Text = "To Savings";
+            this.label1.Text = "An Expense";
             // 
             // rjButton2
             // 
@@ -115,12 +117,11 @@
             this.rjButton2.Text = "Cancel";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // btn_save
             // 
-            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btn_save.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.btn_save.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
             this.btn_save.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_save.BorderRadius = 23;
             this.btn_save.BorderSize = 0;
@@ -132,25 +133,35 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(217, 46);
             this.btn_save.TabIndex = 9;
-            this.btn_save.Text = "Save now";
+            this.btn_save.Text = "Spend now";
             this.btn_save.TextColor = System.Drawing.Color.White;
             this.btn_save.UseVisualStyleBackColor = false;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // roundedPanel2
             // 
-            this.roundedPanel2.BackColor = System.Drawing.Color.AliceBlue;
+            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.roundedPanel2.BorderRadius = 40;
+            this.roundedPanel2.Controls.Add(this.pictureBox2);
             this.roundedPanel2.Controls.Add(this.pictureBox1);
             this.roundedPanel2.Location = new System.Drawing.Point(14, 13);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.Size = new System.Drawing.Size(342, 309);
             this.roundedPanel2.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(190, 136);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(106, 95);
+            this.pictureBox1.Location = new System.Drawing.Point(64, 96);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +171,7 @@
             // txt_SA
             // 
             this.txt_SA.BackColor = System.Drawing.Color.White;
-            this.txt_SA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.txt_SA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
             this.txt_SA.BorderFocusColor = System.Drawing.Color.RoyalBlue;
             this.txt_SA.BorderRadius = 0;
             this.txt_SA.BorderSize = 3;
@@ -172,7 +183,7 @@
             this.txt_SA.Name = "txt_SA";
             this.txt_SA.Padding = new System.Windows.Forms.Padding(30, 7, 10, 7);
             this.txt_SA.PasswordChar = false;
-            this.txt_SA.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.txt_SA.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
             this.txt_SA.PlaceholderText = "Enter amount";
             this.txt_SA.Size = new System.Drawing.Size(305, 46);
             this.txt_SA.TabIndex = 8;
@@ -184,29 +195,27 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Noto Sans Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label3.ForeColor = System.Drawing.Color.SlateBlue;
             this.label3.Location = new System.Drawing.Point(397, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 97);
             this.label3.TabIndex = 7;
             this.label3.Text = "Add";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // addSavings
+            // addExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(816, 358);
             this.Controls.Add(this.roundedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "addSavings";
+            this.Name = "addExpense";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "addSavings";
-            this.Load += new System.EventHandler(this.addSavings_Load);
+            this.Text = "addExpense";
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             this.roundedPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -215,14 +224,15 @@
         #endregion
 
         private RoundedPanel roundedPanel1;
+        private System.Windows.Forms.Label lbl_date;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton btn_save;
         private RoundedPanel roundedPanel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private RJCodeAdvance.RJControls.RJTextBox txt_SA;
         private System.Windows.Forms.Label label3;
-        private RJCodeAdvance.RJControls.RJButton btn_save;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl_date;
     }
 }

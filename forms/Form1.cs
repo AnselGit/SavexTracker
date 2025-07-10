@@ -83,11 +83,10 @@ namespace SavexTracker
 
         private void LoadSavingsToPanel()
         {
-            // Ensure table layout is ready
             tblSave.Controls.Clear();
             tblSave.RowStyles.Clear();
             tblSave.RowCount = 0;
-            tblSave.AutoScroll = true; // Allow scrolling if rows overflow
+            tblSave.AutoScroll = true;
 
             string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
             string connStr = $"Data Source={dbPath};Version=3;";
@@ -104,26 +103,16 @@ namespace SavexTracker
 
                     while (reader.Read())
                     {
+                        string txtNameDate = reader["txtNameDate"].ToString();
+                        string txtNameAmount = reader["txtNameAmount"].ToString();
+                        string timestamp = reader["timestamp"].ToString();
+                        double amount = Convert.ToDouble(reader["amount"]);
+
+                        // RJTextBoxes (unchanged)
                         var dateBox = new RJCodeAdvance.RJControls.RJTextBox
                         {
-                            Name = reader["txtNameDate"].ToString(),
-                            Texts = reader["timestamp"].ToString(),                            
-                            BackColor = Color.White,
-                            BorderColor = Color.FromArgb(224, 224, 224),
-                            BorderFocusColor = Color.MediumSlateBlue,
-                            BorderRadius = 0,
-                            BorderSize = 1,
-                            ForeColor = Color.Silver,
-                            UnderlinedStyle = true,
-                            Size = new Size(90, 35),
-                            Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point),
-                            Margin = new Padding(5)
-                        };
-
-                        var amtBox = new RJCodeAdvance.RJControls.RJTextBox
-                        {
-                            Name = reader["txtNameAmount"].ToString(),
-                            Texts = "₱" + reader["amount"].ToString(),                            
+                            Name = txtNameDate,
+                            Texts = timestamp,
                             BackColor = Color.White,
                             BorderColor = Color.FromArgb(224, 224, 224),
                             BorderFocusColor = Color.MediumSlateBlue,
@@ -131,18 +120,85 @@ namespace SavexTracker
                             BorderSize = 1,
                             ForeColor = Color.FromArgb(64, 64, 64),
                             UnderlinedStyle = true,
-                            Size = new Size(131, 35),
-                            Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point),
+                            Size = new Size(90, 35),
+                            Font = new Font("Microsoft Sans Serif", 12F),
                             Margin = new Padding(5)
                         };
 
-                        // Add a new row style to allow growth
+                        var amtBox = new RJCodeAdvance.RJControls.RJTextBox
+                        {
+                            Name = txtNameAmount,
+                            Texts = "₱" + amount.ToString(),
+                            BackColor = Color.White,
+                            BorderColor = Color.FromArgb(224, 224, 224),
+                            BorderFocusColor = Color.MediumSlateBlue,
+                            BorderRadius = 0,
+                            BorderSize = 1,
+                            ForeColor = Color.FromArgb(64, 64, 64),
+                            UnderlinedStyle = true,
+                            Size = new Size(120, 35),
+                            Font = new Font("Microsoft Sans Serif", 12F),
+                            Margin = new Padding(5)
+                        };
+
+                        // Add RJTextBoxes row
                         tblSave.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-                        tblSave.Controls.Add(dateBox, 0, row);
-                        tblSave.Controls.Add(amtBox, 1, row);
+                        tblSave.Controls.Add(dateBox, 0, tblSave.RowCount);
+                        tblSave.Controls.Add(amtBox, 1, tblSave.RowCount);
+                        tblSave.RowCount++;
+
+                        // Replace subpanel + label with a single Button
+                        Button btnModify = new Button
+                        {
+                            Text = "Modify",
+                            Name = "btnModify_" + row,
+                            FlatStyle = FlatStyle.Flat,
+                            BackColor = Color.White,
+                            ForeColor = Color.White,
+                            Font = new Font("Noto Sans", 9, FontStyle.Bold),
+                            Cursor = Cursors.Hand,
+                            Dock = DockStyle.Left,
+                            Size = new Size(230, 20),
+                            Margin = new Padding(0)
+                        };
+
+                        // Optional hover effect
+                        btnModify.MouseEnter += (s, e) => btnModify.BackColor = Color.FromArgb(30, 144, 255); // DodgerBlue
+                        btnModify.MouseLeave += (s, e) => btnModify.BackColor = Color.White;
+
+                        // Button click event
+                        btnModify.Click += (s, e) =>
+                        {
+                            GlobalData.CurrentTxtNameDate = txtNameDate;
+                            GlobalData.CurrentTxtNameAmount = txtNameAmount;
+                            GlobalData.CurrentTimestamp = timestamp;
+                            GlobalData.CurrentAmount = amount;
+
+                            using (var conn2 = new SQLiteConnection(connStr))
+                            {
+                                conn2.Open();
+                                string idQuery = "SELECT sid FROM savings WHERE txtNameDate = @date AND txtNameAmount = @amount";
+                                using (var cmdID = new SQLiteCommand(idQuery, conn2))
+                                {
+                                    cmdID.Parameters.AddWithValue("@date", txtNameDate);
+                                    cmdID.Parameters.AddWithValue("@amount", txtNameAmount);
+                                    object result = cmdID.ExecuteScalar();
+                                    if (result != null)
+                                        GlobalData.CurrentID = Convert.ToInt32(result);
+                                }
+                            }
+
+                            var updateForm = new UpdateDeleteForm();
+                            updateForm.Show();
+                        };
+
+                        // Add the button to a new row
+                        tblSave.RowStyles.Add(new RowStyle(SizeType.Absolute, 25));
+                        tblSave.Controls.Add(btnModify, 0, tblSave.RowCount);
+                        tblSave.SetColumnSpan(btnModify, 2);
+                        tblSave.RowCount++;
 
                         row++;
-                        tblSave.RowCount = row; // Ensure row count matches
                     }
                 }
             }

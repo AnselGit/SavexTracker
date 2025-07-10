@@ -1,0 +1,579 @@
+﻿namespace SavexTracker.forms
+{
+    partial class UpdateDeleteForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateDeleteForm));
+            this.pnlUpdateCon = new RoundedPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnCancel1 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnCon1 = new RJCodeAdvance.RJControls.RJButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pnlUpdated = new RoundedPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.roundedPanel4 = new RoundedPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.roundedPanel1 = new RoundedPanel();
+            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDate = new RJCodeAdvance.RJControls.RJTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btn_save = new RJCodeAdvance.RJControls.RJButton();
+            this.roundedPanel2 = new RoundedPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtAmt = new RJCodeAdvance.RJControls.RJTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlDeleteCon = new RoundedPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
+            this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pnlDeleted = new RoundedPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.roundedPanel6 = new RoundedPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pnlUpdateCon.SuspendLayout();
+            this.pnlUpdated.SuspendLayout();
+            this.roundedPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.roundedPanel1.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlDeleteCon.SuspendLayout();
+            this.pnlDeleted.SuspendLayout();
+            this.roundedPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pnlUpdateCon
+            // 
+            this.pnlUpdateCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.pnlUpdateCon.BorderRadius = 30;
+            this.pnlUpdateCon.Controls.Add(this.label7);
+            this.pnlUpdateCon.Controls.Add(this.btnCancel1);
+            this.pnlUpdateCon.Controls.Add(this.btnCon1);
+            this.pnlUpdateCon.Controls.Add(this.label8);
+            this.pnlUpdateCon.Controls.Add(this.pnlUpdated);
+            this.pnlUpdateCon.Location = new System.Drawing.Point(12, 12);
+            this.pnlUpdateCon.Name = "pnlUpdateCon";
+            this.pnlUpdateCon.Size = new System.Drawing.Size(792, 334);
+            this.pnlUpdateCon.TabIndex = 17;
+            this.pnlUpdateCon.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(144, 151);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(504, 32);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Are you sure you want to update specific data?";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCancel1
+            // 
+            this.btnCancel1.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnCancel1.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.btnCancel1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel1.BorderRadius = 23;
+            this.btnCancel1.BorderSize = 0;
+            this.btnCancel1.FlatAppearance.BorderSize = 0;
+            this.btnCancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel1.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel1.ForeColor = System.Drawing.Color.White;
+            this.btnCancel1.Location = new System.Drawing.Point(439, 201);
+            this.btnCancel1.Name = "btnCancel1";
+            this.btnCancel1.Size = new System.Drawing.Size(113, 46);
+            this.btnCancel1.TabIndex = 11;
+            this.btnCancel1.Text = "Cancel";
+            this.btnCancel1.TextColor = System.Drawing.Color.White;
+            this.btnCancel1.UseVisualStyleBackColor = false;
+            this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
+            // 
+            // btnCon1
+            // 
+            this.btnCon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCon1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCon1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCon1.BorderRadius = 23;
+            this.btnCon1.BorderSize = 0;
+            this.btnCon1.FlatAppearance.BorderSize = 0;
+            this.btnCon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCon1.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCon1.ForeColor = System.Drawing.Color.White;
+            this.btnCon1.Location = new System.Drawing.Point(216, 201);
+            this.btnCon1.Name = "btnCon1";
+            this.btnCon1.Size = new System.Drawing.Size(217, 46);
+            this.btnCon1.TabIndex = 9;
+            this.btnCon1.Text = "Confirm";
+            this.btnCon1.TextColor = System.Drawing.Color.White;
+            this.btnCon1.UseVisualStyleBackColor = false;
+            this.btnCon1.Click += new System.EventHandler(this.btnCon1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Noto Sans Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label8.Location = new System.Drawing.Point(155, 62);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(483, 97);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Confirmation";
+            // 
+            // pnlUpdated
+            // 
+            this.pnlUpdated.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.pnlUpdated.BorderRadius = 40;
+            this.pnlUpdated.Controls.Add(this.label5);
+            this.pnlUpdated.Controls.Add(this.roundedPanel4);
+            this.pnlUpdated.Location = new System.Drawing.Point(135, 58);
+            this.pnlUpdated.Name = "pnlUpdated";
+            this.pnlUpdated.Size = new System.Drawing.Size(522, 218);
+            this.pnlUpdated.TabIndex = 14;
+            this.pnlUpdated.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(225, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(251, 73);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Updated!";
+            // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.roundedPanel4.BorderRadius = 40;
+            this.roundedPanel4.Controls.Add(this.pictureBox2);
+            this.roundedPanel4.Location = new System.Drawing.Point(24, 23);
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.Size = new System.Drawing.Size(172, 172);
+            this.roundedPanel4.TabIndex = 15;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(23, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.BackColor = System.Drawing.Color.White;
+            this.roundedPanel1.BorderRadius = 30;
+            this.roundedPanel1.Controls.Add(this.rjButton1);
+            this.roundedPanel1.Controls.Add(this.label2);
+            this.roundedPanel1.Controls.Add(this.label1);
+            this.roundedPanel1.Controls.Add(this.txtDate);
+            this.roundedPanel1.Controls.Add(this.label4);
+            this.roundedPanel1.Controls.Add(this.rjButton2);
+            this.roundedPanel1.Controls.Add(this.btn_save);
+            this.roundedPanel1.Controls.Add(this.roundedPanel2);
+            this.roundedPanel1.Controls.Add(this.txtAmt);
+            this.roundedPanel1.Controls.Add(this.label3);
+            this.roundedPanel1.Location = new System.Drawing.Point(12, 12);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Size = new System.Drawing.Size(792, 334);
+            this.roundedPanel1.TabIndex = 1;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.rjButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 18;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(744, 13);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(36, 36);
+            this.rjButton1.TabIndex = 17;
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(597, 213);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 24);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Amount";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(453, 213);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 24);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Date";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDate
+            // 
+            this.txtDate.BackColor = System.Drawing.Color.White;
+            this.txtDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtDate.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.txtDate.BorderRadius = 0;
+            this.txtDate.BorderSize = 3;
+            this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDate.Location = new System.Drawing.Point(414, 163);
+            this.txtDate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDate.Multiline = false;
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtDate.PasswordChar = false;
+            this.txtDate.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtDate.PlaceholderText = "00/00/00";
+            this.txtDate.Size = new System.Drawing.Size(126, 46);
+            this.txtDate.TabIndex = 14;
+            this.txtDate.Texts = "";
+            this.txtDate.UnderlinedStyle = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(408, 102);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(352, 32);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "You are about to make a change";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.OrangeRed;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 23;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(637, 255);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(82, 46);
+            this.rjButton2.TabIndex = 11;
+            this.rjButton2.Text = "Delete";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_save.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_save.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_save.BorderRadius = 23;
+            this.btn_save.BorderSize = 0;
+            this.btn_save.FlatAppearance.BorderSize = 0;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(414, 255);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(217, 46);
+            this.btn_save.TabIndex = 9;
+            this.btn_save.Text = "Modify now";
+            this.btn_save.TextColor = System.Drawing.Color.White;
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.roundedPanel2.BorderRadius = 40;
+            this.roundedPanel2.Controls.Add(this.pictureBox1);
+            this.roundedPanel2.Location = new System.Drawing.Point(14, 13);
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.Size = new System.Drawing.Size(342, 309);
+            this.roundedPanel2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(95, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtAmt
+            // 
+            this.txtAmt.BackColor = System.Drawing.Color.White;
+            this.txtAmt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtAmt.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.txtAmt.BorderRadius = 0;
+            this.txtAmt.BorderSize = 3;
+            this.txtAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAmt.Location = new System.Drawing.Point(548, 163);
+            this.txtAmt.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAmt.Multiline = false;
+            this.txtAmt.Name = "txtAmt";
+            this.txtAmt.Padding = new System.Windows.Forms.Padding(30, 7, 10, 7);
+            this.txtAmt.PasswordChar = false;
+            this.txtAmt.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtAmt.PlaceholderText = "100";
+            this.txtAmt.Size = new System.Drawing.Size(171, 46);
+            this.txtAmt.TabIndex = 8;
+            this.txtAmt.Texts = "";
+            this.txtAmt.UnderlinedStyle = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Noto Sans Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(397, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(272, 97);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Modify";
+            // 
+            // pnlDeleteCon
+            // 
+            this.pnlDeleteCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.pnlDeleteCon.BorderRadius = 30;
+            this.pnlDeleteCon.Controls.Add(this.label6);
+            this.pnlDeleteCon.Controls.Add(this.rjButton3);
+            this.pnlDeleteCon.Controls.Add(this.rjButton4);
+            this.pnlDeleteCon.Controls.Add(this.label9);
+            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
+            this.pnlDeleteCon.Location = new System.Drawing.Point(12, 12);
+            this.pnlDeleteCon.Name = "pnlDeleteCon";
+            this.pnlDeleteCon.Size = new System.Drawing.Size(792, 334);
+            this.pnlDeleteCon.TabIndex = 18;
+            this.pnlDeleteCon.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(144, 151);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(504, 32);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Are you sure you want to update specific data?";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.OrangeRed;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton3.BorderRadius = 23;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Location = new System.Drawing.Point(439, 201);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(113, 46);
+            this.rjButton3.TabIndex = 11;
+            this.rjButton3.Text = "Cancel";
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
+            // 
+            // rjButton4
+            // 
+            this.rjButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.rjButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton4.BorderRadius = 23;
+            this.rjButton4.BorderSize = 0;
+            this.rjButton4.FlatAppearance.BorderSize = 0;
+            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton4.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton4.ForeColor = System.Drawing.Color.White;
+            this.rjButton4.Location = new System.Drawing.Point(216, 201);
+            this.rjButton4.Name = "rjButton4";
+            this.rjButton4.Size = new System.Drawing.Size(217, 46);
+            this.rjButton4.TabIndex = 9;
+            this.rjButton4.Text = "Confirm";
+            this.rjButton4.TextColor = System.Drawing.Color.White;
+            this.rjButton4.UseVisualStyleBackColor = false;
+            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Noto Sans Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label9.Location = new System.Drawing.Point(155, 62);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(483, 97);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Confirmation";
+            // 
+            // pnlDeleted
+            // 
+            this.pnlDeleted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.pnlDeleted.BorderRadius = 40;
+            this.pnlDeleted.Controls.Add(this.label10);
+            this.pnlDeleted.Controls.Add(this.roundedPanel6);
+            this.pnlDeleted.Location = new System.Drawing.Point(135, 58);
+            this.pnlDeleted.Name = "pnlDeleted";
+            this.pnlDeleted.Size = new System.Drawing.Size(522, 218);
+            this.pnlDeleted.TabIndex = 14;
+            this.pnlDeleted.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label10.Location = new System.Drawing.Point(225, 72);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(251, 73);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Updated!";
+            // 
+            // roundedPanel6
+            // 
+            this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundedPanel6.BorderRadius = 40;
+            this.roundedPanel6.Controls.Add(this.pictureBox3);
+            this.roundedPanel6.Location = new System.Drawing.Point(24, 23);
+            this.roundedPanel6.Name = "roundedPanel6";
+            this.roundedPanel6.Size = new System.Drawing.Size(172, 172);
+            this.roundedPanel6.TabIndex = 15;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(23, 23);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // UpdateDeleteForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(816, 358);
+            this.Controls.Add(this.pnlDeleteCon);
+            this.Controls.Add(this.pnlUpdateCon);
+            this.Controls.Add(this.roundedPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "UpdateDeleteForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "UpdateDeleteForm";
+            this.pnlUpdateCon.ResumeLayout(false);
+            this.pnlUpdateCon.PerformLayout();
+            this.pnlUpdated.ResumeLayout(false);
+            this.pnlUpdated.PerformLayout();
+            this.roundedPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.roundedPanel1.ResumeLayout(false);
+            this.roundedPanel1.PerformLayout();
+            this.roundedPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlDeleteCon.ResumeLayout(false);
+            this.pnlDeleteCon.PerformLayout();
+            this.pnlDeleted.ResumeLayout(false);
+            this.pnlDeleted.PerformLayout();
+            this.roundedPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private RoundedPanel roundedPanel1;
+        private System.Windows.Forms.Label label4;
+        private RoundedPanel roundedPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private RJCodeAdvance.RJControls.RJTextBox txtAmt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private RJCodeAdvance.RJControls.RJTextBox txtDate;
+        private RoundedPanel pnlUpdateCon;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private RoundedPanel pnlUpdated;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label5;
+        private RoundedPanel roundedPanel4;
+        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton btn_save;
+        private RJCodeAdvance.RJControls.RJButton btnCancel1;
+        private RJCodeAdvance.RJControls.RJButton btnCon1;
+        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private RoundedPanel pnlDeleteCon;
+        private System.Windows.Forms.Label label6;
+        private RJCodeAdvance.RJControls.RJButton rjButton3;
+        private RJCodeAdvance.RJControls.RJButton rjButton4;
+        private System.Windows.Forms.Label label9;
+        private RoundedPanel pnlDeleted;
+        private System.Windows.Forms.Label label10;
+        private RoundedPanel roundedPanel6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+    }
+}

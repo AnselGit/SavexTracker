@@ -316,8 +316,8 @@ namespace SavexTracker
             // 
             this.tblSave.AutoScroll = true;
             this.tblSave.ColumnCount = 2;
-            this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.88189F));
-            this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.11811F));
+            this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.73228F));
+            this.tblSave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.26772F));
             this.tblSave.Location = new System.Drawing.Point(15, 39);
             this.tblSave.Name = "tblSave";
             this.tblSave.RowCount = 1;
