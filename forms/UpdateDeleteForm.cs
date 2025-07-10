@@ -18,74 +18,130 @@ namespace SavexTracker.forms
             InitializeComponent();
         }
 
+        public void ShowExpensePanel()
+        {
+            pnlExpenseMod.Visible = true;
+        }
         private void UpdateDeleteForm_Load(object sender, EventArgs e)
         {
             lblDate.Text = GlobalData.CurrentTimestamp;
             txtAmt.Texts = GlobalData.CurrentAmount.ToString("0.00");
-            btn_Mod.Enabled = false;
+            txtEamt.Texts = GlobalData.CurrentAmount.ToString("0.00");
+            txtNote.Texts = GlobalData.CurrentNote ?? "";
 
+            btn_Mod.Enabled = false;
+            btn_Mod2.Enabled = false;
+
+            txtEamt._TextChanged += ValidateChanges;  // ✅ use _TextChanged
             txtAmt._TextChanged += ValidateChanges;
+            txtNote._TextChanged += ValidateChanges;
         }
 
         private void ValidateChanges(object sender, EventArgs e)
         {
+            string currentNote = txtNote.Texts?.Trim() ?? "";
+            string originalNote = GlobalData.CurrentNote?.Trim() ?? "";
+
             bool amountChanged =
-            double.TryParse(txtAmt.Texts.Replace("₱", "").Trim(), out double newAmount) &&
-            newAmount != GlobalData.CurrentAmount;
+                double.TryParse(txtAmt.Texts.Replace("₱", "").Trim(), out double newAmount) &&
+                newAmount != GlobalData.CurrentAmount;
 
-            btn_Mod.Enabled = amountChanged;
+            bool amountChanged2 =
+                double.TryParse(txtEamt.Texts.Replace("₱", "").Trim(), out double newAmount2) &&
+                newAmount2 != GlobalData.CurrentAmount;
+
+            bool noteChanged = currentNote != originalNote;
+
+            btn_Mod.Enabled = amountChanged || noteChanged;
+            btn_Mod2.Enabled = amountChanged2 || noteChanged;
         }
-
 
         private void btn_save_Click(object sender, EventArgs e)
         {
             pnlUpdateCon.Visible = true;
+            pnlUpdateCon.BringToFront();
         }
+
+        private void ShowSuccessPanel()
+        {
+            pnlUpdated.Visible = true;
+
+            Timer hideTimer = new Timer();
+            hideTimer.Interval = 1500;
+            hideTimer.Tick += (s, args) =>
+            {
+                this.Close();
+                hideTimer.Stop();
+                hideTimer.Dispose();
+            };
+            hideTimer.Start();
+        }
+
 
         private void btnCon1_Click(object sender, EventArgs e)
         {
-            string newDate = lblDate.Text.Trim();  // now using lblDate
-            string newAmountText = txtAmt.Texts.Trim().Replace("₱", "").Trim();
-
-            if (!double.TryParse(newAmountText, out double newAmount) || newAmount <= 0)
-            {
-                MessageBox.Show("Invalid amount. Please enter a valid number greater than 0.");
-                return;
-            }
-
+            string newDate = lblDate.Text.Trim();  // shared for both
             string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
             string connStr = $"Data Source={dbPath};Version=3;";
 
             using (SQLiteConnection conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string updateQuery = @"
-            UPDATE savings
-            SET timestamp = @timestamp,
-                amount = @amount
-            WHERE sid = @sid";
 
-                using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, conn))
+                // Attempt to update savings
+                string newSavingsAmountText = txtAmt.Texts.Trim().Replace("₱", "").Trim();
+
+                if (double.TryParse(newSavingsAmountText, out double newSavingsAmount) && newSavingsAmount > 0)
+                {
+                    string updateSavingsQuery = @"
+UPDATE savings
+SET timestamp = @timestamp,
+    amount = @amount
+WHERE sid = @sid";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(updateSavingsQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@timestamp", newDate);
+                        cmd.Parameters.AddWithValue("@amount", newSavingsAmount);
+                        cmd.Parameters.AddWithValue("@sid", GlobalData.CurrentID);
+
+                        int affected = cmd.ExecuteNonQuery();
+                        if (affected > 0)
+                        {
+                            ShowSuccessPanel();
+                            return;
+                        }
+                    }
+                }
+
+                // Now try to update expenses
+                string newExpenseAmountText = txtEamt.Texts.Trim().Replace("₱", "").Trim();
+                string newNote = txtNote.Texts.Trim();
+
+                if (!double.TryParse(newExpenseAmountText, out double newExpenseAmount) || newExpenseAmount <= 0)
+                {
+                    MessageBox.Show("Invalid amount. Please enter a valid number greater than 0.");
+                    return;
+                }
+
+                string updateExpensesQuery = @"
+UPDATE expenses
+SET timestamp = @timestamp,
+    amount = @amount,
+    note = @note
+WHERE eid = @eid";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(updateExpensesQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@timestamp", newDate);
-                    cmd.Parameters.AddWithValue("@amount", newAmount);
-                    cmd.Parameters.AddWithValue("@sid", GlobalData.CurrentID);
+                    cmd.Parameters.AddWithValue("@amount", newExpenseAmount);
+                    cmd.Parameters.AddWithValue("@note", newNote);
+                    cmd.Parameters.AddWithValue("@eid", GlobalData.CurrentID);
 
                     int affected = cmd.ExecuteNonQuery();
-
                     if (affected > 0)
                     {
-                        pnlUpdated.Visible = true;
-
-                        Timer hideTimer = new Timer();
-                        hideTimer.Interval = 1500;
-                        hideTimer.Tick += (s, args) =>
-                        {
-                            this.Close();
-                            hideTimer.Stop();
-                            hideTimer.Dispose();
-                        };
-                        hideTimer.Start();
+                        ShowSuccessPanel();
                     }
                     else
                     {
@@ -95,9 +151,11 @@ namespace SavexTracker.forms
             }
         }
 
+
         private void rjButton2_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = true;
+            pnlDeleteCon.BringToFront();
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
@@ -220,12 +278,14 @@ namespace SavexTracker.forms
 
         private void rjButton3_Click(object sender, EventArgs e)
         {
-            pnlDeleteCon.Visible = false;
+            pnlDeleteCon.Visible = true;
+            pnlDeleteCon.BringToFront();
         }
 
         private void btnCancel1_Click(object sender, EventArgs e)
         {
-            pnlUpdateCon.Visible = false;
+            pnlUpdateCon.Visible = true;
+            pnlUpdateCon.BringToFront();
         }
 
         private void rjButton1_Click_1(object sender, EventArgs e)
@@ -240,12 +300,14 @@ namespace SavexTracker.forms
 
         private void rjButton6_Click(object sender, EventArgs e)
         {
-            pnlUpdateCon.Visible = false;
+            pnlUpdateCon.Visible = true;
+            pnlUpdateCon.BringToFront();
         }
 
         private void rjButton5_Click(object sender, EventArgs e)
         {
-            pnlDeleteCon.Visible = false;
+            pnlDeleteCon.Visible = true;
+            pnlDeleteCon.BringToFront();
         }
 
         private void rjButton2_Click_1(object sender, EventArgs e)

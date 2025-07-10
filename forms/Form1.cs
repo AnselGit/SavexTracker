@@ -341,8 +341,10 @@ namespace SavexTracker
                             GlobalData.CurrentAmount = amount;
                             GlobalData.CurrentNote = note;
 
+
                             var updateForm = new UpdateDeleteForm();
                             updateForm.Show();
+                            updateForm.ShowExpensePanel();
                         };
 
                         tbl_Spend.RowStyles.Add(new RowStyle(SizeType.Absolute, 25));
