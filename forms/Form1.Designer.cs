@@ -38,9 +38,6 @@ namespace SavexTracker
             this.roundedPanel4 = new RoundedPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.tbl_Spend = new System.Windows.Forms.TableLayoutPanel();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.n1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.ea1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -92,7 +89,6 @@ namespace SavexTracker
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
-            this.tbl_Spend.SuspendLayout();
             this.gradientPanelRound5.SuspendLayout();
             this.pnlSave.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -142,6 +138,7 @@ namespace SavexTracker
             this.rjButton9.Text = "Archive";
             this.rjButton9.TextColor = System.Drawing.Color.White;
             this.rjButton9.UseVisualStyleBackColor = false;
+            this.rjButton9.Click += new System.EventHandler(this.rjButton9_Click);
             // 
             // btnRefresh
             // 
@@ -176,9 +173,9 @@ namespace SavexTracker
             this.gradientPanelRound6.Controls.Add(this.roundedPanel4);
             this.gradientPanelRound6.Controls.Add(this.label17);
             this.gradientPanelRound6.GradientAngle = 90F;
-            this.gradientPanelRound6.Location = new System.Drawing.Point(349, 213);
+            this.gradientPanelRound6.Location = new System.Drawing.Point(349, 196);
             this.gradientPanelRound6.Name = "gradientPanelRound6";
-            this.gradientPanelRound6.Size = new System.Drawing.Size(479, 620);
+            this.gradientPanelRound6.Size = new System.Drawing.Size(479, 637);
             this.gradientPanelRound6.TabIndex = 15;
             // 
             // roundedPanel4
@@ -191,7 +188,7 @@ namespace SavexTracker
             this.roundedPanel4.Controls.Add(this.label21);
             this.roundedPanel4.Location = new System.Drawing.Point(5, 60);
             this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.Size = new System.Drawing.Size(468, 535);
+            this.roundedPanel4.Size = new System.Drawing.Size(468, 549);
             this.roundedPanel4.TabIndex = 11;
             // 
             // label12
@@ -212,82 +209,13 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.35681F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.64319F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
-            this.tbl_Spend.Controls.Add(this.rjTextBox1, 0, 0);
-            this.tbl_Spend.Controls.Add(this.n1, 2, 0);
-            this.tbl_Spend.Controls.Add(this.ea1, 1, 0);
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 261F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
             this.tbl_Spend.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39F));
-            this.tbl_Spend.Size = new System.Drawing.Size(437, 475);
+            this.tbl_Spend.Size = new System.Drawing.Size(437, 484);
             this.tbl_Spend.TabIndex = 14;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.White;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 1;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(4, 4);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(77, 35);
-            this.rjTextBox1.TabIndex = 13;
-            this.rjTextBox1.Texts = "$ 1000";
-            this.rjTextBox1.UnderlinedStyle = true;
-            // 
-            // n1
-            // 
-            this.n1.BackColor = System.Drawing.Color.White;
-            this.n1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.n1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.n1.BorderRadius = 0;
-            this.n1.BorderSize = 1;
-            this.n1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n1.ForeColor = System.Drawing.Color.Gray;
-            this.n1.Location = new System.Drawing.Point(180, 4);
-            this.n1.Margin = new System.Windows.Forms.Padding(4);
-            this.n1.Multiline = false;
-            this.n1.Name = "n1";
-            this.n1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.n1.PasswordChar = false;
-            this.n1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.n1.PlaceholderText = "";
-            this.n1.Size = new System.Drawing.Size(252, 35);
-            this.n1.TabIndex = 12;
-            this.n1.Texts = "Note...";
-            this.n1.UnderlinedStyle = true;
-            // 
-            // ea1
-            // 
-            this.ea1.BackColor = System.Drawing.Color.White;
-            this.ea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ea1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.ea1.BorderRadius = 0;
-            this.ea1.BorderSize = 1;
-            this.ea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ea1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ea1.Location = new System.Drawing.Point(89, 4);
-            this.ea1.Margin = new System.Windows.Forms.Padding(4);
-            this.ea1.Multiline = false;
-            this.ea1.Name = "ea1";
-            this.ea1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.ea1.PasswordChar = false;
-            this.ea1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.ea1.PlaceholderText = "";
-            this.ea1.Size = new System.Drawing.Size(82, 35);
-            this.ea1.TabIndex = 0;
-            this.ea1.Texts = "$ 1000";
-            this.ea1.UnderlinedStyle = true;
             // 
             // label20
             // 
@@ -338,9 +266,9 @@ namespace SavexTracker
             this.gradientPanelRound5.Controls.Add(this.pnlSave);
             this.gradientPanelRound5.Controls.Add(this.label16);
             this.gradientPanelRound5.GradientAngle = 90F;
-            this.gradientPanelRound5.Location = new System.Drawing.Point(28, 213);
+            this.gradientPanelRound5.Location = new System.Drawing.Point(28, 196);
             this.gradientPanelRound5.Name = "gradientPanelRound5";
-            this.gradientPanelRound5.Size = new System.Drawing.Size(293, 620);
+            this.gradientPanelRound5.Size = new System.Drawing.Size(293, 637);
             this.gradientPanelRound5.TabIndex = 14;
             // 
             // pnlSave
@@ -352,7 +280,7 @@ namespace SavexTracker
             this.pnlSave.Controls.Add(this.label18);
             this.pnlSave.Location = new System.Drawing.Point(4, 60);
             this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(284, 535);
+            this.pnlSave.Size = new System.Drawing.Size(284, 549);
             this.pnlSave.TabIndex = 10;
             // 
             // tblSave
@@ -365,7 +293,7 @@ namespace SavexTracker
             this.tblSave.Name = "tblSave";
             this.tblSave.RowCount = 1;
             this.tblSave.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39F));
-            this.tblSave.Size = new System.Drawing.Size(254, 475);
+            this.tblSave.Size = new System.Drawing.Size(254, 484);
             this.tblSave.TabIndex = 13;
             // 
             // label19
@@ -989,7 +917,6 @@ namespace SavexTracker
             this.gradientPanelRound6.PerformLayout();
             this.roundedPanel4.ResumeLayout(false);
             this.roundedPanel4.PerformLayout();
-            this.tbl_Spend.ResumeLayout(false);
             this.gradientPanelRound5.ResumeLayout(false);
             this.gradientPanelRound5.PerformLayout();
             this.pnlSave.ResumeLayout(false);
@@ -1071,13 +998,10 @@ namespace SavexTracker
         private RoundedPanel roundedPanel4;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private RJCodeAdvance.RJControls.RJTextBox n1;
-        private RJCodeAdvance.RJControls.RJTextBox ea1;
         private System.Windows.Forms.TableLayoutPanel tblSave;
         private RJCodeAdvance.RJControls.RJButton btnRefresh;
         private RJCodeAdvance.RJControls.RJButton rjButton9;
         private System.Windows.Forms.TableLayoutPanel tbl_Spend;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.Label label12;
     }
 }

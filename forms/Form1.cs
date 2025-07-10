@@ -14,9 +14,9 @@ namespace SavexTracker
         public Form1()
         {
             InitializeComponent();
-            LoadSavingsToPanel();
-            LoadExpensesToPanel();
             EnsureDatabaseAndTable();
+            LoadExpensesToPanel();
+            LoadSavingsToPanel();                        
         }
 
         private void EnsureDatabaseAndTable()
@@ -36,8 +36,7 @@ namespace SavexTracker
                 // 1. Savings Table
                 string createSavingsTable = @"
         CREATE TABLE IF NOT EXISTS savings (
-            sid INTEGER PRIMARY KEY AUTOINCREMENT,
-            tbxName TEXT NOT NULL,
+            sid INTEGER PRIMARY KEY AUTOINCREMENT,            
             timestamp TEXT NOT NULL,
             amount REAL NOT NULL
         );";
@@ -136,7 +135,7 @@ namespace SavexTracker
             using (var conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string query = "SELECT txtNameDate, txtNameAmount, timestamp, amount FROM savings ORDER BY sid DESC";
+                string query = "SELECT sid, timestamp, amount FROM savings ORDER BY sid DESC";
 
                 using (var cmd = new SQLiteCommand(query, conn))
                 using (var reader = cmd.ExecuteReader())
@@ -145,12 +144,13 @@ namespace SavexTracker
 
                     while (reader.Read())
                     {
-                        string txtNameDate = reader["txtNameDate"].ToString();
-                        string txtNameAmount = reader["txtNameAmount"].ToString();
+                        int sid = Convert.ToInt32(reader["sid"]);
                         string timestamp = reader["timestamp"].ToString();
                         double amount = Convert.ToDouble(reader["amount"]);
 
-                        // RJTextBoxes (unchanged)
+                        string txtNameDate = $"n{sid}";
+                        string txtNameAmount = $"sa{sid}";
+
                         var dateBox = new RJCodeAdvance.RJControls.RJTextBox
                         {
                             Name = txtNameDate,
@@ -170,7 +170,7 @@ namespace SavexTracker
                         var amtBox = new RJCodeAdvance.RJControls.RJTextBox
                         {
                             Name = txtNameAmount,
-                            Texts = "₱" + amount.ToString(),
+                            Texts = "₱" + amount.ToString("0.00"),
                             BackColor = Color.White,
                             BorderColor = Color.FromArgb(224, 224, 224),
                             BorderFocusColor = Color.MediumSlateBlue,
@@ -183,13 +183,11 @@ namespace SavexTracker
                             Margin = new Padding(5)
                         };
 
-                        // Add RJTextBoxes row
                         tblSave.RowStyles.Add(new RowStyle(SizeType.AutoSize));
                         tblSave.Controls.Add(dateBox, 0, tblSave.RowCount);
                         tblSave.Controls.Add(amtBox, 1, tblSave.RowCount);
                         tblSave.RowCount++;
 
-                        // Replace subpanel + label with a single Button
                         Button btnModify = new Button
                         {
                             Text = "Modify",
@@ -199,42 +197,25 @@ namespace SavexTracker
                             ForeColor = Color.White,
                             Font = new Font("Noto Sans", 9, FontStyle.Bold),
                             Cursor = Cursors.Hand,
-                            Dock = DockStyle.Left,
-                            Size = new Size(230, 20),
+                            Anchor = AnchorStyles.Top | AnchorStyles.Left,
+                            Dock = DockStyle.None,
+                            Size = new Size(230, 25),
                             Margin = new Padding(0)
                         };
 
-                        // Optional hover effect
-                        btnModify.MouseEnter += (s, e) => btnModify.BackColor = Color.FromArgb(30, 144, 255); // DodgerBlue
+                        btnModify.MouseEnter += (s, e) => btnModify.BackColor = Color.FromArgb(30, 144, 255);
                         btnModify.MouseLeave += (s, e) => btnModify.BackColor = Color.White;
 
-                        // Button click event
                         btnModify.Click += (s, e) =>
                         {
-                            GlobalData.CurrentTxtNameDate = txtNameDate;
-                            GlobalData.CurrentTxtNameAmount = txtNameAmount;
+                            GlobalData.CurrentID = sid;
                             GlobalData.CurrentTimestamp = timestamp;
                             GlobalData.CurrentAmount = amount;
-
-                            using (var conn2 = new SQLiteConnection(connStr))
-                            {
-                                conn2.Open();
-                                string idQuery = "SELECT sid FROM savings WHERE txtNameDate = @date AND txtNameAmount = @amount";
-                                using (var cmdID = new SQLiteCommand(idQuery, conn2))
-                                {
-                                    cmdID.Parameters.AddWithValue("@date", txtNameDate);
-                                    cmdID.Parameters.AddWithValue("@amount", txtNameAmount);
-                                    object result = cmdID.ExecuteScalar();
-                                    if (result != null)
-                                        GlobalData.CurrentID = Convert.ToInt32(result);
-                                }
-                            }
 
                             var updateForm = new UpdateDeleteForm();
                             updateForm.Show();
                         };
 
-                        // Add the button to a new row
                         tblSave.RowStyles.Add(new RowStyle(SizeType.Absolute, 25));
                         tblSave.Controls.Add(btnModify, 0, tblSave.RowCount);
                         tblSave.SetColumnSpan(btnModify, 2);
@@ -245,6 +226,7 @@ namespace SavexTracker
                 }
             }
         }
+
 
         private void LoadExpensesToPanel()
         {
@@ -343,8 +325,9 @@ namespace SavexTracker
                             ForeColor = Color.White,
                             Font = new Font("Noto Sans", 9, FontStyle.Bold),
                             Cursor = Cursors.Hand,
-                            Dock = DockStyle.Left,
-                            Size = new Size(230, 20),
+                            Anchor = AnchorStyles.Top | AnchorStyles.Left,
+                            Dock = DockStyle.None,
+                            Size = new Size(430, 25),
                             Margin = new Padding(0)
                         };
 
@@ -356,7 +339,7 @@ namespace SavexTracker
                             GlobalData.CurrentID = eid;
                             GlobalData.CurrentTimestamp = timestamp;
                             GlobalData.CurrentAmount = amount;
-                            //GlobalData.CurrentNote = note;
+                            GlobalData.CurrentNote = note;
 
                             var updateForm = new UpdateDeleteForm();
                             updateForm.Show();
@@ -381,6 +364,12 @@ namespace SavexTracker
         private void rjButton6_Click(object sender, EventArgs e)
         {
             addExpense addForm = new addExpense();
+            addForm.Show();
+        }
+
+        private void rjButton9_Click(object sender, EventArgs e)
+        {
+            ArchiveForm addForm = new ArchiveForm();
             addForm.Show();
         }
     }

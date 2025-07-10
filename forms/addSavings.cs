@@ -64,41 +64,30 @@ namespace SavexTracker.forms
                 conn.Open();
 
                 string createTableQuery = @"
-        CREATE TABLE IF NOT EXISTS savings (
-            sid INTEGER PRIMARY KEY AUTOINCREMENT,
-            txtNameDate TEXT,
-            txtNameAmount TEXT,
-            timestamp TEXT NOT NULL,
-            amount REAL NOT NULL
-        );";
+CREATE TABLE IF NOT EXISTS savings (
+    sid INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp TEXT NOT NULL,
+    amount REAL NOT NULL
+);";
                 using (SQLiteCommand createCmd = new SQLiteCommand(createTableQuery, conn))
                 {
                     createCmd.ExecuteNonQuery();
                 }
 
-                // Get current index for naming
-                string countQuery = "SELECT COUNT(*) FROM savings";
-                int index = Convert.ToInt32(new SQLiteCommand(countQuery, conn).ExecuteScalar()) + 1;
-
-                string txtNameDate = $"n{index}";
-                string txtNameAmount = $"sa{index}";
-
                 string insertQuery = @"
-        INSERT INTO savings (txtNameDate, txtNameAmount, timestamp, amount)
-        VALUES (@txtNameDate, @txtNameAmount, @timestamp, @amount);";
+INSERT INTO savings (timestamp, amount)
+VALUES (@timestamp, @amount);";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn))
                 {
-                    cmd.Parameters.AddWithValue("@txtNameDate", txtNameDate);
-                    cmd.Parameters.AddWithValue("@txtNameAmount", txtNameAmount);
                     cmd.Parameters.AddWithValue("@timestamp", dateText);
                     cmd.Parameters.AddWithValue("@amount", amount);
-
                     cmd.ExecuteNonQuery();
                 }
 
                 conn.Close();
             }
+
             pnlAdded.Visible = true;
 
             Timer hideTimer = new Timer();

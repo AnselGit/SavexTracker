@@ -160,8 +160,6 @@ namespace SavexTracker.forms
                         insertCmd.Parameters.AddWithValue("@eid", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@name", "Savings");
 
-                        insertCmd.Parameters.AddWithValue("@txtNameDate1", GlobalData.CurrentTxtNameDate);
-                        insertCmd.Parameters.AddWithValue("@txtNameAmount1", GlobalData.CurrentTxtNameAmount);
                         insertCmd.Parameters.AddWithValue("@timestamp1", GlobalData.CurrentTimestamp);
                         insertCmd.Parameters.AddWithValue("@amount1", GlobalData.CurrentAmount);
 
@@ -181,8 +179,6 @@ namespace SavexTracker.forms
                         insertCmd.Parameters.AddWithValue("@timestamp1", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@amount1", DBNull.Value);
 
-                        insertCmd.Parameters.AddWithValue("@txtNameDate2", GlobalData.CurrentTxtNameDate);
-                        insertCmd.Parameters.AddWithValue("@txtNameAmount2", GlobalData.CurrentTxtNameAmount);
                         insertCmd.Parameters.AddWithValue("@timestamp2", GlobalData.CurrentTimestamp);
                         insertCmd.Parameters.AddWithValue("@amount2", GlobalData.CurrentAmount);
                     }
@@ -240,6 +236,21 @@ namespace SavexTracker.forms
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rjButton6_Click(object sender, EventArgs e)
+        {
+            pnlUpdateCon.Visible = false;
+        }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+            pnlDeleteCon.Visible = false;
+        }
+
+        private void rjButton2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
