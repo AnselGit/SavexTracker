@@ -20,23 +20,20 @@ namespace SavexTracker.forms
 
         private void UpdateDeleteForm_Load(object sender, EventArgs e)
         {
-            txtDate.Texts = GlobalData.CurrentTimestamp;
+            lblDate.Text = GlobalData.CurrentTimestamp;
             txtAmt.Texts = GlobalData.CurrentAmount.ToString("0.00");
             btn_Mod.Enabled = false;
 
-            txtDate._TextChanged += ValidateChanges;
             txtAmt._TextChanged += ValidateChanges;
         }
 
         private void ValidateChanges(object sender, EventArgs e)
         {
-            bool dateChanged = txtDate.Texts != GlobalData.CurrentTimestamp;
-
             bool amountChanged =
-                double.TryParse(txtAmt.Texts.Replace("₱", "").Trim(), out double newAmount) &&
-                newAmount != GlobalData.CurrentAmount;
+            double.TryParse(txtAmt.Texts.Replace("₱", "").Trim(), out double newAmount) &&
+            newAmount != GlobalData.CurrentAmount;
 
-            btn_Mod.Enabled = dateChanged || amountChanged;
+            btn_Mod.Enabled = amountChanged;
         }
 
 
@@ -47,7 +44,7 @@ namespace SavexTracker.forms
 
         private void btnCon1_Click(object sender, EventArgs e)
         {
-            string newDate = txtDate.Texts.Trim();
+            string newDate = lblDate.Text.Trim();  // now using lblDate
             string newAmountText = txtAmt.Texts.Trim().Replace("₱", "").Trim();
 
             if (!double.TryParse(newAmountText, out double newAmount) || newAmount <= 0)
@@ -95,8 +92,7 @@ namespace SavexTracker.forms
                         MessageBox.Show("Update failed. Record not found.");
                     }
                 }
-                conn.Close();
-            }            
+            }
         }
 
         private void rjButton2_Click(object sender, EventArgs e)
