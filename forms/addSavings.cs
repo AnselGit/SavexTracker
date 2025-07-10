@@ -53,9 +53,9 @@ namespace SavexTracker.forms
             if (amountText.StartsWith("₱"))
                 amountText = amountText.Substring(1);
 
-            if (!double.TryParse(amountText, out double amount))
+            if (!decimal.TryParse(amountText, out decimal amount) || amount <= 0)
             {
-                MessageBox.Show("Invalid amount format.");
+                MessageBox.Show("Amount must be a positive number (greater than 0) and contain only valid digits.");
                 return;
             }
 
@@ -99,10 +99,17 @@ namespace SavexTracker.forms
 
                 conn.Close();
             }
+            pnlAdded.Visible = true;
 
-            MessageBox.Show("Saved successfully!");
-            this.Close();
+            Timer hideTimer = new Timer();
+            hideTimer.Interval = 1500;
+            hideTimer.Tick += (s, args) =>
+            {
+                this.Close();
+                hideTimer.Stop();
+                hideTimer.Dispose();
+            };
+            hideTimer.Start();
         }
-
     }
 }

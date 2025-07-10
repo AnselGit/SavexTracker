@@ -44,8 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDate = new RJCodeAdvance.RJControls.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
-            this.btn_save = new RJCodeAdvance.RJControls.RJButton();
+            this.btn_Del = new RJCodeAdvance.RJControls.RJButton();
+            this.btn_Mod = new RJCodeAdvance.RJControls.RJButton();
             this.roundedPanel2 = new RoundedPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtAmt = new RJCodeAdvance.RJControls.RJTextBox();
@@ -205,8 +205,8 @@
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.Controls.Add(this.txtDate);
             this.roundedPanel1.Controls.Add(this.label4);
-            this.roundedPanel1.Controls.Add(this.rjButton2);
-            this.roundedPanel1.Controls.Add(this.btn_save);
+            this.roundedPanel1.Controls.Add(this.btn_Del);
+            this.roundedPanel1.Controls.Add(this.btn_Mod);
             this.roundedPanel1.Controls.Add(this.roundedPanel2);
             this.roundedPanel1.Controls.Add(this.txtAmt);
             this.roundedPanel1.Controls.Add(this.label3);
@@ -274,7 +274,7 @@
             this.txtDate.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtDate.PasswordChar = false;
             this.txtDate.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtDate.PlaceholderText = "00/00/00";
+            this.txtDate.PlaceholderText = "";
             this.txtDate.Size = new System.Drawing.Size(126, 46);
             this.txtDate.TabIndex = 14;
             this.txtDate.Texts = "";
@@ -292,45 +292,45 @@
             this.label4.Text = "You are about to make a change";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rjButton2
+            // btn_Del
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.OrangeRed;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.OrangeRed;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 23;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(637, 255);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(82, 46);
-            this.rjButton2.TabIndex = 11;
-            this.rjButton2.Text = "Delete";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            this.btn_Del.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_Del.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.btn_Del.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Del.BorderRadius = 23;
+            this.btn_Del.BorderSize = 0;
+            this.btn_Del.FlatAppearance.BorderSize = 0;
+            this.btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Del.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Del.ForeColor = System.Drawing.Color.White;
+            this.btn_Del.Location = new System.Drawing.Point(637, 255);
+            this.btn_Del.Name = "btn_Del";
+            this.btn_Del.Size = new System.Drawing.Size(82, 46);
+            this.btn_Del.TabIndex = 11;
+            this.btn_Del.Text = "Delete";
+            this.btn_Del.TextColor = System.Drawing.Color.White;
+            this.btn_Del.UseVisualStyleBackColor = false;
+            this.btn_Del.Click += new System.EventHandler(this.rjButton2_Click);
             // 
-            // btn_save
+            // btn_Mod
             // 
-            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_save.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_save.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_save.BorderRadius = 23;
-            this.btn_save.BorderSize = 0;
-            this.btn_save.FlatAppearance.BorderSize = 0;
-            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(414, 255);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(217, 46);
-            this.btn_save.TabIndex = 9;
-            this.btn_save.Text = "Modify now";
-            this.btn_save.TextColor = System.Drawing.Color.White;
-            this.btn_save.UseVisualStyleBackColor = false;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            this.btn_Mod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Mod.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Mod.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Mod.BorderRadius = 23;
+            this.btn_Mod.BorderSize = 0;
+            this.btn_Mod.FlatAppearance.BorderSize = 0;
+            this.btn_Mod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Mod.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mod.ForeColor = System.Drawing.Color.White;
+            this.btn_Mod.Location = new System.Drawing.Point(414, 255);
+            this.btn_Mod.Name = "btn_Mod";
+            this.btn_Mod.Size = new System.Drawing.Size(217, 46);
+            this.btn_Mod.TabIndex = 9;
+            this.btn_Mod.Text = "Modify now";
+            this.btn_Mod.TextColor = System.Drawing.Color.White;
+            this.btn_Mod.UseVisualStyleBackColor = false;
+            this.btn_Mod.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // roundedPanel2
             // 
@@ -368,7 +368,7 @@
             this.txtAmt.Padding = new System.Windows.Forms.Padding(30, 7, 10, 7);
             this.txtAmt.PasswordChar = false;
             this.txtAmt.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtAmt.PlaceholderText = "100";
+            this.txtAmt.PlaceholderText = "";
             this.txtAmt.Size = new System.Drawing.Size(171, 46);
             this.txtAmt.TabIndex = 8;
             this.txtAmt.Texts = "";
@@ -408,9 +408,9 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Location = new System.Drawing.Point(144, 151);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(504, 32);
+            this.label6.Size = new System.Drawing.Size(496, 32);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Are you sure you want to update specific data?";
+            this.label6.Text = "Are you sure you want to delete specific data?";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rjButton3
@@ -514,15 +514,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(816, 358);
-            this.Controls.Add(this.pnlDeleteCon);
             this.Controls.Add(this.pnlUpdateCon);
             this.Controls.Add(this.roundedPanel1);
+            this.Controls.Add(this.pnlDeleteCon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateDeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateDeleteForm";
+            this.Load += new System.EventHandler(this.UpdateDeleteForm_Load);
             this.pnlUpdateCon.ResumeLayout(false);
             this.pnlUpdateCon.PerformLayout();
             this.pnlUpdated.ResumeLayout(false);
@@ -561,8 +562,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private RoundedPanel roundedPanel4;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
-        private RJCodeAdvance.RJControls.RJButton btn_save;
+        private RJCodeAdvance.RJControls.RJButton btn_Del;
+        private RJCodeAdvance.RJControls.RJButton btn_Mod;
         private RJCodeAdvance.RJControls.RJButton btnCancel1;
         private RJCodeAdvance.RJControls.RJButton btnCon1;
         private RJCodeAdvance.RJControls.RJButton rjButton1;

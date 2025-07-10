@@ -56,7 +56,7 @@ namespace SavexTracker
         private void rjButton1_Click(object sender, EventArgs e)
         {
             addSavings addForm = new addSavings();
-            addForm.ShowDialog(); // Modal — pauses until form is closed
+            addForm.Show(); // Modal — pauses until form is closed
         }
 
         private void rjButton2_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace SavexTracker
             using (var conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string query = "SELECT txtNameDate, txtNameAmount, timestamp, amount FROM savings";
+                string query = "SELECT txtNameDate, txtNameAmount, timestamp, amount FROM savings ORDER BY sid DESC";
 
                 using (var cmd = new SQLiteCommand(query, conn))
                 using (var reader = cmd.ExecuteReader())
