@@ -32,15 +32,17 @@ namespace SavexTracker
         {       
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rjButton9 = new RJCodeAdvance.RJControls.RJButton();
             this.btnRefresh = new RJCodeAdvance.RJControls.RJButton();
             this.gradientPanelRound6 = new GradientPanelRound();
             this.roundedPanel4 = new RoundedPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbl_Spend = new System.Windows.Forms.TableLayoutPanel();
+            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.n1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.ea1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.gradientPanelRound5 = new GradientPanelRound();
             this.pnlSave = new RoundedPanel();
@@ -87,12 +89,10 @@ namespace SavexTracker
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
-            this.rjButton9 = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.tbl_Spend.SuspendLayout();
             this.gradientPanelRound5.SuspendLayout();
             this.pnlSave.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,6 +122,26 @@ namespace SavexTracker
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 862);
             this.panel1.TabIndex = 0;
+            // 
+            // rjButton9
+            // 
+            this.rjButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rjButton9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rjButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton9.BorderColor = System.Drawing.Color.White;
+            this.rjButton9.BorderRadius = 33;
+            this.rjButton9.BorderSize = 0;
+            this.rjButton9.FlatAppearance.BorderSize = 0;
+            this.rjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton9.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton9.ForeColor = System.Drawing.Color.White;
+            this.rjButton9.Location = new System.Drawing.Point(695, 111);
+            this.rjButton9.Name = "rjButton9";
+            this.rjButton9.Size = new System.Drawing.Size(133, 65);
+            this.rjButton9.TabIndex = 17;
+            this.rjButton9.Text = "Archive";
+            this.rjButton9.TextColor = System.Drawing.Color.White;
+            this.rjButton9.UseVisualStyleBackColor = false;
             // 
             // btnRefresh
             // 
@@ -165,56 +185,65 @@ namespace SavexTracker
             // 
             this.roundedPanel4.BackColor = System.Drawing.Color.White;
             this.roundedPanel4.BorderRadius = 60;
+            this.roundedPanel4.Controls.Add(this.label12);
+            this.roundedPanel4.Controls.Add(this.tbl_Spend);
             this.roundedPanel4.Controls.Add(this.label20);
             this.roundedPanel4.Controls.Add(this.label21);
-            this.roundedPanel4.Controls.Add(this.flowLayoutPanel2);
             this.roundedPanel4.Location = new System.Drawing.Point(5, 60);
             this.roundedPanel4.Name = "roundedPanel4";
             this.roundedPanel4.Size = new System.Drawing.Size(468, 535);
             this.roundedPanel4.TabIndex = 11;
             // 
-            // label20
+            // label12
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(259, 5);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 24);
-            this.label20.TabIndex = 12;
-            this.label20.Text = "Note";
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(38, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 24);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Date";
             // 
-            // label21
+            // tbl_Spend
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label21.Location = new System.Drawing.Point(30, 5);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(72, 24);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "Amount";
+            this.tbl_Spend.AutoScroll = true;
+            this.tbl_Spend.ColumnCount = 3;
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.35681F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.64319F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tbl_Spend.Controls.Add(this.rjTextBox1, 0, 0);
+            this.tbl_Spend.Controls.Add(this.n1, 2, 0);
+            this.tbl_Spend.Controls.Add(this.ea1, 1, 0);
+            this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
+            this.tbl_Spend.Name = "tbl_Spend";
+            this.tbl_Spend.RowCount = 1;
+            this.tbl_Spend.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39F));
+            this.tbl_Spend.Size = new System.Drawing.Size(437, 475);
+            this.tbl_Spend.TabIndex = 14;
             // 
-            // flowLayoutPanel2
+            // rjTextBox1
             // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Controls.Add(this.panel3);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 32);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(465, 503);
-            this.flowLayoutPanel2.TabIndex = 0;
-            this.flowLayoutPanel2.WrapContents = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.n1);
-            this.panel3.Controls.Add(this.ea1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(440, 1200);
-            this.panel3.TabIndex = 0;
+            this.rjTextBox1.BackColor = System.Drawing.Color.White;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 1;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(4, 4);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "";
+            this.rjTextBox1.Size = new System.Drawing.Size(77, 35);
+            this.rjTextBox1.TabIndex = 13;
+            this.rjTextBox1.Texts = "$ 1000";
+            this.rjTextBox1.UnderlinedStyle = true;
             // 
             // n1
             // 
@@ -225,7 +254,7 @@ namespace SavexTracker
             this.n1.BorderSize = 1;
             this.n1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.n1.ForeColor = System.Drawing.Color.Gray;
-            this.n1.Location = new System.Drawing.Point(120, 4);
+            this.n1.Location = new System.Drawing.Point(180, 4);
             this.n1.Margin = new System.Windows.Forms.Padding(4);
             this.n1.Multiline = false;
             this.n1.Name = "n1";
@@ -233,7 +262,7 @@ namespace SavexTracker
             this.n1.PasswordChar = false;
             this.n1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.n1.PlaceholderText = "";
-            this.n1.Size = new System.Drawing.Size(316, 35);
+            this.n1.Size = new System.Drawing.Size(252, 35);
             this.n1.TabIndex = 12;
             this.n1.Texts = "Note...";
             this.n1.UnderlinedStyle = true;
@@ -247,7 +276,7 @@ namespace SavexTracker
             this.ea1.BorderSize = 1;
             this.ea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ea1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ea1.Location = new System.Drawing.Point(13, 4);
+            this.ea1.Location = new System.Drawing.Point(89, 4);
             this.ea1.Margin = new System.Windows.Forms.Padding(4);
             this.ea1.Multiline = false;
             this.ea1.Name = "ea1";
@@ -255,10 +284,35 @@ namespace SavexTracker
             this.ea1.PasswordChar = false;
             this.ea1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.ea1.PlaceholderText = "";
-            this.ea1.Size = new System.Drawing.Size(99, 35);
+            this.ea1.Size = new System.Drawing.Size(82, 35);
             this.ea1.TabIndex = 0;
             this.ea1.Texts = "$ 1000";
             this.ea1.UnderlinedStyle = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label20.Location = new System.Drawing.Point(293, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(48, 24);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "Note";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label21.Location = new System.Drawing.Point(108, 9);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 24);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "Amount";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label17
             // 
@@ -320,7 +374,7 @@ namespace SavexTracker
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label19.Location = new System.Drawing.Point(161, 5);
+            this.label19.Location = new System.Drawing.Point(161, 8);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(72, 24);
             this.label19.TabIndex = 12;
@@ -332,7 +386,7 @@ namespace SavexTracker
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label18.Location = new System.Drawing.Point(40, 5);
+            this.label18.Location = new System.Drawing.Point(40, 8);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(46, 24);
             this.label18.TabIndex = 11;
@@ -477,7 +531,7 @@ namespace SavexTracker
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(174, 46);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Go premium to unlock\r\nmonthly tracker\r\n";
+            this.label4.Text = "Go premium to unlock\r\nspecial features.\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -684,6 +738,7 @@ namespace SavexTracker
             this.rjButton6.TabIndex = 0;
             this.rjButton6.TextColor = System.Drawing.Color.White;
             this.rjButton6.UseVisualStyleBackColor = false;
+            this.rjButton6.Click += new System.EventHandler(this.rjButton6_Click);
             // 
             // rjButton5
             // 
@@ -899,26 +954,6 @@ namespace SavexTracker
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
             // 
-            // rjButton9
-            // 
-            this.rjButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.rjButton9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.rjButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton9.BorderColor = System.Drawing.Color.White;
-            this.rjButton9.BorderRadius = 33;
-            this.rjButton9.BorderSize = 0;
-            this.rjButton9.FlatAppearance.BorderSize = 0;
-            this.rjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton9.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton9.ForeColor = System.Drawing.Color.White;
-            this.rjButton9.Location = new System.Drawing.Point(695, 111);
-            this.rjButton9.Name = "rjButton9";
-            this.rjButton9.Size = new System.Drawing.Size(133, 65);
-            this.rjButton9.TabIndex = 17;
-            this.rjButton9.Text = "Archive";
-            this.rjButton9.TextColor = System.Drawing.Color.White;
-            this.rjButton9.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -954,8 +989,7 @@ namespace SavexTracker
             this.gradientPanelRound6.PerformLayout();
             this.roundedPanel4.ResumeLayout(false);
             this.roundedPanel4.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.tbl_Spend.ResumeLayout(false);
             this.gradientPanelRound5.ResumeLayout(false);
             this.gradientPanelRound5.PerformLayout();
             this.pnlSave.ResumeLayout(false);
@@ -1037,13 +1071,14 @@ namespace SavexTracker
         private RoundedPanel roundedPanel4;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel panel3;
         private RJCodeAdvance.RJControls.RJTextBox n1;
         private RJCodeAdvance.RJControls.RJTextBox ea1;
         private System.Windows.Forms.TableLayoutPanel tblSave;
         private RJCodeAdvance.RJControls.RJButton btnRefresh;
         private RJCodeAdvance.RJControls.RJButton rjButton9;
+        private System.Windows.Forms.TableLayoutPanel tbl_Spend;
+        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private System.Windows.Forms.Label label12;
     }
 }
 

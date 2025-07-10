@@ -32,37 +32,54 @@ namespace SavexTracker
             {
                 conn.Open();
 
+                // 1. Savings Table
                 string createSavingsTable = @"
-            CREATE TABLE IF NOT EXISTS savings (
-                sid INTEGER PRIMARY KEY AUTOINCREMENT,
-                tbxName TEXT NOT NULL,
-                timestamp TEXT NOT NULL,
-                amount REAL NOT NULL
-            );";
+        CREATE TABLE IF NOT EXISTS savings (
+            sid INTEGER PRIMARY KEY AUTOINCREMENT,
+            tbxName TEXT NOT NULL,
+            timestamp TEXT NOT NULL,
+            amount REAL NOT NULL
+        );";
 
+                // 2. Archive Table
                 string createArchiveTable = @"
-            CREATE TABLE IF NOT EXISTS archive (
-                aid INTEGER PRIMARY KEY AUTOINCREMENT,
-                sid INTEGER,
-                name TEXT,
-                txtNameDate1 TEXT,
-                txtNameAmount1 TEXT,
-                timestamp1 TEXT,
-                amount1 REAL,
-                eid INTEGER,
-                txtNameDate2 TEXT,
-                txtNameAmount2 TEXT,
-                timestamp2 TEXT,
-                amount2 REAL,
-                note TEXT
-            );";
+        CREATE TABLE IF NOT EXISTS archive (
+            aid INTEGER PRIMARY KEY AUTOINCREMENT,
+            sid INTEGER,
+            name TEXT,
+            txtNameDate1 TEXT,
+            txtNameAmount1 TEXT,
+            timestamp1 TEXT,
+            amount1 REAL,
+            eid INTEGER,
+            txtNameDate2 TEXT,
+            txtNameAmount2 TEXT,
+            timestamp2 TEXT,
+            amount2 REAL,
+            note TEXT
+        );";
 
+                // 3. Expenses Table
+                string createExpensesTable = @"
+        CREATE TABLE IF NOT EXISTS expenses (
+            eid INTEGER PRIMARY KEY AUTOINCREMENT,
+            timestamp TEXT NOT NULL,
+            amount REAL NOT NULL,
+            note TEXT
+        );";
+
+                // Execute all table creations
                 using (SQLiteCommand cmd = new SQLiteCommand(createSavingsTable, conn))
                 {
                     cmd.ExecuteNonQuery();
                 }
 
                 using (SQLiteCommand cmd = new SQLiteCommand(createArchiveTable, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+
+                using (SQLiteCommand cmd = new SQLiteCommand(createExpensesTable, conn))
                 {
                     cmd.ExecuteNonQuery();
                 }
@@ -79,7 +96,7 @@ namespace SavexTracker
         private void rjButton1_Click(object sender, EventArgs e)
         {
             addSavings addForm = new addSavings();
-            addForm.Show(); // Modal — pauses until form is closed
+            addForm.Show(); 
         }
 
         private void rjButton2_Click(object sender, EventArgs e)
@@ -227,6 +244,16 @@ namespace SavexTracker
             }
         }
 
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton6_Click(object sender, EventArgs e)
+        {
+            addExpense addForm = new addExpense();
+            addForm.Show();
+        }
     }
 
     public class VerticalFlowPanel : FlowLayoutPanel
