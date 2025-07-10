@@ -59,6 +59,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.roundedPanel6 = new RoundedPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.pnlUpdateCon.SuspendLayout();
             this.pnlUpdated.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -76,11 +78,11 @@
             // 
             this.pnlUpdateCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.pnlUpdateCon.BorderRadius = 30;
+            this.pnlUpdateCon.Controls.Add(this.pnlUpdated);
             this.pnlUpdateCon.Controls.Add(this.label7);
             this.pnlUpdateCon.Controls.Add(this.btnCancel1);
             this.pnlUpdateCon.Controls.Add(this.btnCon1);
             this.pnlUpdateCon.Controls.Add(this.label8);
-            this.pnlUpdateCon.Controls.Add(this.pnlUpdated);
             this.pnlUpdateCon.Location = new System.Drawing.Point(12, 12);
             this.pnlUpdateCon.Name = "pnlUpdateCon";
             this.pnlUpdateCon.Size = new System.Drawing.Size(792, 334);
@@ -155,6 +157,7 @@
             // 
             this.pnlUpdated.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.pnlUpdated.BorderRadius = 40;
+            this.pnlUpdated.Controls.Add(this.label12);
             this.pnlUpdated.Controls.Add(this.label5);
             this.pnlUpdated.Controls.Add(this.roundedPanel4);
             this.pnlUpdated.Location = new System.Drawing.Point(135, 58);
@@ -169,7 +172,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(225, 72);
+            this.label5.Location = new System.Drawing.Point(197, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(251, 73);
             this.label5.TabIndex = 16;
@@ -390,11 +393,11 @@
             // 
             this.pnlDeleteCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pnlDeleteCon.BorderRadius = 30;
+            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
             this.pnlDeleteCon.Controls.Add(this.label6);
             this.pnlDeleteCon.Controls.Add(this.rjButton3);
             this.pnlDeleteCon.Controls.Add(this.rjButton4);
             this.pnlDeleteCon.Controls.Add(this.label9);
-            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
             this.pnlDeleteCon.Location = new System.Drawing.Point(12, 12);
             this.pnlDeleteCon.Name = "pnlDeleteCon";
             this.pnlDeleteCon.Size = new System.Drawing.Size(792, 334);
@@ -470,6 +473,7 @@
             this.pnlDeleted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pnlDeleted.BorderRadius = 40;
             this.pnlDeleted.Controls.Add(this.label10);
+            this.pnlDeleted.Controls.Add(this.label11);
             this.pnlDeleted.Controls.Add(this.roundedPanel6);
             this.pnlDeleted.Location = new System.Drawing.Point(135, 58);
             this.pnlDeleted.Name = "pnlDeleted";
@@ -482,12 +486,12 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(225, 72);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label10.Location = new System.Drawing.Point(197, 43);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(251, 73);
+            this.label10.Size = new System.Drawing.Size(321, 73);
             this.label10.TabIndex = 16;
-            this.label10.Text = "Updated!";
+            this.label10.Text = "Successfully";
             // 
             // roundedPanel6
             // 
@@ -509,6 +513,30 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label11.Location = new System.Drawing.Point(197, 102);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(219, 73);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Deleted";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label12.Location = new System.Drawing.Point(197, 43);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(321, 73);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Successfully";
             // 
             // UpdateDeleteForm
             // 
@@ -576,5 +604,7 @@
         private System.Windows.Forms.Label label10;
         private RoundedPanel roundedPanel6;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

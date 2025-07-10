@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addSavings));
+            this.roundedPanel1 = new RoundedPanel();
             this.pnlAdded = new RoundedPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.roundedPanel6 = new RoundedPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.roundedPanel1 = new RoundedPanel();
             this.lbl_date = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,13 +44,31 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_SA = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.roundedPanel1.SuspendLayout();
             this.pnlAdded.SuspendLayout();
             this.roundedPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.BackColor = System.Drawing.Color.White;
+            this.roundedPanel1.BorderRadius = 30;
+            this.roundedPanel1.Controls.Add(this.pnlAdded);
+            this.roundedPanel1.Controls.Add(this.lbl_date);
+            this.roundedPanel1.Controls.Add(this.label4);
+            this.roundedPanel1.Controls.Add(this.label1);
+            this.roundedPanel1.Controls.Add(this.rjButton2);
+            this.roundedPanel1.Controls.Add(this.btn_save);
+            this.roundedPanel1.Controls.Add(this.roundedPanel2);
+            this.roundedPanel1.Controls.Add(this.txt_SA);
+            this.roundedPanel1.Controls.Add(this.label3);
+            this.roundedPanel1.Location = new System.Drawing.Point(12, 12);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Size = new System.Drawing.Size(792, 334);
+            this.roundedPanel1.TabIndex = 0;
             // 
             // pnlAdded
             // 
@@ -73,9 +91,9 @@
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(334, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(307, 73);
+            this.label2.Size = new System.Drawing.Size(321, 73);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Successfuly";
+            this.label2.Text = "Successfully";
             // 
             // label10
             // 
@@ -109,24 +127,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
-            // 
-            // roundedPanel1
-            // 
-            this.roundedPanel1.BackColor = System.Drawing.Color.White;
-            this.roundedPanel1.BorderRadius = 30;
-            this.roundedPanel1.Controls.Add(this.pnlAdded);
-            this.roundedPanel1.Controls.Add(this.lbl_date);
-            this.roundedPanel1.Controls.Add(this.label4);
-            this.roundedPanel1.Controls.Add(this.label1);
-            this.roundedPanel1.Controls.Add(this.rjButton2);
-            this.roundedPanel1.Controls.Add(this.btn_save);
-            this.roundedPanel1.Controls.Add(this.roundedPanel2);
-            this.roundedPanel1.Controls.Add(this.txt_SA);
-            this.roundedPanel1.Controls.Add(this.label3);
-            this.roundedPanel1.Location = new System.Drawing.Point(12, 12);
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(792, 334);
-            this.roundedPanel1.TabIndex = 0;
             // 
             // lbl_date
             // 
@@ -271,12 +271,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addSavings";
             this.Load += new System.EventHandler(this.addSavings_Load);
+            this.roundedPanel1.ResumeLayout(false);
+            this.roundedPanel1.PerformLayout();
             this.pnlAdded.ResumeLayout(false);
             this.pnlAdded.PerformLayout();
             this.roundedPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.roundedPanel1.ResumeLayout(false);
-            this.roundedPanel1.PerformLayout();
             this.roundedPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

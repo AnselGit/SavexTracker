@@ -78,8 +78,17 @@ namespace SavexTracker.forms
 
                     if (affected > 0)
                     {
-                        MessageBox.Show("Record updated successfully!");
-                        pnlUpdateCon.Visible = true;
+                        pnlUpdated.Visible = true;
+
+                        Timer hideTimer = new Timer();
+                        hideTimer.Interval = 1500;
+                        hideTimer.Tick += (s, args) =>
+                        {
+                            this.Close();
+                            hideTimer.Stop();
+                            hideTimer.Dispose();
+                        };
+                        hideTimer.Start();
                     }
                     else
                     {
@@ -87,20 +96,7 @@ namespace SavexTracker.forms
                     }
                 }
                 conn.Close();
-            }
-            pnlUpdated.Visible = true;
-            pnlUpdateCon.Visible = true;
-
-            Timer hideTimer = new Timer();
-            hideTimer.Interval = 1500; // 2 seconds (2000 milliseconds)
-            hideTimer.Tick += (s, args) =>
-            {
-                pnlUpdated.Visible = false;
-                pnlUpdateCon.Visible = false;
-                hideTimer.Stop();
-                hideTimer.Dispose();
-            };
-            hideTimer.Start();
+            }            
         }
 
         private void rjButton2_Click(object sender, EventArgs e)
@@ -115,15 +111,13 @@ namespace SavexTracker.forms
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
-            pnlDeleted.Visible = true;
-            pnlDeleteCon.Visible = true;
+            pnlDeleted.Visible = true;            
 
             Timer hideTimer = new Timer();
-            hideTimer.Interval = 1500; // 2 seconds (2000 milliseconds)
+            hideTimer.Interval = 1500; 
             hideTimer.Tick += (s, args) =>
             {
-                pnlDeleted.Visible = false;
-                pnlDeleteCon.Visible = false;
+                this.Close();
                 hideTimer.Stop();
                 hideTimer.Dispose();
             };
