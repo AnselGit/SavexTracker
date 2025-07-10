@@ -98,6 +98,12 @@
     <Compile Include="forms\addSavings.Designer.cs">
       <DependentUpon>addSavings.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\ArchiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ArchiveForm.Designer.cs">
+      <DependentUpon>ArchiveForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\addSavings.resx">
       <DependentUpon>addSavings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ArchiveForm.resx">
+      <DependentUpon>ArchiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

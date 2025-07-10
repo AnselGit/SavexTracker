@@ -105,8 +105,110 @@ namespace SavexTracker.forms
             this.Close();
         }
 
+        private void MoveToArchive()
+        {
+            string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
+            string connStr = $"Data Source={dbPath};Version=3;";
+
+            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            {
+                conn.Open();
+
+                // Step 1: Check which table the ID belongs to
+                bool isSavings = false;
+                bool isExpenses = false;
+
+                using (SQLiteCommand checkSavings = new SQLiteCommand("SELECT COUNT(*) FROM savings WHERE sid = @id", conn))
+                {
+                    checkSavings.Parameters.AddWithValue("@id", GlobalData.CurrentID);
+                    isSavings = Convert.ToInt32(checkSavings.ExecuteScalar()) > 0;
+                }
+
+                if (!isSavings)
+                {
+                    using (SQLiteCommand checkExpenses = new SQLiteCommand("SELECT COUNT(*) FROM expenses WHERE eid = @id", conn))
+                    {
+                        checkExpenses.Parameters.AddWithValue("@id", GlobalData.CurrentID);
+                        isExpenses = Convert.ToInt32(checkExpenses.ExecuteScalar()) > 0;
+                    }
+                }
+
+                if (!isSavings && !isExpenses)
+                {
+                    MessageBox.Show("Record not found in either table.");
+                    return;
+                }
+
+                // Step 2: Insert into archive table
+                string insertQuery = @"
+            INSERT INTO archive (
+                sid, eid, name,
+                txtNameDate1, txtNameAmount1, timestamp1, amount1,
+                txtNameDate2, txtNameAmount2, timestamp2, amount2
+            )
+            VALUES (
+                @sid, @eid, @name,
+                @txtNameDate1, @txtNameAmount1, @timestamp1, @amount1,
+                @txtNameDate2, @txtNameAmount2, @timestamp2, @amount2
+            );";
+
+                using (SQLiteCommand insertCmd = new SQLiteCommand(insertQuery, conn))
+                {
+                    if (isSavings)
+                    {
+                        insertCmd.Parameters.AddWithValue("@sid", GlobalData.CurrentID);
+                        insertCmd.Parameters.AddWithValue("@eid", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@name", "Savings");
+
+                        insertCmd.Parameters.AddWithValue("@txtNameDate1", GlobalData.CurrentTxtNameDate);
+                        insertCmd.Parameters.AddWithValue("@txtNameAmount1", GlobalData.CurrentTxtNameAmount);
+                        insertCmd.Parameters.AddWithValue("@timestamp1", GlobalData.CurrentTimestamp);
+                        insertCmd.Parameters.AddWithValue("@amount1", GlobalData.CurrentAmount);
+
+                        insertCmd.Parameters.AddWithValue("@txtNameDate2", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@txtNameAmount2", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@timestamp2", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@amount2", DBNull.Value);
+                    }
+                    else if (isExpenses)
+                    {
+                        insertCmd.Parameters.AddWithValue("@sid", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@eid", GlobalData.CurrentID);
+                        insertCmd.Parameters.AddWithValue("@name", "Expenses");
+
+                        insertCmd.Parameters.AddWithValue("@txtNameDate1", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@txtNameAmount1", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@timestamp1", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@amount1", DBNull.Value);
+
+                        insertCmd.Parameters.AddWithValue("@txtNameDate2", GlobalData.CurrentTxtNameDate);
+                        insertCmd.Parameters.AddWithValue("@txtNameAmount2", GlobalData.CurrentTxtNameAmount);
+                        insertCmd.Parameters.AddWithValue("@timestamp2", GlobalData.CurrentTimestamp);
+                        insertCmd.Parameters.AddWithValue("@amount2", GlobalData.CurrentAmount);
+                    }
+
+                    insertCmd.ExecuteNonQuery();
+                }
+
+                // Step 3: Delete from original table
+                string deleteQuery = isSavings
+                    ? "DELETE FROM savings WHERE sid = @id"
+                    : "DELETE FROM expenses WHERE eid = @id";
+
+                using (SQLiteCommand deleteCmd = new SQLiteCommand(deleteQuery, conn))
+                {
+                    deleteCmd.Parameters.AddWithValue("@id", GlobalData.CurrentID);
+                    deleteCmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Record moved to archive successfully!");
+            }
+        }
+
+
         private void rjButton4_Click(object sender, EventArgs e)
         {
+            MoveToArchive();
             pnlDeleted.Visible = true;            
 
             Timer hideTimer = new Timer();
@@ -135,6 +237,9 @@ namespace SavexTracker.forms
             this.Close();
         }
 
-        
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace SavexTracker
         {
             InitializeComponent();
             LoadSavingsToPanel();
+            EnsureDatabaseAndTable();
         }
 
         private void EnsureDatabaseAndTable()
@@ -31,15 +32,37 @@ namespace SavexTracker
             {
                 conn.Open();
 
-                string createTableQuery = @"
-        CREATE TABLE IF NOT EXISTS savings (
-            sid INTEGER PRIMARY KEY AUTOINCREMENT,
-            tbxName TEXT NOT NULL,
-            timestamp TEXT NOT NULL,
-            amount REAL NOT NULL
-        );";
+                string createSavingsTable = @"
+            CREATE TABLE IF NOT EXISTS savings (
+                sid INTEGER PRIMARY KEY AUTOINCREMENT,
+                tbxName TEXT NOT NULL,
+                timestamp TEXT NOT NULL,
+                amount REAL NOT NULL
+            );";
 
-                using (SQLiteCommand cmd = new SQLiteCommand(createTableQuery, conn))
+                string createArchiveTable = @"
+            CREATE TABLE IF NOT EXISTS archive (
+                aid INTEGER PRIMARY KEY AUTOINCREMENT,
+                sid INTEGER,
+                name TEXT,
+                txtNameDate1 TEXT,
+                txtNameAmount1 TEXT,
+                timestamp1 TEXT,
+                amount1 REAL,
+                eid INTEGER,
+                txtNameDate2 TEXT,
+                txtNameAmount2 TEXT,
+                timestamp2 TEXT,
+                amount2 REAL,
+                note TEXT
+            );";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(createSavingsTable, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+
+                using (SQLiteCommand cmd = new SQLiteCommand(createArchiveTable, conn))
                 {
                     cmd.ExecuteNonQuery();
                 }

@@ -33,7 +33,6 @@ namespace SavexTracker
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRefresh = new RJCodeAdvance.RJControls.RJButton();
-            this.label14 = new System.Windows.Forms.Label();
             this.gradientPanelRound6 = new GradientPanelRound();
             this.roundedPanel4 = new RoundedPanel();
             this.label20 = new System.Windows.Forms.Label();
@@ -88,6 +87,7 @@ namespace SavexTracker
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
+            this.rjButton9 = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -112,8 +112,8 @@ namespace SavexTracker
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
+            this.panel1.Controls.Add(this.rjButton9);
             this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.gradientPanelRound6);
             this.panel1.Controls.Add(this.gradientPanelRound5);
             this.panel1.Controls.Add(this.label15);
@@ -143,17 +143,6 @@ namespace SavexTracker
             this.btnRefresh.TextColor = System.Drawing.Color.White;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.label14.Location = new System.Drawing.Point(113, 26);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 54);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "My";
             // 
             // gradientPanelRound6
             // 
@@ -366,11 +355,11 @@ namespace SavexTracker
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.label15.Location = new System.Drawing.Point(113, 69);
+            this.label15.Location = new System.Drawing.Point(113, 51);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(202, 54);
+            this.label15.Size = new System.Drawing.Size(232, 54);
             this.label15.TabIndex = 13;
-            this.label15.Text = "Record";
+            this.label15.Text = "My Record";
             // 
             // pictureBox2
             // 
@@ -910,6 +899,26 @@ namespace SavexTracker
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
             // 
+            // rjButton9
+            // 
+            this.rjButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rjButton9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rjButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton9.BorderColor = System.Drawing.Color.White;
+            this.rjButton9.BorderRadius = 33;
+            this.rjButton9.BorderSize = 0;
+            this.rjButton9.FlatAppearance.BorderSize = 0;
+            this.rjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton9.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton9.ForeColor = System.Drawing.Color.White;
+            this.rjButton9.Location = new System.Drawing.Point(695, 111);
+            this.rjButton9.Name = "rjButton9";
+            this.rjButton9.Size = new System.Drawing.Size(133, 65);
+            this.rjButton9.TabIndex = 17;
+            this.rjButton9.Text = "Archive";
+            this.rjButton9.TextColor = System.Drawing.Color.White;
+            this.rjButton9.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1016,7 +1025,6 @@ namespace SavexTracker
         private System.Windows.Forms.TextBox textBox2;
         private MaterialSkin.Controls.MaterialListBox materialListBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private GradientPanelRound gradientPanelRound5;
         private GradientPanelRound gradientPanelRound6;
@@ -1035,6 +1043,7 @@ namespace SavexTracker
         private RJCodeAdvance.RJControls.RJTextBox ea1;
         private System.Windows.Forms.TableLayoutPanel tblSave;
         private RJCodeAdvance.RJControls.RJButton btnRefresh;
+        private RJCodeAdvance.RJControls.RJButton rjButton9;
     }
 }
 

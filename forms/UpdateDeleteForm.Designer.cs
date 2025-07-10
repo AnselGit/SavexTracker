@@ -419,11 +419,11 @@
             // 
             this.pnlDeleteCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pnlDeleteCon.BorderRadius = 30;
-            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
             this.pnlDeleteCon.Controls.Add(this.label6);
             this.pnlDeleteCon.Controls.Add(this.rjButton3);
             this.pnlDeleteCon.Controls.Add(this.rjButton4);
             this.pnlDeleteCon.Controls.Add(this.label9);
+            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
             this.pnlDeleteCon.Location = new System.Drawing.Point(12, 12);
             this.pnlDeleteCon.Name = "pnlDeleteCon";
             this.pnlDeleteCon.Size = new System.Drawing.Size(792, 334);
@@ -499,6 +499,7 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Are you sure you want to delete specific data?";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // rjButton3
             // 
@@ -558,9 +559,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(816, 358);
+            this.Controls.Add(this.pnlDeleteCon);
             this.Controls.Add(this.pnlUpdateCon);
             this.Controls.Add(this.roundedPanel1);
-            this.Controls.Add(this.pnlDeleteCon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateDeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
