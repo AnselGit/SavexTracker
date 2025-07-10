@@ -15,6 +15,7 @@ namespace SavexTracker
         {
             InitializeComponent();
             LoadSavingsToPanel();
+            LoadExpensesToPanel();
             EnsureDatabaseAndTable();
         }
 
@@ -115,8 +116,9 @@ namespace SavexTracker
             btnRefresh.Enabled = false;
 
             LoadSavingsToPanel(); 
+            LoadExpensesToPanel();
 
-            await Task.Delay(500); // short delay
+            await Task.Delay(500);
             btnRefresh.Text = "Refresh";
             btnRefresh.Enabled = true;
         }
@@ -237,6 +239,133 @@ namespace SavexTracker
                         tblSave.Controls.Add(btnModify, 0, tblSave.RowCount);
                         tblSave.SetColumnSpan(btnModify, 2);
                         tblSave.RowCount++;
+
+                        row++;
+                    }
+                }
+            }
+        }
+
+        private void LoadExpensesToPanel()
+        {
+            tbl_Spend.Controls.Clear();
+            tbl_Spend.RowStyles.Clear();
+            tbl_Spend.RowCount = 0;
+            tbl_Spend.AutoScroll = true;
+
+            string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
+            string connStr = $"Data Source={dbPath};Version=3;";
+
+            using (var conn = new SQLiteConnection(connStr))
+            {
+                conn.Open();
+                string query = "SELECT eid, timestamp, amount, note FROM expenses ORDER BY eid DESC";
+
+                using (var cmd = new SQLiteCommand(query, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    int row = 0;
+
+                    while (reader.Read())
+                    {
+                        int eid = Convert.ToInt32(reader["eid"]);
+                        string timestamp = reader["timestamp"].ToString();
+                        double amount = Convert.ToDouble(reader["amount"]);
+                        string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
+
+                        string txtNameDate = $"edate_{eid}";
+                        string txtNameAmount = $"eamt_{eid}";
+                        string txtNameNote = $"enote_{eid}";
+
+                        // Create RJTextBoxes
+                        var dateBox = new RJCodeAdvance.RJControls.RJTextBox
+                        {
+                            Name = txtNameDate,
+                            Texts = timestamp,
+                            BackColor = Color.White,
+                            BorderColor = Color.FromArgb(224, 224, 224),
+                            BorderFocusColor = Color.MediumSlateBlue,
+                            BorderRadius = 0,
+                            BorderSize = 1,
+                            ForeColor = Color.FromArgb(64, 64, 64),
+                            UnderlinedStyle = true,
+                            Size = new Size(77, 35),
+                            Font = new Font("Microsoft Sans Serif", 12F),
+                            Margin = new Padding(5)
+                        };
+
+                        var amtBox = new RJCodeAdvance.RJControls.RJTextBox
+                        {
+                            Name = txtNameAmount,
+                            Texts = "₱" + amount.ToString("0.00"),
+                            BackColor = Color.White,
+                            BorderColor = Color.FromArgb(224, 224, 224),
+                            BorderFocusColor = Color.MediumSlateBlue,
+                            BorderRadius = 0,
+                            BorderSize = 1,
+                            ForeColor = Color.FromArgb(64, 64, 64),
+                            UnderlinedStyle = true,
+                            Size = new Size(82, 35),
+                            Font = new Font("Microsoft Sans Serif", 12F),
+                            Margin = new Padding(5)
+                        };
+
+                        var noteBox = new RJCodeAdvance.RJControls.RJTextBox
+                        {
+                            Name = txtNameNote,
+                            Texts = note,
+                            BackColor = Color.White,
+                            BorderColor = Color.FromArgb(224, 224, 224),
+                            BorderFocusColor = Color.MediumSlateBlue,
+                            BorderRadius = 0,
+                            BorderSize = 1,
+                            ForeColor = Color.FromArgb(64, 64, 64),
+                            UnderlinedStyle = true,
+                            Size = new Size(252, 35),
+                            Font = new Font("Microsoft Sans Serif", 12F),
+                            Margin = new Padding(5)
+                        };
+
+                        // Add to row
+                        tbl_Spend.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                        tbl_Spend.Controls.Add(dateBox, 0, tbl_Spend.RowCount);
+                        tbl_Spend.Controls.Add(amtBox, 1, tbl_Spend.RowCount);
+                        tbl_Spend.Controls.Add(noteBox, 2, tbl_Spend.RowCount);
+                        tbl_Spend.RowCount++;
+
+                        // Modify button
+                        Button btnModify = new Button
+                        {
+                            Text = "Modify",
+                            Name = "btnModify_" + row,
+                            FlatStyle = FlatStyle.Flat,
+                            BackColor = Color.White,
+                            ForeColor = Color.White,
+                            Font = new Font("Noto Sans", 9, FontStyle.Bold),
+                            Cursor = Cursors.Hand,
+                            Dock = DockStyle.Left,
+                            Size = new Size(230, 20),
+                            Margin = new Padding(0)
+                        };
+
+                        btnModify.MouseEnter += (s, e) => btnModify.BackColor = Color.FromArgb(30, 144, 255);
+                        btnModify.MouseLeave += (s, e) => btnModify.BackColor = Color.White;
+
+                        btnModify.Click += (s, e) =>
+                        {
+                            GlobalData.CurrentID = eid;
+                            GlobalData.CurrentTimestamp = timestamp;
+                            GlobalData.CurrentAmount = amount;
+                            //GlobalData.CurrentNote = note;
+
+                            var updateForm = new UpdateDeleteForm();
+                            updateForm.Show();
+                        };
+
+                        tbl_Spend.RowStyles.Add(new RowStyle(SizeType.Absolute, 25));
+                        tbl_Spend.Controls.Add(btnModify, 0, tbl_Spend.RowCount);
+                        tbl_Spend.SetColumnSpan(btnModify, 3);
+                        tbl_Spend.RowCount++;
 
                         row++;
                     }
