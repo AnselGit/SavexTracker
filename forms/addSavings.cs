@@ -17,6 +17,8 @@ namespace SavexTracker.forms
         public addSavings()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += AddSavings_KeyDown;
         }
 
         private async void RefreshRecord()
@@ -31,7 +33,27 @@ namespace SavexTracker.forms
         private void addSavings_Load(object sender, EventArgs e)
         {
             lbl_date.Text = DateTime.Now.ToString("MM/dd/yy");
+            txt_SA.KeyDown += txt_SA_KeyDown;
+        }
+
+        private void txt_SA_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Prevents ding sound
+                btn_save.PerformClick();   // Simulate button click
+            }
         }        
+
+        private void AddSavings_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
+
 
         private void label3_Click(object sender, EventArgs e)
         {

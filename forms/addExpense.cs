@@ -17,11 +17,31 @@ namespace SavexTracker.forms
         public addExpense()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += AddExpense_KeyDown;
         }
 
         private void addExpense_Load(object sender, EventArgs e)
         {
             lbl_date.Text = DateTime.Now.ToString("MM/dd/yy");
+            txt_SA.KeyDown += txt_SA_KeyDown;
+        }
+
+        private void txt_SA_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Prevents ding sound
+                btn_save.PerformClick();   // Simulate button click
+            }
+        }
+
+        private void AddExpense_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
 
         private void rjButton2_Click(object sender, EventArgs e)

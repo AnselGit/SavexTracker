@@ -91,7 +91,7 @@
             this.txtNote.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
             this.txtNote.PlaceholderText = "Enter a note...";
             this.txtNote.Size = new System.Drawing.Size(214, 46);
-            this.txtNote.TabIndex = 15;
+            this.txtNote.TabIndex = 2;
             this.txtNote.Texts = "";
             this.txtNote.UnderlinedStyle = true;
             // 
@@ -145,7 +145,7 @@
             this.rjButton2.Location = new System.Drawing.Point(618, 255);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(82, 46);
-            this.rjButton2.TabIndex = 11;
+            this.rjButton2.TabIndex = 4;
             this.rjButton2.Text = "Cancel";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
@@ -165,7 +165,7 @@
             this.btn_save.Location = new System.Drawing.Point(395, 255);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(217, 46);
-            this.btn_save.TabIndex = 9;
+            this.btn_save.TabIndex = 3;
             this.btn_save.Text = "Spend now";
             this.btn_save.TextColor = System.Drawing.Color.White;
             this.btn_save.UseVisualStyleBackColor = false;
@@ -220,7 +220,7 @@
             this.txt_SA.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
             this.txt_SA.PlaceholderText = "";
             this.txt_SA.Size = new System.Drawing.Size(138, 46);
-            this.txt_SA.TabIndex = 8;
+            this.txt_SA.TabIndex = 1;
             this.txt_SA.Texts = "";
             this.txt_SA.UnderlinedStyle = true;
             // 
