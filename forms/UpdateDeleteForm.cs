@@ -73,13 +73,13 @@ namespace SavexTracker.forms
         private void ShowSuccessPanel()
         {
             pnlUpdated.BringToFront();
-            pnlUpdated.Visible = true;            
-            RefreshRecord();
+            pnlUpdated.Visible = true;                        
 
             Timer hideTimer = new Timer();
-            hideTimer.Interval = 2000;
+            hideTimer.Interval = 1500;
             hideTimer.Tick += (s, args) =>
             {
+                RefreshRecord();
                 this.Close();
                 hideTimer.Stop();
                 hideTimer.Dispose();
@@ -277,14 +277,14 @@ VALUES (
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
-            MoveToArchive();
-            RefreshRecord();
+            MoveToArchive();            
             pnlDeleted.Visible = true;            
 
             Timer hideTimer = new Timer();
             hideTimer.Interval = 1500; 
             hideTimer.Tick += (s, args) =>
             {
+                RefreshRecord();
                 this.Close();
                 hideTimer.Stop();
                 hideTimer.Dispose();
