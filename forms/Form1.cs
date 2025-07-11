@@ -15,6 +15,7 @@ namespace SavexTracker
         {
             InitializeComponent();
             EnsureDatabaseAndTable();
+            UpdateTotalLabels();
             LoadExpensesToPanel();
             LoadSavingsToPanel();                        
         }
@@ -24,6 +25,7 @@ namespace SavexTracker
             btnRefresh.Text = "Refreshing";
             btnRefresh.Enabled = false;
 
+            UpdateTotalLabels();
             LoadSavingsToPanel();
             LoadExpensesToPanel();
 
@@ -90,8 +92,8 @@ CREATE TABLE IF NOT EXISTS expenses (
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            EnsureDatabaseAndTable();
             UpdateTotalLabels();
+            EnsureDatabaseAndTable();            
         }
         
         private void rjButton1_Click(object sender, EventArgs e)
@@ -112,8 +114,8 @@ CREATE TABLE IF NOT EXISTS expenses (
 
         private async void btnRefresh_Click(object sender, EventArgs e)
         {
-            await RefreshDataAsync();
             UpdateTotalLabels();
+            await RefreshDataAsync();            
         }
 
         private void LoadSavingsToPanel()
@@ -325,7 +327,7 @@ CREATE TABLE IF NOT EXISTS expenses (
                             Margin = new Padding(0)
                         };
 
-                        btnModify.MouseEnter += (s, e) => btnModify.BackColor = Color.FromArgb(30, 144, 255);
+                        btnModify.MouseEnter += (s, e) => btnModify.BackColor = Color.FromArgb(106, 90, 205);
                         btnModify.MouseLeave += (s, e) => btnModify.BackColor = Color.White;
 
                         btnModify.Click += (s, e) =>
@@ -381,6 +383,20 @@ CREATE TABLE IF NOT EXISTS expenses (
             lblTotalSave.Text = totalSave.ToString("₱0.00");
             lblTotalSpent.Text = totalSpend.ToString("₱0.00");
             lblGrand.Text = grandTotal.ToString("₱0.00");
+
+            // Optional: change color based on balance
+            if (grandTotal > 0)
+            {
+                lblGrand.ForeColor = Color.Green;
+            }
+            else if (grandTotal < 0)
+            {
+                lblGrand.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblGrand.ForeColor = Color.Gray;
+            }
         }
 
 

@@ -294,8 +294,7 @@ VALUES (
 
         private void rjButton3_Click(object sender, EventArgs e)
         {
-            pnlDeleteCon.Visible = true;
-            pnlDeleteCon.BringToFront();
+            pnlDeleteCon.Visible = false;            
         }
 
         private void btnCancel1_Click(object sender, EventArgs e)

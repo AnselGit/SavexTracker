@@ -79,13 +79,13 @@ namespace SavexTracker
             this.gradientPanelRound4 = new GradientPanelRound();
             this.label10 = new System.Windows.Forms.Label();
             this.roundedPanel11 = new RoundedPanel();
+            this.lblTotalSpent = new System.Windows.Forms.Label();
             this.roundedPanel10 = new RoundedPanel();
+            this.lblTotalSave = new System.Windows.Forms.Label();
             this.roundedPanel9 = new RoundedPanel();
+            this.lblGrand = new System.Windows.Forms.Label();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
-            this.lblGrand = new System.Windows.Forms.Label();
-            this.lblTotalSave = new System.Windows.Forms.Label();
-            this.lblTotalSpent = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -209,7 +209,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -801,6 +801,17 @@ namespace SavexTracker
             this.roundedPanel11.Size = new System.Drawing.Size(178, 39);
             this.roundedPanel11.TabIndex = 7;
             // 
+            // lblTotalSpent
+            // 
+            this.lblTotalSpent.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalSpent.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalSpent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTotalSpent.Location = new System.Drawing.Point(3, 1);
+            this.lblTotalSpent.Name = "lblTotalSpent";
+            this.lblTotalSpent.Size = new System.Drawing.Size(172, 38);
+            this.lblTotalSpent.TabIndex = 15;
+            this.lblTotalSpent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // roundedPanel10
             // 
             this.roundedPanel10.BackColor = System.Drawing.Color.White;
@@ -811,6 +822,17 @@ namespace SavexTracker
             this.roundedPanel10.Size = new System.Drawing.Size(178, 39);
             this.roundedPanel10.TabIndex = 6;
             // 
+            // lblTotalSave
+            // 
+            this.lblTotalSave.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalSave.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTotalSave.Location = new System.Drawing.Point(3, 1);
+            this.lblTotalSave.Name = "lblTotalSave";
+            this.lblTotalSave.Size = new System.Drawing.Size(172, 38);
+            this.lblTotalSave.TabIndex = 14;
+            this.lblTotalSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // roundedPanel9
             // 
             this.roundedPanel9.BackColor = System.Drawing.Color.White;
@@ -820,6 +842,17 @@ namespace SavexTracker
             this.roundedPanel9.Name = "roundedPanel9";
             this.roundedPanel9.Size = new System.Drawing.Size(274, 63);
             this.roundedPanel9.TabIndex = 5;
+            // 
+            // lblGrand
+            // 
+            this.lblGrand.BackColor = System.Drawing.Color.Transparent;
+            this.lblGrand.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Bold);
+            this.lblGrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblGrand.Location = new System.Drawing.Point(0, 0);
+            this.lblGrand.Name = "lblGrand";
+            this.lblGrand.Size = new System.Drawing.Size(271, 63);
+            this.lblGrand.TabIndex = 13;
+            this.lblGrand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roundedPanel1
             // 
@@ -842,42 +875,6 @@ namespace SavexTracker
             this.roundedPanel8.Name = "roundedPanel8";
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
-            // 
-            // lblGrand
-            // 
-            this.lblGrand.BackColor = System.Drawing.Color.Transparent;
-            this.lblGrand.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Bold);
-            this.lblGrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblGrand.Location = new System.Drawing.Point(0, 0);
-            this.lblGrand.Name = "lblGrand";
-            this.lblGrand.Size = new System.Drawing.Size(271, 63);
-            this.lblGrand.TabIndex = 13;
-            this.lblGrand.Text = "1000.00";
-            this.lblGrand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTotalSave
-            // 
-            this.lblTotalSave.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalSave.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblTotalSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTotalSave.Location = new System.Drawing.Point(3, 1);
-            this.lblTotalSave.Name = "lblTotalSave";
-            this.lblTotalSave.Size = new System.Drawing.Size(172, 38);
-            this.lblTotalSave.TabIndex = 14;
-            this.lblTotalSave.Text = "1000.00";
-            this.lblTotalSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTotalSpent
-            // 
-            this.lblTotalSpent.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalSpent.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblTotalSpent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTotalSpent.Location = new System.Drawing.Point(3, 1);
-            this.lblTotalSpent.Name = "lblTotalSpent";
-            this.lblTotalSpent.Size = new System.Drawing.Size(172, 38);
-            this.lblTotalSpent.TabIndex = 15;
-            this.lblTotalSpent.Text = "1000.00";
-            this.lblTotalSpent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
