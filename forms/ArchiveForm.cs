@@ -152,8 +152,8 @@ namespace SavexTracker.forms
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            pnlRestored.Visible = true;
-            pnlRestored.BringToFront();
+            pnlRestoreCon.Visible = true;
+            pnlRestoreCon.BringToFront();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
