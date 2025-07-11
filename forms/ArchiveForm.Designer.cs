@@ -39,13 +39,13 @@
             this.btnDelete = new RJCodeAdvance.RJControls.RJButton();
             this.btnRestore = new RJCodeAdvance.RJControls.RJButton();
             this.dgv_Archive = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Archive)).BeginInit();
@@ -192,40 +192,7 @@
             this.dgv_Archive.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Archive.Size = new System.Drawing.Size(705, 260);
             this.dgv_Archive.TabIndex = 17;
-            this.dgv_Archive.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Archive_CellContentClick);
             this.dgv_Archive.SelectionChanged += new System.EventHandler(this.dgv_Archive_SelectionChanged_1);
-            // 
-            // colDate
-            // 
-            this.colDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colDate.HeaderText = "Date";
-            this.colDate.Name = "colDate";
-            this.colDate.ReadOnly = true;
-            this.colDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colType
-            // 
-            this.colType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colType.HeaderText = "Type";
-            this.colType.Name = "colType";
-            this.colType.ReadOnly = true;
-            this.colType.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colAmount
-            // 
-            this.colAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colAmount.HeaderText = "Amount";
-            this.colAmount.Name = "colAmount";
-            this.colAmount.ReadOnly = true;
-            this.colAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colNote
-            // 
-            this.colNote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNote.HeaderText = "Note";
-            this.colNote.Name = "colNote";
-            this.colNote.ReadOnly = true;
-            this.colNote.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label6
             // 
@@ -260,6 +227,38 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // colDate
+            // 
+            this.colDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colDate.HeaderText = "Date";
+            this.colDate.Name = "colDate";
+            this.colDate.ReadOnly = true;
+            this.colDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colType
+            // 
+            this.colType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colType.HeaderText = "Type";
+            this.colType.Name = "colType";
+            this.colType.ReadOnly = true;
+            this.colType.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAmount
+            // 
+            this.colAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colAmount.HeaderText = "Amount";
+            this.colAmount.Name = "colAmount";
+            this.colAmount.ReadOnly = true;
+            this.colAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colNote
+            // 
+            this.colNote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNote.HeaderText = "Note";
+            this.colNote.Name = "colNote";
+            this.colNote.ReadOnly = true;
+            this.colNote.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // colId
             // 
@@ -297,11 +296,11 @@
         private System.Windows.Forms.DataGridView dgv_Archive;
         private RJCodeAdvance.RJControls.RJButton btnDelete;
         private RJCodeAdvance.RJControls.RJButton btnRestore;
+        private RJCodeAdvance.RJControls.RJButton rjButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNote;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
     }
 }

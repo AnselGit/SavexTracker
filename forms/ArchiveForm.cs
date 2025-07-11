@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SavexTracker; // for AppConfig and GlobalData
 
@@ -17,13 +11,15 @@ namespace SavexTracker.forms
         public ArchiveForm()
         {
             InitializeComponent();
+            SetupArchiveGrid();
+            LoadArchiveData();
         }
 
         private void ArchiveForm_Load(object sender, EventArgs e)
         {
             SetupArchiveGrid();
             LoadArchiveData();
-            dgv_Archive.SelectionChanged += dgv_Archive_SelectionChanged;
+            dgv_Archive.SelectionChanged += dgv_Archive_SelectionChanged_1;
             btnRestore.Enabled = false;
             btnDelete.Enabled = false;
         }
@@ -37,12 +33,12 @@ namespace SavexTracker.forms
                 conn.Open();
 
                 string query = @"
-            SELECT sid, eid, name, 
-                   timestamp1, amount1, 
-                   timestamp2, amount2, 
-                   note 
-            FROM archive 
-            ORDER BY ROWID DESC";
+                    SELECT sid, eid, name, 
+                           timestamp1, amount1, 
+                           timestamp2, amount2, 
+                           note 
+                    FROM archive 
+                    ORDER BY ROWID DESC";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
@@ -56,25 +52,23 @@ namespace SavexTracker.forms
                             : reader["timestamp2"]?.ToString() ?? "";
 
                         string amount = type == "Savings"
-                            ? Convert.ToDouble(reader["amount1"]).ToString("₱0.00")
-                            : Convert.ToDouble(reader["amount2"]).ToString("₱0.00");
+                            ? Convert.ToDouble(reader["amount1"]).ToString("\u20B10.00")
+                            : Convert.ToDouble(reader["amount2"]).ToString("\u20B10.00");
 
-                        string note = reader["note"]?.ToString() ?? "";
+                        string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
 
-                        // Determine ID from sid or eid
                         object sid = reader["sid"];
                         object eid = reader["eid"];
                         string id = (sid != DBNull.Value) ? sid.ToString() : eid.ToString();
 
-                        // Create new row manually
                         DataGridViewRow row = new DataGridViewRow();
                         row.CreateCells(dgv_Archive);
 
-                        row.Cells[dgv_Archive.Columns["colId"].Index].Value = id;
-                        row.Cells[dgv_Archive.Columns["colType"].Index].Value = type;
-                        row.Cells[dgv_Archive.Columns["colDate"].Index].Value = date;
-                        row.Cells[dgv_Archive.Columns["colAmount"].Index].Value = amount;
-                        row.Cells[dgv_Archive.Columns["colNote"].Index].Value = note;
+                        if (dgv_Archive.Columns.Contains("colId")) row.Cells[dgv_Archive.Columns["colId"].Index].Value = id;
+                        if (dgv_Archive.Columns.Contains("colType")) row.Cells[dgv_Archive.Columns["colType"].Index].Value = type;
+                        if (dgv_Archive.Columns.Contains("colDate")) row.Cells[dgv_Archive.Columns["colDate"].Index].Value = date;
+                        if (dgv_Archive.Columns.Contains("colAmount")) row.Cells[dgv_Archive.Columns["colAmount"].Index].Value = amount;
+                        if (dgv_Archive.Columns.Contains("colNote")) row.Cells[dgv_Archive.Columns["colNote"].Index].Value = note;
 
                         dgv_Archive.Rows.Add(row);
                     }
@@ -100,20 +94,52 @@ namespace SavexTracker.forms
             dgv_Archive.DefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
-        private void dgv_Archive_SelectionChanged(object sender, EventArgs e)
+        private void dgv_Archive_SelectionChanged_1(object sender, EventArgs e)
         {
-            bool rowSelected = dgv_Archive.SelectedRows.Count > 0;
-            btnRestore.Enabled = rowSelected;
-            btnDelete.Enabled = rowSelected;
-        }
+            if (dgv_Archive.CurrentRow == null) return;
 
-        private void dgv_Archive_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
+            var row = dgv_Archive.CurrentRow;
 
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            GlobalData.Archive_type = row.Cells["colType"].Value?.ToString();
+            GlobalData.Archive_note = row.Cells["colNote"].Value?.ToString();
+            string idText = row.Cells["colId"].Value?.ToString();
+
+            if (!int.TryParse(idText, out int archiveId)) return;
+
+            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+
+                string query = @"
+                    SELECT sid, eid, timestamp1, amount1, timestamp2, amount2, note 
+                    FROM archive 
+                    WHERE sid = @id OR eid = @id";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", archiveId);
+
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            GlobalData.Archive_sid = reader["sid"] != DBNull.Value ? Convert.ToInt32(reader["sid"]) : (int?)null;
+                            GlobalData.Archive_eid = reader["eid"] != DBNull.Value ? Convert.ToInt32(reader["eid"]) : (int?)null;
+
+                            GlobalData.Archive_timestamp1 = reader["timestamp1"]?.ToString();
+                            GlobalData.Archive_timestamp2 = reader["timestamp2"]?.ToString();
+
+                            GlobalData.Archive_amount1 = reader["amount1"] != DBNull.Value ? Convert.ToDouble(reader["amount1"]) : (double?)null;
+                            GlobalData.Archive_amount2 = reader["amount2"] != DBNull.Value ? Convert.ToDouble(reader["amount2"]) : (double?)null;
+
+                            GlobalData.Archive_note = reader["note"]?.ToString();
+                        }
+                    }
+                }
+            }
+
+            btnRestore.Enabled = true;
+            btnDelete.Enabled = true;
         }
 
         private void btnRestore_Click(object sender, EventArgs e)
@@ -124,9 +150,7 @@ namespace SavexTracker.forms
                 return;
             }
 
-            string connStr = AppConfig.ConnectionString;
-
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
 
@@ -162,6 +186,8 @@ namespace SavexTracker.forms
 
                 MessageBox.Show("Record restored successfully!");
             }
+
+            LoadArchiveData();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -184,9 +210,7 @@ namespace SavexTracker.forms
             string type = dgv_Archive.CurrentRow.Cells["colType"].Value.ToString();
             int id = Convert.ToInt32(dgv_Archive.CurrentRow.Cells["colId"].Value);
 
-            string connStr = AppConfig.ConnectionString;
-
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
 
@@ -202,55 +226,14 @@ namespace SavexTracker.forms
             LoadArchiveData();
         }
 
-        private void dgv_Archive_SelectionChanged_1(object sender, EventArgs e)
+        private void rjButton2_Click(object sender, EventArgs e)
         {
-            if (dgv_Archive.CurrentRow == null) return;
+            this.Close();
+        }
 
-            var row = dgv_Archive.CurrentRow;
+        private void dgv_Archive_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-            GlobalData.Archive_type = row.Cells["colType"].Value?.ToString();
-            GlobalData.Archive_note = row.Cells["colNote"].Value?.ToString();
-            string idText = row.Cells["colId"].Value?.ToString();
-
-            if (!int.TryParse(idText, out int archiveId))
-                return;
-
-            string connStr = AppConfig.ConnectionString;
-
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-
-                string query = @"
-            SELECT sid, eid, timestamp1, amount1, timestamp2, amount2, note 
-            FROM archive 
-            WHERE sid = @id OR eid = @id";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", archiveId);
-
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            GlobalData.Archive_sid = reader["sid"] != DBNull.Value ? Convert.ToInt32(reader["sid"]) : (int?)null;
-                            GlobalData.Archive_eid = reader["eid"] != DBNull.Value ? Convert.ToInt32(reader["eid"]) : (int?)null;
-
-                            GlobalData.Archive_timestamp1 = reader["timestamp1"]?.ToString();
-                            GlobalData.Archive_timestamp2 = reader["timestamp2"]?.ToString();
-
-                            GlobalData.Archive_amount1 = reader["amount1"] != DBNull.Value ? Convert.ToDouble(reader["amount1"]) : (double?)null;
-                            GlobalData.Archive_amount2 = reader["amount2"] != DBNull.Value ? Convert.ToDouble(reader["amount2"]) : (double?)null;
-
-                            GlobalData.Archive_note = reader["note"]?.ToString();
-                        }
-                    }
-                }
-            }
-
-            btnRestore.Enabled = true;
-            btnDelete.Enabled = true;
         }
     }
 }

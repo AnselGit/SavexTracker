@@ -91,6 +91,7 @@ namespace SavexTracker.forms
             }
 
             pnlAdded.Visible = true;
+            pnlAdded.BringToFront();
 
             Timer hideTimer = new Timer();
             hideTimer.Interval = 1500;

@@ -172,9 +172,9 @@ WHERE eid = @eid";
             {
                 conn.Open();
 
-                // Step 1: Check which table the ID belongs to
                 bool isSavings = false;
                 bool isExpenses = false;
+                string expenseNote = "";
 
                 using (SQLiteCommand checkSavings = new SQLiteCommand("SELECT COUNT(*) FROM savings WHERE sid = @id", conn))
                 {
@@ -189,6 +189,17 @@ WHERE eid = @eid";
                         checkExpenses.Parameters.AddWithValue("@id", GlobalData.CurrentID);
                         isExpenses = Convert.ToInt32(checkExpenses.ExecuteScalar()) > 0;
                     }
+
+                    // If expense, fetch the note
+                    if (isExpenses)
+                    {
+                        using (SQLiteCommand noteCmd = new SQLiteCommand("SELECT note FROM expenses WHERE eid = @id", conn))
+                        {
+                            noteCmd.Parameters.AddWithValue("@id", GlobalData.CurrentID);
+                            var result = noteCmd.ExecuteScalar();
+                            expenseNote = result != DBNull.Value ? result.ToString() : "";
+                        }
+                    }
                 }
 
                 if (!isSavings && !isExpenses)
@@ -197,18 +208,20 @@ WHERE eid = @eid";
                     return;
                 }
 
-                // Step 2: Insert into archive table (clean version)
+                // Step 2: Insert into archive table (with note now)
                 string insertQuery = @"
-        INSERT INTO archive (
-            sid, eid, name,
-            timestamp1, amount1,
-            timestamp2, amount2
-        )
-        VALUES (
-            @sid, @eid, @name,
-            @timestamp1, @amount1,
-            @timestamp2, @amount2
-        );";
+INSERT INTO archive (
+    sid, eid, name,
+    timestamp1, amount1,
+    timestamp2, amount2,
+    note
+)
+VALUES (
+    @sid, @eid, @name,
+    @timestamp1, @amount1,
+    @timestamp2, @amount2,
+    @note
+);";
 
                 using (SQLiteCommand insertCmd = new SQLiteCommand(insertQuery, conn))
                 {
@@ -217,22 +230,22 @@ WHERE eid = @eid";
                         insertCmd.Parameters.AddWithValue("@sid", GlobalData.CurrentID);
                         insertCmd.Parameters.AddWithValue("@eid", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@name", "Savings");
-
                         insertCmd.Parameters.AddWithValue("@timestamp1", GlobalData.CurrentTimestamp);
                         insertCmd.Parameters.AddWithValue("@amount1", GlobalData.CurrentAmount);
                         insertCmd.Parameters.AddWithValue("@timestamp2", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@amount2", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@note", DBNull.Value);
                     }
                     else if (isExpenses)
                     {
                         insertCmd.Parameters.AddWithValue("@sid", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@eid", GlobalData.CurrentID);
                         insertCmd.Parameters.AddWithValue("@name", "Expenses");
-
                         insertCmd.Parameters.AddWithValue("@timestamp1", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@amount1", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@timestamp2", GlobalData.CurrentTimestamp);
                         insertCmd.Parameters.AddWithValue("@amount2", GlobalData.CurrentAmount);
+                        insertCmd.Parameters.AddWithValue("@note", expenseNote);
                     }
 
                     insertCmd.ExecuteNonQuery();
@@ -247,9 +260,10 @@ WHERE eid = @eid";
                 {
                     deleteCmd.Parameters.AddWithValue("@id", GlobalData.CurrentID);
                     deleteCmd.ExecuteNonQuery();
-                }                
+                }
             }
         }
+
 
         private void rjButton4_Click(object sender, EventArgs e)
         {

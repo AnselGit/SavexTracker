@@ -35,56 +35,43 @@ namespace SavexTracker
 
                 // 1. Savings Table
                 string createSavingsTable = @"
-        CREATE TABLE IF NOT EXISTS savings (
-            sid INTEGER PRIMARY KEY AUTOINCREMENT,            
-            timestamp TEXT NOT NULL,
-            amount REAL NOT NULL
-        );";
+CREATE TABLE IF NOT EXISTS savings (
+    sid INTEGER PRIMARY KEY AUTOINCREMENT,            
+    timestamp TEXT NOT NULL,
+    amount REAL NOT NULL
+);";
 
-                // 2. Archive Table
+                // 2. Clean Archive Table
                 string createArchiveTable = @"
-        CREATE TABLE IF NOT EXISTS archive (
-            aid INTEGER PRIMARY KEY AUTOINCREMENT,
-            sid INTEGER,
-            name TEXT,
-            txtNameDate1 TEXT,
-            txtNameAmount1 TEXT,
-            timestamp1 TEXT,
-            amount1 REAL,
-            eid INTEGER,
-            txtNameDate2 TEXT,
-            txtNameAmount2 TEXT,
-            timestamp2 TEXT,
-            amount2 REAL,
-            note TEXT
-        );";
+CREATE TABLE IF NOT EXISTS archive (
+    aid INTEGER PRIMARY KEY AUTOINCREMENT,
+    sid INTEGER,
+    eid INTEGER,
+    name TEXT,
+    timestamp1 TEXT,
+    amount1 REAL,
+    timestamp2 TEXT,
+    amount2 REAL,
+    note TEXT
+);";
 
                 // 3. Expenses Table
                 string createExpensesTable = @"
-        CREATE TABLE IF NOT EXISTS expenses (
-            eid INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp TEXT NOT NULL,
-            amount REAL NOT NULL,
-            note TEXT
-        );";
+CREATE TABLE IF NOT EXISTS expenses (
+    eid INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp TEXT NOT NULL,
+    amount REAL NOT NULL,
+    note TEXT
+);";
 
-                // Execute all table creations
                 using (SQLiteCommand cmd = new SQLiteCommand(createSavingsTable, conn))
-                {
                     cmd.ExecuteNonQuery();
-                }
 
                 using (SQLiteCommand cmd = new SQLiteCommand(createArchiveTable, conn))
-                {
                     cmd.ExecuteNonQuery();
-                }
 
                 using (SQLiteCommand cmd = new SQLiteCommand(createExpensesTable, conn))
-                {
                     cmd.ExecuteNonQuery();
-                }
-
-                conn.Close();
             }
         }
 
