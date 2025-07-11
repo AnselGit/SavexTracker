@@ -246,8 +246,7 @@ namespace SavexTracker.forms
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            pnlRestoreCon.Visible = false;
-            pnlRestored.Visible = false;
+            pnlRestoreCon.Visible = false;            
         }
 
         private void rjButton5_Click(object sender, EventArgs e)

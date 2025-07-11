@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS expenses (
                             BorderSize = 1,
                             ForeColor = Color.FromArgb(64, 64, 64),
                             UnderlinedStyle = true,
-                            Size = new Size(90, 35),
+                            Size = new Size(82, 31),
                             Font = new Font("Microsoft Sans Serif", 12F),
                             Margin = new Padding(5)
                         };
@@ -263,7 +263,7 @@ CREATE TABLE IF NOT EXISTS expenses (
                             BorderSize = 1,
                             ForeColor = Color.FromArgb(64, 64, 64),
                             UnderlinedStyle = true,
-                            Size = new Size(77, 35),
+                            Size = new Size(107, 31),
                             Font = new Font("Microsoft Sans Serif", 12F),
                             Margin = new Padding(5)
                         };
@@ -279,7 +279,7 @@ CREATE TABLE IF NOT EXISTS expenses (
                             BorderSize = 1,
                             ForeColor = Color.FromArgb(64, 64, 64),
                             UnderlinedStyle = true,
-                            Size = new Size(82, 35),
+                            Size = new Size(124, 31),
                             Font = new Font("Microsoft Sans Serif", 12F),
                             Margin = new Padding(5)
                         };
@@ -295,7 +295,7 @@ CREATE TABLE IF NOT EXISTS expenses (
                             BorderSize = 1,
                             ForeColor = Color.FromArgb(64, 64, 64),
                             UnderlinedStyle = true,
-                            Size = new Size(252, 35),
+                            Size = new Size(182, 31),
                             Font = new Font("Microsoft Sans Serif", 12F),
                             Margin = new Padding(5)
                         };

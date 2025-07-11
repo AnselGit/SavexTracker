@@ -72,11 +72,12 @@ namespace SavexTracker.forms
 
         private void ShowSuccessPanel()
         {
+            pnlUpdated.BringToFront();
+            pnlUpdated.Visible = true;            
             RefreshRecord();
-            pnlUpdated.Visible = true;
 
             Timer hideTimer = new Timer();
-            hideTimer.Interval = 1500;
+            hideTimer.Interval = 2000;
             hideTimer.Tick += (s, args) =>
             {
                 this.Close();
@@ -299,8 +300,7 @@ VALUES (
 
         private void btnCancel1_Click(object sender, EventArgs e)
         {
-            pnlUpdateCon.Visible = true;
-            pnlUpdateCon.BringToFront();
+            pnlUpdateCon.Visible = false;            
         }
 
         private void rjButton1_Click_1(object sender, EventArgs e)
