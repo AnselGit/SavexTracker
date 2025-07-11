@@ -79,13 +79,13 @@ namespace SavexTracker
             this.gradientPanelRound4 = new GradientPanelRound();
             this.label10 = new System.Windows.Forms.Label();
             this.roundedPanel11 = new RoundedPanel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.roundedPanel10 = new RoundedPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.roundedPanel9 = new RoundedPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
+            this.lblGrand = new System.Windows.Forms.Label();
+            this.lblTotalSave = new System.Windows.Forms.Label();
+            this.lblTotalSpent = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -209,7 +209,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -795,70 +795,31 @@ namespace SavexTracker
             // 
             this.roundedPanel11.BackColor = System.Drawing.Color.White;
             this.roundedPanel11.BorderRadius = 30;
-            this.roundedPanel11.Controls.Add(this.textBox3);
+            this.roundedPanel11.Controls.Add(this.lblTotalSpent);
             this.roundedPanel11.Location = new System.Drawing.Point(26, 190);
             this.roundedPanel11.Name = "roundedPanel11";
             this.roundedPanel11.Size = new System.Drawing.Size(178, 39);
             this.roundedPanel11.TabIndex = 7;
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(13, 0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 37);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "----";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // roundedPanel10
             // 
             this.roundedPanel10.BackColor = System.Drawing.Color.White;
             this.roundedPanel10.BorderRadius = 30;
-            this.roundedPanel10.Controls.Add(this.textBox2);
+            this.roundedPanel10.Controls.Add(this.lblTotalSave);
             this.roundedPanel10.Location = new System.Drawing.Point(26, 144);
             this.roundedPanel10.Name = "roundedPanel10";
             this.roundedPanel10.Size = new System.Drawing.Size(178, 39);
             this.roundedPanel10.TabIndex = 6;
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(13, -1);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 37);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "----";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // roundedPanel9
             // 
             this.roundedPanel9.BackColor = System.Drawing.Color.White;
             this.roundedPanel9.BorderRadius = 30;
-            this.roundedPanel9.Controls.Add(this.textBox1);
+            this.roundedPanel9.Controls.Add(this.lblGrand);
             this.roundedPanel9.Location = new System.Drawing.Point(26, 74);
             this.roundedPanel9.Name = "roundedPanel9";
             this.roundedPanel9.Size = new System.Drawing.Size(274, 63);
             this.roundedPanel9.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(14, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 51);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "----";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // roundedPanel1
             // 
@@ -881,6 +842,42 @@ namespace SavexTracker
             this.roundedPanel8.Name = "roundedPanel8";
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
+            // 
+            // lblGrand
+            // 
+            this.lblGrand.BackColor = System.Drawing.Color.Transparent;
+            this.lblGrand.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Bold);
+            this.lblGrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblGrand.Location = new System.Drawing.Point(0, 0);
+            this.lblGrand.Name = "lblGrand";
+            this.lblGrand.Size = new System.Drawing.Size(271, 63);
+            this.lblGrand.TabIndex = 13;
+            this.lblGrand.Text = "1000.00";
+            this.lblGrand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalSave
+            // 
+            this.lblTotalSave.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalSave.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTotalSave.Location = new System.Drawing.Point(3, 1);
+            this.lblTotalSave.Name = "lblTotalSave";
+            this.lblTotalSave.Size = new System.Drawing.Size(172, 38);
+            this.lblTotalSave.TabIndex = 14;
+            this.lblTotalSave.Text = "1000.00";
+            this.lblTotalSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalSpent
+            // 
+            this.lblTotalSpent.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalSpent.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalSpent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTotalSpent.Location = new System.Drawing.Point(3, 1);
+            this.lblTotalSpent.Name = "lblTotalSpent";
+            this.lblTotalSpent.Size = new System.Drawing.Size(172, 38);
+            this.lblTotalSpent.TabIndex = 15;
+            this.lblTotalSpent.Text = "1000.00";
+            this.lblTotalSpent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -936,11 +933,8 @@ namespace SavexTracker
             this.gradientPanelRound4.ResumeLayout(false);
             this.gradientPanelRound4.PerformLayout();
             this.roundedPanel11.ResumeLayout(false);
-            this.roundedPanel11.PerformLayout();
             this.roundedPanel10.ResumeLayout(false);
-            this.roundedPanel10.PerformLayout();
             this.roundedPanel9.ResumeLayout(false);
-            this.roundedPanel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -981,9 +975,6 @@ namespace SavexTracker
         private RoundedPanel roundedPanel9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private MaterialSkin.Controls.MaterialListBox materialListBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label15;
@@ -1003,6 +994,9 @@ namespace SavexTracker
         private RJCodeAdvance.RJControls.RJButton rjButton9;
         private System.Windows.Forms.TableLayoutPanel tbl_Spend;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblGrand;
+        private System.Windows.Forms.Label lblTotalSpent;
+        private System.Windows.Forms.Label lblTotalSave;
     }
 }
 

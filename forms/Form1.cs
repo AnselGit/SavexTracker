@@ -90,7 +90,8 @@ CREATE TABLE IF NOT EXISTS expenses (
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            EnsureDatabaseAndTable();            
+            EnsureDatabaseAndTable();
+            UpdateTotalLabels();
         }
         
         private void rjButton1_Click(object sender, EventArgs e)
@@ -112,6 +113,7 @@ CREATE TABLE IF NOT EXISTS expenses (
         private async void btnRefresh_Click(object sender, EventArgs e)
         {
             await RefreshDataAsync();
+            UpdateTotalLabels();
         }
 
         private void LoadSavingsToPanel()
@@ -349,6 +351,38 @@ CREATE TABLE IF NOT EXISTS expenses (
                 }
             }
         }
+
+        private void UpdateTotalLabels()
+        {
+            double totalSave = 0;
+            double totalSpend = 0;
+
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+
+                // Total Savings
+                using (var cmd = new SQLiteCommand("SELECT SUM(amount) FROM savings", conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    totalSave = result != DBNull.Value ? Convert.ToDouble(result) : 0;
+                }
+
+                // Total Spent
+                using (var cmd = new SQLiteCommand("SELECT SUM(amount) FROM expenses", conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    totalSpend = result != DBNull.Value ? Convert.ToDouble(result) : 0;
+                }
+            }
+
+            double grandTotal = totalSave - totalSpend;
+
+            lblTotalSave.Text = totalSave.ToString("₱0.00");
+            lblTotalSpent.Text = totalSpend.ToString("₱0.00");
+            lblGrand.Text = grandTotal.ToString("₱0.00");
+        }
+
 
         private void label21_Click(object sender, EventArgs e)
         {

@@ -42,7 +42,7 @@ namespace SavexTracker.forms
 
             txtEamt._TextChanged += ValidateChanges; 
             txtAmt._TextChanged += ValidateChanges;
-            txtNote._TextChanged += ValidateChanges;
+            txtNote._TextChanged += ValidateChanges;            
         }
 
         private void ValidateChanges(object sender, EventArgs e)
