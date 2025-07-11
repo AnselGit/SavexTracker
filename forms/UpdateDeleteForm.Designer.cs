@@ -191,9 +191,9 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(197, 102);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(219, 73);
+            this.label11.Size = new System.Drawing.Size(254, 73);
             this.label11.TabIndex = 17;
-            this.label11.Text = "Deleted";
+            this.label11.Text = "Removed";
             // 
             // roundedPanel6
             // 
@@ -477,7 +477,7 @@
             this.rjButton5.Name = "rjButton5";
             this.rjButton5.Size = new System.Drawing.Size(82, 46);
             this.rjButton5.TabIndex = 11;
-            this.rjButton5.Text = "Delete";
+            this.rjButton5.Text = "Remove";
             this.rjButton5.TextColor = System.Drawing.Color.White;
             this.rjButton5.UseVisualStyleBackColor = false;
             this.rjButton5.Click += new System.EventHandler(this.rjButton5_Click);
@@ -680,7 +680,7 @@
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.Size = new System.Drawing.Size(82, 46);
             this.btn_Del.TabIndex = 11;
-            this.btn_Del.Text = "Delete";
+            this.btn_Del.Text = "Remove";
             this.btn_Del.TextColor = System.Drawing.Color.White;
             this.btn_Del.UseVisualStyleBackColor = false;
             this.btn_Del.Click += new System.EventHandler(this.rjButton2_Click);

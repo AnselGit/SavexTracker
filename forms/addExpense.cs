@@ -29,6 +29,14 @@ namespace SavexTracker.forms
             this.Close();
         }
 
+        private async void RefreshRecord()
+        {
+            if (Application.OpenForms["Form1"] is Form1 mainForm)
+            {
+                await mainForm.RefreshDataAsync();
+            }
+        }
+
         private void btn_save_Click(object sender, EventArgs e)
         {
             string folder = @"C:\Users\22-65\Desktop\School\SavexTracker\database";
@@ -89,7 +97,7 @@ namespace SavexTracker.forms
 
                 conn.Close();
             }
-
+            RefreshRecord();
             pnlAdded.Visible = true;
             pnlAdded.BringToFront();
 

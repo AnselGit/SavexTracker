@@ -24,6 +24,14 @@ namespace SavexTracker.forms
             btnDelete.Enabled = false;
         }
 
+        private async void RefreshRecord()
+        {
+            if (Application.OpenForms["Form1"] is Form1 mainForm)
+            {
+                await mainForm.RefreshDataAsync();
+            }
+        }
+
         private void LoadArchiveData()
         {
             dgv_Archive.Rows.Clear();
@@ -144,6 +152,106 @@ namespace SavexTracker.forms
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
+            pnlRestored.Visible = true;
+            pnlRestored.BringToFront();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            pnlDeleteCon.Visible = true;
+            pnlDeleteCon.BringToFront();            
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgv_Archive_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlDeleteCon_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            if (dgv_Archive.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a record to delete.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "This will permanently delete the record from archive.\nAre you sure?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (result != DialogResult.Yes)
+                return;
+
+            string type = dgv_Archive.CurrentRow.Cells["colType"].Value.ToString();
+            int id = Convert.ToInt32(dgv_Archive.CurrentRow.Cells["colId"].Value);
+
+            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+
+                string deleteQuery = "DELETE FROM archive WHERE " + (type == "Savings" ? "sid" : "eid") + " = @id";
+                using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }            
+            LoadArchiveData();
+            RefreshRecord();
+            pnlDeleted.Visible = true;
+
+            Timer hideTimer = new Timer();
+            hideTimer.Interval = 1500;
+            hideTimer.Tick += (s, args) =>
+            {
+                pnlDeleteCon.Visible = false;
+                pnlDeleted.Visible = false;
+                hideTimer.Stop();
+                hideTimer.Dispose();
+            };
+            hideTimer.Start();
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            pnlDeleteCon.Visible = false;            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            pnlRestoreCon.Visible = false;
+            pnlRestored.Visible = false;
+        }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
             if (string.IsNullOrEmpty(GlobalData.Archive_type))
             {
                 MessageBox.Show("No archive item selected.");
@@ -183,57 +291,23 @@ namespace SavexTracker.forms
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
-
-                MessageBox.Show("Record restored successfully!");
+                
             }
 
             LoadArchiveData();
-        }
+            RefreshRecord();
+            pnlRestored.Visible = true;
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (dgv_Archive.CurrentRow == null)
+            Timer hideTimer = new Timer();
+            hideTimer.Interval = 1500;
+            hideTimer.Tick += (s, args) =>
             {
-                MessageBox.Show("Please select a record to delete.");
-                return;
-            }
-
-            DialogResult result = MessageBox.Show(
-                "This will permanently delete the record from archive.\nAre you sure?",
-                "Confirm Delete",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (result != DialogResult.Yes)
-                return;
-
-            string type = dgv_Archive.CurrentRow.Cells["colType"].Value.ToString();
-            int id = Convert.ToInt32(dgv_Archive.CurrentRow.Cells["colId"].Value);
-
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
-            {
-                conn.Open();
-
-                string deleteQuery = "DELETE FROM archive WHERE " + (type == "Savings" ? "sid" : "eid") + " = @id";
-                using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-
-            MessageBox.Show("Record permanently deleted.");
-            LoadArchiveData();
-        }
-
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void dgv_Archive_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+                pnlRestoreCon.Visible = false;
+                pnlRestored.Visible = false;
+                hideTimer.Stop();
+                hideTimer.Dispose();
+            };
+            hideTimer.Start();
         }
     }
 }

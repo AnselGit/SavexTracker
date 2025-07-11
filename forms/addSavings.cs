@@ -19,6 +19,15 @@ namespace SavexTracker.forms
             InitializeComponent();
         }
 
+        private async void RefreshRecord()
+        {
+            if (Application.OpenForms["Form1"] is Form1 mainForm)
+            {
+                await mainForm.RefreshDataAsync();
+            }
+        }
+
+
         private void addSavings_Load(object sender, EventArgs e)
         {
             lbl_date.Text = DateTime.Now.ToString("MM/dd/yy");
@@ -87,8 +96,9 @@ VALUES (@timestamp, @amount);";
 
                 conn.Close();
             }
-
+            RefreshRecord();
             pnlAdded.Visible = true;
+            pnlAdded.BringToFront();
 
             Timer hideTimer = new Timer();
             hideTimer.Interval = 1500;

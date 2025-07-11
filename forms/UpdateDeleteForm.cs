@@ -22,6 +22,14 @@ namespace SavexTracker.forms
         {
             pnlExpenseMod.Visible = true;
         }
+
+        private async void RefreshRecord()
+        {
+            if (Application.OpenForms["Form1"] is Form1 mainForm)
+            {
+                await mainForm.RefreshDataAsync();
+            }
+        }
         private void UpdateDeleteForm_Load(object sender, EventArgs e)
         {
             lblDate.Text = GlobalData.CurrentTimestamp;
@@ -64,6 +72,7 @@ namespace SavexTracker.forms
 
         private void ShowSuccessPanel()
         {
+            RefreshRecord();
             pnlUpdated.Visible = true;
 
             Timer hideTimer = new Timer();
@@ -268,6 +277,7 @@ VALUES (
         private void rjButton4_Click(object sender, EventArgs e)
         {
             MoveToArchive();
+            RefreshRecord();
             pnlDeleted.Visible = true;            
 
             Timer hideTimer = new Timer();

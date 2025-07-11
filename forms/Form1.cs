@@ -19,6 +19,19 @@ namespace SavexTracker
             LoadSavingsToPanel();                        
         }
 
+        public async Task RefreshDataAsync()
+        {
+            btnRefresh.Text = "Refreshing";
+            btnRefresh.Enabled = false;
+
+            LoadSavingsToPanel();
+            LoadExpensesToPanel();
+
+            await Task.Delay(500);
+            btnRefresh.Text = "Refresh";
+            btnRefresh.Enabled = true;
+        }
+
         private void EnsureDatabaseAndTable()
         {
             string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
@@ -98,15 +111,7 @@ CREATE TABLE IF NOT EXISTS expenses (
 
         private async void btnRefresh_Click(object sender, EventArgs e)
         {
-            btnRefresh.Text = "Refreshing";
-            btnRefresh.Enabled = false;
-
-            LoadSavingsToPanel(); 
-            LoadExpensesToPanel();
-
-            await Task.Delay(500);
-            btnRefresh.Text = "Refresh";
-            btnRefresh.Enabled = true;
+            await RefreshDataAsync();
         }
 
         private void LoadSavingsToPanel()
