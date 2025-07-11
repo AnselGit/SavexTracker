@@ -30,11 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchiveForm));
             this.roundedPanel1 = new RoundedPanel();
+            this.btnDelete = new RJCodeAdvance.RJControls.RJButton();
+            this.btnRestore = new RJCodeAdvance.RJControls.RJButton();
             this.dgv_Archive = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Archive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -44,6 +49,8 @@
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
             this.roundedPanel1.BorderRadius = 50;
+            this.roundedPanel1.Controls.Add(this.btnDelete);
+            this.roundedPanel1.Controls.Add(this.btnRestore);
             this.roundedPanel1.Controls.Add(this.dgv_Archive);
             this.roundedPanel1.Controls.Add(this.label6);
             this.roundedPanel1.Controls.Add(this.label9);
@@ -53,20 +60,55 @@
             this.roundedPanel1.Size = new System.Drawing.Size(776, 553);
             this.roundedPanel1.TabIndex = 0;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDelete.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(590, 483);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(150, 40);
+            this.btnDelete.TabIndex = 19;
+            this.btnDelete.Text = "rjButton2";
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnRestore
+            // 
+            this.btnRestore.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnRestore.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnRestore.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRestore.BorderRadius = 0;
+            this.btnRestore.BorderSize = 0;
+            this.btnRestore.FlatAppearance.BorderSize = 0;
+            this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestore.ForeColor = System.Drawing.Color.White;
+            this.btnRestore.Location = new System.Drawing.Point(434, 483);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Size = new System.Drawing.Size(150, 40);
+            this.btnRestore.TabIndex = 18;
+            this.btnRestore.Text = "rjButton1";
+            this.btnRestore.TextColor = System.Drawing.Color.White;
+            this.btnRestore.UseVisualStyleBackColor = false;
+            // 
             // dgv_Archive
             // 
             this.dgv_Archive.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Archive.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dgv_Archive.Location = new System.Drawing.Point(19, 200);
+            this.colType,
+            this.colDate,
+            this.colAmount,
+            this.colNote});
+            this.dgv_Archive.Location = new System.Drawing.Point(46, 202);
             this.dgv_Archive.Name = "dgv_Archive";
-            this.dgv_Archive.Size = new System.Drawing.Size(240, 150);
+            this.dgv_Archive.Size = new System.Drawing.Size(694, 260);
             this.dgv_Archive.TabIndex = 17;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.dgv_Archive.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Archive_CellContentClick);
             // 
             // label6
             // 
@@ -102,6 +144,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // colType
+            // 
+            this.colType.Frozen = true;
+            this.colType.HeaderText = "Type";
+            this.colType.Name = "colType";
+            this.colType.ReadOnly = true;
+            this.colType.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colDate
+            // 
+            this.colDate.HeaderText = "Date";
+            this.colDate.Name = "colDate";
+            this.colDate.ReadOnly = true;
+            this.colDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAmount
+            // 
+            this.colAmount.HeaderText = "Amount";
+            this.colAmount.Name = "colAmount";
+            this.colAmount.ReadOnly = true;
+            this.colAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colNote
+            // 
+            this.colNote.HeaderText = "Note";
+            this.colNote.Name = "colNote";
+            this.colNote.ReadOnly = true;
+            this.colNote.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colNote.Width = 350;
+            // 
             // ArchiveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,6 +200,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgv_Archive;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private RJCodeAdvance.RJControls.RJButton btnDelete;
+        private RJCodeAdvance.RJControls.RJButton btnRestore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNote;
     }
 }

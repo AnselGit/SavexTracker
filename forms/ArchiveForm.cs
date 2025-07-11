@@ -15,17 +15,22 @@ namespace SavexTracker.forms
     {
         public ArchiveForm()
         {
-            InitializeComponent();
-            LoadArchivedData();
+            InitializeComponent();            
         }
 
         private void ArchiveForm_Load(object sender, EventArgs e)
         {
-            LoadArchivedData();
+            SetupArchiveGrid();
+            LoadArchiveData();
+            btnRestore.Enabled = false;
+            btnDelete.Enabled = false;
         }
 
-        private void LoadArchivedData()
+
+        private void LoadArchiveData()
         {
+            dgv_Archive.Rows.Clear();
+
             string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
             string connStr = $"Data Source={dbPath};Version=3;";
 
@@ -33,35 +38,59 @@ namespace SavexTracker.forms
             {
                 conn.Open();
 
-                string query = @"
-            SELECT 
-                name AS 'Type',
-                COALESCE(timestamp1, timestamp2) AS 'Timestamp',
-                COALESCE(amount1, amount2) AS 'Amount',
-                note AS 'Note'
-            FROM archive
-            ORDER BY aid DESC;";
+                string query = "SELECT name, timestamp1, amount1, timestamp2, amount2 FROM archive ORDER BY ROWID DESC";
 
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-
-                    // Optional: format amount column with ₱
-                    foreach (DataRow row in dt.Rows)
+                    while (reader.Read())
                     {
-                        if (double.TryParse(row["Amount"].ToString(), out double amount))
-                        {
-                            row["Amount"] = $"₱{amount:0.00}";
-                        }
-                    }
+                        string type = reader["name"].ToString();
 
-                    dgv_Archive.DataSource = dt;
+                        string date = type == "Savings"
+                            ? reader["timestamp1"]?.ToString() ?? ""
+                            : reader["timestamp2"]?.ToString() ?? "";
+
+                        string amount = type == "Savings"
+                            ? Convert.ToDouble(reader["amount1"]).ToString("₱0.00")
+                            : Convert.ToDouble(reader["amount2"]).ToString("₱0.00");
+
+                        string note = ""; // Add note logic here if needed
+
+                        dgv_Archive.Rows.Add(type, date, amount, note);
+                    }
                 }
             }
         }
 
+        private void SetupArchiveGrid()
+        {
+            dgv_Archive.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_Archive.MultiSelect = false;
+            dgv_Archive.ReadOnly = true;
+            dgv_Archive.AllowUserToAddRows = false;
+            dgv_Archive.AllowUserToDeleteRows = false;
+            dgv_Archive.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            dgv_Archive.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgv_Archive.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgv_Archive.EnableHeadersVisualStyles = false;
+            dgv_Archive.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
 
+            dgv_Archive.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dgv_Archive.DefaultCellStyle.SelectionForeColor = Color.Black;
+        }
+
+        private void dgv_Archive_SelectionChanged(object sender, EventArgs e)
+        {
+            bool rowSelected = dgv_Archive.SelectedRows.Count > 0;
+            btnRestore.Enabled = rowSelected;
+            btnDelete.Enabled = rowSelected;
+        }
+
+        private void dgv_Archive_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
