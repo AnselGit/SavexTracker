@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addExpense));
             this.roundedPanel1 = new RoundedPanel();
+            this.txtNote = new RJCodeAdvance.RJControls.RJTextBox();
             this.lbl_date = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_SA = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNote = new RJCodeAdvance.RJControls.RJTextBox();
             this.pnlAdded = new RoundedPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -72,6 +72,28 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(792, 334);
             this.roundedPanel1.TabIndex = 2;
+            // 
+            // txtNote
+            // 
+            this.txtNote.BackColor = System.Drawing.Color.White;
+            this.txtNote.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.txtNote.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.txtNote.BorderRadius = 0;
+            this.txtNote.BorderSize = 3;
+            this.txtNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNote.Location = new System.Drawing.Point(541, 202);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNote.Multiline = false;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Padding = new System.Windows.Forms.Padding(30, 7, 10, 7);
+            this.txtNote.PasswordChar = false;
+            this.txtNote.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.txtNote.PlaceholderText = "Enter a note...";
+            this.txtNote.Size = new System.Drawing.Size(214, 46);
+            this.txtNote.TabIndex = 15;
+            this.txtNote.Texts = "";
+            this.txtNote.UnderlinedStyle = true;
             // 
             // lbl_date
             // 
@@ -214,28 +236,6 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Add";
             // 
-            // txtNote
-            // 
-            this.txtNote.BackColor = System.Drawing.Color.White;
-            this.txtNote.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.txtNote.BorderFocusColor = System.Drawing.Color.RoyalBlue;
-            this.txtNote.BorderRadius = 0;
-            this.txtNote.BorderSize = 3;
-            this.txtNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNote.Location = new System.Drawing.Point(541, 202);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNote.Multiline = false;
-            this.txtNote.Name = "txtNote";
-            this.txtNote.Padding = new System.Windows.Forms.Padding(30, 7, 10, 7);
-            this.txtNote.PasswordChar = false;
-            this.txtNote.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.txtNote.PlaceholderText = "Enter a note...";
-            this.txtNote.Size = new System.Drawing.Size(214, 46);
-            this.txtNote.TabIndex = 15;
-            this.txtNote.Texts = "";
-            this.txtNote.UnderlinedStyle = true;
-            // 
             // pnlAdded
             // 
             this.pnlAdded.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
@@ -300,8 +300,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(816, 358);
-            this.Controls.Add(this.pnlAdded);
             this.Controls.Add(this.roundedPanel1);
+            this.Controls.Add(this.pnlAdded);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addExpense";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

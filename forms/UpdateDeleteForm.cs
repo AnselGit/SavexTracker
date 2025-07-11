@@ -32,7 +32,7 @@ namespace SavexTracker.forms
             btn_Mod.Enabled = false;
             btn_Mod2.Enabled = false;
 
-            txtEamt._TextChanged += ValidateChanges;  // ✅ use _TextChanged
+            txtEamt._TextChanged += ValidateChanges; 
             txtAmt._TextChanged += ValidateChanges;
             txtNote._TextChanged += ValidateChanges;
         }
@@ -197,18 +197,18 @@ WHERE eid = @eid";
                     return;
                 }
 
-                // Step 2: Insert into archive table
+                // Step 2: Insert into archive table (clean version)
                 string insertQuery = @"
-            INSERT INTO archive (
-                sid, eid, name,
-                txtNameDate1, txtNameAmount1, timestamp1, amount1,
-                txtNameDate2, txtNameAmount2, timestamp2, amount2
-            )
-            VALUES (
-                @sid, @eid, @name,
-                @txtNameDate1, @txtNameAmount1, @timestamp1, @amount1,
-                @txtNameDate2, @txtNameAmount2, @timestamp2, @amount2
-            );";
+        INSERT INTO archive (
+            sid, eid, name,
+            timestamp1, amount1,
+            timestamp2, amount2
+        )
+        VALUES (
+            @sid, @eid, @name,
+            @timestamp1, @amount1,
+            @timestamp2, @amount2
+        );";
 
                 using (SQLiteCommand insertCmd = new SQLiteCommand(insertQuery, conn))
                 {
@@ -220,9 +220,6 @@ WHERE eid = @eid";
 
                         insertCmd.Parameters.AddWithValue("@timestamp1", GlobalData.CurrentTimestamp);
                         insertCmd.Parameters.AddWithValue("@amount1", GlobalData.CurrentAmount);
-
-                        insertCmd.Parameters.AddWithValue("@txtNameDate2", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@txtNameAmount2", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@timestamp2", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@amount2", DBNull.Value);
                     }
@@ -232,11 +229,8 @@ WHERE eid = @eid";
                         insertCmd.Parameters.AddWithValue("@eid", GlobalData.CurrentID);
                         insertCmd.Parameters.AddWithValue("@name", "Expenses");
 
-                        insertCmd.Parameters.AddWithValue("@txtNameDate1", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@txtNameAmount1", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@timestamp1", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@amount1", DBNull.Value);
-
                         insertCmd.Parameters.AddWithValue("@timestamp2", GlobalData.CurrentTimestamp);
                         insertCmd.Parameters.AddWithValue("@amount2", GlobalData.CurrentAmount);
                     }
@@ -253,12 +247,9 @@ WHERE eid = @eid";
                 {
                     deleteCmd.Parameters.AddWithValue("@id", GlobalData.CurrentID);
                     deleteCmd.ExecuteNonQuery();
-                }
-
-                MessageBox.Show("Record moved to archive successfully!");
+                }                
             }
         }
-
 
         private void rjButton4_Click(object sender, EventArgs e)
         {

@@ -374,6 +374,11 @@ namespace SavexTracker
             ArchiveForm addForm = new ArchiveForm();
             addForm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class VerticalFlowPanel : FlowLayoutPanel
