@@ -20,6 +20,25 @@ namespace SavexTracker
             LoadSavingsToPanel();                        
         }
 
+        public Form1(Form openingForm)
+        {
+            InitializeComponent();
+            this.openingForm = openingForm;
+        }
+
+        private Form openingForm;
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            UpdateTotalLabels();
+            EnsureDatabaseAndTable();
+
+            if (openingForm != null)
+            {
+                openingForm.Close();
+            }
+        }
+
         public async Task RefreshDataAsync()
         {
             btnRefresh.Text = "Refreshing";
@@ -92,10 +111,9 @@ CREATE TABLE IF NOT EXISTS expenses (
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            UpdateTotalLabels();
-            EnsureDatabaseAndTable();            
+                       
         }
-        
+
         private void rjButton1_Click(object sender, EventArgs e)
         {
             addSavings addForm = new addSavings();
@@ -421,6 +439,8 @@ CREATE TABLE IF NOT EXISTS expenses (
         {
 
         }
+
+        
     }
 
     public class VerticalFlowPanel : FlowLayoutPanel

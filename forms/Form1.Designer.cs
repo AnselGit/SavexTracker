@@ -209,7 +209,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -906,6 +906,7 @@ namespace SavexTracker
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panel1.ResumeLayout(false);
             this.gradientPanelRound6.ResumeLayout(false);
             this.gradientPanelRound6.PerformLayout();

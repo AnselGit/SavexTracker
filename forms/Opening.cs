@@ -7,6 +7,7 @@ namespace SavexTracker.forms
     {
         private Timer loadingTimer;
         private int progressValue = 0;
+        private Form1 mainForm;
 
         public Opening()
         {
@@ -21,30 +22,47 @@ namespace SavexTracker.forms
             pgb_init.Value = 0;
             pgb_init.Style = ProgressBarStyle.Continuous;
 
-            // Set up the timer to make it finish in exactly 3 seconds
+            // Setup timer
             loadingTimer = new Timer();
-            loadingTimer.Interval = 30; // 30ms tick
+            loadingTimer.Interval = 30; // ~3 seconds total (30ms * 100 = 3000ms)
             loadingTimer.Tick += LoadingTimer_Tick;
             loadingTimer.Start();
         }
 
         private void LoadingTimer_Tick(object sender, EventArgs e)
         {
-            // Since 100 steps * 30ms = 3000ms (3 seconds)
             progressValue += 1;
 
             if (progressValue <= 100)
-            {
                 pgb_init.Value = progressValue;
+
+            // At 2 seconds (30ms * 66 ≈ 1980ms), preload Form1 but keep hidden
+            if (progressValue == 66 && mainForm == null)
+            {
+                lblStatus.Text = "Loading the application...";
+                mainForm = new Form1();
+                mainForm.Opacity = 0; // Load it hidden
+                mainForm.Show();      // Show (but invisible), so it can initialize
             }
 
+            // At 100%, show main form visibly and close this
             if (progressValue >= 100)
             {
+                lblStatus.Text = "Done";
                 loadingTimer.Stop();
 
-                Form1 mainForm = new Form1();
-                mainForm.Show();
-                this.Close(); // Close the opening form after 3 seconds
+                if (mainForm != null)
+                {
+                    mainForm.Opacity = 1; // Make it visible now
+                    mainForm.BringToFront();
+                }
+                else
+                {
+                    mainForm = new Form1();
+                    mainForm.Show();
+                }
+
+                this.Hide();
             }
         }
     }

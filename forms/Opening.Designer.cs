@@ -30,7 +30,7 @@
         {
             this.lbl_Name = new System.Windows.Forms.Label();
             this.pgb_init = new RJCodeAdvance.RJControls.RJProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -63,16 +63,16 @@
             this.pgb_init.SymbolBefore = "";
             this.pgb_init.TabIndex = 1;
             // 
-            // label1
+            // lblStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 341);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Initialing...";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(12, 341);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(79, 20);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "Initialing...";
             // 
             // label2
             // 
@@ -92,7 +92,7 @@
             this.BackColor = System.Drawing.Color.SlateBlue;
             this.ClientSize = new System.Drawing.Size(664, 399);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.pgb_init);
             this.Controls.Add(this.lbl_Name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -109,7 +109,7 @@
 
         private System.Windows.Forms.Label lbl_Name;
         private RJCodeAdvance.RJControls.RJProgressBar pgb_init;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label label2;
     }
 }
