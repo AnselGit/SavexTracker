@@ -242,6 +242,7 @@ CREATE TABLE IF NOT EXISTS history (
                             GlobalData.CurrentID = sid;
                             GlobalData.CurrentTimestamp = timestamp;
                             GlobalData.CurrentAmount = amount;
+                            GlobalData.CurrentType = "Savings";
 
                             var updateForm = new UpdateDeleteForm();
                             updateForm.Show();
@@ -371,6 +372,7 @@ CREATE TABLE IF NOT EXISTS history (
                             GlobalData.CurrentTimestamp = timestamp;
                             GlobalData.CurrentAmount = amount;
                             GlobalData.CurrentNote = note;
+                            GlobalData.CurrentType = "Expenses";
 
 
                             var updateForm = new UpdateDeleteForm();
@@ -419,10 +421,13 @@ CREATE TABLE IF NOT EXISTS history (
             lblTotalSpent.Text = totalSpend.ToString("₱0.00");
             lblGrand.Text = grandTotal.ToString("₱0.00");
 
+            lblTotalSave.ForeColor = Color.FromArgb(64, 64, 64);
+            lblTotalSpent.ForeColor = Color.FromArgb(64, 64, 64);
+
             // Optional: change color based on balance
             if (grandTotal > 0)
             {
-                lblGrand.ForeColor = Color.Green;
+                lblGrand.ForeColor = Color.FromArgb(64, 64, 64);
             }
             else if (grandTotal < 0)
             {
@@ -549,6 +554,11 @@ CREATE TABLE IF NOT EXISTS history (
         private void rjButton12_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = false;
+        }
+
+        private void lblGrand_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

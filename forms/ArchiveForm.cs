@@ -17,6 +17,7 @@ namespace SavexTracker.forms
 
         private void ArchiveForm_Load(object sender, EventArgs e)
         {
+            dgv_Archive.ClearSelection();
             SetupArchiveGrid();
             LoadArchiveData();
             dgv_Archive.SelectionChanged += dgv_Archive_SelectionChanged_1;
@@ -87,7 +88,7 @@ namespace SavexTracker.forms
         private void SetupArchiveGrid()
         {
             dgv_Archive.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Archive.MultiSelect = false;
+            dgv_Archive.MultiSelect = true;
             dgv_Archive.ReadOnly = true;
             dgv_Archive.AllowUserToAddRows = false;
             dgv_Archive.AllowUserToDeleteRows = false;
@@ -109,6 +110,7 @@ namespace SavexTracker.forms
             var row = dgv_Archive.CurrentRow;
 
             GlobalData.Archive_type = row.Cells["colType"].Value?.ToString();
+            GlobalData.CurrentType = row.Cells["colType"].Value?.ToString(); // ✅ Set this here
             GlobalData.Archive_note = row.Cells["colNote"].Value?.ToString();
             string idText = row.Cells["colId"].Value?.ToString();
 
@@ -119,9 +121,9 @@ namespace SavexTracker.forms
                 conn.Open();
 
                 string query = @"
-                    SELECT sid, eid, timestamp1, amount1, timestamp2, amount2, note 
-                    FROM archive 
-                    WHERE sid = @id OR eid = @id";
+            SELECT sid, eid, timestamp1, amount1, timestamp2, amount2, note 
+            FROM archive 
+            WHERE sid = @id OR eid = @id";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
@@ -184,48 +186,48 @@ namespace SavexTracker.forms
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
-            if (dgv_Archive.CurrentRow == null)
+            if (dgv_Archive.SelectedRows.Count == 0)
                 return;
-
-            string type = dgv_Archive.CurrentRow.Cells["colType"].Value.ToString();
-            int id = Convert.ToInt32(dgv_Archive.CurrentRow.Cells["colId"].Value);
-
-            double? amountToLog = null;
 
             using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
 
-                // Get amount before deletion for logging
-                string getAmountQuery = "SELECT amount1, amount2 FROM archive WHERE sid = @id OR eid = @id";
-                using (var getCmd = new SQLiteCommand(getAmountQuery, conn))
+                foreach (DataGridViewRow row in dgv_Archive.SelectedRows)
                 {
-                    getCmd.Parameters.AddWithValue("@id", id);
-                    using (var reader = getCmd.ExecuteReader())
+                    string type = row.Cells["colType"].Value?.ToString();
+                    int id = Convert.ToInt32(row.Cells["colId"].Value);
+
+                    double? amountToLog = null;
+
+                    string getAmountQuery = "SELECT amount1, amount2 FROM archive WHERE sid = @id OR eid = @id";
+                    using (var getCmd = new SQLiteCommand(getAmountQuery, conn))
                     {
-                        if (reader.Read())
+                        getCmd.Parameters.AddWithValue("@id", id);
+                        using (var reader = getCmd.ExecuteReader())
                         {
-                            if (type == "Savings" && reader["amount1"] != DBNull.Value)
-                                amountToLog = Convert.ToDouble(reader["amount1"]);
-                            else if (type == "Expenses" && reader["amount2"] != DBNull.Value)
-                                amountToLog = Convert.ToDouble(reader["amount2"]);
+                            if (reader.Read())
+                            {
+                                if (type == "Savings" && reader["amount1"] != DBNull.Value)
+                                    amountToLog = Convert.ToDouble(reader["amount1"]);
+                                else if (type == "Expenses" && reader["amount2"] != DBNull.Value)
+                                    amountToLog = Convert.ToDouble(reader["amount2"]);
+                            }
                         }
                     }
-                }
 
-                // Delete from archive
-                string deleteQuery = "DELETE FROM archive WHERE " + (type == "Savings" ? "sid" : "eid") + " = @id";
-                using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
-                }
+                    string deleteQuery = "DELETE FROM archive WHERE " + (type == "Savings" ? "sid" : "eid") + " = @id";
+                    using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.ExecuteNonQuery();
+                    }
 
-                // Log deletion
-                if (amountToLog.HasValue)
-                {
-                    string logText = type == "Savings" ? "Deleted savings" : "Deleted expense";
-                    History.LogHistory(logText, amountToLog.Value);
+                    if (amountToLog.HasValue)
+                    {
+                        string logText = type == "Savings" ? "Deleted savings" : "Deleted expense";
+                        History.LogHistory(logText, amountToLog.Value, conn);
+                    }
                 }
             }
 
@@ -267,9 +269,9 @@ namespace SavexTracker.forms
 
         private void rjButton5_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(GlobalData.Archive_type))
+            if (dgv_Archive.SelectedRows.Count == 0)
             {
-                MessageBox.Show("No archive item selected.");
+                MessageBox.Show("No archive items selected.");
                 return;
             }
 
@@ -277,42 +279,59 @@ namespace SavexTracker.forms
             {
                 conn.Open();
 
-                if (GlobalData.Archive_type == "Savings")
+                foreach (DataGridViewRow row in dgv_Archive.SelectedRows)
                 {
-                    string query = "INSERT INTO savings (timestamp, amount) VALUES (@timestamp, @amount)";
+                    string type = row.Cells["colType"].Value?.ToString();
+                    int id = Convert.ToInt32(row.Cells["colId"].Value);
+
+                    string query = "SELECT * FROM archive WHERE sid = @id OR eid = @id";
                     using (var cmd = new SQLiteCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@timestamp", GlobalData.Archive_timestamp1);
-                        cmd.Parameters.AddWithValue("@amount", GlobalData.Archive_amount1);
-                        cmd.ExecuteNonQuery();
+                        cmd.Parameters.AddWithValue("@id", id);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                if (type == "Savings")
+                                {
+                                    string timestamp = reader["timestamp1"].ToString();
+                                    double amount = Convert.ToDouble(reader["amount1"]);
+
+                                    using (var insertCmd = new SQLiteCommand("INSERT INTO savings (timestamp, amount) VALUES (@timestamp, @amount)", conn))
+                                    {
+                                        insertCmd.Parameters.AddWithValue("@timestamp", timestamp);
+                                        insertCmd.Parameters.AddWithValue("@amount", amount);
+                                        insertCmd.ExecuteNonQuery();
+                                    }
+
+                                    History.LogHistory("Restored savings", amount, conn);
+                                }
+                                else if (type == "Expenses")
+                                {
+                                    string timestamp = reader["timestamp2"].ToString();
+                                    double amount = Convert.ToDouble(reader["amount2"]);
+                                    string note = reader["note"]?.ToString();
+
+                                    using (var insertCmd = new SQLiteCommand("INSERT INTO expenses (timestamp, amount, note) VALUES (@timestamp, @amount, @note)", conn))
+                                    {
+                                        insertCmd.Parameters.AddWithValue("@timestamp", timestamp);
+                                        insertCmd.Parameters.AddWithValue("@amount", amount);
+                                        insertCmd.Parameters.AddWithValue("@note", note);
+                                        insertCmd.ExecuteNonQuery();
+                                    }
+
+                                    History.LogHistory("Restored expense", amount, conn);
+                                }
+                            }
+                        }
                     }
 
-                    // ✅ Log restored savings
-                    if (GlobalData.Archive_amount1.HasValue)
-                        History.LogHistory("Restored savings", GlobalData.Archive_amount1.Value);
-                }
-                else if (GlobalData.Archive_type == "Expenses")
-                {
-                    string query = "INSERT INTO expenses (timestamp, amount, note) VALUES (@timestamp, @amount, @note)";
-                    using (var cmd = new SQLiteCommand(query, conn))
+                    string deleteQuery = "DELETE FROM archive WHERE sid = @id OR eid = @id";
+                    using (var deleteCmd = new SQLiteCommand(deleteQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@timestamp", GlobalData.Archive_timestamp2);
-                        cmd.Parameters.AddWithValue("@amount", GlobalData.Archive_amount2);
-                        cmd.Parameters.AddWithValue("@note", GlobalData.Archive_note);
-                        cmd.ExecuteNonQuery();
+                        deleteCmd.Parameters.AddWithValue("@id", id);
+                        deleteCmd.ExecuteNonQuery();
                     }
-
-                    // ✅ Log restored expense
-                    if (GlobalData.Archive_amount2.HasValue)
-                        History.LogHistory("Restored expense", GlobalData.Archive_amount2.Value);
-                }
-
-                string deleteQuery = "DELETE FROM archive WHERE sid = @id OR eid = @id";
-                using (var cmd = new SQLiteCommand(deleteQuery, conn))
-                {
-                    var id = GlobalData.Archive_sid ?? GlobalData.Archive_eid;
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
                 }
             }
 
@@ -332,5 +351,32 @@ namespace SavexTracker.forms
             hideTimer.Start();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            dgv_Archive.ClearSelection();
+            if (linkLabel1.Text == "Select All")
+            {
+                foreach (DataGridViewRow row in dgv_Archive.Rows)
+                {
+                    row.Selected = true;
+                }
+                linkLabel1.Text = "Deselect All";
+            }
+            else
+            {
+                dgv_Archive.ClearSelection();
+                linkLabel1.Text = "Select All";
+            }
+        }
+
+        private void pnlArchive_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void roundedPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

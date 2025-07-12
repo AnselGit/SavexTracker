@@ -36,6 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchiveForm));
             this.roundedPanel1 = new RoundedPanel();
             this.pnlArchive = new RoundedPanel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnDelete = new RJCodeAdvance.RJControls.RJButton();
             this.label6 = new System.Windows.Forms.Label();
@@ -97,11 +98,13 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(776, 553);
             this.roundedPanel1.TabIndex = 0;
+            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
             // pnlArchive
             // 
             this.pnlArchive.BackColor = System.Drawing.Color.White;
             this.pnlArchive.BorderRadius = 50;
+            this.pnlArchive.Controls.Add(this.linkLabel1);
             this.pnlArchive.Controls.Add(this.rjButton2);
             this.pnlArchive.Controls.Add(this.btnDelete);
             this.pnlArchive.Controls.Add(this.label6);
@@ -113,6 +116,23 @@
             this.pnlArchive.Name = "pnlArchive";
             this.pnlArchive.Size = new System.Drawing.Size(736, 508);
             this.pnlArchive.TabIndex = 24;
+            this.pnlArchive.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlArchive_Paint);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkLabel1.Location = new System.Drawing.Point(331, 471);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(76, 23);
+            this.linkLabel1.TabIndex = 21;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Select all";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // rjButton2
             // 
@@ -144,9 +164,9 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(638, 459);
+            this.btnDelete.Location = new System.Drawing.Point(614, 459);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(82, 46);
+            this.btnDelete.Size = new System.Drawing.Size(106, 46);
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextColor = System.Drawing.Color.White;
@@ -176,9 +196,9 @@
             this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestore.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnRestore.ForeColor = System.Drawing.Color.White;
-            this.btnRestore.Location = new System.Drawing.Point(415, 459);
+            this.btnRestore.Location = new System.Drawing.Point(432, 459);
             this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(217, 46);
+            this.btnRestore.Size = new System.Drawing.Size(176, 46);
             this.btnRestore.TabIndex = 18;
             this.btnRestore.Text = "Restore";
             this.btnRestore.TextColor = System.Drawing.Color.White;
@@ -219,7 +239,7 @@
             this.colId});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -246,6 +266,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Archive.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_Archive.RowTemplate.Height = 30;
             this.dgv_Archive.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_Archive.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Archive.Size = new System.Drawing.Size(705, 260);
@@ -683,5 +704,6 @@
         private RoundedPanel roundedPanel4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

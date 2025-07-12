@@ -118,7 +118,7 @@ WHERE sid = @sid";
                         int affected = cmd.ExecuteNonQuery();
                         if (affected > 0)
                         {
-                            History.LogHistory("Updated savings", newSavingsAmount); // ✅ log it
+                            History.LogHistory("Updated savings", newSavingsAmount, conn); // ✅ log it
                             ShowSuccessPanel();
                             return;
                         }
@@ -152,7 +152,7 @@ WHERE eid = @eid";
                     int affected = cmd.ExecuteNonQuery();
                     if (affected > 0)
                     {
-                        History.LogHistory("Updated expense", newExpenseAmount); // ✅ log it
+                        History.LogHistory("Updated expense", newExpenseAmount, conn); // ✅ log it
                         ShowSuccessPanel();
                     }
                     else
@@ -185,43 +185,18 @@ WHERE eid = @eid";
             {
                 conn.Open();
 
-                bool isSavings = false;
-                bool isExpenses = false;
-                string expenseNote = "";
-
-                using (SQLiteCommand checkSavings = new SQLiteCommand("SELECT COUNT(*) FROM savings WHERE sid = @id", conn))
-                {
-                    checkSavings.Parameters.AddWithValue("@id", GlobalData.CurrentID);
-                    isSavings = Convert.ToInt32(checkSavings.ExecuteScalar()) > 0;
-                }
-
-                if (!isSavings)
-                {
-                    using (SQLiteCommand checkExpenses = new SQLiteCommand("SELECT COUNT(*) FROM expenses WHERE eid = @id", conn))
-                    {
-                        checkExpenses.Parameters.AddWithValue("@id", GlobalData.CurrentID);
-                        isExpenses = Convert.ToInt32(checkExpenses.ExecuteScalar()) > 0;
-                    }
-
-                    // If expense, fetch the note
-                    if (isExpenses)
-                    {
-                        using (SQLiteCommand noteCmd = new SQLiteCommand("SELECT note FROM expenses WHERE eid = @id", conn))
-                        {
-                            noteCmd.Parameters.AddWithValue("@id", GlobalData.CurrentID);
-                            var result = noteCmd.ExecuteScalar();
-                            expenseNote = result != DBNull.Value ? result.ToString() : "";
-                        }
-                    }
-                }
+                bool isSavings = GlobalData.CurrentType == "Savings";
+                bool isExpenses = GlobalData.CurrentType == "Expenses";
 
                 if (!isSavings && !isExpenses)
                 {
-                    MessageBox.Show("Record not found in either table.");
+                    MessageBox.Show("Invalid record type.");
                     return;
                 }
 
-                // Step 2: Insert into archive table (with note now)
+                string expenseNote = GlobalData.CurrentNote ?? "";
+
+                // Step 1: Insert into archive
                 string insertQuery = @"
 INSERT INTO archive (
     sid, eid, name,
@@ -264,7 +239,7 @@ VALUES (
                     insertCmd.ExecuteNonQuery();
                 }
 
-                // Step 3: Delete from original table
+                // Step 2: Delete from the appropriate table
                 string deleteQuery = isSavings
                     ? "DELETE FROM savings WHERE sid = @id"
                     : "DELETE FROM expenses WHERE eid = @id";
@@ -275,13 +250,11 @@ VALUES (
                     deleteCmd.ExecuteNonQuery();
                 }
 
-                // ✅ Step 4: Log to history
+                // Step 3: Log to history
                 string action = isSavings ? "Removed savings" : "Removed expense";
-                History.LogHistory(action, GlobalData.CurrentAmount);
+                History.LogHistory(action, GlobalData.CurrentAmount, conn);
             }
         }
-
-
 
         private void rjButton4_Click(object sender, EventArgs e)
         {

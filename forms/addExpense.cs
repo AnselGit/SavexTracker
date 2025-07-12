@@ -114,10 +114,9 @@ namespace SavexTracker.forms
                     cmd.Parameters.AddWithValue("@note", noteValue);
                     cmd.ExecuteNonQuery();
                 }
-
+                History.LogHistory("Added expense", (double)amount, conn);
                 conn.Close();
-            }
-            History.LogHistory("Added expense", (double)amount);
+            }            
 
             RefreshRecord();
             pnlAdded.Visible = true;

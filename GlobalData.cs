@@ -3,6 +3,7 @@
     public static class GlobalData
     {
         public static int CurrentID;
+        public static string CurrentType;
         public static string CurrentTimestamp;
         public static double CurrentAmount;
         public static string CurrentNote;
@@ -18,7 +19,7 @@
 
         public static double? Archive_amount1;
         public static double? Archive_amount2;
-
+        
         public static int? Archive_rowid;
     }
 }
