@@ -115,9 +115,11 @@ VALUES (@timestamp, @amount);";
                     cmd.Parameters.AddWithValue("@amount", amount);
                     cmd.ExecuteNonQuery();
                 }
-
+                
                 conn.Close();
             }
+            History.LogHistory("Added savings", (double)amount);
+
             RefreshRecord();
             pnlAdded.Visible = true;
             pnlAdded.BringToFront();
@@ -132,5 +134,6 @@ VALUES (@timestamp, @amount);";
             };
             hideTimer.Start();
         }
+    
     }
 }

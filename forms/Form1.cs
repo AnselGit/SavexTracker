@@ -17,7 +17,8 @@ namespace SavexTracker
             EnsureDatabaseAndTable();
             UpdateTotalLabels();
             LoadExpensesToPanel();
-            LoadSavingsToPanel();                        
+            LoadSavingsToPanel();
+            LoadHistory();
         }
 
         public Form1(Form openingForm)
@@ -43,10 +44,11 @@ namespace SavexTracker
         {
             btnRefresh.Text = "Refreshing";
             btnRefresh.Enabled = false;
-
+            
             UpdateTotalLabels();
             LoadSavingsToPanel();
             LoadExpensesToPanel();
+            LoadHistory();
 
             await Task.Delay(500);
             btnRefresh.Text = "Refresh";
@@ -97,6 +99,21 @@ CREATE TABLE IF NOT EXISTS expenses (
     amount REAL NOT NULL,
     note TEXT
 );";
+
+                //4. History Table
+                string createHistoryTable = @"
+CREATE TABLE IF NOT EXISTS history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    action TEXT NOT NULL,
+    amount REAL,
+    timestamp TEXT NOT NULL
+);";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(createHistoryTable, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+
 
                 using (SQLiteCommand cmd = new SQLiteCommand(createSavingsTable, conn))
                     cmd.ExecuteNonQuery();
@@ -417,6 +434,53 @@ CREATE TABLE IF NOT EXISTS expenses (
             }
         }
 
+        public static void LogHistory(string action, double amount)
+        {
+            string connStr = AppConfig.ConnectionString;
+            string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            {
+                conn.Open();
+                string query = "INSERT INTO history (action, amount, timestamp) VALUES (@action, @amount, @timestamp)";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@action", action);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@timestamp", timestamp);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void LoadHistory()
+        {
+            rtbHistory.Clear(); // Or whatever RichTextBox you use
+
+            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT action, amount, timestamp FROM history ORDER BY id DESC";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string action = reader["action"].ToString();
+                        double amount = Convert.ToDouble(reader["amount"]);
+                        string timestamp = DateTime.Parse(reader["timestamp"].ToString())
+                            .ToString("MM/dd/yyyy 'at' hh:mm tt");
+
+                        string entry = $"{action} - ₱{amount:N2}\n{timestamp}\n\n";
+                        rtbHistory.AppendText(entry);
+                    }
+                }
+            }
+
+            rtbHistory.ScrollToCaret(); // Scroll to bottom
+        }
+
 
         private void label21_Click(object sender, EventArgs e)
         {
@@ -440,7 +504,20 @@ CREATE TABLE IF NOT EXISTS expenses (
 
         }
 
-        
+        private void rjButton11_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM history";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            rtbHistory.Clear();
+        }
     }
 
     public class VerticalFlowPanel : FlowLayoutPanel

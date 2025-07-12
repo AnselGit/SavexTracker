@@ -56,7 +56,6 @@
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
             this.roundedPanel1.BorderRadius = 30;
-            this.roundedPanel1.Controls.Add(this.pnlAdded);
             this.roundedPanel1.Controls.Add(this.lbl_date);
             this.roundedPanel1.Controls.Add(this.label4);
             this.roundedPanel1.Controls.Add(this.label1);
@@ -65,6 +64,7 @@
             this.roundedPanel1.Controls.Add(this.roundedPanel2);
             this.roundedPanel1.Controls.Add(this.txt_SA);
             this.roundedPanel1.Controls.Add(this.label3);
+            this.roundedPanel1.Controls.Add(this.pnlAdded);
             this.roundedPanel1.Location = new System.Drawing.Point(12, 12);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(792, 334);

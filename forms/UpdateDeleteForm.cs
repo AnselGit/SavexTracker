@@ -90,7 +90,7 @@ namespace SavexTracker.forms
 
         private void btnCon1_Click(object sender, EventArgs e)
         {
-            string newDate = lblDate.Text.Trim();  // shared for both
+            string newDate = lblDate.Text.Trim();
             string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
             string connStr = $"Data Source={dbPath};Version=3;";
 
@@ -98,7 +98,7 @@ namespace SavexTracker.forms
             {
                 conn.Open();
 
-                // Attempt to update savings
+                // Try to update savings
                 string newSavingsAmountText = txtAmt.Texts.Trim().Replace("₱", "").Trim();
 
                 if (double.TryParse(newSavingsAmountText, out double newSavingsAmount) && newSavingsAmount > 0)
@@ -118,13 +118,14 @@ WHERE sid = @sid";
                         int affected = cmd.ExecuteNonQuery();
                         if (affected > 0)
                         {
+                            History.LogHistory("Updated savings", newSavingsAmount); // ✅ log it
                             ShowSuccessPanel();
                             return;
                         }
                     }
                 }
 
-                // Now try to update expenses
+                // Try to update expenses
                 string newExpenseAmountText = txtEamt.Texts.Trim().Replace("₱", "").Trim();
                 string newNote = txtNote.Texts.Trim();
 
@@ -151,6 +152,7 @@ WHERE eid = @eid";
                     int affected = cmd.ExecuteNonQuery();
                     if (affected > 0)
                     {
+                        History.LogHistory("Updated expense", newExpenseAmount); // ✅ log it
                         ShowSuccessPanel();
                     }
                     else
@@ -160,6 +162,7 @@ WHERE eid = @eid";
                 }
             }
         }
+
 
 
         private void rjButton2_Click(object sender, EventArgs e)
@@ -271,8 +274,13 @@ VALUES (
                     deleteCmd.Parameters.AddWithValue("@id", GlobalData.CurrentID);
                     deleteCmd.ExecuteNonQuery();
                 }
+
+                // ✅ Step 4: Log to history
+                string action = isSavings ? "Removed savings" : "Removed expense";
+                History.LogHistory(action, GlobalData.CurrentAmount);
             }
         }
+
 
 
         private void rjButton4_Click(object sender, EventArgs e)

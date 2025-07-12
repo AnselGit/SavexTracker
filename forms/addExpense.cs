@@ -117,6 +117,8 @@ namespace SavexTracker.forms
 
                 conn.Close();
             }
+            History.LogHistory("Added expense", (double)amount);
+
             RefreshRecord();
             pnlAdded.Visible = true;
             pnlAdded.BringToFront();
