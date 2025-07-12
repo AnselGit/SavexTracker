@@ -62,6 +62,13 @@ namespace SavexTracker
             this.label3 = new System.Windows.Forms.Label();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.gradientPanelRound1 = new GradientPanelRound();
+            this.pnlEmpty = new RoundedPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pnlDeleteCon = new RoundedPanel();
+            this.rjButton12 = new RJCodeAdvance.RJControls.RJButton();
+            this.rjButton13 = new RJCodeAdvance.RJControls.RJButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.rjButton11 = new RJCodeAdvance.RJControls.RJButton();
             this.pnlHistory = new RoundedPanel();
             this.rtbHistory = new System.Windows.Forms.RichTextBox();
@@ -97,6 +104,10 @@ namespace SavexTracker
             this.roundedPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gradientPanelRound1.SuspendLayout();
+            this.pnlEmpty.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnlDeleteCon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlHistory.SuspendLayout();
             this.gradientPanelRound2.SuspendLayout();
             this.gradientPanelRound3.SuspendLayout();
@@ -210,7 +221,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -547,11 +558,111 @@ namespace SavexTracker
             this.gradientPanelRound1.Controls.Add(this.rjButton11);
             this.gradientPanelRound1.Controls.Add(this.pnlHistory);
             this.gradientPanelRound1.Controls.Add(this.label11);
+            this.gradientPanelRound1.Controls.Add(this.pnlEmpty);
+            this.gradientPanelRound1.Controls.Add(this.pnlDeleteCon);
             this.gradientPanelRound1.GradientAngle = 60F;
             this.gradientPanelRound1.Location = new System.Drawing.Point(1169, 459);
             this.gradientPanelRound1.Name = "gradientPanelRound1";
             this.gradientPanelRound1.Size = new System.Drawing.Size(326, 399);
             this.gradientPanelRound1.TabIndex = 6;
+            // 
+            // pnlEmpty
+            // 
+            this.pnlEmpty.BackColor = System.Drawing.Color.White;
+            this.pnlEmpty.BorderRadius = 30;
+            this.pnlEmpty.Controls.Add(this.label13);
+            this.pnlEmpty.Controls.Add(this.pictureBox4);
+            this.pnlEmpty.Location = new System.Drawing.Point(26, 74);
+            this.pnlEmpty.Name = "pnlEmpty";
+            this.pnlEmpty.Size = new System.Drawing.Size(274, 282);
+            this.pnlEmpty.TabIndex = 19;
+            this.pnlEmpty.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label13.Location = new System.Drawing.Point(52, 180);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(172, 24);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "The history is empty";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(83, 59);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 23;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pnlDeleteCon
+            // 
+            this.pnlDeleteCon.AutoScroll = true;
+            this.pnlDeleteCon.BackColor = System.Drawing.Color.White;
+            this.pnlDeleteCon.BorderRadius = 30;
+            this.pnlDeleteCon.Controls.Add(this.rjButton12);
+            this.pnlDeleteCon.Controls.Add(this.rjButton13);
+            this.pnlDeleteCon.Controls.Add(this.pictureBox3);
+            this.pnlDeleteCon.Location = new System.Drawing.Point(26, 74);
+            this.pnlDeleteCon.Name = "pnlDeleteCon";
+            this.pnlDeleteCon.Size = new System.Drawing.Size(274, 282);
+            this.pnlDeleteCon.TabIndex = 7;
+            this.pnlDeleteCon.Visible = false;
+            // 
+            // rjButton12
+            // 
+            this.rjButton12.BackColor = System.Drawing.Color.OrangeRed;
+            this.rjButton12.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.rjButton12.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton12.BorderRadius = 15;
+            this.rjButton12.BorderSize = 0;
+            this.rjButton12.FlatAppearance.BorderSize = 0;
+            this.rjButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton12.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton12.ForeColor = System.Drawing.Color.White;
+            this.rjButton12.Location = new System.Drawing.Point(67, 208);
+            this.rjButton12.Name = "rjButton12";
+            this.rjButton12.Size = new System.Drawing.Size(135, 30);
+            this.rjButton12.TabIndex = 27;
+            this.rjButton12.Text = "Cancel";
+            this.rjButton12.TextColor = System.Drawing.Color.White;
+            this.rjButton12.UseVisualStyleBackColor = false;
+            this.rjButton12.Click += new System.EventHandler(this.rjButton12_Click);
+            // 
+            // rjButton13
+            // 
+            this.rjButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.rjButton13.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.rjButton13.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton13.BorderRadius = 15;
+            this.rjButton13.BorderSize = 0;
+            this.rjButton13.FlatAppearance.BorderSize = 0;
+            this.rjButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton13.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton13.ForeColor = System.Drawing.Color.White;
+            this.rjButton13.Location = new System.Drawing.Point(67, 172);
+            this.rjButton13.Name = "rjButton13";
+            this.rjButton13.Size = new System.Drawing.Size(135, 30);
+            this.rjButton13.TabIndex = 26;
+            this.rjButton13.Text = "Delete";
+            this.rjButton13.TextColor = System.Drawing.Color.White;
+            this.rjButton13.UseVisualStyleBackColor = false;
+            this.rjButton13.Click += new System.EventHandler(this.rjButton13_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(57, 17);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(155, 155);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
             // 
             // rjButton11
             // 
@@ -589,8 +700,8 @@ namespace SavexTracker
             // 
             this.rtbHistory.BackColor = System.Drawing.Color.White;
             this.rtbHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbHistory.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbHistory.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.rtbHistory.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbHistory.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rtbHistory.Location = new System.Drawing.Point(17, 17);
             this.rtbHistory.Name = "rtbHistory";
             this.rtbHistory.ReadOnly = true;
@@ -944,6 +1055,11 @@ namespace SavexTracker
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gradientPanelRound1.ResumeLayout(false);
             this.gradientPanelRound1.PerformLayout();
+            this.pnlEmpty.ResumeLayout(false);
+            this.pnlEmpty.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnlDeleteCon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlHistory.ResumeLayout(false);
             this.gradientPanelRound2.ResumeLayout(false);
             this.gradientPanelRound2.PerformLayout();
@@ -1017,6 +1133,13 @@ namespace SavexTracker
         private System.Windows.Forms.Label lblTotalSave;
         private System.Windows.Forms.RichTextBox rtbHistory;
         private RJCodeAdvance.RJControls.RJButton rjButton11;
+        private RoundedPanel pnlDeleteCon;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private RJCodeAdvance.RJControls.RJButton rjButton12;
+        private RJCodeAdvance.RJControls.RJButton rjButton13;
+        private RoundedPanel pnlEmpty;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label13;
     }
 }
 

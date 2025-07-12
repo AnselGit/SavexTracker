@@ -455,13 +455,30 @@ CREATE TABLE IF NOT EXISTS history (
 
         private void LoadHistory()
         {
-            rtbHistory.Clear(); // Or whatever RichTextBox you use
+            rtbHistory.Clear();
+            bool isEmpty = true;
 
             using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
-                string query = "SELECT action, amount, timestamp FROM history ORDER BY id DESC";
 
+                // Check if the table has records
+                using (SQLiteCommand countCmd = new SQLiteCommand("SELECT COUNT(*) FROM history", conn))
+                {
+                    long count = (long)countCmd.ExecuteScalar();
+                    isEmpty = count == 0;
+                }
+
+                // Show the empty panel if no history found
+                if (isEmpty)
+                {
+                    pnlEmpty.Visible = true;
+                    pnlEmpty.BringToFront();
+                    return; // Exit early, no need to proceed
+                }
+
+                // Otherwise, continue loading history
+                string query = "SELECT action, amount, timestamp FROM history ORDER BY id DESC";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
@@ -476,11 +493,12 @@ CREATE TABLE IF NOT EXISTS history (
                         rtbHistory.AppendText(entry);
                     }
                 }
+                LoadHistory();
             }
 
-            rtbHistory.ScrollToCaret(); // Scroll to bottom
+            pnlEmpty.Visible = false;
+            rtbHistory.ScrollToCaret();
         }
-
 
         private void label21_Click(object sender, EventArgs e)
         {
@@ -506,6 +524,14 @@ CREATE TABLE IF NOT EXISTS history (
 
         private void rjButton11_Click(object sender, EventArgs e)
         {
+            pnlDeleteCon.Visible = true;
+            pnlDeleteCon.BringToFront();
+
+
+        }
+
+        private void rjButton13_Click(object sender, EventArgs e)
+        {
             using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
@@ -515,8 +541,14 @@ CREATE TABLE IF NOT EXISTS history (
                     cmd.ExecuteNonQuery();
                 }
             }
-
+            pnlHistory.Visible = true;
+            pnlHistory.BringToFront();
             rtbHistory.Clear();
+        }
+
+        private void rjButton12_Click(object sender, EventArgs e)
+        {
+            pnlDeleteCon.Visible = false;
         }
     }
 
