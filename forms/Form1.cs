@@ -496,8 +496,7 @@ CREATE TABLE IF NOT EXISTS history (
             }
 
             pnlEmpty.Visible = false;
-            rtbHistory.ScrollToCaret();
-            LoadHistory();
+            rtbHistory.ScrollToCaret();            
         }
 
         private void label21_Click(object sender, EventArgs e)
@@ -544,6 +543,7 @@ CREATE TABLE IF NOT EXISTS history (
             pnlHistory.Visible = true;
             pnlHistory.BringToFront();
             rtbHistory.Clear();
+            LoadHistory();
         }
 
         private void rjButton12_Click(object sender, EventArgs e)

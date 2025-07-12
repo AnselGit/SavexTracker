@@ -224,7 +224,7 @@ namespace SavexTracker.forms
                 // Log deletion
                 if (amountToLog.HasValue)
                 {
-                    string logText = type == "Savings" ? "Permanently deleted savings" : "Permanently deleted expense";
+                    string logText = type == "Savings" ? "Deleted savings" : "Deleted expense";
                     History.LogHistory(logText, amountToLog.Value);
                 }
             }

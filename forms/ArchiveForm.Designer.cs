@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchiveForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchiveForm));
             this.roundedPanel1 = new RoundedPanel();
             this.pnlDeleteCon = new RoundedPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,9 +90,9 @@
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
             this.roundedPanel1.BorderRadius = 50;
-            this.roundedPanel1.Controls.Add(this.pnlDeleteCon);
             this.roundedPanel1.Controls.Add(this.pnlArchive);
             this.roundedPanel1.Controls.Add(this.pnlRestoreCon);
+            this.roundedPanel1.Controls.Add(this.pnlDeleteCon);
             this.roundedPanel1.Location = new System.Drawing.Point(12, 12);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(776, 553);
@@ -102,12 +102,12 @@
             // 
             this.pnlDeleteCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pnlDeleteCon.BorderRadius = 50;
+            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
             this.pnlDeleteCon.Controls.Add(this.label1);
             this.pnlDeleteCon.Controls.Add(this.rjButton3);
             this.pnlDeleteCon.Controls.Add(this.rjButton4);
             this.pnlDeleteCon.Controls.Add(this.label2);
             this.pnlDeleteCon.Controls.Add(this.pictureBox2);
-            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
             this.pnlDeleteCon.Location = new System.Drawing.Point(20, 22);
             this.pnlDeleteCon.Name = "pnlDeleteCon";
             this.pnlDeleteCon.Size = new System.Drawing.Size(736, 508);
@@ -352,7 +352,7 @@
             this.dgv_Archive.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Archive.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
