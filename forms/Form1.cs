@@ -242,7 +242,7 @@ CREATE TABLE IF NOT EXISTS history (
                             GlobalData.CurrentID = sid;
                             GlobalData.CurrentTimestamp = timestamp;
                             GlobalData.CurrentAmount = amount;
-                            GlobalData.CurrentType = "Savings";
+
 
                             var updateForm = new UpdateDeleteForm();
                             updateForm.Show();
@@ -501,6 +501,7 @@ CREATE TABLE IF NOT EXISTS history (
             }
 
             pnlEmpty.Visible = false;
+            rtbHistory.SelectionStart = 0;
             rtbHistory.ScrollToCaret();            
         }
 
