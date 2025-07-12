@@ -185,34 +185,50 @@ namespace SavexTracker.forms
         private void rjButton4_Click(object sender, EventArgs e)
         {
             if (dgv_Archive.CurrentRow == null)
-            {
-                MessageBox.Show("Please select a record to delete.");
-                return;
-            }
-
-            DialogResult result = MessageBox.Show(
-                "This will permanently delete the record from archive.\nAre you sure?",
-                "Confirm Delete",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (result != DialogResult.Yes)
                 return;
 
             string type = dgv_Archive.CurrentRow.Cells["colType"].Value.ToString();
             int id = Convert.ToInt32(dgv_Archive.CurrentRow.Cells["colId"].Value);
 
+            double? amountToLog = null;
+
             using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
 
+                // Get amount before deletion for logging
+                string getAmountQuery = "SELECT amount1, amount2 FROM archive WHERE sid = @id OR eid = @id";
+                using (var getCmd = new SQLiteCommand(getAmountQuery, conn))
+                {
+                    getCmd.Parameters.AddWithValue("@id", id);
+                    using (var reader = getCmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (type == "Savings" && reader["amount1"] != DBNull.Value)
+                                amountToLog = Convert.ToDouble(reader["amount1"]);
+                            else if (type == "Expenses" && reader["amount2"] != DBNull.Value)
+                                amountToLog = Convert.ToDouble(reader["amount2"]);
+                        }
+                    }
+                }
+
+                // Delete from archive
                 string deleteQuery = "DELETE FROM archive WHERE " + (type == "Savings" ? "sid" : "eid") + " = @id";
                 using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
-            }            
+
+                // Log deletion
+                if (amountToLog.HasValue)
+                {
+                    string logText = type == "Savings" ? "Permanently deleted savings" : "Permanently deleted expense";
+                    History.LogHistory(logText, amountToLog.Value);
+                }
+            }
+
             LoadArchiveData();
             RefreshRecord();
             pnlDeleted.Visible = true;
@@ -270,6 +286,10 @@ namespace SavexTracker.forms
                         cmd.Parameters.AddWithValue("@amount", GlobalData.Archive_amount1);
                         cmd.ExecuteNonQuery();
                     }
+
+                    // ✅ Log restored savings
+                    if (GlobalData.Archive_amount1.HasValue)
+                        History.LogHistory("Restored savings", GlobalData.Archive_amount1.Value);
                 }
                 else if (GlobalData.Archive_type == "Expenses")
                 {
@@ -281,6 +301,10 @@ namespace SavexTracker.forms
                         cmd.Parameters.AddWithValue("@note", GlobalData.Archive_note);
                         cmd.ExecuteNonQuery();
                     }
+
+                    // ✅ Log restored expense
+                    if (GlobalData.Archive_amount2.HasValue)
+                        History.LogHistory("Restored expense", GlobalData.Archive_amount2.Value);
                 }
 
                 string deleteQuery = "DELETE FROM archive WHERE sid = @id OR eid = @id";
@@ -290,7 +314,6 @@ namespace SavexTracker.forms
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
-                
             }
 
             LoadArchiveData();
@@ -308,5 +331,6 @@ namespace SavexTracker.forms
             };
             hideTimer.Start();
         }
+
     }
 }
