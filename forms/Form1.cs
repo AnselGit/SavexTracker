@@ -492,12 +492,12 @@ CREATE TABLE IF NOT EXISTS history (
                         string entry = $"{action} - ₱{amount:N2}\n{timestamp}\n\n";
                         rtbHistory.AppendText(entry);
                     }
-                }
-                LoadHistory();
+                }                
             }
 
             pnlEmpty.Visible = false;
             rtbHistory.ScrollToCaret();
+            LoadHistory();
         }
 
         private void label21_Click(object sender, EventArgs e)
