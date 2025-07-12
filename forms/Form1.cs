@@ -242,6 +242,7 @@ CREATE TABLE IF NOT EXISTS history (
                             GlobalData.CurrentID = sid;
                             GlobalData.CurrentTimestamp = timestamp;
                             GlobalData.CurrentAmount = amount;
+                            GlobalData.CurrentType = "Savings";
 
 
                             var updateForm = new UpdateDeleteForm();

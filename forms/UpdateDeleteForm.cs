@@ -185,18 +185,61 @@ WHERE eid = @eid";
             {
                 conn.Open();
 
-                bool isSavings = GlobalData.CurrentType == "Savings";
-                bool isExpenses = GlobalData.CurrentType == "Expenses";
+                string type = GlobalData.CurrentType;
+                int id = GlobalData.CurrentID;
 
-                if (!isSavings && !isExpenses)
+                string timestamp = "";
+                double amount = 0;
+                string note = "";
+
+                if (type == "Savings")
+                {
+                    using (var cmd = new SQLiteCommand("SELECT timestamp, amount FROM savings WHERE sid = @id", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                timestamp = reader["timestamp"].ToString();
+                                amount = Convert.ToDouble(reader["amount"]);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Savings record not found.");
+                                return;
+                            }
+                        }
+                    }
+                }
+                else if (type == "Expenses")
+                {
+                    using (var cmd = new SQLiteCommand("SELECT timestamp, amount, note FROM expenses WHERE eid = @id", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                timestamp = reader["timestamp"].ToString();
+                                amount = Convert.ToDouble(reader["amount"]);
+                                note = reader["note"]?.ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Expense record not found.");
+                                return;
+                            }
+                        }
+                    }
+                }
+                else
                 {
                     MessageBox.Show("Invalid record type.");
                     return;
                 }
 
-                string expenseNote = GlobalData.CurrentNote ?? "";
-
-                // Step 1: Insert into archive
+                // Insert into archive
                 string insertQuery = @"
 INSERT INTO archive (
     sid, eid, name,
@@ -213,46 +256,46 @@ VALUES (
 
                 using (SQLiteCommand insertCmd = new SQLiteCommand(insertQuery, conn))
                 {
-                    if (isSavings)
+                    if (type == "Savings")
                     {
-                        insertCmd.Parameters.AddWithValue("@sid", GlobalData.CurrentID);
+                        insertCmd.Parameters.AddWithValue("@sid", id);
                         insertCmd.Parameters.AddWithValue("@eid", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@name", "Savings");
-                        insertCmd.Parameters.AddWithValue("@timestamp1", GlobalData.CurrentTimestamp);
-                        insertCmd.Parameters.AddWithValue("@amount1", GlobalData.CurrentAmount);
+                        insertCmd.Parameters.AddWithValue("@timestamp1", timestamp);
+                        insertCmd.Parameters.AddWithValue("@amount1", amount);
                         insertCmd.Parameters.AddWithValue("@timestamp2", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@amount2", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@note", DBNull.Value);
                     }
-                    else if (isExpenses)
+                    else
                     {
                         insertCmd.Parameters.AddWithValue("@sid", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@eid", GlobalData.CurrentID);
+                        insertCmd.Parameters.AddWithValue("@eid", id);
                         insertCmd.Parameters.AddWithValue("@name", "Expenses");
                         insertCmd.Parameters.AddWithValue("@timestamp1", DBNull.Value);
                         insertCmd.Parameters.AddWithValue("@amount1", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@timestamp2", GlobalData.CurrentTimestamp);
-                        insertCmd.Parameters.AddWithValue("@amount2", GlobalData.CurrentAmount);
-                        insertCmd.Parameters.AddWithValue("@note", expenseNote);
+                        insertCmd.Parameters.AddWithValue("@timestamp2", timestamp);
+                        insertCmd.Parameters.AddWithValue("@amount2", amount);
+                        insertCmd.Parameters.AddWithValue("@note", note);
                     }
 
                     insertCmd.ExecuteNonQuery();
                 }
 
-                // Step 2: Delete from the appropriate table
-                string deleteQuery = isSavings
+                // Delete from correct table
+                string deleteQuery = type == "Savings"
                     ? "DELETE FROM savings WHERE sid = @id"
                     : "DELETE FROM expenses WHERE eid = @id";
 
                 using (SQLiteCommand deleteCmd = new SQLiteCommand(deleteQuery, conn))
                 {
-                    deleteCmd.Parameters.AddWithValue("@id", GlobalData.CurrentID);
+                    deleteCmd.Parameters.AddWithValue("@id", id);
                     deleteCmd.ExecuteNonQuery();
                 }
 
-                // Step 3: Log to history
-                string action = isSavings ? "Removed savings" : "Removed expense";
-                History.LogHistory(action, GlobalData.CurrentAmount, conn);
+                // Log
+                string action = type == "Savings" ? "Removed savings" : "Removed expense";
+                History.LogHistory(action, amount, conn);
             }
         }
 
