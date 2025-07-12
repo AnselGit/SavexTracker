@@ -422,8 +422,8 @@ CREATE TABLE IF NOT EXISTS history (
             lblTotalSpent.Text = totalSpend.ToString("₱0.00");
             lblGrand.Text = grandTotal.ToString("₱0.00");
 
-            lblTotalSave.ForeColor = Color.FromArgb(64, 64, 64);
-            lblTotalSpent.ForeColor = Color.FromArgb(64, 64, 64);
+            lblTotalSave.ForeColor = Color.Gray;
+            lblTotalSpent.ForeColor = Color.Gray;
 
             // Optional: change color based on balance
             if (grandTotal > 0)
@@ -561,6 +561,32 @@ CREATE TABLE IF NOT EXISTS history (
         private void lblGrand_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rjButton14_Click(object sender, EventArgs e)
+        {
+            btnDelAll_S.Visible = !btnDelAll_S.Visible;
+        }
+
+        private void rjButton15_Click(object sender, EventArgs e)
+        {
+            btnDelAll_E.Visible = !btnDelAll_E.Visible;
+        }
+
+        private void btnDelAll_S_Click(object sender, EventArgs e)
+        {
+            GlobalData.CurrentType = "Savings";
+            DeleteAll deleteForm = new DeleteAll();
+            deleteForm.Show();
+            btnDelAll_S.Visible = false;
+        }
+
+        private void btnDelAll_E_Click(object sender, EventArgs e)
+        {
+            GlobalData.CurrentType = "Expenses";
+            DeleteAll deleteForm = new DeleteAll();
+            deleteForm.Show();
+            btnDelAll_E.Visible = false;
         }
     }
 

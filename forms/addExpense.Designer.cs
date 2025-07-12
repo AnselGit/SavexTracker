@@ -300,8 +300,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(816, 358);
-            this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.pnlAdded);
+            this.Controls.Add(this.roundedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addExpense";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

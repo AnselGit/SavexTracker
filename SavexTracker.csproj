@@ -102,6 +102,12 @@
     <Compile Include="forms\ArchiveForm.Designer.cs">
       <DependentUpon>ArchiveForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\DeleteAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\DeleteAll.Designer.cs">
+      <DependentUpon>DeleteAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\ArchiveForm.resx">
       <DependentUpon>ArchiveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\DeleteAll.resx">
+      <DependentUpon>DeleteAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

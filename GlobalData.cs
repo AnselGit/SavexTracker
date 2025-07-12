@@ -21,5 +21,7 @@
         public static double? Archive_amount2;
         
         public static int? Archive_rowid;
+
+
     }
 }

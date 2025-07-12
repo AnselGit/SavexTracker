@@ -32,9 +32,12 @@ namespace SavexTracker
         {       
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelAll_S = new RJCodeAdvance.RJControls.RJButton();
+            this.btnDelAll_E = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton9 = new RJCodeAdvance.RJControls.RJButton();
             this.btnRefresh = new RJCodeAdvance.RJControls.RJButton();
             this.gradientPanelRound6 = new GradientPanelRound();
+            this.rjButton15 = new RJCodeAdvance.RJControls.RJButton();
             this.roundedPanel4 = new RoundedPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.tbl_Spend = new System.Windows.Forms.TableLayoutPanel();
@@ -42,6 +45,7 @@ namespace SavexTracker
             this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.gradientPanelRound5 = new GradientPanelRound();
+            this.rjButton14 = new RJCodeAdvance.RJControls.RJButton();
             this.pnlSave = new RoundedPanel();
             this.tblSave = new System.Windows.Forms.TableLayoutPanel();
             this.label19 = new System.Windows.Forms.Label();
@@ -120,6 +124,8 @@ namespace SavexTracker
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
+            this.panel1.Controls.Add(this.btnDelAll_S);
+            this.panel1.Controls.Add(this.btnDelAll_E);
             this.panel1.Controls.Add(this.rjButton9);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.gradientPanelRound6);
@@ -130,6 +136,50 @@ namespace SavexTracker
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 862);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDelAll_S
+            // 
+            this.btnDelAll_S.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelAll_S.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelAll_S.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelAll_S.BorderColor = System.Drawing.Color.White;
+            this.btnDelAll_S.BorderRadius = 12;
+            this.btnDelAll_S.BorderSize = 0;
+            this.btnDelAll_S.FlatAppearance.BorderSize = 0;
+            this.btnDelAll_S.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelAll_S.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelAll_S.ForeColor = System.Drawing.Color.White;
+            this.btnDelAll_S.Location = new System.Drawing.Point(28, 165);
+            this.btnDelAll_S.Name = "btnDelAll_S";
+            this.btnDelAll_S.Size = new System.Drawing.Size(159, 25);
+            this.btnDelAll_S.TabIndex = 20;
+            this.btnDelAll_S.Text = "Delete all";
+            this.btnDelAll_S.TextColor = System.Drawing.Color.White;
+            this.btnDelAll_S.UseVisualStyleBackColor = false;
+            this.btnDelAll_S.Visible = false;
+            this.btnDelAll_S.Click += new System.EventHandler(this.btnDelAll_S_Click);
+            // 
+            // btnDelAll_E
+            // 
+            this.btnDelAll_E.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelAll_E.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelAll_E.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelAll_E.BorderColor = System.Drawing.Color.White;
+            this.btnDelAll_E.BorderRadius = 12;
+            this.btnDelAll_E.BorderSize = 0;
+            this.btnDelAll_E.FlatAppearance.BorderSize = 0;
+            this.btnDelAll_E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelAll_E.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelAll_E.ForeColor = System.Drawing.Color.White;
+            this.btnDelAll_E.Location = new System.Drawing.Point(349, 165);
+            this.btnDelAll_E.Name = "btnDelAll_E";
+            this.btnDelAll_E.Size = new System.Drawing.Size(159, 25);
+            this.btnDelAll_E.TabIndex = 19;
+            this.btnDelAll_E.Text = "Delete all";
+            this.btnDelAll_E.TextColor = System.Drawing.Color.White;
+            this.btnDelAll_E.UseVisualStyleBackColor = false;
+            this.btnDelAll_E.Visible = false;
+            this.btnDelAll_E.Click += new System.EventHandler(this.btnDelAll_E_Click);
             // 
             // rjButton9
             // 
@@ -182,6 +232,7 @@ namespace SavexTracker
             this.gradientPanelRound6.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.gradientPanelRound6.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.gradientPanelRound6.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound6.Controls.Add(this.rjButton15);
             this.gradientPanelRound6.Controls.Add(this.roundedPanel4);
             this.gradientPanelRound6.Controls.Add(this.label17);
             this.gradientPanelRound6.GradientAngle = 90F;
@@ -189,6 +240,26 @@ namespace SavexTracker
             this.gradientPanelRound6.Name = "gradientPanelRound6";
             this.gradientPanelRound6.Size = new System.Drawing.Size(479, 637);
             this.gradientPanelRound6.TabIndex = 15;
+            // 
+            // rjButton15
+            // 
+            this.rjButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.rjButton15.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.rjButton15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton15.BackgroundImage")));
+            this.rjButton15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton15.BorderColor = System.Drawing.Color.White;
+            this.rjButton15.BorderRadius = 0;
+            this.rjButton15.BorderSize = 0;
+            this.rjButton15.FlatAppearance.BorderSize = 0;
+            this.rjButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton15.ForeColor = System.Drawing.Color.White;
+            this.rjButton15.Location = new System.Drawing.Point(32, 17);
+            this.rjButton15.Name = "rjButton15";
+            this.rjButton15.Size = new System.Drawing.Size(30, 30);
+            this.rjButton15.TabIndex = 15;
+            this.rjButton15.TextColor = System.Drawing.Color.White;
+            this.rjButton15.UseVisualStyleBackColor = false;
+            this.rjButton15.Click += new System.EventHandler(this.rjButton15_Click);
             // 
             // roundedPanel4
             // 
@@ -221,7 +292,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -275,6 +346,7 @@ namespace SavexTracker
             this.gradientPanelRound5.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
             this.gradientPanelRound5.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.gradientPanelRound5.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound5.Controls.Add(this.rjButton14);
             this.gradientPanelRound5.Controls.Add(this.pnlSave);
             this.gradientPanelRound5.Controls.Add(this.label16);
             this.gradientPanelRound5.GradientAngle = 90F;
@@ -282,6 +354,26 @@ namespace SavexTracker
             this.gradientPanelRound5.Name = "gradientPanelRound5";
             this.gradientPanelRound5.Size = new System.Drawing.Size(293, 637);
             this.gradientPanelRound5.TabIndex = 14;
+            // 
+            // rjButton14
+            // 
+            this.rjButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.rjButton14.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.rjButton14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton14.BackgroundImage")));
+            this.rjButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton14.BorderColor = System.Drawing.Color.White;
+            this.rjButton14.BorderRadius = 0;
+            this.rjButton14.BorderSize = 0;
+            this.rjButton14.FlatAppearance.BorderSize = 0;
+            this.rjButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton14.ForeColor = System.Drawing.Color.White;
+            this.rjButton14.Location = new System.Drawing.Point(29, 17);
+            this.rjButton14.Name = "rjButton14";
+            this.rjButton14.Size = new System.Drawing.Size(30, 30);
+            this.rjButton14.TabIndex = 14;
+            this.rjButton14.TextColor = System.Drawing.Color.White;
+            this.rjButton14.UseVisualStyleBackColor = false;
+            this.rjButton14.Click += new System.EventHandler(this.rjButton14_Click);
             // 
             // pnlSave
             // 
@@ -1141,6 +1233,10 @@ namespace SavexTracker
         private RoundedPanel pnlEmpty;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label13;
+        private RJCodeAdvance.RJControls.RJButton rjButton15;
+        private RJCodeAdvance.RJControls.RJButton rjButton14;
+        private RJCodeAdvance.RJControls.RJButton btnDelAll_S;
+        private RJCodeAdvance.RJControls.RJButton btnDelAll_E;
     }
 }
 
