@@ -31,7 +31,7 @@ namespace SavexTracker
         private void InitializeComponent()
         {       
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_3 = new System.Windows.Forms.Panel();
             this.btnDelAll_S = new RJCodeAdvance.RJControls.RJButton();
             this.btnDelAll_E = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton9 = new RJCodeAdvance.RJControls.RJButton();
@@ -85,9 +85,6 @@ namespace SavexTracker
             this.rjButton5 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton7 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton8 = new RJCodeAdvance.RJControls.RJButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.gradientPanelRound4 = new GradientPanelRound();
             this.label10 = new System.Windows.Forms.Label();
             this.roundedPanel11 = new RoundedPanel();
@@ -98,7 +95,26 @@ namespace SavexTracker
             this.lblGrand = new System.Windows.Forms.Label();
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPanel8 = new RoundedPanel();
-            this.panel1.SuspendLayout();
+            this.btnNav_1 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnNav_2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnNav_3 = new RJCodeAdvance.RJControls.RJButton();
+            this.pnl_2 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.label5 = new System.Windows.Forms.Label();
+            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.rjButton19 = new RJCodeAdvance.RJControls.RJButton();
+            this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.roundedPanel2 = new RoundedPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pnl_1 = new System.Windows.Forms.Panel();
+            this.roundedPanel12 = new RoundedPanel();
+            this.roundedPanel6 = new RoundedPanel();
+            this.roundedPanel3 = new RoundedPanel();
+            this.roundedPanel5 = new RoundedPanel();
+            this.pnl_3.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
             this.gradientPanelRound5.SuspendLayout();
@@ -119,23 +135,27 @@ namespace SavexTracker
             this.roundedPanel11.SuspendLayout();
             this.roundedPanel10.SuspendLayout();
             this.roundedPanel9.SuspendLayout();
+            this.pnl_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.pnl_1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnl_3
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
-            this.panel1.Controls.Add(this.btnDelAll_S);
-            this.panel1.Controls.Add(this.btnDelAll_E);
-            this.panel1.Controls.Add(this.rjButton9);
-            this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Controls.Add(this.gradientPanelRound6);
-            this.panel1.Controls.Add(this.gradientPanelRound5);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(289, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 862);
-            this.panel1.TabIndex = 0;
+            this.pnl_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
+            this.pnl_3.Controls.Add(this.btnDelAll_S);
+            this.pnl_3.Controls.Add(this.btnDelAll_E);
+            this.pnl_3.Controls.Add(this.rjButton9);
+            this.pnl_3.Controls.Add(this.btnRefresh);
+            this.pnl_3.Controls.Add(this.gradientPanelRound6);
+            this.pnl_3.Controls.Add(this.gradientPanelRound5);
+            this.pnl_3.Controls.Add(this.label15);
+            this.pnl_3.Controls.Add(this.pictureBox2);
+            this.pnl_3.Location = new System.Drawing.Point(289, 25);
+            this.pnl_3.Name = "pnl_3";
+            this.pnl_3.Size = new System.Drawing.Size(854, 862);
+            this.pnl_3.TabIndex = 0;
             // 
             // btnDelAll_S
             // 
@@ -292,7 +312,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -318,7 +338,7 @@ namespace SavexTracker
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label21.Location = new System.Drawing.Point(123, 9);
+            this.label21.Location = new System.Drawing.Point(146, 9);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(72, 24);
             this.label21.TabIndex = 11;
@@ -923,7 +943,7 @@ namespace SavexTracker
             this.rjButton7.FlatAppearance.BorderSize = 0;
             this.rjButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton7.ForeColor = System.Drawing.Color.White;
-            this.rjButton7.Location = new System.Drawing.Point(27, 427);
+            this.rjButton7.Location = new System.Drawing.Point(27, 426);
             this.rjButton7.Name = "rjButton7";
             this.rjButton7.Size = new System.Drawing.Size(50, 50);
             this.rjButton7.TabIndex = 10;
@@ -942,48 +962,12 @@ namespace SavexTracker
             this.rjButton8.FlatAppearance.BorderSize = 0;
             this.rjButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton8.ForeColor = System.Drawing.Color.White;
-            this.rjButton8.Location = new System.Drawing.Point(27, 486);
+            this.rjButton8.Location = new System.Drawing.Point(27, 485);
             this.rjButton8.Name = "rjButton8";
             this.rjButton8.Size = new System.Drawing.Size(50, 50);
             this.rjButton8.TabIndex = 11;
             this.rjButton8.TextColor = System.Drawing.Color.White;
             this.rjButton8.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(79, 382);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 24);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Dashboard";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.label8.Location = new System.Drawing.Point(79, 441);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 24);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Search";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(79, 500);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 24);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "My Record";
             // 
             // gradientPanelRound4
             // 
@@ -1101,6 +1085,264 @@ namespace SavexTracker
             this.roundedPanel8.Size = new System.Drawing.Size(100, 100);
             this.roundedPanel8.TabIndex = 7;
             // 
+            // btnNav_1
+            // 
+            this.btnNav_1.BackColor = System.Drawing.Color.White;
+            this.btnNav_1.BackgroundColor = System.Drawing.Color.White;
+            this.btnNav_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNav_1.BorderColor = System.Drawing.Color.White;
+            this.btnNav_1.BorderRadius = 12;
+            this.btnNav_1.BorderSize = 0;
+            this.btnNav_1.FlatAppearance.BorderSize = 0;
+            this.btnNav_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNav_1.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNav_1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnNav_1.Location = new System.Drawing.Point(76, 376);
+            this.btnNav_1.Name = "btnNav_1";
+            this.btnNav_1.Padding = new System.Windows.Forms.Padding(0, 0, 70, 0);
+            this.btnNav_1.Size = new System.Drawing.Size(188, 34);
+            this.btnNav_1.TabIndex = 19;
+            this.btnNav_1.Text = "Dashboard";
+            this.btnNav_1.TextColor = System.Drawing.Color.RoyalBlue;
+            this.btnNav_1.UseVisualStyleBackColor = false;
+            this.btnNav_1.Click += new System.EventHandler(this.btnNav_1_Click_1);
+            // 
+            // btnNav_2
+            // 
+            this.btnNav_2.BackColor = System.Drawing.Color.White;
+            this.btnNav_2.BackgroundColor = System.Drawing.Color.White;
+            this.btnNav_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNav_2.BorderColor = System.Drawing.Color.White;
+            this.btnNav_2.BorderRadius = 12;
+            this.btnNav_2.BorderSize = 0;
+            this.btnNav_2.FlatAppearance.BorderSize = 0;
+            this.btnNav_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNav_2.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNav_2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnNav_2.Location = new System.Drawing.Point(76, 434);
+            this.btnNav_2.Name = "btnNav_2";
+            this.btnNav_2.Padding = new System.Windows.Forms.Padding(0, 0, 100, 0);
+            this.btnNav_2.Size = new System.Drawing.Size(188, 34);
+            this.btnNav_2.TabIndex = 20;
+            this.btnNav_2.Text = "Search";
+            this.btnNav_2.TextColor = System.Drawing.Color.RoyalBlue;
+            this.btnNav_2.UseVisualStyleBackColor = false;
+            this.btnNav_2.Click += new System.EventHandler(this.btnNav_2_Click_1);
+            // 
+            // btnNav_3
+            // 
+            this.btnNav_3.BackColor = System.Drawing.Color.White;
+            this.btnNav_3.BackgroundColor = System.Drawing.Color.White;
+            this.btnNav_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNav_3.BorderColor = System.Drawing.Color.White;
+            this.btnNav_3.BorderRadius = 12;
+            this.btnNav_3.BorderSize = 0;
+            this.btnNav_3.FlatAppearance.BorderSize = 0;
+            this.btnNav_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNav_3.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNav_3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnNav_3.Location = new System.Drawing.Point(76, 493);
+            this.btnNav_3.Name = "btnNav_3";
+            this.btnNav_3.Padding = new System.Windows.Forms.Padding(0, 0, 100, 0);
+            this.btnNav_3.Size = new System.Drawing.Size(188, 34);
+            this.btnNav_3.TabIndex = 21;
+            this.btnNav_3.Text = "Record";
+            this.btnNav_3.TextColor = System.Drawing.Color.RoyalBlue;
+            this.btnNav_3.UseVisualStyleBackColor = false;
+            this.btnNav_3.Click += new System.EventHandler(this.btnNav_3_Click);
+            // 
+            // pnl_2
+            // 
+            this.pnl_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
+            this.pnl_2.Controls.Add(this.monthCalendar1);
+            this.pnl_2.Controls.Add(this.label5);
+            this.pnl_2.Controls.Add(this.rjTextBox1);
+            this.pnl_2.Controls.Add(this.rjButton19);
+            this.pnl_2.Controls.Add(this.label25);
+            this.pnl_2.Controls.Add(this.pictureBox5);
+            this.pnl_2.Location = new System.Drawing.Point(289, 25);
+            this.pnl_2.Name = "pnl_2";
+            this.pnl_2.Padding = new System.Windows.Forms.Padding(0, 0, 70, 0);
+            this.pnl_2.Size = new System.Drawing.Size(854, 862);
+            this.pnl_2.TabIndex = 22;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(28, 250);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label5.Location = new System.Drawing.Point(27, 176);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 29);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Search by text";
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(146, 209);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "";
+            this.rjTextBox1.Size = new System.Drawing.Size(682, 31);
+            this.rjTextBox1.TabIndex = 17;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            this.rjTextBox1._TextChanged += new System.EventHandler(this.rjTextBox1__TextChanged);
+            // 
+            // rjButton19
+            // 
+            this.rjButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.rjButton19.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.rjButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton19.BorderColor = System.Drawing.Color.White;
+            this.rjButton19.BorderRadius = 33;
+            this.rjButton19.BorderSize = 0;
+            this.rjButton19.FlatAppearance.BorderSize = 0;
+            this.rjButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton19.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton19.ForeColor = System.Drawing.Color.White;
+            this.rjButton19.Location = new System.Drawing.Point(695, 28);
+            this.rjButton19.Name = "rjButton19";
+            this.rjButton19.Size = new System.Drawing.Size(133, 65);
+            this.rjButton19.TabIndex = 16;
+            this.rjButton19.Text = "Refresh";
+            this.rjButton19.TextColor = System.Drawing.Color.White;
+            this.rjButton19.UseVisualStyleBackColor = false;
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.label25.Location = new System.Drawing.Point(113, 51);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(232, 54);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "Search";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(28, 28);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(28, 28);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.label9.Location = new System.Drawing.Point(113, 51);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(232, 54);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Dashboard";
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.roundedPanel2.BorderRadius = 60;
+            this.roundedPanel2.Location = new System.Drawing.Point(28, 209);
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.Size = new System.Drawing.Size(347, 123);
+            this.roundedPanel2.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(595, 81);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 24);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Amount";
+            // 
+            // pnl_1
+            // 
+            this.pnl_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.pnl_1.Controls.Add(this.roundedPanel12);
+            this.pnl_1.Controls.Add(this.roundedPanel6);
+            this.pnl_1.Controls.Add(this.roundedPanel3);
+            this.pnl_1.Controls.Add(this.roundedPanel5);
+            this.pnl_1.Controls.Add(this.label8);
+            this.pnl_1.Controls.Add(this.roundedPanel2);
+            this.pnl_1.Controls.Add(this.label9);
+            this.pnl_1.Controls.Add(this.pictureBox6);
+            this.pnl_1.Location = new System.Drawing.Point(289, 25);
+            this.pnl_1.Name = "pnl_1";
+            this.pnl_1.Padding = new System.Windows.Forms.Padding(0, 0, 70, 0);
+            this.pnl_1.Size = new System.Drawing.Size(854, 862);
+            this.pnl_1.TabIndex = 23;
+            // 
+            // roundedPanel12
+            // 
+            this.roundedPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.roundedPanel12.BorderRadius = 60;
+            this.roundedPanel12.Location = new System.Drawing.Point(399, 493);
+            this.roundedPanel12.Name = "roundedPanel12";
+            this.roundedPanel12.Size = new System.Drawing.Size(429, 340);
+            this.roundedPanel12.TabIndex = 18;
+            // 
+            // roundedPanel6
+            // 
+            this.roundedPanel6.BackColor = System.Drawing.Color.White;
+            this.roundedPanel6.BorderRadius = 60;
+            this.roundedPanel6.Location = new System.Drawing.Point(28, 493);
+            this.roundedPanel6.Name = "roundedPanel6";
+            this.roundedPanel6.Size = new System.Drawing.Size(347, 340);
+            this.roundedPanel6.TabIndex = 16;
+            // 
+            // roundedPanel3
+            // 
+            this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.roundedPanel3.BorderRadius = 60;
+            this.roundedPanel3.Location = new System.Drawing.Point(28, 351);
+            this.roundedPanel3.Name = "roundedPanel3";
+            this.roundedPanel3.Size = new System.Drawing.Size(347, 123);
+            this.roundedPanel3.TabIndex = 16;
+            // 
+            // roundedPanel5
+            // 
+            this.roundedPanel5.BackColor = System.Drawing.Color.White;
+            this.roundedPanel5.BorderRadius = 60;
+            this.roundedPanel5.Location = new System.Drawing.Point(392, 209);
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.Size = new System.Drawing.Size(436, 265);
+            this.roundedPanel5.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1108,12 +1350,12 @@ namespace SavexTracker
             this.BackColor = System.Drawing.Color.White;
             this.BorderColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1520, 911);
+            this.Controls.Add(this.btnNav_3);
+            this.Controls.Add(this.btnNav_2);
+            this.Controls.Add(this.btnNav_1);
             this.Controls.Add(this.roundedPanel8);
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.gradientPanelRound4);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.rjButton8);
             this.Controls.Add(this.rjButton7);
             this.Controls.Add(this.rjButton5);
@@ -1126,13 +1368,15 @@ namespace SavexTracker
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjCircularPictureBox1);
             this.Controls.Add(this.roundedPanel7);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_1);
+            this.Controls.Add(this.pnl_2);
+            this.Controls.Add(this.pnl_3);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
-            this.panel1.ResumeLayout(false);
+            this.pnl_3.ResumeLayout(false);
             this.gradientPanelRound6.ResumeLayout(false);
             this.gradientPanelRound6.PerformLayout();
             this.roundedPanel4.ResumeLayout(false);
@@ -1163,6 +1407,12 @@ namespace SavexTracker
             this.roundedPanel11.ResumeLayout(false);
             this.roundedPanel10.ResumeLayout(false);
             this.roundedPanel9.ResumeLayout(false);
+            this.pnl_2.ResumeLayout(false);
+            this.pnl_2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.pnl_1.ResumeLayout(false);
+            this.pnl_1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1170,7 +1420,7 @@ namespace SavexTracker
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_3;
         private RoundedPanel roundedPanel7;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private RJCodeAdvance.RJControls.RJButton rjButton1;
@@ -1192,9 +1442,6 @@ namespace SavexTracker
         private RJCodeAdvance.RJControls.RJButton rjButton10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private GradientPanelRound gradientPanelRound4;
         private RoundedPanel roundedPanel1;
         private RoundedPanel roundedPanel8;
@@ -1237,6 +1484,25 @@ namespace SavexTracker
         private RJCodeAdvance.RJControls.RJButton rjButton14;
         private RJCodeAdvance.RJControls.RJButton btnDelAll_S;
         private RJCodeAdvance.RJControls.RJButton btnDelAll_E;
+        private RJCodeAdvance.RJControls.RJButton btnNav_1;
+        private RJCodeAdvance.RJControls.RJButton btnNav_2;
+        private RJCodeAdvance.RJControls.RJButton btnNav_3;
+        private System.Windows.Forms.Panel pnl_2;
+        private RJCodeAdvance.RJControls.RJButton rjButton19;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label9;
+        private RoundedPanel roundedPanel2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel pnl_1;
+        private RoundedPanel roundedPanel5;
+        private RoundedPanel roundedPanel12;
+        private RoundedPanel roundedPanel6;
+        private RoundedPanel roundedPanel3;
     }
 }
 

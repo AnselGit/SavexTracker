@@ -152,6 +152,42 @@ namespace SavexTracker.forms
             btnDelete.Enabled = true;
         }
 
+        private int flickerCount = 0;
+        private Timer flickerTimer;
+        private Color originalColor;
+
+        private void FlickerDeleteAllBackground()
+        {
+            originalColor = this.BackColor; // Save original
+            flickerCount = 0;
+
+            flickerTimer = new Timer();
+            flickerTimer.Interval = 100; // 0.5 seconds
+            flickerTimer.Tick += FlickerTimer_Tick;
+            flickerTimer.Start();
+        }
+
+        private void FlickerTimer_Tick(object sender, EventArgs e)
+        {
+            if (flickerCount % 2 == 0)
+            {
+                this.BackColor = Color.FromArgb(255, 128, 128); // flicker color
+            }
+            else
+            {
+                this.BackColor = originalColor; // back to normal
+            }
+
+            flickerCount++;
+
+            if (flickerCount >= 6) // two full cycles: (on-off) x2
+            {
+                flickerTimer.Stop();
+                flickerTimer.Dispose();
+                this.BackColor = originalColor; // ensure it's reset
+            }
+        }
+
         private void btnRestore_Click(object sender, EventArgs e)
         {
             pnlRestoreCon.Visible = true;
@@ -162,6 +198,7 @@ namespace SavexTracker.forms
         {
             pnlDeleteCon.Visible = true;
             pnlDeleteCon.BringToFront();            
+            FlickerDeleteAllBackground();
         }
 
         private void rjButton2_Click(object sender, EventArgs e)

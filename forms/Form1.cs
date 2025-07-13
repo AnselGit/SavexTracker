@@ -573,8 +573,28 @@ CREATE TABLE IF NOT EXISTS history (
             btnDelAll_E.Visible = !btnDelAll_E.Visible;
         }
 
+        private bool IsTableEmpty(string tableName)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = $"SELECT COUNT(*) FROM {tableName}";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    long count = (long)cmd.ExecuteScalar();
+                    return count == 0;
+                }
+            }
+        }
+
         private void btnDelAll_S_Click(object sender, EventArgs e)
         {
+            if (IsTableEmpty("savings"))
+            {
+                btnDelAll_S.Visible = false;
+                return;
+            }
+
             GlobalData.CurrentType = "Savings";
             DeleteAll deleteForm = new DeleteAll();
             deleteForm.Show();
@@ -583,11 +603,78 @@ CREATE TABLE IF NOT EXISTS history (
 
         private void btnDelAll_E_Click(object sender, EventArgs e)
         {
+            if (IsTableEmpty("expenses"))
+            {
+                btnDelAll_E.Visible = false;
+                return;
+            }
+
             GlobalData.CurrentType = "Expenses";
             DeleteAll deleteForm = new DeleteAll();
             deleteForm.Show();
             btnDelAll_E.Visible = false;
-        } 
+        }
+
+        private void btnNav_1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnNav_2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnNav_3_Click(object sender, EventArgs e)
+        {
+            HighlightNavButton(btnNav_3);
+            pnl_3.Visible = true;
+            pnl_3.BringToFront();
+
+            pnl_1.Visible = false;
+            pnl_2.Visible = true;
+        }
+
+        private void HighlightNavButton(Button selectedButton)
+        {
+            // Reset all nav buttons to white
+            btnNav_1.BackColor = Color.White;
+            btnNav_2.BackColor = Color.White;
+            btnNav_3.BackColor = Color.White;
+
+            // Set the selected one to highlight color
+            selectedButton.BackColor = Color.FromArgb(240, 245, 255);
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjTextBox1__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNav_2_Click_1(object sender, EventArgs e)
+        {
+            HighlightNavButton(btnNav_2);
+            pnl_2.Visible = true;
+            pnl_2.BringToFront();
+
+            pnl_1.Visible = false;
+            pnl_3.Visible = true;
+        }
+
+        private void btnNav_1_Click_1(object sender, EventArgs e)
+        {
+            HighlightNavButton(btnNav_1);
+            pnl_1.Visible = true;
+            pnl_1.BringToFront();
+
+            pnl_2.Visible = false;
+            pnl_3.Visible = true;
+        }
     }
 
     public class VerticalFlowPanel : FlowLayoutPanel
