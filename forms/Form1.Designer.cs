@@ -110,7 +110,7 @@ namespace SavexTracker
             this.roundedPanel2 = new RoundedPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.pnl_1 = new System.Windows.Forms.Panel();
-            this.roundedPanel12 = new RoundedPanel();
+            this.pnlPie = new RoundedPanel();
             this.roundedPanel6 = new RoundedPanel();
             this.roundedPanel3 = new RoundedPanel();
             this.roundedPanel5 = new RoundedPanel();
@@ -312,7 +312,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 218F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -1293,7 +1293,7 @@ namespace SavexTracker
             // pnl_1
             // 
             this.pnl_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.pnl_1.Controls.Add(this.roundedPanel12);
+            this.pnl_1.Controls.Add(this.pnlPie);
             this.pnl_1.Controls.Add(this.roundedPanel6);
             this.pnl_1.Controls.Add(this.roundedPanel3);
             this.pnl_1.Controls.Add(this.roundedPanel5);
@@ -1307,14 +1307,14 @@ namespace SavexTracker
             this.pnl_1.Size = new System.Drawing.Size(854, 862);
             this.pnl_1.TabIndex = 23;
             // 
-            // roundedPanel12
+            // pnlPie
             // 
-            this.roundedPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.roundedPanel12.BorderRadius = 60;
-            this.roundedPanel12.Location = new System.Drawing.Point(399, 493);
-            this.roundedPanel12.Name = "roundedPanel12";
-            this.roundedPanel12.Size = new System.Drawing.Size(429, 340);
-            this.roundedPanel12.TabIndex = 18;
+            this.pnlPie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlPie.BorderRadius = 60;
+            this.pnlPie.Location = new System.Drawing.Point(399, 493);
+            this.pnlPie.Name = "pnlPie";
+            this.pnlPie.Size = new System.Drawing.Size(429, 340);
+            this.pnlPie.TabIndex = 18;
             // 
             // roundedPanel6
             // 
@@ -1500,7 +1500,7 @@ namespace SavexTracker
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel pnl_1;
         private RoundedPanel roundedPanel5;
-        private RoundedPanel roundedPanel12;
+        private RoundedPanel pnlPie;
         private RoundedPanel roundedPanel6;
         private RoundedPanel roundedPanel3;
     }

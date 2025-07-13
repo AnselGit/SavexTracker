@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SavexTracker
 {
     public partial class Form1 : SolidRoundedForm
@@ -32,6 +33,7 @@ namespace SavexTracker
         private void Form1_Load_1(object sender, EventArgs e)
         {
             UpdateTotalLabels();
+            DonutChartBuilder.Build(pnlPie);
             EnsureDatabaseAndTable();
 
             if (openingForm != null)
@@ -125,6 +127,8 @@ CREATE TABLE IF NOT EXISTS history (
                     cmd.ExecuteNonQuery();
             }
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
