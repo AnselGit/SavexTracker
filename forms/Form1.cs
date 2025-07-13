@@ -587,7 +587,7 @@ CREATE TABLE IF NOT EXISTS history (
             DeleteAll deleteForm = new DeleteAll();
             deleteForm.Show();
             btnDelAll_E.Visible = false;
-        }
+        } 
     }
 
     public class VerticalFlowPanel : FlowLayoutPanel
