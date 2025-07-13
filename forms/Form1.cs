@@ -32,8 +32,10 @@ namespace SavexTracker
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            UpdateTotalLabels();
+            ChartBuilder.BuildLineGraph(pnlLine);
             DonutChartBuilder.Build(pnlPie);
+
+            UpdateTotalLabels();            
             EnsureDatabaseAndTable();
 
             if (openingForm != null)
@@ -46,7 +48,7 @@ namespace SavexTracker
         {
             btnRefresh.Text = "Refreshing";
             btnRefresh.Enabled = false;
-            
+
             UpdateTotalLabels();
             LoadSavingsToPanel();
             LoadExpensesToPanel();
