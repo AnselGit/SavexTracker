@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfig.cs" />
+    <Compile Include="BarGraph.cs" />
     <Compile Include="custom classes\GradientPanelRound.cs">
       <SubType>Component</SubType>
     </Compile>

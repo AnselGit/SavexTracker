@@ -34,6 +34,8 @@ namespace SavexTracker
         {
             ChartBuilder.BuildLineGraph(pnlLine);
             DonutChartBuilder.Build(pnlPie);
+            BarGraphBuilder.BuildBarGraph(pnlBar);
+
 
             UpdateTotalLabels();            
             EnsureDatabaseAndTable();
