@@ -16,7 +16,9 @@ namespace SavexTracker
         {
             InitializeComponent();
             EnsureDatabaseAndTable();
+            UpdateGoalLabel();
             UpdateTotalLabels();
+            LoadGoal();
             LoadExpensesToPanel();
             LoadSavingsToPanel();
             LoadHistory();
@@ -33,8 +35,8 @@ namespace SavexTracker
         private void Form1_Load_1(object sender, EventArgs e)
         {
             ChartBuilder.BuildLineGraph(pnlLine);
-            DonutChartBuilder.Build(pnlPie);
-            BarGraphBuilder.BuildBarGraph(pnlBar);
+            DonutChartBuilder.Build(pnlPie2);
+            DonutChartGoalVsTotalBuilder.Build(pnlPie3);
 
 
             UpdateTotalLabels();            
@@ -52,6 +54,8 @@ namespace SavexTracker
             btnRefresh.Enabled = false;
 
             UpdateTotalLabels();
+            UpdateGoalLabel();
+            LoadGoal();
             LoadSavingsToPanel();
             LoadExpensesToPanel();
             LoadHistory();
@@ -115,11 +119,15 @@ CREATE TABLE IF NOT EXISTS history (
     timestamp TEXT NOT NULL
 );";
 
-                using (SQLiteCommand cmd = new SQLiteCommand(createHistoryTable, conn))
-                {
-                    cmd.ExecuteNonQuery();
-                }
+                // 5. Goal Table
+                string createGoalTable = @"
+CREATE TABLE IF NOT EXISTS goal (
+    gid INTEGER PRIMARY KEY AUTOINCREMENT,
+    amount REAL NOT NULL
+);";
 
+                using (SQLiteCommand cmd = new SQLiteCommand(createHistoryTable, conn))               
+                    cmd.ExecuteNonQuery();                
 
                 using (SQLiteCommand cmd = new SQLiteCommand(createSavingsTable, conn))
                     cmd.ExecuteNonQuery();
@@ -129,10 +137,67 @@ CREATE TABLE IF NOT EXISTS history (
 
                 using (SQLiteCommand cmd = new SQLiteCommand(createExpensesTable, conn))
                     cmd.ExecuteNonQuery();
+
+                using (SQLiteCommand cmd = new SQLiteCommand(createGoalTable, conn))
+                    cmd.ExecuteNonQuery();
+
             }
+        }
+        private void UpdateGoalLabel()
+        {
+            double totalSavings = 0;
+            double totalExpenses = 0;
+            double goalAmount = 0;
+
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+
+                using (var cmd = new SQLiteCommand("SELECT IFNULL(SUM(amount), 0) FROM savings", conn))
+                    totalSavings = Convert.ToDouble(cmd.ExecuteScalar());
+
+                using (var cmd = new SQLiteCommand("SELECT IFNULL(SUM(amount), 0) FROM expenses", conn))
+                    totalExpenses = Convert.ToDouble(cmd.ExecuteScalar());
+
+                using (var cmd = new SQLiteCommand("SELECT IFNULL(amount, 0) FROM goal ORDER BY gid DESC LIMIT 1", conn))
+                    goalAmount = Convert.ToDouble(cmd.ExecuteScalar());
+            }
+
+            double grandTotal = totalSavings - totalExpenses;
+            if (grandTotal < 0) grandTotal = 0;
+
+            double percent = 0;
+            if (goalAmount > 0)
+            {
+                percent = (grandTotal / goalAmount) * 100;
+                if (percent > 100) percent = 100; // cap at 100%
+            }
+
+            lblGoal.Text = $"GOAL - {percent:0}%";
         }
 
 
+        private void LoadGoal()
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT amount FROM goal ORDER BY gid DESC LIMIT 1;";
+                using (var cmd = new SQLiteCommand(query, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        double amount = Convert.ToDouble(reader["amount"]);
+                        txtGoal.Text = $"₱{amount:N2}"; // ₱ and 2 decimal places
+                    }
+                    else
+                    {
+                        txtGoal.Text = "₱0.00";
+                    }
+                }
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -428,6 +493,8 @@ CREATE TABLE IF NOT EXISTS history (
 
             lblTotalSave.Text = totalSave.ToString("₱0.00");
             lblTotalSpent.Text = totalSpend.ToString("₱0.00");
+            lblDashSave.Text = totalSave.ToString("₱0.00");
+            lblDashSpend.Text = totalSpend.ToString("₱0.00");
             lblGrand.Text = grandTotal.ToString("₱0.00");
 
             lblTotalSave.ForeColor = Color.Gray;

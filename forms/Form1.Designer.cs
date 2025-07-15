@@ -86,6 +86,8 @@ namespace SavexTracker
             this.rjButton7 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton8 = new RJCodeAdvance.RJControls.RJButton();
             this.gradientPanelRound4 = new GradientPanelRound();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.roundedPanel11 = new RoundedPanel();
             this.lblTotalSpent = new System.Windows.Forms.Label();
@@ -108,12 +110,22 @@ namespace SavexTracker
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.roundedPanel2 = new RoundedPanel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lblGoal = new System.Windows.Forms.Label();
             this.pnl_1 = new System.Windows.Forms.Panel();
-            this.pnlPie = new RoundedPanel();
-            this.pnlBar = new RoundedPanel();
+            this.roundedPanel6 = new RoundedPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pnlPie2 = new RoundedPanel();
+            this.roundedPanel5 = new RoundedPanel();
+            this.btnSet = new RJCodeAdvance.RJControls.RJButton();
+            this.pnlPie3 = new RoundedPanel();
+            this.txtGoal = new System.Windows.Forms.TextBox();
             this.roundedPanel3 = new RoundedPanel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlLine = new RoundedPanel();
+            this.pnlPie = new RoundedPanel();
+            this.lblDashSave = new System.Windows.Forms.Label();
+            this.lblDashSpend = new System.Windows.Forms.Label();
             this.pnl_3.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -138,7 +150,13 @@ namespace SavexTracker
             this.pnl_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.pnl_1.SuspendLayout();
+            this.roundedPanel6.SuspendLayout();
+            this.roundedPanel5.SuspendLayout();
+            this.roundedPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_3
@@ -312,7 +330,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 218F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -704,7 +722,7 @@ namespace SavexTracker
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Noto Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label11.ForeColor = System.Drawing.Color.SlateGray;
             this.label11.Location = new System.Drawing.Point(134, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(136, 41);
@@ -977,6 +995,8 @@ namespace SavexTracker
             this.gradientPanelRound4.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.gradientPanelRound4.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.gradientPanelRound4.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gradientPanelRound4.Controls.Add(this.label22);
+            this.gradientPanelRound4.Controls.Add(this.label14);
             this.gradientPanelRound4.Controls.Add(this.label10);
             this.gradientPanelRound4.Controls.Add(this.roundedPanel11);
             this.gradientPanelRound4.Controls.Add(this.roundedPanel10);
@@ -986,6 +1006,30 @@ namespace SavexTracker
             this.gradientPanelRound4.Name = "gradientPanelRound4";
             this.gradientPanelRound4.Size = new System.Drawing.Size(326, 253);
             this.gradientPanelRound4.TabIndex = 7;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Silver;
+            this.label22.Location = new System.Drawing.Point(210, 195);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(74, 24);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "Expenses";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Silver;
+            this.label14.Location = new System.Drawing.Point(210, 150);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 24);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Savings";
             // 
             // label10
             // 
@@ -1272,32 +1316,43 @@ namespace SavexTracker
             // roundedPanel2
             // 
             this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
-            this.roundedPanel2.BorderRadius = 60;
-            this.roundedPanel2.Location = new System.Drawing.Point(28, 209);
+            this.roundedPanel2.BorderRadius = 30;
+            this.roundedPanel2.Controls.Add(this.lblDashSpend);
+            this.roundedPanel2.Controls.Add(this.pictureBox7);
+            this.roundedPanel2.Location = new System.Drawing.Point(31, 351);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.Size = new System.Drawing.Size(347, 123);
             this.roundedPanel2.TabIndex = 15;
             // 
-            // label8
+            // pictureBox7
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Noto Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(596, 81);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 24);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Amount";
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            // 
+            // lblGoal
+            // 
+            this.lblGoal.AutoSize = true;
+            this.lblGoal.BackColor = System.Drawing.Color.Transparent;
+            this.lblGoal.Font = new System.Drawing.Font("MODERNIZ", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGoal.ForeColor = System.Drawing.Color.SlateBlue;
+            this.lblGoal.Location = new System.Drawing.Point(31, 35);
+            this.lblGoal.Name = "lblGoal";
+            this.lblGoal.Size = new System.Drawing.Size(260, 50);
+            this.lblGoal.TabIndex = 12;
+            this.lblGoal.Text = "GOAL - %";
             // 
             // pnl_1
             // 
             this.pnl_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.pnl_1.Controls.Add(this.pnlPie);
-            this.pnl_1.Controls.Add(this.pnlBar);
+            this.pnl_1.Controls.Add(this.roundedPanel6);
+            this.pnl_1.Controls.Add(this.roundedPanel5);
             this.pnl_1.Controls.Add(this.roundedPanel3);
             this.pnl_1.Controls.Add(this.pnlLine);
-            this.pnl_1.Controls.Add(this.label8);
             this.pnl_1.Controls.Add(this.roundedPanel2);
             this.pnl_1.Controls.Add(this.label9);
             this.pnl_1.Controls.Add(this.pictureBox6);
@@ -1307,32 +1362,111 @@ namespace SavexTracker
             this.pnl_1.Size = new System.Drawing.Size(854, 862);
             this.pnl_1.TabIndex = 23;
             // 
-            // pnlPie
+            // roundedPanel6
             // 
-            this.pnlPie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnlPie.BorderRadius = 60;
-            this.pnlPie.Location = new System.Drawing.Point(399, 493);
-            this.pnlPie.Name = "pnlPie";
-            this.pnlPie.Size = new System.Drawing.Size(429, 340);
-            this.pnlPie.TabIndex = 18;
+            this.roundedPanel6.BackColor = System.Drawing.Color.White;
+            this.roundedPanel6.BorderRadius = 60;
+            this.roundedPanel6.Controls.Add(this.label8);
+            this.roundedPanel6.Controls.Add(this.pnlPie2);
+            this.roundedPanel6.Location = new System.Drawing.Point(28, 490);
+            this.roundedPanel6.Name = "roundedPanel6";
+            this.roundedPanel6.Size = new System.Drawing.Size(347, 343);
+            this.roundedPanel6.TabIndex = 17;
             // 
-            // pnlBar
+            // label8
             // 
-            this.pnlBar.BackColor = System.Drawing.Color.White;
-            this.pnlBar.BorderRadius = 60;
-            this.pnlBar.Location = new System.Drawing.Point(28, 493);
-            this.pnlBar.Name = "pnlBar";
-            this.pnlBar.Size = new System.Drawing.Size(347, 340);
-            this.pnlBar.TabIndex = 16;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Gray;
+            this.label8.Location = new System.Drawing.Point(76, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(197, 29);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Savings vs Expenses";
+            // 
+            // pnlPie2
+            // 
+            this.pnlPie2.BackColor = System.Drawing.Color.MistyRose;
+            this.pnlPie2.BorderRadius = 60;
+            this.pnlPie2.Location = new System.Drawing.Point(7, 53);
+            this.pnlPie2.Name = "pnlPie2";
+            this.pnlPie2.Size = new System.Drawing.Size(327, 236);
+            this.pnlPie2.TabIndex = 16;
+            // 
+            // roundedPanel5
+            // 
+            this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
+            this.roundedPanel5.BorderRadius = 60;
+            this.roundedPanel5.Controls.Add(this.btnSet);
+            this.roundedPanel5.Controls.Add(this.pnlPie3);
+            this.roundedPanel5.Controls.Add(this.txtGoal);
+            this.roundedPanel5.Controls.Add(this.lblGoal);
+            this.roundedPanel5.Location = new System.Drawing.Point(392, 490);
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.Size = new System.Drawing.Size(436, 343);
+            this.roundedPanel5.TabIndex = 18;
+            // 
+            // btnSet
+            // 
+            this.btnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSet.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSet.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSet.BorderRadius = 18;
+            this.btnSet.BorderSize = 0;
+            this.btnSet.FlatAppearance.BorderSize = 0;
+            this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSet.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSet.ForeColor = System.Drawing.Color.White;
+            this.btnSet.Location = new System.Drawing.Point(25, 209);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(176, 62);
+            this.btnSet.TabIndex = 18;
+            this.btnSet.Text = "Set a Goal";
+            this.btnSet.TextColor = System.Drawing.Color.White;
+            this.btnSet.UseVisualStyleBackColor = false;
+            // 
+            // pnlPie3
+            // 
+            this.pnlPie3.BackColor = System.Drawing.Color.MistyRose;
+            this.pnlPie3.BorderRadius = 60;
+            this.pnlPie3.Location = new System.Drawing.Point(207, 93);
+            this.pnlPie3.Name = "pnlPie3";
+            this.pnlPie3.Size = new System.Drawing.Size(220, 201);
+            this.pnlPie3.TabIndex = 17;
+            // 
+            // txtGoal
+            // 
+            this.txtGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
+            this.txtGoal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGoal.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGoal.ForeColor = System.Drawing.Color.SlateBlue;
+            this.txtGoal.Location = new System.Drawing.Point(25, 144);
+            this.txtGoal.Name = "txtGoal";
+            this.txtGoal.Size = new System.Drawing.Size(176, 51);
+            this.txtGoal.TabIndex = 13;
+            this.txtGoal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // roundedPanel3
             // 
             this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.roundedPanel3.BorderRadius = 60;
-            this.roundedPanel3.Location = new System.Drawing.Point(28, 351);
+            this.roundedPanel3.BorderRadius = 30;
+            this.roundedPanel3.Controls.Add(this.lblDashSave);
+            this.roundedPanel3.Controls.Add(this.pictureBox8);
+            this.roundedPanel3.Location = new System.Drawing.Point(28, 209);
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(347, 123);
             this.roundedPanel3.TabIndex = 16;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 20;
+            this.pictureBox8.TabStop = false;
             // 
             // pnlLine
             // 
@@ -1342,6 +1476,37 @@ namespace SavexTracker
             this.pnlLine.Name = "pnlLine";
             this.pnlLine.Size = new System.Drawing.Size(436, 265);
             this.pnlLine.TabIndex = 17;
+            // 
+            // pnlPie
+            // 
+            this.pnlPie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlPie.BorderRadius = 60;
+            this.pnlPie.Location = new System.Drawing.Point(312, 66);
+            this.pnlPie.Name = "pnlPie";
+            this.pnlPie.Size = new System.Drawing.Size(429, 340);
+            this.pnlPie.TabIndex = 18;
+            // 
+            // lblDashSave
+            // 
+            this.lblDashSave.BackColor = System.Drawing.Color.Transparent;
+            this.lblDashSave.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblDashSave.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblDashSave.Location = new System.Drawing.Point(88, 17);
+            this.lblDashSave.Name = "lblDashSave";
+            this.lblDashSave.Size = new System.Drawing.Size(246, 65);
+            this.lblDashSave.TabIndex = 19;
+            this.lblDashSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDashSpend
+            // 
+            this.lblDashSpend.BackColor = System.Drawing.Color.Transparent;
+            this.lblDashSpend.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblDashSpend.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblDashSpend.Location = new System.Drawing.Point(85, 9);
+            this.lblDashSpend.Name = "lblDashSpend";
+            this.lblDashSpend.Size = new System.Drawing.Size(246, 70);
+            this.lblDashSpend.TabIndex = 20;
+            this.lblDashSpend.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -1411,8 +1576,15 @@ namespace SavexTracker
             this.pnl_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.roundedPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.pnl_1.ResumeLayout(false);
-            this.pnl_1.PerformLayout();
+            this.roundedPanel6.ResumeLayout(false);
+            this.roundedPanel6.PerformLayout();
+            this.roundedPanel5.ResumeLayout(false);
+            this.roundedPanel5.PerformLayout();
+            this.roundedPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1497,12 +1669,24 @@ namespace SavexTracker
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
         private RoundedPanel roundedPanel2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblGoal;
         private System.Windows.Forms.Panel pnl_1;
         private RoundedPanel pnlLine;
         private RoundedPanel pnlPie;
-        private RoundedPanel pnlBar;
+        private RoundedPanel pnlPie2;
         private RoundedPanel roundedPanel3;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label14;
+        private RoundedPanel roundedPanel5;
+        private RoundedPanel roundedPanel6;
+        private RoundedPanel pnlPie3;
+        private System.Windows.Forms.TextBox txtGoal;
+        private RJCodeAdvance.RJControls.RJButton btnSet;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label lblDashSpend;
+        private System.Windows.Forms.Label lblDashSave;
     }
 }
 
