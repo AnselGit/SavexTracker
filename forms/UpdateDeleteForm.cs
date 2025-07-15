@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SavexTracker.Database;
+using SavexTracker.Models;
 
 namespace SavexTracker.forms
 {
@@ -91,10 +93,8 @@ namespace SavexTracker.forms
         private void btnCon1_Click(object sender, EventArgs e)
         {
             string newDate = lblDate.Text.Trim();
-            string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
-            string connStr = $"Data Source={dbPath};Version=3;";
 
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
 
@@ -119,6 +119,8 @@ WHERE sid = @sid";
                         if (affected > 0)
                         {
                             History.LogHistory("Updated savings", newSavingsAmount, conn); // ✅ log it
+                            // Update global variable
+                            GlobalData.AllSavings = CRUD.GetAllSavings();
                             ShowSuccessPanel();
                             return;
                         }
@@ -153,6 +155,8 @@ WHERE eid = @eid";
                     if (affected > 0)
                     {
                         History.LogHistory("Updated expense", newExpenseAmount, conn); // ✅ log it
+                        // Update global variable
+                        GlobalData.AllExpenses = CRUD.GetAllExpenses();
                         ShowSuccessPanel();
                     }
                     else

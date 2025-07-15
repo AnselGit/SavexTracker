@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SavexTracker.Database;
+using SavexTracker.Models;
 
 namespace SavexTracker.forms
 {
@@ -168,6 +170,11 @@ namespace SavexTracker.forms
                     MessageBox.Show("Unknown type.");
                 }
             }
+            // Update global variables
+            GlobalData.AllSavings = CRUD.GetAllSavings();
+            GlobalData.AllExpenses = CRUD.GetAllExpenses();
+            GlobalData.AllArchive = CRUD.GetAllArchive();
+
             RefreshRecord();
             pnlDeleted.Visible = true;
             pnlDeleted.BringToFront();

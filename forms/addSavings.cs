@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SavexTracker.Database;
+using SavexTracker.Models;
 
 namespace SavexTracker.forms
 {
@@ -67,11 +69,6 @@ namespace SavexTracker.forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            string folder = @"C:\Users\22-65\Desktop\School\SavexTracker\database";
-            Directory.CreateDirectory(folder);
-            string dbPath = Path.Combine(folder, "CRUD.db");
-            string connStr = $"Data Source={dbPath};Version=3;";
-
             string amountText = txt_SA.Texts.Trim();
             string dateText = lbl_date.Text.Trim();
 
@@ -90,35 +87,22 @@ namespace SavexTracker.forms
                 return;
             }
 
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            // Add saving using CRUD
+            using (var conn = new System.Data.SQLite.SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
-
-                string createTableQuery = @"
-CREATE TABLE IF NOT EXISTS savings (
-    sid INTEGER PRIMARY KEY AUTOINCREMENT,
-    timestamp TEXT NOT NULL,
-    amount REAL NOT NULL
-);";
-                using (SQLiteCommand createCmd = new SQLiteCommand(createTableQuery, conn))
-                {
-                    createCmd.ExecuteNonQuery();
-                }
-
-                string insertQuery = @"
-INSERT INTO savings (timestamp, amount)
-VALUES (@timestamp, @amount);";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn))
+                string insertQuery = @"INSERT INTO savings (timestamp, amount) VALUES (@timestamp, @amount);";
+                using (var cmd = new System.Data.SQLite.SQLiteCommand(insertQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@timestamp", dateText);
                     cmd.Parameters.AddWithValue("@amount", amount);
                     cmd.ExecuteNonQuery();
                 }
                 History.LogHistory("Added savings", (double)amount, conn);
-                conn.Close();                
             }
-            
+
+            // Update global variable
+            GlobalData.AllSavings = CRUD.GetAllSavings();
 
             RefreshRecord();
             pnlAdded.Visible = true;

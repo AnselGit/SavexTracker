@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SavexTracker.Database;
+using SavexTracker.Models;
 
 namespace SavexTracker.forms
 {
@@ -59,14 +61,9 @@ namespace SavexTracker.forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            string folder = @"C:\Users\22-65\Desktop\School\SavexTracker\database";
-            Directory.CreateDirectory(folder);
-            string dbPath = Path.Combine(folder, "CRUD.db");
-            string connStr = $"Data Source={dbPath};Version=3;";
-
-            string amountText = txt_SA.Texts.Trim();         // Get from txt_SA
-            string dateText = lbl_date.Text.Trim();          // Get from lbl_date
-            string noteText = txtNote.Texts.Trim();          // Get from txtNote (RJTextBox for note)
+            string amountText = txt_SA.Texts.Trim();
+            string dateText = lbl_date.Text.Trim();
+            string noteText = txtNote.Texts.Trim();
 
             if (string.IsNullOrEmpty(amountText) || string.IsNullOrEmpty(dateText))
             {
@@ -83,30 +80,12 @@ namespace SavexTracker.forms
                 return;
             }
 
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            // Add expense using CRUD
+            using (var conn = new System.Data.SQLite.SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
-
-                // Create expenses table if not exists
-                string createExpensesQuery = @"
-        CREATE TABLE IF NOT EXISTS expenses (
-            eid INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp TEXT NOT NULL,
-            amount REAL NOT NULL,
-            note TEXT
-        );";
-
-                using (SQLiteCommand createCmd = new SQLiteCommand(createExpensesQuery, conn))
-                {
-                    createCmd.ExecuteNonQuery();
-                }
-
-                // Insert expense record
-                string insertQuery = @"
-        INSERT INTO expenses (timestamp, amount, note)
-        VALUES (@timestamp, @amount, @note);";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn))
+                string insertQuery = @"INSERT INTO expenses (timestamp, amount, note) VALUES (@timestamp, @amount, @note);";
+                using (var cmd = new System.Data.SQLite.SQLiteCommand(insertQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@timestamp", dateText);
                     cmd.Parameters.AddWithValue("@amount", amount);
@@ -115,8 +94,10 @@ namespace SavexTracker.forms
                     cmd.ExecuteNonQuery();
                 }
                 History.LogHistory("Added expense", (double)amount, conn);
-                conn.Close();
-            }            
+            }
+
+            // Update global variable
+            GlobalData.AllExpenses = CRUD.GetAllExpenses();
 
             RefreshRecord();
             pnlAdded.Visible = true;

@@ -3,6 +3,9 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Windows.Forms;
 using SavexTracker; // for AppConfig and GlobalData
+using SavexTracker.Models;
+using System.Collections.Generic;
+using SavexTracker.Database;
 
 namespace SavexTracker.forms
 {
@@ -37,51 +40,29 @@ namespace SavexTracker.forms
         {
             dgv_Archive.Rows.Clear();
 
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            var archiveList = GlobalData.AllArchive ?? new List<ArchiveItem>();
+            foreach (var item in archiveList)
             {
-                conn.Open();
+                string type = item.Name;
+                string date = type == "Savings"
+                    ? item.Timestamp1 ?? ""
+                    : item.Timestamp2 ?? "";
+                string amount = type == "Savings"
+                    ? (item.Amount1 ?? 0).ToString("\u20B10.00")
+                    : (item.Amount2 ?? 0).ToString("\u20B10.00");
+                string note = item.Note ?? "";
+                string id = item.Sid.HasValue ? item.Sid.ToString() : item.Eid.ToString();
 
-                string query = @"
-                    SELECT sid, eid, name, 
-                           timestamp1, amount1, 
-                           timestamp2, amount2, 
-                           note 
-                    FROM archive 
-                    ORDER BY ROWID DESC";
+                DataGridViewRow row = new DataGridViewRow();
+                row.CreateCells(dgv_Archive);
 
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                using (SQLiteDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        string type = reader["name"].ToString();
+                if (dgv_Archive.Columns.Contains("colId")) row.Cells[dgv_Archive.Columns["colId"].Index].Value = id;
+                if (dgv_Archive.Columns.Contains("colType")) row.Cells[dgv_Archive.Columns["colType"].Index].Value = type;
+                if (dgv_Archive.Columns.Contains("colDate")) row.Cells[dgv_Archive.Columns["colDate"].Index].Value = date;
+                if (dgv_Archive.Columns.Contains("colAmount")) row.Cells[dgv_Archive.Columns["colAmount"].Index].Value = amount;
+                if (dgv_Archive.Columns.Contains("colNote")) row.Cells[dgv_Archive.Columns["colNote"].Index].Value = note;
 
-                        string date = type == "Savings"
-                            ? reader["timestamp1"]?.ToString() ?? ""
-                            : reader["timestamp2"]?.ToString() ?? "";
-
-                        string amount = type == "Savings"
-                            ? Convert.ToDouble(reader["amount1"]).ToString("\u20B10.00")
-                            : Convert.ToDouble(reader["amount2"]).ToString("\u20B10.00");
-
-                        string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
-
-                        object sid = reader["sid"];
-                        object eid = reader["eid"];
-                        string id = (sid != DBNull.Value) ? sid.ToString() : eid.ToString();
-
-                        DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(dgv_Archive);
-
-                        if (dgv_Archive.Columns.Contains("colId")) row.Cells[dgv_Archive.Columns["colId"].Index].Value = id;
-                        if (dgv_Archive.Columns.Contains("colType")) row.Cells[dgv_Archive.Columns["colType"].Index].Value = type;
-                        if (dgv_Archive.Columns.Contains("colDate")) row.Cells[dgv_Archive.Columns["colDate"].Index].Value = date;
-                        if (dgv_Archive.Columns.Contains("colAmount")) row.Cells[dgv_Archive.Columns["colAmount"].Index].Value = amount;
-                        if (dgv_Archive.Columns.Contains("colNote")) row.Cells[dgv_Archive.Columns["colNote"].Index].Value = note;
-
-                        dgv_Archive.Rows.Add(row);
-                    }
-                }
+                dgv_Archive.Rows.Add(row);
             }
         }
 

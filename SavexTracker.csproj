@@ -167,11 +167,15 @@
     <Compile Include="forms\UpdateDeleteForm.Designer.cs">
       <DependentUpon>UpdateDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlobalData.cs" />
-    <Compile Include="HIstoryLog.cs" />
-    <Compile Include="LineGraph.cs" />
-    <Compile Include="PieChart.cs" />
-    <Compile Include="PieChart2.cs" />
+    <Compile Include="Models\Saving.cs" />
+    <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\ArchiveItem.cs" />
+    <Compile Include="Models\HistoryItem.cs" />
+    <Compile Include="Models\Goal.cs" />
+    <Compile Include="database\CRUD.cs" />
+    <Compile Include="Charts\LineGraph.cs" />
+    <Compile Include="Charts\PieChart.cs" />
+    <Compile Include="Charts\PieChart2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="custom classes\RoundedForm.cs">
@@ -180,6 +184,7 @@
     <Compile Include="custom classes\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="custom classes/VerticalFlowPanel.cs" />
     <EmbeddedResource Include="forms\addExpense.resx">
       <DependentUpon>addExpense.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +226,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="GlobalData.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="PieChart.cs" />
+    <Compile Include="PieChart2.cs" />
+    <!-- <Compile Include="LineGraph.cs" /> -->
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
