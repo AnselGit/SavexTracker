@@ -31,6 +31,11 @@ namespace SavexTracker
         private void InitializeComponent()
         {       
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_3 = new System.Windows.Forms.Panel();
             this.btnDelAll_S = new RJCodeAdvance.RJControls.RJButton();
             this.btnDelAll_E = new RJCodeAdvance.RJControls.RJButton();
@@ -101,7 +106,15 @@ namespace SavexTracker
             this.btnNav_2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnNav_3 = new RJCodeAdvance.RJControls.RJButton();
             this.pnl_2 = new System.Windows.Forms.Panel();
-            this.txtSeach = new RJCodeAdvance.RJControls.RJTextBox();
+            this.roundedPanel13 = new RoundedPanel();
+            this.roundedPanel14 = new RoundedPanel();
+            this.dgv_Search = new System.Windows.Forms.DataGridView();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roundedPanel12 = new RoundedPanel();
+            this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
             this.btnSearch = new RJCodeAdvance.RJControls.RJButton();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -126,9 +139,6 @@ namespace SavexTracker
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlLine = new RoundedPanel();
             this.pnlPie = new RoundedPanel();
-            this.roundedPanel12 = new RoundedPanel();
-            this.roundedPanel13 = new RoundedPanel();
-            this.roundedPanel14 = new RoundedPanel();
             this.pnl_3.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -151,6 +161,10 @@ namespace SavexTracker
             this.roundedPanel10.SuspendLayout();
             this.roundedPanel9.SuspendLayout();
             this.pnl_2.SuspendLayout();
+            this.roundedPanel13.SuspendLayout();
+            this.roundedPanel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Search)).BeginInit();
+            this.roundedPanel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.roundedPanel2.SuspendLayout();
@@ -160,8 +174,6 @@ namespace SavexTracker
             this.roundedPanel5.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.roundedPanel12.SuspendLayout();
-            this.roundedPanel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_3
@@ -335,7 +347,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -1212,27 +1224,156 @@ namespace SavexTracker
             this.pnl_2.Size = new System.Drawing.Size(854, 862);
             this.pnl_2.TabIndex = 22;
             // 
-            // txtSeach
+            // roundedPanel13
             // 
-            this.txtSeach.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSeach.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtSeach.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSeach.BorderRadius = 0;
-            this.txtSeach.BorderSize = 2;
-            this.txtSeach.Font = new System.Drawing.Font("Noto Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSeach.Location = new System.Drawing.Point(29, 15);
-            this.txtSeach.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeach.Multiline = false;
-            this.txtSeach.Name = "txtSeach";
-            this.txtSeach.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtSeach.PasswordChar = false;
-            this.txtSeach.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSeach.PlaceholderText = "";
-            this.txtSeach.Size = new System.Drawing.Size(631, 44);
-            this.txtSeach.TabIndex = 17;
-            this.txtSeach.Texts = "";
-            this.txtSeach.UnderlinedStyle = false;
+            this.roundedPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.roundedPanel13.BorderRadius = 75;
+            this.roundedPanel13.Controls.Add(this.roundedPanel14);
+            this.roundedPanel13.Location = new System.Drawing.Point(28, 288);
+            this.roundedPanel13.Name = "roundedPanel13";
+            this.roundedPanel13.Size = new System.Drawing.Size(800, 502);
+            this.roundedPanel13.TabIndex = 19;
+            // 
+            // roundedPanel14
+            // 
+            this.roundedPanel14.BackColor = System.Drawing.Color.White;
+            this.roundedPanel14.BorderRadius = 75;
+            this.roundedPanel14.Controls.Add(this.dgv_Search);
+            this.roundedPanel14.Location = new System.Drawing.Point(12, 51);
+            this.roundedPanel14.Name = "roundedPanel14";
+            this.roundedPanel14.Size = new System.Drawing.Size(776, 436);
+            this.roundedPanel14.TabIndex = 20;
+            // 
+            // dgv_Search
+            // 
+            this.dgv_Search.AllowUserToAddRows = false;
+            this.dgv_Search.AllowUserToOrderColumns = true;
+            this.dgv_Search.AllowUserToResizeColumns = false;
+            this.dgv_Search.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_Search.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Search.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_Search.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_Search.ColumnHeadersHeight = 28;
+            this.dgv_Search.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDate,
+            this.colType,
+            this.colAmount,
+            this.colNote});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_Search.GridColor = System.Drawing.Color.White;
+            this.dgv_Search.Location = new System.Drawing.Point(11, 12);
+            this.dgv_Search.Name = "dgv_Search";
+            this.dgv_Search.ReadOnly = true;
+            this.dgv_Search.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_Search.RowTemplate.Height = 30;
+            this.dgv_Search.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_Search.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Search.Size = new System.Drawing.Size(752, 405);
+            this.dgv_Search.TabIndex = 18;
+            // 
+            // colDate
+            // 
+            this.colDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colDate.HeaderText = "Date";
+            this.colDate.Name = "colDate";
+            this.colDate.ReadOnly = true;
+            this.colDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colType
+            // 
+            this.colType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colType.HeaderText = "Type";
+            this.colType.Name = "colType";
+            this.colType.ReadOnly = true;
+            this.colType.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAmount
+            // 
+            this.colAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colAmount.HeaderText = "Amount";
+            this.colAmount.Name = "colAmount";
+            this.colAmount.ReadOnly = true;
+            this.colAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colNote
+            // 
+            this.colNote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNote.HeaderText = "Note";
+            this.colNote.Name = "colNote";
+            this.colNote.ReadOnly = true;
+            this.colNote.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // roundedPanel12
+            // 
+            this.roundedPanel12.BackColor = System.Drawing.Color.White;
+            this.roundedPanel12.BorderRadius = 75;
+            this.roundedPanel12.Controls.Add(this.txtSearch);
+            this.roundedPanel12.Controls.Add(this.btnSearch);
+            this.roundedPanel12.Location = new System.Drawing.Point(28, 164);
+            this.roundedPanel12.Name = "roundedPanel12";
+            this.roundedPanel12.Size = new System.Drawing.Size(800, 74);
+            this.roundedPanel12.TabIndex = 18;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderRadius = 0;
+            this.txtSearch.BorderSize = 2;
+            this.txtSearch.Font = new System.Drawing.Font("Noto Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(29, 16);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceholderText = "Date, Amount, Note";
+            this.txtSearch.Size = new System.Drawing.Size(631, 44);
+            this.txtSearch.TabIndex = 17;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
             // 
             // btnSearch
             // 
@@ -1517,36 +1658,6 @@ namespace SavexTracker
             this.pnlPie.Size = new System.Drawing.Size(429, 340);
             this.pnlPie.TabIndex = 18;
             // 
-            // roundedPanel12
-            // 
-            this.roundedPanel12.BackColor = System.Drawing.Color.White;
-            this.roundedPanel12.BorderRadius = 75;
-            this.roundedPanel12.Controls.Add(this.txtSeach);
-            this.roundedPanel12.Controls.Add(this.btnSearch);
-            this.roundedPanel12.Location = new System.Drawing.Point(28, 164);
-            this.roundedPanel12.Name = "roundedPanel12";
-            this.roundedPanel12.Size = new System.Drawing.Size(800, 74);
-            this.roundedPanel12.TabIndex = 18;
-            // 
-            // roundedPanel13
-            // 
-            this.roundedPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.roundedPanel13.BorderRadius = 75;
-            this.roundedPanel13.Controls.Add(this.roundedPanel14);
-            this.roundedPanel13.Location = new System.Drawing.Point(28, 288);
-            this.roundedPanel13.Name = "roundedPanel13";
-            this.roundedPanel13.Size = new System.Drawing.Size(800, 502);
-            this.roundedPanel13.TabIndex = 19;
-            // 
-            // roundedPanel14
-            // 
-            this.roundedPanel14.BackColor = System.Drawing.Color.White;
-            this.roundedPanel14.BorderRadius = 75;
-            this.roundedPanel14.Location = new System.Drawing.Point(12, 51);
-            this.roundedPanel14.Name = "roundedPanel14";
-            this.roundedPanel14.Size = new System.Drawing.Size(776, 436);
-            this.roundedPanel14.TabIndex = 20;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1612,6 +1723,10 @@ namespace SavexTracker
             this.roundedPanel10.ResumeLayout(false);
             this.roundedPanel9.ResumeLayout(false);
             this.pnl_2.ResumeLayout(false);
+            this.roundedPanel13.ResumeLayout(false);
+            this.roundedPanel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Search)).EndInit();
+            this.roundedPanel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.roundedPanel2.ResumeLayout(false);
@@ -1625,8 +1740,6 @@ namespace SavexTracker
             this.roundedPanel3.ResumeLayout(false);
             this.roundedPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.roundedPanel12.ResumeLayout(false);
-            this.roundedPanel13.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1705,7 +1818,7 @@ namespace SavexTracker
         private RJCodeAdvance.RJControls.RJButton btnSearch;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private RJCodeAdvance.RJControls.RJTextBox txtSeach;
+        private RJCodeAdvance.RJControls.RJTextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
         private RoundedPanel roundedPanel2;
@@ -1732,6 +1845,11 @@ namespace SavexTracker
         private RoundedPanel roundedPanel12;
         private RoundedPanel roundedPanel13;
         private RoundedPanel roundedPanel14;
+        private System.Windows.Forms.DataGridView dgv_Search;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNote;
     }
 }
 

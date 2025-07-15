@@ -169,6 +169,7 @@
     <Compile Include="Models\ArchiveItem.cs" />
     <Compile Include="Models\HistoryItem.cs" />
     <Compile Include="Models\Goal.cs" />
+    <Compile Include="Models\SearchResultItem.cs" />
     <Compile Include="database\CRUD.cs" />
     <Compile Include="Charts\LineGraph.cs" />
     <Compile Include="Charts\PieChart.cs" />

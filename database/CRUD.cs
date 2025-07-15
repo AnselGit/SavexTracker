@@ -514,6 +514,88 @@ namespace SavexTracker.Database
             }
         }
 
+        /// <summary>
+        /// Searches both savings and expenses tables for entries matching the search term in date (month name), amount, or note.
+        /// Returns a list of SearchResultItem (Date, Type, Amount, Note).
+        /// </summary>
+        public static List<SearchResultItem> SearchSavingsAndExpenses(string searchTerm)
+        {
+            var results = new List<SearchResultItem>();
+            string lowerTerm = searchTerm?.ToLower() ?? string.Empty;
+
+            // Search Savings
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT sid, timestamp, amount FROM savings ORDER BY sid DESC";
+                using (var cmd = new SQLiteCommand(query, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string timestamp = reader["timestamp"].ToString();
+                        double amount = Convert.ToDouble(reader["amount"]);
+                        string monthName = "";
+                        try { monthName = DateTime.Parse(timestamp).ToString("MMMM"); } catch { }
+                        if (
+                            (!string.IsNullOrEmpty(lowerTerm) &&
+                                (timestamp.ToLower().Contains(lowerTerm) ||
+                                 monthName.ToLower().Contains(lowerTerm) ||
+                                 amount.ToString("N2").Contains(lowerTerm)))
+                            || string.IsNullOrEmpty(lowerTerm)
+                        )
+                        {
+                            results.Add(new SearchResultItem
+                            {
+                                Date = timestamp,
+                                Type = "Savings",
+                                Amount = amount,
+                                Note = ""
+                            });
+                        }
+                    }
+                }
+            }
+
+            // Search Expenses
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT eid, timestamp, amount, note FROM expenses ORDER BY eid DESC";
+                using (var cmd = new SQLiteCommand(query, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string timestamp = reader["timestamp"].ToString();
+                        double amount = Convert.ToDouble(reader["amount"]);
+                        string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
+                        string monthName = "";
+                        try { monthName = DateTime.Parse(timestamp).ToString("MMMM"); } catch { }
+                        if (
+                            (!string.IsNullOrEmpty(lowerTerm) &&
+                                (timestamp.ToLower().Contains(lowerTerm) ||
+                                 monthName.ToLower().Contains(lowerTerm) ||
+                                 amount.ToString("N2").Contains(lowerTerm) ||
+                                 note.ToLower().Contains(lowerTerm)))
+                            || string.IsNullOrEmpty(lowerTerm)
+                        )
+                        {
+                            results.Add(new SearchResultItem
+                            {
+                                Date = timestamp,
+                                Type = "Expense",
+                                Amount = amount,
+                                Note = note
+                            });
+                        }
+                    }
+                }
+            }
+
+            return results;
+        }
+
         // Add more CRUD methods as needed (AddSaving, AddExpense, UpdateSaving, etc.)
         // ...
     }
