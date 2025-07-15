@@ -110,6 +110,7 @@ namespace SavexTracker
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.roundedPanel2 = new RoundedPanel();
+            this.lblDashSpend = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblGoal = new System.Windows.Forms.Label();
             this.pnl_1 = new System.Windows.Forms.Panel();
@@ -121,11 +122,10 @@ namespace SavexTracker
             this.pnlPie3 = new RoundedPanel();
             this.txtGoal = new System.Windows.Forms.TextBox();
             this.roundedPanel3 = new RoundedPanel();
+            this.lblDashSave = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlLine = new RoundedPanel();
             this.pnlPie = new RoundedPanel();
-            this.lblDashSave = new System.Windows.Forms.Label();
-            this.lblDashSpend = new System.Windows.Forms.Label();
             this.pnl_3.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -330,7 +330,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 225F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -722,7 +722,7 @@ namespace SavexTracker
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Noto Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.SlateGray;
+            this.label11.ForeColor = System.Drawing.Color.SlateBlue;
             this.label11.Location = new System.Drawing.Point(134, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(136, 41);
@@ -1315,7 +1315,7 @@ namespace SavexTracker
             // 
             // roundedPanel2
             // 
-            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.roundedPanel2.BorderRadius = 30;
             this.roundedPanel2.Controls.Add(this.lblDashSpend);
             this.roundedPanel2.Controls.Add(this.pictureBox7);
@@ -1323,6 +1323,18 @@ namespace SavexTracker
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.Size = new System.Drawing.Size(347, 123);
             this.roundedPanel2.TabIndex = 15;
+            // 
+            // lblDashSpend
+            // 
+            this.lblDashSpend.BackColor = System.Drawing.Color.Transparent;
+            this.lblDashSpend.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashSpend.ForeColor = System.Drawing.Color.SlateBlue;
+            this.lblDashSpend.Location = new System.Drawing.Point(85, 9);
+            this.lblDashSpend.Name = "lblDashSpend";
+            this.lblDashSpend.Size = new System.Drawing.Size(246, 70);
+            this.lblDashSpend.TabIndex = 20;
+            this.lblDashSpend.Text = "1000000";
+            this.lblDashSpend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox7
             // 
@@ -1418,7 +1430,7 @@ namespace SavexTracker
             this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSet.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSet.ForeColor = System.Drawing.Color.White;
-            this.btnSet.Location = new System.Drawing.Point(25, 209);
+            this.btnSet.Location = new System.Drawing.Point(25, 221);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(176, 62);
             this.btnSet.TabIndex = 18;
@@ -1430,9 +1442,9 @@ namespace SavexTracker
             // 
             this.pnlPie3.BackColor = System.Drawing.Color.MistyRose;
             this.pnlPie3.BorderRadius = 60;
-            this.pnlPie3.Location = new System.Drawing.Point(207, 93);
+            this.pnlPie3.Location = new System.Drawing.Point(207, 132);
             this.pnlPie3.Name = "pnlPie3";
-            this.pnlPie3.Size = new System.Drawing.Size(220, 201);
+            this.pnlPie3.Size = new System.Drawing.Size(220, 168);
             this.pnlPie3.TabIndex = 17;
             // 
             // txtGoal
@@ -1441,15 +1453,15 @@ namespace SavexTracker
             this.txtGoal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGoal.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGoal.ForeColor = System.Drawing.Color.SlateBlue;
-            this.txtGoal.Location = new System.Drawing.Point(25, 144);
+            this.txtGoal.Location = new System.Drawing.Point(25, 77);
             this.txtGoal.Name = "txtGoal";
-            this.txtGoal.Size = new System.Drawing.Size(176, 51);
+            this.txtGoal.Size = new System.Drawing.Size(388, 51);
             this.txtGoal.TabIndex = 13;
             this.txtGoal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // roundedPanel3
             // 
-            this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
             this.roundedPanel3.BorderRadius = 30;
             this.roundedPanel3.Controls.Add(this.lblDashSave);
             this.roundedPanel3.Controls.Add(this.pictureBox8);
@@ -1457,6 +1469,18 @@ namespace SavexTracker
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(347, 123);
             this.roundedPanel3.TabIndex = 16;
+            // 
+            // lblDashSave
+            // 
+            this.lblDashSave.BackColor = System.Drawing.Color.Transparent;
+            this.lblDashSave.Font = new System.Drawing.Font("Noto Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashSave.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblDashSave.Location = new System.Drawing.Point(88, 12);
+            this.lblDashSave.Name = "lblDashSave";
+            this.lblDashSave.Size = new System.Drawing.Size(246, 71);
+            this.lblDashSave.TabIndex = 19;
+            this.lblDashSave.Text = "1000000";
+            this.lblDashSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox8
             // 
@@ -1485,28 +1509,6 @@ namespace SavexTracker
             this.pnlPie.Name = "pnlPie";
             this.pnlPie.Size = new System.Drawing.Size(429, 340);
             this.pnlPie.TabIndex = 18;
-            // 
-            // lblDashSave
-            // 
-            this.lblDashSave.BackColor = System.Drawing.Color.Transparent;
-            this.lblDashSave.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblDashSave.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblDashSave.Location = new System.Drawing.Point(88, 17);
-            this.lblDashSave.Name = "lblDashSave";
-            this.lblDashSave.Size = new System.Drawing.Size(246, 65);
-            this.lblDashSave.TabIndex = 19;
-            this.lblDashSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDashSpend
-            // 
-            this.lblDashSpend.BackColor = System.Drawing.Color.Transparent;
-            this.lblDashSpend.Font = new System.Drawing.Font("Noto Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblDashSpend.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDashSpend.Location = new System.Drawing.Point(85, 9);
-            this.lblDashSpend.Name = "lblDashSpend";
-            this.lblDashSpend.Size = new System.Drawing.Size(246, 70);
-            this.lblDashSpend.TabIndex = 20;
-            this.lblDashSpend.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
