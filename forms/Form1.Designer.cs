@@ -101,10 +101,8 @@ namespace SavexTracker
             this.btnNav_2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnNav_3 = new RJCodeAdvance.RJControls.RJButton();
             this.pnl_2 = new System.Windows.Forms.Panel();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjButton19 = new RJCodeAdvance.RJControls.RJButton();
+            this.txtSeach = new RJCodeAdvance.RJControls.RJTextBox();
+            this.btnSearch = new RJCodeAdvance.RJControls.RJButton();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -128,6 +126,9 @@ namespace SavexTracker
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlLine = new RoundedPanel();
             this.pnlPie = new RoundedPanel();
+            this.roundedPanel12 = new RoundedPanel();
+            this.roundedPanel13 = new RoundedPanel();
+            this.roundedPanel14 = new RoundedPanel();
             this.pnl_3.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -159,6 +160,8 @@ namespace SavexTracker
             this.roundedPanel5.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.roundedPanel12.SuspendLayout();
+            this.roundedPanel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_3
@@ -332,7 +335,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 231F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -1198,11 +1201,9 @@ namespace SavexTracker
             // 
             // pnl_2
             // 
-            this.pnl_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
-            this.pnl_2.Controls.Add(this.monthCalendar1);
-            this.pnl_2.Controls.Add(this.label5);
-            this.pnl_2.Controls.Add(this.rjTextBox1);
-            this.pnl_2.Controls.Add(this.rjButton19);
+            this.pnl_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.pnl_2.Controls.Add(this.roundedPanel13);
+            this.pnl_2.Controls.Add(this.roundedPanel12);
             this.pnl_2.Controls.Add(this.label25);
             this.pnl_2.Controls.Add(this.pictureBox5);
             this.pnl_2.Location = new System.Drawing.Point(289, 25);
@@ -1211,64 +1212,47 @@ namespace SavexTracker
             this.pnl_2.Size = new System.Drawing.Size(854, 862);
             this.pnl_2.TabIndex = 22;
             // 
-            // monthCalendar1
+            // txtSeach
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(28, 250);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 19;
+            this.txtSeach.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSeach.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSeach.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSeach.BorderRadius = 0;
+            this.txtSeach.BorderSize = 2;
+            this.txtSeach.Font = new System.Drawing.Font("Noto Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSeach.Location = new System.Drawing.Point(29, 15);
+            this.txtSeach.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeach.Multiline = false;
+            this.txtSeach.Name = "txtSeach";
+            this.txtSeach.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtSeach.PasswordChar = false;
+            this.txtSeach.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSeach.PlaceholderText = "";
+            this.txtSeach.Size = new System.Drawing.Size(631, 44);
+            this.txtSeach.TabIndex = 17;
+            this.txtSeach.Texts = "";
+            this.txtSeach.UnderlinedStyle = false;
             // 
-            // label5
+            // btnSearch
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(27, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 29);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Search by text";
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(146, 209);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(682, 31);
-            this.rjTextBox1.TabIndex = 17;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // rjButton19
-            // 
-            this.rjButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.rjButton19.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.rjButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton19.BorderColor = System.Drawing.Color.White;
-            this.rjButton19.BorderRadius = 33;
-            this.rjButton19.BorderSize = 0;
-            this.rjButton19.FlatAppearance.BorderSize = 0;
-            this.rjButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton19.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton19.ForeColor = System.Drawing.Color.White;
-            this.rjButton19.Location = new System.Drawing.Point(695, 28);
-            this.rjButton19.Name = "rjButton19";
-            this.rjButton19.Size = new System.Drawing.Size(133, 65);
-            this.rjButton19.TabIndex = 16;
-            this.rjButton19.Text = "Refresh";
-            this.rjButton19.TextColor = System.Drawing.Color.White;
-            this.rjButton19.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.BorderColor = System.Drawing.Color.White;
+            this.btnSearch.BorderRadius = 25;
+            this.btnSearch.BorderSize = 0;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(667, 12);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(119, 50);
+            this.btnSearch.TabIndex = 16;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.TextColor = System.Drawing.Color.White;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // label25
             // 
@@ -1533,6 +1517,36 @@ namespace SavexTracker
             this.pnlPie.Size = new System.Drawing.Size(429, 340);
             this.pnlPie.TabIndex = 18;
             // 
+            // roundedPanel12
+            // 
+            this.roundedPanel12.BackColor = System.Drawing.Color.White;
+            this.roundedPanel12.BorderRadius = 75;
+            this.roundedPanel12.Controls.Add(this.txtSeach);
+            this.roundedPanel12.Controls.Add(this.btnSearch);
+            this.roundedPanel12.Location = new System.Drawing.Point(28, 164);
+            this.roundedPanel12.Name = "roundedPanel12";
+            this.roundedPanel12.Size = new System.Drawing.Size(800, 74);
+            this.roundedPanel12.TabIndex = 18;
+            // 
+            // roundedPanel13
+            // 
+            this.roundedPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.roundedPanel13.BorderRadius = 75;
+            this.roundedPanel13.Controls.Add(this.roundedPanel14);
+            this.roundedPanel13.Location = new System.Drawing.Point(28, 288);
+            this.roundedPanel13.Name = "roundedPanel13";
+            this.roundedPanel13.Size = new System.Drawing.Size(800, 502);
+            this.roundedPanel13.TabIndex = 19;
+            // 
+            // roundedPanel14
+            // 
+            this.roundedPanel14.BackColor = System.Drawing.Color.White;
+            this.roundedPanel14.BorderRadius = 75;
+            this.roundedPanel14.Location = new System.Drawing.Point(12, 51);
+            this.roundedPanel14.Name = "roundedPanel14";
+            this.roundedPanel14.Size = new System.Drawing.Size(776, 436);
+            this.roundedPanel14.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1598,7 +1612,6 @@ namespace SavexTracker
             this.roundedPanel10.ResumeLayout(false);
             this.roundedPanel9.ResumeLayout(false);
             this.pnl_2.ResumeLayout(false);
-            this.pnl_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.roundedPanel2.ResumeLayout(false);
@@ -1612,6 +1625,8 @@ namespace SavexTracker
             this.roundedPanel3.ResumeLayout(false);
             this.roundedPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.roundedPanel12.ResumeLayout(false);
+            this.roundedPanel13.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1687,12 +1702,10 @@ namespace SavexTracker
         private RJCodeAdvance.RJControls.RJButton btnNav_2;
         private RJCodeAdvance.RJControls.RJButton btnNav_3;
         private System.Windows.Forms.Panel pnl_2;
-        private RJCodeAdvance.RJControls.RJButton rjButton19;
+        private RJCodeAdvance.RJControls.RJButton btnSearch;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private RJCodeAdvance.RJControls.RJTextBox txtSeach;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
         private RoundedPanel roundedPanel2;
@@ -1716,6 +1729,9 @@ namespace SavexTracker
         private System.Windows.Forms.Label lblDashSave;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
+        private RoundedPanel roundedPanel12;
+        private RoundedPanel roundedPanel13;
+        private RoundedPanel roundedPanel14;
     }
 }
 

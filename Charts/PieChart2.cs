@@ -34,7 +34,7 @@ public static class DonutChartGoalVsTotalBuilder
             StartAngle = 0,
             InsideLabelFormat = "{1}\n₱{0:0.##}", 
             OutsideLabelFormat = null,           
-            TextColor = OxyColors.DimGray        
+            TextColor = OxyColors.White        
         };
 
         pieSeries.Slices.Add(new PieSlice("Grand Total", grandTotal)
