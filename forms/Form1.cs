@@ -23,6 +23,7 @@ namespace SavexTracker
         private void Form1_Load_1(object sender, EventArgs e)
         {
             _ = RefreshDataAsync();
+            btnNav_1_Click_1(btnNav_1, EventArgs.Empty);
         }
 
         public async Task RefreshDataAsync()
