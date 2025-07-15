@@ -94,77 +94,25 @@ namespace SavexTracker.forms
         {
             string newDate = lblDate.Text.Trim();
 
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            string newSavingsAmountText = txtAmt.Texts.Trim().Replace("₱", "").Trim();
+            if (double.TryParse(newSavingsAmountText, out double newSavingsAmount) && newSavingsAmount > 0)
             {
-                conn.Open();
-
-                // Try to update savings
-                string newSavingsAmountText = txtAmt.Texts.Trim().Replace("₱", "").Trim();
-
-                if (double.TryParse(newSavingsAmountText, out double newSavingsAmount) && newSavingsAmount > 0)
-                {
-                    string updateSavingsQuery = @"
-UPDATE savings
-SET timestamp = @timestamp,
-    amount = @amount
-WHERE sid = @sid";
-
-                    using (SQLiteCommand cmd = new SQLiteCommand(updateSavingsQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@timestamp", newDate);
-                        cmd.Parameters.AddWithValue("@amount", newSavingsAmount);
-                        cmd.Parameters.AddWithValue("@sid", GlobalData.CurrentID);
-
-                        int affected = cmd.ExecuteNonQuery();
-                        if (affected > 0)
-                        {
-                            History.LogHistory("Updated savings", newSavingsAmount, conn); // ✅ log it
-                            // Update global variable
-                            GlobalData.AllSavings = CRUD.GetAllSavings();
-                            ShowSuccessPanel();
-                            return;
-                        }
-                    }
-                }
-
-                // Try to update expenses
-                string newExpenseAmountText = txtEamt.Texts.Trim().Replace("₱", "").Trim();
-                string newNote = txtNote.Texts.Trim();
-
-                if (!double.TryParse(newExpenseAmountText, out double newExpenseAmount) || newExpenseAmount <= 0)
-                {
-                    MessageBox.Show("Invalid amount. Please enter a valid number greater than 0.");
-                    return;
-                }
-
-                string updateExpensesQuery = @"
-UPDATE expenses
-SET timestamp = @timestamp,
-    amount = @amount,
-    note = @note
-WHERE eid = @eid";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(updateExpensesQuery, conn))
-                {
-                    cmd.Parameters.AddWithValue("@timestamp", newDate);
-                    cmd.Parameters.AddWithValue("@amount", newExpenseAmount);
-                    cmd.Parameters.AddWithValue("@note", newNote);
-                    cmd.Parameters.AddWithValue("@eid", GlobalData.CurrentID);
-
-                    int affected = cmd.ExecuteNonQuery();
-                    if (affected > 0)
-                    {
-                        History.LogHistory("Updated expense", newExpenseAmount, conn); // ✅ log it
-                        // Update global variable
-                        GlobalData.AllExpenses = CRUD.GetAllExpenses();
-                        ShowSuccessPanel();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Update failed. Record not found.");
-                    }
-                }
+                CRUD.UpdateSaving(GlobalData.CurrentID, newDate, newSavingsAmount);
+                GlobalData.AllSavings = CRUD.GetAllSavings();
+                ShowSuccessPanel();
+                return;
             }
+
+            string newExpenseAmountText = txtEamt.Texts.Trim().Replace("₱", "").Trim();
+            string newNote = txtNote.Texts.Trim();
+            if (!double.TryParse(newExpenseAmountText, out double newExpenseAmount) || newExpenseAmount <= 0)
+            {
+                MessageBox.Show("Invalid amount. Please enter a valid number greater than 0.");
+                return;
+            }
+            CRUD.UpdateExpense(GlobalData.CurrentID, newDate, newExpenseAmount, newNote);
+            GlobalData.AllExpenses = CRUD.GetAllExpenses();
+            ShowSuccessPanel();
         }
 
 
@@ -182,125 +130,9 @@ WHERE eid = @eid";
 
         private void MoveToArchive()
         {
-            string dbPath = @"C:\Users\22-65\Desktop\School\SavexTracker\database\CRUD.db";
-            string connStr = $"Data Source={dbPath};Version=3;";
-
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-
-                string type = GlobalData.CurrentType;
-                int id = GlobalData.CurrentID;
-
-                string timestamp = "";
-                double amount = 0;
-                string note = "";
-
-                if (type == "Savings")
-                {
-                    using (var cmd = new SQLiteCommand("SELECT timestamp, amount FROM savings WHERE sid = @id", conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                timestamp = reader["timestamp"].ToString();
-                                amount = Convert.ToDouble(reader["amount"]);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Savings record not found.");
-                                return;
-                            }
-                        }
-                    }
-                }
-                else if (type == "Expenses")
-                {
-                    using (var cmd = new SQLiteCommand("SELECT timestamp, amount, note FROM expenses WHERE eid = @id", conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                timestamp = reader["timestamp"].ToString();
-                                amount = Convert.ToDouble(reader["amount"]);
-                                note = reader["note"]?.ToString();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Expense record not found.");
-                                return;
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Invalid record type.");
-                    return;
-                }
-
-                // Insert into archive
-                string insertQuery = @"
-INSERT INTO archive (
-    sid, eid, name,
-    timestamp1, amount1,
-    timestamp2, amount2,
-    note
-)
-VALUES (
-    @sid, @eid, @name,
-    @timestamp1, @amount1,
-    @timestamp2, @amount2,
-    @note
-);";
-
-                using (SQLiteCommand insertCmd = new SQLiteCommand(insertQuery, conn))
-                {
-                    if (type == "Savings")
-                    {
-                        insertCmd.Parameters.AddWithValue("@sid", id);
-                        insertCmd.Parameters.AddWithValue("@eid", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@name", "Savings");
-                        insertCmd.Parameters.AddWithValue("@timestamp1", timestamp);
-                        insertCmd.Parameters.AddWithValue("@amount1", amount);
-                        insertCmd.Parameters.AddWithValue("@timestamp2", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@amount2", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@note", DBNull.Value);
-                    }
-                    else
-                    {
-                        insertCmd.Parameters.AddWithValue("@sid", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@eid", id);
-                        insertCmd.Parameters.AddWithValue("@name", "Expenses");
-                        insertCmd.Parameters.AddWithValue("@timestamp1", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@amount1", DBNull.Value);
-                        insertCmd.Parameters.AddWithValue("@timestamp2", timestamp);
-                        insertCmd.Parameters.AddWithValue("@amount2", amount);
-                        insertCmd.Parameters.AddWithValue("@note", note);
-                    }
-
-                    insertCmd.ExecuteNonQuery();
-                }
-
-                // Delete from correct table
-                string deleteQuery = type == "Savings"
-                    ? "DELETE FROM savings WHERE sid = @id"
-                    : "DELETE FROM expenses WHERE eid = @id";
-
-                using (SQLiteCommand deleteCmd = new SQLiteCommand(deleteQuery, conn))
-                {
-                    deleteCmd.Parameters.AddWithValue("@id", id);
-                    deleteCmd.ExecuteNonQuery();
-                }
-
-                // Log
-                string action = type == "Savings" ? "Removed savings" : "Removed expense";
-                History.LogHistory(action, amount, conn);
-            }
+            string type = GlobalData.CurrentType;
+            int id = GlobalData.CurrentID;
+            CRUD.ArchiveItem(id, type);
         }
 
         private void rjButton4_Click(object sender, EventArgs e)

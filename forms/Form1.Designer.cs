@@ -1558,9 +1558,9 @@ namespace SavexTracker
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjCircularPictureBox1);
             this.Controls.Add(this.roundedPanel7);
-            this.Controls.Add(this.pnl_1);
             this.Controls.Add(this.pnl_2);
             this.Controls.Add(this.pnl_3);
+            this.Controls.Add(this.pnl_1);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

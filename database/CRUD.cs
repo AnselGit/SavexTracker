@@ -266,6 +266,254 @@ namespace SavexTracker.Database
             }
         }
 
+        // Add a new saving and log history
+        public static void AddSaving(Saving saving)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string insertQuery = "INSERT INTO savings (timestamp, amount) VALUES (@timestamp, @amount);";
+                using (var cmd = new SQLiteCommand(insertQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@timestamp", saving.Timestamp);
+                    cmd.Parameters.AddWithValue("@amount", saving.Amount);
+                    cmd.ExecuteNonQuery();
+                }
+                LogHistory("Added savings", saving.Amount, DateTime.Now);
+            }
+        }
+
+        // Add a new expense and log history
+        public static void AddExpense(Expense expense)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string insertQuery = "INSERT INTO expenses (timestamp, amount, note) VALUES (@timestamp, @amount, @note);";
+                using (var cmd = new SQLiteCommand(insertQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@timestamp", expense.Timestamp);
+                    cmd.Parameters.AddWithValue("@amount", expense.Amount);
+                    cmd.Parameters.AddWithValue("@note", string.IsNullOrWhiteSpace(expense.Note) ? (object)DBNull.Value : expense.Note);
+                    cmd.ExecuteNonQuery();
+                }
+                LogHistory("Added expense", expense.Amount, DateTime.Now);
+            }
+        }
+
+        // Update a saving and log history
+        public static void UpdateSaving(int id, string date, double amount)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string updateQuery = "UPDATE savings SET timestamp = @timestamp, amount = @amount WHERE sid = @sid";
+                using (var cmd = new SQLiteCommand(updateQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@timestamp", date);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@sid", id);
+                    int affected = cmd.ExecuteNonQuery();
+                    if (affected > 0)
+                    {
+                        LogHistory("Updated savings", amount, DateTime.Now);
+                    }
+                }
+            }
+        }
+
+        // Update an expense and log history
+        public static void UpdateExpense(int id, string date, double amount, string note)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string updateQuery = "UPDATE expenses SET timestamp = @timestamp, amount = @amount, note = @note WHERE eid = @eid";
+                using (var cmd = new SQLiteCommand(updateQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@timestamp", date);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@note", note);
+                    cmd.Parameters.AddWithValue("@eid", id);
+                    int affected = cmd.ExecuteNonQuery();
+                    if (affected > 0)
+                    {
+                        LogHistory("Updated expense", amount, DateTime.Now);
+                    }
+                }
+            }
+        }
+
+        // Archive a saving or expense and log history
+        public static void ArchiveItem(int id, string type)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string timestamp = "";
+                double amount = 0;
+                string note = "";
+                if (type == "Savings")
+                {
+                    using (var cmd = new SQLiteCommand("SELECT timestamp, amount FROM savings WHERE sid = @id", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                timestamp = reader["timestamp"].ToString();
+                                amount = Convert.ToDouble(reader["amount"]);
+                            }
+                        }
+                    }
+                }
+                else if (type == "Expenses")
+                {
+                    using (var cmd = new SQLiteCommand("SELECT timestamp, amount, note FROM expenses WHERE eid = @id", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                timestamp = reader["timestamp"].ToString();
+                                amount = Convert.ToDouble(reader["amount"]);
+                                note = reader["note"]?.ToString();
+                            }
+                        }
+                    }
+                }
+                // Insert into archive
+                string insertQuery = @"INSERT INTO archive (sid, eid, name, timestamp1, amount1, timestamp2, amount2, note) VALUES (@sid, @eid, @name, @timestamp1, @amount1, @timestamp2, @amount2, @note);";
+                using (var insertCmd = new SQLiteCommand(insertQuery, conn))
+                {
+                    if (type == "Savings")
+                    {
+                        insertCmd.Parameters.AddWithValue("@sid", id);
+                        insertCmd.Parameters.AddWithValue("@eid", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@name", "Savings");
+                        insertCmd.Parameters.AddWithValue("@timestamp1", timestamp);
+                        insertCmd.Parameters.AddWithValue("@amount1", amount);
+                        insertCmd.Parameters.AddWithValue("@timestamp2", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@amount2", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@note", DBNull.Value);
+                    }
+                    else
+                    {
+                        insertCmd.Parameters.AddWithValue("@sid", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@eid", id);
+                        insertCmd.Parameters.AddWithValue("@name", "Expenses");
+                        insertCmd.Parameters.AddWithValue("@timestamp1", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@amount1", DBNull.Value);
+                        insertCmd.Parameters.AddWithValue("@timestamp2", timestamp);
+                        insertCmd.Parameters.AddWithValue("@amount2", amount);
+                        insertCmd.Parameters.AddWithValue("@note", note);
+                    }
+                    insertCmd.ExecuteNonQuery();
+                }
+                // Delete from original table
+                string deleteQuery = type == "Savings" ? "DELETE FROM savings WHERE sid = @id" : "DELETE FROM expenses WHERE eid = @id";
+                using (var deleteCmd = new SQLiteCommand(deleteQuery, conn))
+                {
+                    deleteCmd.Parameters.AddWithValue("@id", id);
+                    deleteCmd.ExecuteNonQuery();
+                }
+                // Log
+                string action = type == "Savings" ? "Removed savings" : "Removed expense";
+                LogHistory(action, amount, DateTime.Now);
+            }
+        }
+
+        // Restore an archive item and log history
+        public static void RestoreArchiveItem(int id, string type)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM archive WHERE sid = @id OR eid = @id";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (type == "Savings")
+                            {
+                                string timestamp = reader["timestamp1"].ToString();
+                                double amount = Convert.ToDouble(reader["amount1"]);
+                                using (var insertCmd = new SQLiteCommand("INSERT INTO savings (timestamp, amount) VALUES (@timestamp, @amount)", conn))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@timestamp", timestamp);
+                                    insertCmd.Parameters.AddWithValue("@amount", amount);
+                                    insertCmd.ExecuteNonQuery();
+                                }
+                                LogHistory("Restored savings", amount, DateTime.Now);
+                            }
+                            else if (type == "Expenses")
+                            {
+                                string timestamp = reader["timestamp2"].ToString();
+                                double amount = Convert.ToDouble(reader["amount2"]);
+                                string note = reader["note"]?.ToString();
+                                using (var insertCmd = new SQLiteCommand("INSERT INTO expenses (timestamp, amount, note) VALUES (@timestamp, @amount, @note)", conn))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@timestamp", timestamp);
+                                    insertCmd.Parameters.AddWithValue("@amount", amount);
+                                    insertCmd.Parameters.AddWithValue("@note", note);
+                                    insertCmd.ExecuteNonQuery();
+                                }
+                                LogHistory("Restored expense", amount, DateTime.Now);
+                            }
+                        }
+                    }
+                }
+                // Delete from archive
+                string deleteQuery = "DELETE FROM archive WHERE sid = @id OR eid = @id";
+                using (var deleteCmd = new SQLiteCommand(deleteQuery, conn))
+                {
+                    deleteCmd.Parameters.AddWithValue("@id", id);
+                    deleteCmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Delete an archive item and log history
+        public static void DeleteArchiveItem(int id, string type)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                double? amountToLog = null;
+                string getAmountQuery = "SELECT amount1, amount2 FROM archive WHERE sid = @id OR eid = @id";
+                using (var getCmd = new SQLiteCommand(getAmountQuery, conn))
+                {
+                    getCmd.Parameters.AddWithValue("@id", id);
+                    using (var reader = getCmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (type == "Savings" && reader["amount1"] != DBNull.Value)
+                                amountToLog = Convert.ToDouble(reader["amount1"]);
+                            else if (type == "Expenses" && reader["amount2"] != DBNull.Value)
+                                amountToLog = Convert.ToDouble(reader["amount2"]);
+                        }
+                    }
+                }
+                string deleteQuery = "DELETE FROM archive WHERE " + (type == "Savings" ? "sid" : "eid") + " = @id";
+                using (var cmd = new SQLiteCommand(deleteQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+                if (amountToLog.HasValue)
+                {
+                    string logText = type == "Savings" ? "Deleted savings" : "Deleted expense";
+                    LogHistory(logText, amountToLog.Value, DateTime.Now);
+                }
+            }
+        }
+
         // Add more CRUD methods as needed (AddSaving, AddExpense, UpdateSaving, etc.)
         // ...
     }

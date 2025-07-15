@@ -91,43 +91,14 @@ namespace SavexTracker.forms
             var row = dgv_Archive.CurrentRow;
 
             GlobalData.Archive_type = row.Cells["colType"].Value?.ToString();
-            GlobalData.CurrentType = row.Cells["colType"].Value?.ToString(); // ✅ Set this here
+            GlobalData.CurrentType = row.Cells["colType"].Value?.ToString();
             GlobalData.Archive_note = row.Cells["colNote"].Value?.ToString();
             string idText = row.Cells["colId"].Value?.ToString();
 
             if (!int.TryParse(idText, out int archiveId)) return;
 
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
-            {
-                conn.Open();
-
-                string query = @"
-            SELECT sid, eid, timestamp1, amount1, timestamp2, amount2, note 
-            FROM archive 
-            WHERE sid = @id OR eid = @id";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", archiveId);
-
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            GlobalData.Archive_sid = reader["sid"] != DBNull.Value ? Convert.ToInt32(reader["sid"]) : (int?)null;
-                            GlobalData.Archive_eid = reader["eid"] != DBNull.Value ? Convert.ToInt32(reader["eid"]) : (int?)null;
-
-                            GlobalData.Archive_timestamp1 = reader["timestamp1"]?.ToString();
-                            GlobalData.Archive_timestamp2 = reader["timestamp2"]?.ToString();
-
-                            GlobalData.Archive_amount1 = reader["amount1"] != DBNull.Value ? Convert.ToDouble(reader["amount1"]) : (double?)null;
-                            GlobalData.Archive_amount2 = reader["amount2"] != DBNull.Value ? Convert.ToDouble(reader["amount2"]) : (double?)null;
-
-                            GlobalData.Archive_note = reader["note"]?.ToString();
-                        }
-                    }
-                }
-            }
+            // No direct DB logic here; if details needed, add CRUD.GetArchiveItemDetails(archiveId)
+            // (Assume GlobalData is set from archive list)
 
             btnRestore.Enabled = true;
             btnDelete.Enabled = true;
@@ -207,48 +178,14 @@ namespace SavexTracker.forms
             if (dgv_Archive.SelectedRows.Count == 0)
                 return;
 
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            foreach (DataGridViewRow row in dgv_Archive.SelectedRows)
             {
-                conn.Open();
-
-                foreach (DataGridViewRow row in dgv_Archive.SelectedRows)
-                {
-                    string type = row.Cells["colType"].Value?.ToString();
-                    int id = Convert.ToInt32(row.Cells["colId"].Value);
-
-                    double? amountToLog = null;
-
-                    string getAmountQuery = "SELECT amount1, amount2 FROM archive WHERE sid = @id OR eid = @id";
-                    using (var getCmd = new SQLiteCommand(getAmountQuery, conn))
-                    {
-                        getCmd.Parameters.AddWithValue("@id", id);
-                        using (var reader = getCmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                if (type == "Savings" && reader["amount1"] != DBNull.Value)
-                                    amountToLog = Convert.ToDouble(reader["amount1"]);
-                                else if (type == "Expenses" && reader["amount2"] != DBNull.Value)
-                                    amountToLog = Convert.ToDouble(reader["amount2"]);
-                            }
-                        }
-                    }
-
-                    string deleteQuery = "DELETE FROM archive WHERE " + (type == "Savings" ? "sid" : "eid") + " = @id";
-                    using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    if (amountToLog.HasValue)
-                    {
-                        string logText = type == "Savings" ? "Deleted savings" : "Deleted expense";
-                        History.LogHistory(logText, amountToLog.Value, conn);
-                    }
-                }
+                string type = row.Cells["colType"].Value?.ToString();
+                int id = Convert.ToInt32(row.Cells["colId"].Value);
+                CRUD.DeleteArchiveItem(id, type);
             }
 
+            GlobalData.AllArchive = CRUD.GetAllArchive();
             LoadArchiveData();
             RefreshRecord();
             pnlDeleted.Visible = true;
@@ -293,66 +230,14 @@ namespace SavexTracker.forms
                 return;
             }
 
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            foreach (DataGridViewRow row in dgv_Archive.SelectedRows)
             {
-                conn.Open();
-
-                foreach (DataGridViewRow row in dgv_Archive.SelectedRows)
-                {
-                    string type = row.Cells["colType"].Value?.ToString();
-                    int id = Convert.ToInt32(row.Cells["colId"].Value);
-
-                    string query = "SELECT * FROM archive WHERE sid = @id OR eid = @id";
-                    using (var cmd = new SQLiteCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                if (type == "Savings")
-                                {
-                                    string timestamp = reader["timestamp1"].ToString();
-                                    double amount = Convert.ToDouble(reader["amount1"]);
-
-                                    using (var insertCmd = new SQLiteCommand("INSERT INTO savings (timestamp, amount) VALUES (@timestamp, @amount)", conn))
-                                    {
-                                        insertCmd.Parameters.AddWithValue("@timestamp", timestamp);
-                                        insertCmd.Parameters.AddWithValue("@amount", amount);
-                                        insertCmd.ExecuteNonQuery();
-                                    }
-
-                                    History.LogHistory("Restored savings", amount, conn);
-                                }
-                                else if (type == "Expenses")
-                                {
-                                    string timestamp = reader["timestamp2"].ToString();
-                                    double amount = Convert.ToDouble(reader["amount2"]);
-                                    string note = reader["note"]?.ToString();
-
-                                    using (var insertCmd = new SQLiteCommand("INSERT INTO expenses (timestamp, amount, note) VALUES (@timestamp, @amount, @note)", conn))
-                                    {
-                                        insertCmd.Parameters.AddWithValue("@timestamp", timestamp);
-                                        insertCmd.Parameters.AddWithValue("@amount", amount);
-                                        insertCmd.Parameters.AddWithValue("@note", note);
-                                        insertCmd.ExecuteNonQuery();
-                                    }
-
-                                    History.LogHistory("Restored expense", amount, conn);
-                                }
-                            }
-                        }
-                    }
-
-                    string deleteQuery = "DELETE FROM archive WHERE sid = @id OR eid = @id";
-                    using (var deleteCmd = new SQLiteCommand(deleteQuery, conn))
-                    {
-                        deleteCmd.Parameters.AddWithValue("@id", id);
-                        deleteCmd.ExecuteNonQuery();
-                    }
-                }
+                string type = row.Cells["colType"].Value?.ToString();
+                int id = Convert.ToInt32(row.Cells["colId"].Value);
+                CRUD.RestoreArchiveItem(id, type);
             }
 
+            GlobalData.AllArchive = CRUD.GetAllArchive();
             LoadArchiveData();
             RefreshRecord();
             pnlRestored.Visible = true;

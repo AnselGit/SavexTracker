@@ -81,25 +81,15 @@ namespace SavexTracker.forms
             if (amountText.StartsWith("₱"))
                 amountText = amountText.Substring(1);
 
-            if (!decimal.TryParse(amountText, out decimal amount) || amount <= 0)
+            if (!double.TryParse(amountText, out double amount) || amount <= 0)
             {
                 MessageBox.Show("Amount must be a positive number (greater than 0) and contain only valid digits.");
                 return;
             }
 
             // Add saving using CRUD
-            using (var conn = new System.Data.SQLite.SQLiteConnection(AppConfig.ConnectionString))
-            {
-                conn.Open();
-                string insertQuery = @"INSERT INTO savings (timestamp, amount) VALUES (@timestamp, @amount);";
-                using (var cmd = new System.Data.SQLite.SQLiteCommand(insertQuery, conn))
-                {
-                    cmd.Parameters.AddWithValue("@timestamp", dateText);
-                    cmd.Parameters.AddWithValue("@amount", amount);
-                    cmd.ExecuteNonQuery();
-                }
-                History.LogHistory("Added savings", (double)amount, conn);
-            }
+            var saving = new Saving { Timestamp = dateText, Amount = amount };
+            CRUD.AddSaving(saving);
 
             // Update global variable
             GlobalData.AllSavings = CRUD.GetAllSavings();
