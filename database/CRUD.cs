@@ -536,7 +536,14 @@ namespace SavexTracker.Database
                         string timestamp = reader["timestamp"].ToString();
                         double amount = Convert.ToDouble(reader["amount"]);
                         string monthName = "";
-                        try { monthName = DateTime.Parse(timestamp).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture); } catch { }
+                        try {
+                            var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
+                            monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                        } catch {
+                            try {
+                                monthName = DateTime.Parse(timestamp).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                            } catch { }
+                        }
                         if (
                             (!string.IsNullOrEmpty(lowerTerm) &&
                                 (timestamp.ToLower().Contains(lowerTerm) ||
@@ -571,7 +578,14 @@ namespace SavexTracker.Database
                         double amount = Convert.ToDouble(reader["amount"]);
                         string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
                         string monthName = "";
-                        try { monthName = DateTime.Parse(timestamp).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture); } catch { }
+                        try {
+                            var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
+                            monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                        } catch {
+                            try {
+                                monthName = DateTime.Parse(timestamp).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                            } catch { }
+                        }
                         if (
                             (!string.IsNullOrEmpty(lowerTerm) &&
                                 (timestamp.ToLower().Contains(lowerTerm) ||
