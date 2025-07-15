@@ -6,28 +6,18 @@ using System;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Windows.Forms;
+using SavexTracker.Database;
 
 public static class DonutChartBuilder
 {
     public static void Build(Panel targetPanel)
     {
-        double savings = 0;
-        double expenses = 0;
-
-        using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
-        {
-            conn.Open();
-
-            using (var cmd = new SQLiteCommand("SELECT IFNULL(SUM(amount), 0) FROM savings", conn))
-                savings = Convert.ToDouble(cmd.ExecuteScalar());
-
-            using (var cmd = new SQLiteCommand("SELECT IFNULL(SUM(amount), 0) FROM expenses", conn))
-                expenses = Convert.ToDouble(cmd.ExecuteScalar());
-        }
+        double savings = CRUD.GetTotalSavings();
+        double expenses = CRUD.GetTotalExpenses();
 
         var model = new PlotModel
         {
-            Background = OxyColor.FromRgb(240, 227, 255),
+            Background = OxyColor.FromRgb(255, 255, 255),
             PlotAreaBorderColor = OxyColors.Transparent
         };
 
@@ -35,22 +25,25 @@ public static class DonutChartBuilder
         {
             InnerDiameter = 0.6,
             Stroke = OxyColors.White,
-            StrokeThickness = 2,
+            StrokeThickness = 4,
             AngleSpan = 360,
             StartAngle = 0,
             InsideLabelFormat = "{1}\n₱{0:0.##}",
             OutsideLabelFormat = null,
-            TextColor = OxyColors.DimGray
+            TextColor = OxyColors.Black, 
+            Font = "Noto Sans",
+            FontSize = 14,
+            FontWeight = 500
         };
 
         pieSeries.Slices.Add(new PieSlice("Savings", savings)
         {
-            Fill = OxyColor.FromRgb(104, 74, 255) // Custom savings color
+            Fill = OxyColor.FromRgb(207, 179, 255)
         });
 
         pieSeries.Slices.Add(new PieSlice("Expenses", expenses)
         {
-            Fill = OxyColor.FromRgb(192, 192, 255) // Custom expenses color
+            Fill = OxyColor.FromRgb(179, 219, 255)
         });
 
         model.Series.Add(pieSeries);

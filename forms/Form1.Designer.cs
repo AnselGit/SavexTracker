@@ -110,6 +110,7 @@ namespace SavexTracker
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.roundedPanel2 = new RoundedPanel();
+            this.label24 = new System.Windows.Forms.Label();
             this.lblDashSpend = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblGoal = new System.Windows.Forms.Label();
@@ -122,12 +123,11 @@ namespace SavexTracker
             this.pnlPie3 = new RoundedPanel();
             this.txtGoal = new System.Windows.Forms.TextBox();
             this.roundedPanel3 = new RoundedPanel();
+            this.label23 = new System.Windows.Forms.Label();
             this.lblDashSave = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlLine = new RoundedPanel();
             this.pnlPie = new RoundedPanel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.pnl_3.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -332,7 +332,7 @@ namespace SavexTracker
             this.tbl_Spend.ColumnCount = 3;
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
             this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
+            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 231F));
             this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
             this.tbl_Spend.Name = "tbl_Spend";
             this.tbl_Spend.RowCount = 1;
@@ -363,7 +363,6 @@ namespace SavexTracker
             this.label21.Size = new System.Drawing.Size(72, 24);
             this.label21.TabIndex = 11;
             this.label21.Text = "Amount";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label17
             // 
@@ -1249,7 +1248,7 @@ namespace SavexTracker
             this.rjTextBox1.Size = new System.Drawing.Size(682, 31);
             this.rjTextBox1.TabIndex = 17;
             this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;            
+            this.rjTextBox1.UnderlinedStyle = false;
             // 
             // rjButton19
             // 
@@ -1280,7 +1279,7 @@ namespace SavexTracker
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(232, 54);
             this.label25.TabIndex = 13;
-            this.label25.Text = "Search";          
+            this.label25.Text = "Search";
             // 
             // pictureBox5
             // 
@@ -1320,10 +1319,21 @@ namespace SavexTracker
             this.roundedPanel2.Controls.Add(this.label24);
             this.roundedPanel2.Controls.Add(this.lblDashSpend);
             this.roundedPanel2.Controls.Add(this.pictureBox7);
-            this.roundedPanel2.Location = new System.Drawing.Point(31, 351);
+            this.roundedPanel2.Location = new System.Drawing.Point(28, 320);
             this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.Size = new System.Drawing.Size(347, 123);
+            this.roundedPanel2.Size = new System.Drawing.Size(347, 92);
             this.roundedPanel2.TabIndex = 15;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(91, 8);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(99, 29);
+            this.label24.TabIndex = 21;
+            this.label24.Text = "Expenses";
             // 
             // lblDashSpend
             // 
@@ -1340,7 +1350,7 @@ namespace SavexTracker
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox7.Location = new System.Drawing.Point(11, 11);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(70, 70);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1390,8 +1400,8 @@ namespace SavexTracker
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(76, 18);
+            this.label8.ForeColor = System.Drawing.Color.DarkGray;
+            this.label8.Location = new System.Drawing.Point(76, 35);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(197, 29);
             this.label8.TabIndex = 8;
@@ -1401,9 +1411,9 @@ namespace SavexTracker
             // 
             this.pnlPie2.BackColor = System.Drawing.Color.MistyRose;
             this.pnlPie2.BorderRadius = 60;
-            this.pnlPie2.Location = new System.Drawing.Point(7, 53);
+            this.pnlPie2.Location = new System.Drawing.Point(0, 70);
             this.pnlPie2.Name = "pnlPie2";
-            this.pnlPie2.Size = new System.Drawing.Size(327, 236);
+            this.pnlPie2.Size = new System.Drawing.Size(347, 245);
             this.pnlPie2.TabIndex = 16;
             // 
             // roundedPanel5
@@ -1469,8 +1479,19 @@ namespace SavexTracker
             this.roundedPanel3.Controls.Add(this.pictureBox8);
             this.roundedPanel3.Location = new System.Drawing.Point(28, 209);
             this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.Size = new System.Drawing.Size(347, 123);
+            this.roundedPanel3.Size = new System.Drawing.Size(347, 95);
             this.roundedPanel3.TabIndex = 16;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(94, 11);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(82, 29);
+            this.label23.TabIndex = 19;
+            this.label23.Text = "Savings";
             // 
             // lblDashSave
             // 
@@ -1511,28 +1532,6 @@ namespace SavexTracker
             this.pnlPie.Name = "pnlPie";
             this.pnlPie.Size = new System.Drawing.Size(429, 340);
             this.pnlPie.TabIndex = 18;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(94, 11);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(82, 29);
-            this.label23.TabIndex = 19;
-            this.label23.Text = "Savings";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Noto Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(91, 8);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(99, 29);
-            this.label24.TabIndex = 21;
-            this.label24.Text = "Expenses";
             // 
             // Form1
             // 

@@ -18,16 +18,7 @@ namespace SavexTracker
         public Form1()
         {
             InitializeComponent();
-            // Initial setup moved to RefreshDataAsync
-        }
-
-        public Form1(Form openingForm)
-        {
-            InitializeComponent();
-            this.openingForm = openingForm;
-        }
-
-        private Form openingForm;    
+        } 
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
@@ -58,23 +49,9 @@ namespace SavexTracker
 
         private void UpdateGoalLabel()
         {
-            double totalSavings = 0;
-            double totalExpenses = 0;
-            double goalAmount = 0;
-
-            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
-            {
-                conn.Open();
-
-                using (var cmd = new SQLiteCommand("SELECT IFNULL(SUM(amount), 0) FROM savings", conn))
-                    totalSavings = Convert.ToDouble(cmd.ExecuteScalar());
-
-                using (var cmd = new SQLiteCommand("SELECT IFNULL(SUM(amount), 0) FROM expenses", conn))
-                    totalExpenses = Convert.ToDouble(cmd.ExecuteScalar());
-
-                using (var cmd = new SQLiteCommand("SELECT IFNULL(amount, 0) FROM goal ORDER BY gid DESC LIMIT 1", conn))
-                    goalAmount = Convert.ToDouble(cmd.ExecuteScalar());
-            }
+            double totalSavings = CRUD.GetTotalSavings();
+            double totalExpenses = CRUD.GetTotalExpenses();
+            double goalAmount = CRUD.GetLatestGoalAmount();
 
             double grandTotal = totalSavings - totalExpenses;
             if (grandTotal < 0) grandTotal = 0;
@@ -92,26 +69,9 @@ namespace SavexTracker
 
         private void LoadGoal()
         {
-            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
-            {
-                conn.Open();
-                string query = "SELECT amount FROM goal ORDER BY gid DESC LIMIT 1;";
-                using (var cmd = new SQLiteCommand(query, conn))
-                using (var reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        double amount = Convert.ToDouble(reader["amount"]);
-                        txtGoal.Text = $"₱{amount:N2}"; // ₱ and 2 decimal places
-                        GlobalData.CurrentGoal = amount; // ← Set global variable
-                    }
-                    else
-                    {
-                        txtGoal.Text = "₱0.00";
-                        GlobalData.CurrentGoal = 0; // ← Fallback
-                    }
-                }
-            }
+            double amount = CRUD.GetLatestGoalAmount();
+            txtGoal.Text = $"₱{amount:N2}";
+            GlobalData.CurrentGoal = amount;
         }
 
 
@@ -351,28 +311,8 @@ namespace SavexTracker
 
         private void UpdateTotalLabels()
         {
-            double totalSave = 0;
-            double totalSpend = 0;
-
-            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
-            {
-                conn.Open();
-
-                // Total Savings
-                using (var cmd = new SQLiteCommand("SELECT SUM(amount) FROM savings", conn))
-                {
-                    object result = cmd.ExecuteScalar();
-                    totalSave = result != DBNull.Value ? Convert.ToDouble(result) : 0;
-                }
-
-                // Total Spent
-                using (var cmd = new SQLiteCommand("SELECT SUM(amount) FROM expenses", conn))
-                {
-                    object result = cmd.ExecuteScalar();
-                    totalSpend = result != DBNull.Value ? Convert.ToDouble(result) : 0;
-                }
-            }
-
+            double totalSave = CRUD.GetTotalSavings();
+            double totalSpend = CRUD.GetTotalExpenses();
             double grandTotal = totalSave - totalSpend;
 
             lblTotalSave.Text = totalSave.ToString("₱0.00");
@@ -384,95 +324,53 @@ namespace SavexTracker
             lblTotalSave.ForeColor = Color.Gray;
             lblTotalSpent.ForeColor = Color.Gray;
 
-            // Optional: change color based on balance
             if (grandTotal >= GlobalData.CurrentGoal && grandTotal > 0)
             {
-                lblGrand.ForeColor = Color.Green; // Reached or exceeded the goal
+                lblGrand.ForeColor = Color.Green;
             }
             else if (grandTotal > 0)
             {
-                lblGrand.ForeColor = Color.FromArgb(64, 64, 64); // Normal positive total
+                lblGrand.ForeColor = Color.FromArgb(64, 64, 64);
             }
             else if (grandTotal < 0)
             {
-                lblGrand.ForeColor = Color.Red; // Negative balance
+                lblGrand.ForeColor = Color.Red;
             }
             else
             {
-                lblGrand.ForeColor = Color.Gray; // Zero total
+                lblGrand.ForeColor = Color.Gray;
             }
 
         }
 
         public static void LogHistory(string action, double amount)
         {
-            string connStr = AppConfig.ConnectionString;
-            string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-                string query = "INSERT INTO history (action, amount, timestamp) VALUES (@action, @amount, @timestamp)";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@action", action);
-                    cmd.Parameters.AddWithValue("@amount", amount);
-                    cmd.Parameters.AddWithValue("@timestamp", timestamp);
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            CRUD.LogHistory(action, amount);
         }
 
         private void LoadHistory()
         {
             rtbHistory.Clear();
-            bool isEmpty = true;
-
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
+            var historyList = CRUD.GetAllHistory();
+            if (historyList == null || historyList.Count == 0)
             {
-                conn.Open();
+                pnlEmpty.Visible = true;
+                pnlEmpty.BringToFront();
+                return;
+            }
 
-                // Check if the table has records
-                using (SQLiteCommand countCmd = new SQLiteCommand("SELECT COUNT(*) FROM history", conn))
-                {
-                    long count = (long)countCmd.ExecuteScalar();
-                    isEmpty = count == 0;
-                }
-
-                // Show the empty panel if no history found
-                if (isEmpty)
-                {
-                    pnlEmpty.Visible = true;
-                    pnlEmpty.BringToFront();
-                    return; // Exit early, no need to proceed
-                }
-
-                // Otherwise, continue loading history
-                string query = "SELECT action, amount, timestamp FROM history ORDER BY id DESC";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                using (SQLiteDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        string action = reader["action"].ToString();
-                        double amount = Convert.ToDouble(reader["amount"]);
-                        string timestamp = DateTime.Parse(reader["timestamp"].ToString())
-                            .ToString("MM/dd/yyyy 'at' hh:mm tt");
-
-                        string entry = $"{action} - ₱{amount:N2}\n{timestamp}\n\n";
-                        rtbHistory.AppendText(entry);
-                    }
-                }                
+            foreach (var item in historyList)
+            {
+                string action = item.Action;
+                double amount = item.Amount ?? 0;
+                string timestamp = DateTime.Parse(item.Timestamp).ToString("MM/dd/yyyy 'at' hh:mm tt");
+                string entry = $"{action} - ₱{amount:N2}\n{timestamp}\n\n";
+                rtbHistory.AppendText(entry);
             }
 
             pnlEmpty.Visible = false;
             rtbHistory.SelectionStart = 0;
-            rtbHistory.ScrollToCaret();            
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
+            rtbHistory.ScrollToCaret();
         }
 
         private void rjButton6_Click(object sender, EventArgs e)
@@ -487,11 +385,6 @@ namespace SavexTracker
             addForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void rjButton11_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = true;
@@ -502,15 +395,7 @@ namespace SavexTracker
 
         private void rjButton13_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
-            {
-                conn.Open();
-                string query = "DELETE FROM history";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            CRUD.DeleteAllHistory();
             pnlHistory.Visible = true;
             pnlHistory.BringToFront();
             rtbHistory.Clear();
@@ -539,16 +424,7 @@ namespace SavexTracker
 
         private bool IsTableEmpty(string tableName)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(AppConfig.ConnectionString))
-            {
-                conn.Open();
-                string query = $"SELECT COUNT(*) FROM {tableName}";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    long count = (long)cmd.ExecuteScalar();
-                    return count == 0;
-                }
-            }
+            return CRUD.IsTableEmpty(tableName);
         }
 
         private void btnDelAll_S_Click(object sender, EventArgs e)
@@ -622,7 +498,17 @@ namespace SavexTracker
 
         private void btnSet_Click(object sender, EventArgs e)
         {
-            _ = RefreshDataAsync();
+            // Remove currency symbol and parse value
+            string input = txtGoal.Text.Replace("₱", "").Replace(",", "").Trim();
+            if (double.TryParse(input, out double newGoal))
+            {
+                CRUD.UpdateGoalAmount(newGoal);
+                _ = RefreshDataAsync();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid goal amount.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

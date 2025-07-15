@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using SavexTracker.Database;
 using SavexTracker.Models;
 
@@ -35,4 +35,4 @@ namespace SavexTracker
 
 
     }
-}
+} 

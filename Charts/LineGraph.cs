@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using SavexTracker.Database;
 
 public static class ChartBuilder
 {
@@ -28,45 +29,30 @@ public static class ChartBuilder
         string format = "MM/dd/yy";
         CultureInfo provider = CultureInfo.InvariantCulture;
 
-        using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
-        {
-            conn.Open();
+        // Use CRUD to get all savings and expenses
+        var allSavings = CRUD.GetAllSavings();
+        var allExpenses = CRUD.GetAllExpenses();
 
-            // Read savings
-            using (var cmd = new SQLiteCommand("SELECT timestamp, amount FROM savings", conn))
-            using (var reader = cmd.ExecuteReader())
+        foreach (var saving in allSavings)
+        {
+            if (DateTime.TryParseExact(saving.Timestamp, format, provider, DateTimeStyles.None, out DateTime date))
             {
-                while (reader.Read())
+                if (date.Month == DateTime.Now.Month && date.Year == DateTime.Now.Year)
                 {
-                    string rawTimestamp = reader["timestamp"].ToString();
-                    if (DateTime.TryParseExact(rawTimestamp, format, provider, DateTimeStyles.None, out DateTime date))
-                    {
-                        if (date.Month == DateTime.Now.Month && date.Year == DateTime.Now.Year)
-                        {
-                            int day = date.Day;
-                            double amount = Convert.ToDouble(reader["amount"]);
-                            savingsData[day] += amount;
-                        }
-                    }
+                    int day = date.Day;
+                    savingsData[day] += saving.Amount;
                 }
             }
+        }
 
-            // Read expenses
-            using (var cmd = new SQLiteCommand("SELECT timestamp, amount FROM expenses", conn))
-            using (var reader = cmd.ExecuteReader())
+        foreach (var expense in allExpenses)
+        {
+            if (DateTime.TryParseExact(expense.Timestamp, format, provider, DateTimeStyles.None, out DateTime date))
             {
-                while (reader.Read())
+                if (date.Month == DateTime.Now.Month && date.Year == DateTime.Now.Year)
                 {
-                    string rawTimestamp = reader["timestamp"].ToString();
-                    if (DateTime.TryParseExact(rawTimestamp, format, provider, DateTimeStyles.None, out DateTime date))
-                    {
-                        if (date.Month == DateTime.Now.Month && date.Year == DateTime.Now.Year)
-                        {
-                            int day = date.Day;
-                            double amount = Convert.ToDouble(reader["amount"]);
-                            expensesData[day] += amount;
-                        }
-                    }
+                    int day = date.Day;
+                    expensesData[day] += expense.Amount;
                 }
             }
         }
@@ -76,7 +62,7 @@ public static class ChartBuilder
             Title = "Savings vs Expenses (This Month)",
             PlotAreaBorderColor = OxyColors.Transparent,
             Background = OxyColors.White,
-            TextColor = OxyColors.DimGray
+            TextColor = OxyColors.DarkGray
         };
 
         // X Axis (Days)
@@ -116,7 +102,7 @@ public static class ChartBuilder
         // Area under Savings
         var savingsArea = new AreaSeries
         {
-            Color = OxyColor.FromAColor(100, OxyColor.FromRgb(74, 183, 255)),
+            Color = OxyColor.FromRgb(74, 183, 255),
             StrokeThickness = 0,
             LineStyle = LineStyle.None
         };

@@ -122,9 +122,6 @@
     <Compile Include="custom classes\GradientPanelRound.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="custom classes\translucent.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="forms\addExpense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,7 +181,6 @@
     <Compile Include="custom classes\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="custom classes/VerticalFlowPanel.cs" />
     <EmbeddedResource Include="forms\addExpense.resx">
       <DependentUpon>addExpense.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,10 +222,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="GlobalData.cs" />
-    <Compile Include="History.cs" />
-    <Compile Include="PieChart.cs" />
-    <Compile Include="PieChart2.cs" />
+    <Compile Include="Models\GlobalData.cs" />
+    <Compile Include="Models\History.cs" />
     <!-- <Compile Include="LineGraph.cs" /> -->
   </ItemGroup>
   <ItemGroup>

@@ -161,6 +161,111 @@ namespace SavexTracker.Database
             return 0;
         }
 
+        public static double GetTotalSavings()
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                using (var cmd = new SQLiteCommand("SELECT IFNULL(SUM(amount), 0) FROM savings", conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    return result != DBNull.Value ? Convert.ToDouble(result) : 0;
+                }
+            }
+        }
+
+        public static double GetTotalExpenses()
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                using (var cmd = new SQLiteCommand("SELECT IFNULL(SUM(amount), 0) FROM expenses", conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    return result != DBNull.Value ? Convert.ToDouble(result) : 0;
+                }
+            }
+        }
+
+        public static void LogHistory(string action, double amount, DateTime? timestamp = null)
+        {
+            string ts = (timestamp ?? DateTime.Now).ToString("yyyy-MM-dd HH:mm:ss");
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO history (action, amount, timestamp) VALUES (@action, @amount, @timestamp)";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@action", action);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@timestamp", ts);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static bool IsTableEmpty(string tableName)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = $"SELECT COUNT(*) FROM {tableName}";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    long count = (long)cmd.ExecuteScalar();
+                    return count == 0;
+                }
+            }
+        }
+
+        public static void DeleteAllHistory()
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM history";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static void UpdateGoalAmount(double newAmount)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                // Check if there is already a goal row
+                string countQuery = "SELECT COUNT(*) FROM goal";
+                long count = 0;
+                using (var countCmd = new SQLiteCommand(countQuery, conn))
+                {
+                    count = (long)countCmd.ExecuteScalar();
+                }
+                if (count == 0)
+                {
+                    // Insert new goal
+                    string insertQuery = "INSERT INTO goal (amount) VALUES (@amount)";
+                    using (var insertCmd = new SQLiteCommand(insertQuery, conn))
+                    {
+                        insertCmd.Parameters.AddWithValue("@amount", newAmount);
+                        insertCmd.ExecuteNonQuery();
+                    }
+                }
+                else
+                {
+                    // Update the latest goal row
+                    string updateQuery = "UPDATE goal SET amount = @amount WHERE gid = (SELECT gid FROM goal ORDER BY gid DESC LIMIT 1)";
+                    using (var updateCmd = new SQLiteCommand(updateQuery, conn))
+                    {
+                        updateCmd.Parameters.AddWithValue("@amount", newAmount);
+                        updateCmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
         // Add more CRUD methods as needed (AddSaving, AddExpense, UpdateSaving, etc.)
         // ...
     }
