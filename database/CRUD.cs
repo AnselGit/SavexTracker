@@ -536,18 +536,35 @@ namespace SavexTracker.Database
                         string timestamp = reader["timestamp"].ToString();
                         double amount = Convert.ToDouble(reader["amount"]);
                         string monthName = "";
+                        string monthAbbr = "";
+                        string year = "";
+                        string monthYear = "";
+                        string monthAbbrYear = "";
                         try {
                             var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
                             monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                            monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture);
+                            year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                            monthYear = monthName + " " + year;
+                            monthAbbrYear = monthAbbr + " " + year;
                         } catch {
                             try {
-                                monthName = DateTime.Parse(timestamp).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                                var dt = DateTime.Parse(timestamp);
+                                monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                                monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture);
+                                year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                                monthYear = monthName + " " + year;
+                                monthAbbrYear = monthAbbr + " " + year;
                             } catch { }
                         }
                         if (
                             (!string.IsNullOrEmpty(lowerTerm) &&
                                 (timestamp.ToLower().Contains(lowerTerm) ||
                                  monthName.ToLower().Contains(lowerTerm) ||
+                                 monthAbbr.ToLower().Contains(lowerTerm) ||
+                                 year.Contains(lowerTerm) ||
+                                 monthYear.ToLower().Contains(lowerTerm) ||
+                                 monthAbbrYear.ToLower().Contains(lowerTerm) ||
                                  amount.ToString("N2").Contains(lowerTerm)))
                             || string.IsNullOrEmpty(lowerTerm)
                         )
@@ -578,18 +595,35 @@ namespace SavexTracker.Database
                         double amount = Convert.ToDouble(reader["amount"]);
                         string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
                         string monthName = "";
+                        string monthAbbr = "";
+                        string year = "";
+                        string monthYear = "";
+                        string monthAbbrYear = "";
                         try {
                             var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
                             monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                            monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture);
+                            year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                            monthYear = monthName + " " + year;
+                            monthAbbrYear = monthAbbr + " " + year;
                         } catch {
                             try {
-                                monthName = DateTime.Parse(timestamp).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                                var dt = DateTime.Parse(timestamp);
+                                monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
+                                monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture);
+                                year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                                monthYear = monthName + " " + year;
+                                monthAbbrYear = monthAbbr + " " + year;
                             } catch { }
                         }
                         if (
                             (!string.IsNullOrEmpty(lowerTerm) &&
                                 (timestamp.ToLower().Contains(lowerTerm) ||
                                  monthName.ToLower().Contains(lowerTerm) ||
+                                 monthAbbr.ToLower().Contains(lowerTerm) ||
+                                 year.Contains(lowerTerm) ||
+                                 monthYear.ToLower().Contains(lowerTerm) ||
+                                 monthAbbrYear.ToLower().Contains(lowerTerm) ||
                                  amount.ToString("N2").Contains(lowerTerm) ||
                                  note.ToLower().Contains(lowerTerm)))
                             || string.IsNullOrEmpty(lowerTerm)
