@@ -1249,8 +1249,7 @@ namespace SavexTracker
             this.rjTextBox1.Size = new System.Drawing.Size(682, 31);
             this.rjTextBox1.TabIndex = 17;
             this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            this.rjTextBox1._TextChanged += new System.EventHandler(this.rjTextBox1__TextChanged);
+            this.rjTextBox1.UnderlinedStyle = false;            
             // 
             // rjButton19
             // 
@@ -1281,8 +1280,7 @@ namespace SavexTracker
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(232, 54);
             this.label25.TabIndex = 13;
-            this.label25.Text = "Search";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
+            this.label25.Text = "Search";          
             // 
             // pictureBox5
             // 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SavexTracker.Database;
 using SavexTracker.Models;
-using System.Collections.Generic; // Added for List
+using System.Collections.Generic;
 
 
 namespace SavexTracker
@@ -18,14 +18,7 @@ namespace SavexTracker
         public Form1()
         {
             InitializeComponent();
-            CRUD.EnsureDatabaseAndTables();
-            CRUD.LoadAllDataToGlobals();
-            UpdateGoalLabel();
-            UpdateTotalLabels();
-            LoadGoal();
-            LoadExpensesToPanel();
-            LoadSavingsToPanel();
-            LoadHistory();
+            // Initial setup moved to RefreshDataAsync
         }
 
         public Form1(Form openingForm)
@@ -34,23 +27,11 @@ namespace SavexTracker
             this.openingForm = openingForm;
         }
 
-        private Form openingForm;
+        private Form openingForm;    
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            ChartBuilder.BuildLineGraph(pnlLine);
-            DonutChartBuilder.Build(pnlPie2);
-            DonutChartGoalVsTotalBuilder.Build(pnlPie3);
-
-
-            UpdateTotalLabels();
-            CRUD.EnsureDatabaseAndTables();
-            CRUD.LoadAllDataToGlobals();
-
-            if (openingForm != null)
-            {
-                openingForm.Close();
-            }
+            _ = RefreshDataAsync();
         }
 
         public async Task RefreshDataAsync()
@@ -58,12 +39,17 @@ namespace SavexTracker
             btnRefresh.Text = "Refreshing";
             btnRefresh.Enabled = false;
 
-            UpdateTotalLabels();
+            CRUD.EnsureDatabaseAndTables();
+            CRUD.LoadAllDataToGlobals();
             UpdateGoalLabel();
+            UpdateTotalLabels();
             LoadGoal();
-            LoadSavingsToPanel();
             LoadExpensesToPanel();
+            LoadSavingsToPanel();
             LoadHistory();
+            ChartBuilder.BuildLineGraph(pnlLine);
+            DonutChartBuilder.Build(pnlPie2);
+            DonutChartGoalVsTotalBuilder.Build(pnlPie3);
 
             await Task.Delay(500);
             btnRefresh.Text = "Refresh";
@@ -129,11 +115,6 @@ namespace SavexTracker
         }
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-                       
-        }
-
         private void rjButton1_Click(object sender, EventArgs e)
         {
             addSavings addForm = new addSavings();
@@ -152,8 +133,7 @@ namespace SavexTracker
 
         private async void btnRefresh_Click(object sender, EventArgs e)
         {
-            UpdateTotalLabels();
-            await RefreshDataAsync();            
+            await RefreshDataAsync();
         }
 
         private void LoadSavingsToPanel()
@@ -599,16 +579,6 @@ namespace SavexTracker
             btnDelAll_E.Visible = false;
         }
 
-        private void btnNav_1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnNav_2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnNav_3_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNav_3);
@@ -628,16 +598,6 @@ namespace SavexTracker
 
             // Set the selected one to highlight color
             selectedButton.BackColor = Color.FromArgb(240, 245, 255);
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rjTextBox1__TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnNav_2_Click_1(object sender, EventArgs e)
@@ -662,7 +622,7 @@ namespace SavexTracker
 
         private void btnSet_Click(object sender, EventArgs e)
         {
-            UpdateGoalLabel();
+            _ = RefreshDataAsync();
         }
     }
 }
