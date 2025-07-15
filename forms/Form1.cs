@@ -18,25 +18,7 @@ namespace SavexTracker
         public Form1()
         {
             InitializeComponent();
-            // Wire up the search event
-            txtSearch.TextChanged += TxtSearch_TextChanged;
-        }
-
-        private void TxtSearch_TextChanged(object sender, EventArgs e)
-        {
-            string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
-            var results = CRUD.SearchSavingsAndExpenses(searchTerm);
-            dgv_Search.Rows.Clear();
-            // Optionally clear columns if needed (uncomment if you see duplicate columns)
-            // dgv_Search.Columns.Clear();
-            foreach (var item in results)
-            {
-                dgv_Search.Rows.Add(item.Date, item.Type, $"₱{item.Amount:N2}", item.Note);
-            }
-            // Hide ID column if not used
-            if (dgv_Search.Columns.Contains("colId"))
-                dgv_Search.Columns["colId"].Visible = false;
-        }
+        }       
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
@@ -526,6 +508,19 @@ namespace SavexTracker
             else
             {
                 MessageBox.Show("Please enter a valid goal amount.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
+            var results = CRUD.SearchSavingsAndExpenses(searchTerm);
+            dgv_Search.Rows.Clear();
+            // Use only the designer-defined columns for styling
+            foreach (var item in results)
+            {
+                // Add by column order: Date, Type, Amount, Note
+                dgv_Search.Rows.Add(item.Date, item.Type, $"₱{item.Amount:N2}", item.Note);
             }
         }
     }
