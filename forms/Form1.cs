@@ -18,7 +18,7 @@ namespace SavexTracker
         public Form1()
         {
             InitializeComponent();
-        }       
+        }
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
@@ -512,6 +512,32 @@ namespace SavexTracker
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
+            var results = CRUD.SearchSavingsAndExpenses(searchTerm);
+            dgv_Search.Rows.Clear();
+            // Use only the designer-defined columns for styling
+            foreach (var item in results)
+            {
+                // Add by column order: Date, Type, Amount, Note
+                dgv_Search.Rows.Add(item.Date, item.Type, $"₱{item.Amount:N2}", item.Note);
+            }
+        }
+
+        private void txtSearch__TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
+            var results = CRUD.SearchSavingsAndExpenses(searchTerm);
+            dgv_Search.Rows.Clear();
+            // Use only the designer-defined columns for styling
+            foreach (var item in results)
+            {
+                // Add by column order: Date, Type, Amount, Note
+                dgv_Search.Rows.Add(item.Date, item.Type, $"₱{item.Amount:N2}", item.Note);
+            }
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
         {
             string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
             var results = CRUD.SearchSavingsAndExpenses(searchTerm);
