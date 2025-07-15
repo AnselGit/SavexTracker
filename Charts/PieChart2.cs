@@ -27,14 +27,14 @@ public static class DonutChartGoalVsTotalBuilder
 
         var pieSeries = new PieSeries
         {
-            InnerDiameter = 0.8,
+            InnerDiameter = 0.7,
             Stroke = OxyColor.FromRgb(240, 227, 255),
             StrokeThickness = 6,
             AngleSpan = 360,
             StartAngle = 0,
             InsideLabelFormat = "{1}\n₱{0:0.##}", 
             OutsideLabelFormat = null,           
-            TextColor = OxyColors.White        
+            TextColor = OxyColors.Black        
         };
 
         pieSeries.Slices.Add(new PieSlice("Grand Total", grandTotal)

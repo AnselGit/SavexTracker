@@ -373,6 +373,19 @@ namespace SavexTracker
             rtbHistory.ScrollToCaret();
         }
 
+        private void PerformSearch()
+        {
+            string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
+            var results = CRUD.SearchSavingsAndExpenses(searchTerm);
+            dgv_Search.Rows.Clear();
+            // Use only the designer-defined columns for styling
+            foreach (var item in results)
+            {
+                // Add by column order: Date, Type, Amount, Note
+                dgv_Search.Rows.Add(item.Date, item.Type, $"₱{item.Amount:N2}", item.Note);
+            }
+        }
+
         private void rjButton6_Click(object sender, EventArgs e)
         {
             addExpense addForm = new addExpense();
@@ -509,45 +522,21 @@ namespace SavexTracker
             {
                 MessageBox.Show("Please enter a valid goal amount.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
+        }        
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
-            var results = CRUD.SearchSavingsAndExpenses(searchTerm);
-            dgv_Search.Rows.Clear();
-            // Use only the designer-defined columns for styling
-            foreach (var item in results)
-            {
-                // Add by column order: Date, Type, Amount, Note
-                dgv_Search.Rows.Add(item.Date, item.Type, $"₱{item.Amount:N2}", item.Note);
-            }
+            PerformSearch();
         }
 
         private void txtSearch__TextChanged(object sender, EventArgs e)
         {
-            string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
-            var results = CRUD.SearchSavingsAndExpenses(searchTerm);
-            dgv_Search.Rows.Clear();
-            // Use only the designer-defined columns for styling
-            foreach (var item in results)
-            {
-                // Add by column order: Date, Type, Amount, Note
-                dgv_Search.Rows.Add(item.Date, item.Type, $"₱{item.Amount:N2}", item.Note);
-            }
+            PerformSearch();
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
         {
-            string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
-            var results = CRUD.SearchSavingsAndExpenses(searchTerm);
-            dgv_Search.Rows.Clear();
-            // Use only the designer-defined columns for styling
-            foreach (var item in results)
-            {
-                // Add by column order: Date, Type, Amount, Note
-                dgv_Search.Rows.Add(item.Date, item.Type, $"₱{item.Amount:N2}", item.Note);
-            }
+            PerformSearch();
         }
     }
 }

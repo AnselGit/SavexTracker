@@ -251,7 +251,6 @@
             this.pnlArchive.Name = "pnlArchive";
             this.pnlArchive.Size = new System.Drawing.Size(736, 508);
             this.pnlArchive.TabIndex = 24;
-            this.pnlArchive.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlArchive_Paint);
             // 
             // linkLabel1
             // 
@@ -261,10 +260,10 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.linkLabel1.Location = new System.Drawing.Point(331, 471);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(76, 23);
+            this.linkLabel1.Size = new System.Drawing.Size(77, 23);
             this.linkLabel1.TabIndex = 21;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Select all";
+            this.linkLabel1.Text = "Select All";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -484,7 +483,6 @@
             this.pnlDeleteCon.Size = new System.Drawing.Size(736, 508);
             this.pnlDeleteCon.TabIndex = 23;
             this.pnlDeleteCon.Visible = false;
-            this.pnlDeleteCon.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDeleteCon_Paint);
             // 
             // pnlDeleted
             // 
@@ -629,7 +627,6 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(776, 553);
             this.roundedPanel1.TabIndex = 0;
-            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
             // ArchiveForm
             // 

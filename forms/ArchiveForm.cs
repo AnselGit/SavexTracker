@@ -158,20 +158,6 @@ namespace SavexTracker.forms
             this.Close();
         }
 
-        private void dgv_Archive_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlDeleteCon_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
@@ -205,16 +191,6 @@ namespace SavexTracker.forms
         private void rjButton3_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = false;            
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
@@ -256,7 +232,7 @@ namespace SavexTracker.forms
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            dgv_Archive.ClearSelection();
+            //dgv_Archive.ClearSelection();
             if (linkLabel1.Text == "Select All")
             {
                 foreach (DataGridViewRow row in dgv_Archive.Rows)
@@ -270,16 +246,6 @@ namespace SavexTracker.forms
                 dgv_Archive.ClearSelection();
                 linkLabel1.Text = "Select All";
             }
-        }
-
-        private void pnlArchive_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void roundedPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
