@@ -31,11 +31,11 @@ namespace SavexTracker.forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchiveForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlRestoreCon = new SavexTracker.CustomClasses.RoundedPanel();
             this.pnlRestored = new SavexTracker.CustomClasses.RoundedPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,16 +62,16 @@ namespace SavexTracker.forms
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDeleteCon = new SavexTracker.CustomClasses.RoundedPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlDeleted = new SavexTracker.CustomClasses.RoundedPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.roundedPanel6 = new SavexTracker.CustomClasses.RoundedPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
+            this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new SavexTracker.CustomClasses.RoundedPanel();
             this.pnlRestoreCon.SuspendLayout();
             this.pnlRestored.SuspendLayout();
@@ -82,10 +82,10 @@ namespace SavexTracker.forms
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Archive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDeleteCon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlDeleted.SuspendLayout();
             this.roundedPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,12 +93,12 @@ namespace SavexTracker.forms
             // 
             this.pnlRestoreCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
             this.pnlRestoreCon.BorderRadius = 50;
-            this.pnlRestoreCon.Controls.Add(this.pnlRestored);
             this.pnlRestoreCon.Controls.Add(this.label5);
             this.pnlRestoreCon.Controls.Add(this.rjButton1);
             this.pnlRestoreCon.Controls.Add(this.rjButton5);
             this.pnlRestoreCon.Controls.Add(this.label7);
             this.pnlRestoreCon.Controls.Add(this.pictureBox5);
+            this.pnlRestoreCon.Controls.Add(this.pnlRestored);
             this.pnlRestoreCon.Location = new System.Drawing.Point(20, 22);
             this.pnlRestoreCon.Name = "pnlRestoreCon";
             this.pnlRestoreCon.Size = new System.Drawing.Size(736, 508);
@@ -347,25 +347,25 @@ namespace SavexTracker.forms
             this.dgv_Archive.AllowUserToOrderColumns = true;
             this.dgv_Archive.AllowUserToResizeColumns = false;
             this.dgv_Archive.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Archive.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Archive.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Archive.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Archive.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Archive.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Archive.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Archive.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Archive.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Archive.ColumnHeadersHeight = 28;
             this.dgv_Archive.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -373,35 +373,35 @@ namespace SavexTracker.forms
             this.colAmount,
             this.colNote,
             this.colId});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Archive.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Archive.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Archive.GridColor = System.Drawing.Color.White;
             this.dgv_Archive.Location = new System.Drawing.Point(15, 184);
             this.dgv_Archive.Name = "dgv_Archive";
             this.dgv_Archive.ReadOnly = true;
             this.dgv_Archive.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Archive.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Archive.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Archive.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Archive.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Archive.RowTemplate.Height = 30;
             this.dgv_Archive.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_Archive.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -486,6 +486,64 @@ namespace SavexTracker.forms
             this.pnlDeleteCon.TabIndex = 23;
             this.pnlDeleteCon.Visible = false;
             // 
+            // pnlDeleted
+            // 
+            this.pnlDeleted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.pnlDeleted.BorderRadius = 40;
+            this.pnlDeleted.Controls.Add(this.label11);
+            this.pnlDeleted.Controls.Add(this.roundedPanel6);
+            this.pnlDeleted.Controls.Add(this.label10);
+            this.pnlDeleted.Location = new System.Drawing.Point(110, 52);
+            this.pnlDeleted.Name = "pnlDeleted";
+            this.pnlDeleted.Size = new System.Drawing.Size(522, 411);
+            this.pnlDeleted.TabIndex = 23;
+            this.pnlDeleted.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label11.Location = new System.Drawing.Point(197, 199);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(219, 73);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Deleted";
+            // 
+            // roundedPanel6
+            // 
+            this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundedPanel6.BorderRadius = 40;
+            this.roundedPanel6.Controls.Add(this.pictureBox3);
+            this.roundedPanel6.Location = new System.Drawing.Point(24, 120);
+            this.roundedPanel6.Name = "roundedPanel6";
+            this.roundedPanel6.Size = new System.Drawing.Size(172, 172);
+            this.roundedPanel6.TabIndex = 15;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(23, 23);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label10.Location = new System.Drawing.Point(197, 140);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(321, 73);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Successfully";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -560,64 +618,6 @@ namespace SavexTracker.forms
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
-            // pnlDeleted
-            // 
-            this.pnlDeleted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.pnlDeleted.BorderRadius = 40;
-            this.pnlDeleted.Controls.Add(this.label11);
-            this.pnlDeleted.Controls.Add(this.roundedPanel6);
-            this.pnlDeleted.Controls.Add(this.label10);
-            this.pnlDeleted.Location = new System.Drawing.Point(110, 52);
-            this.pnlDeleted.Name = "pnlDeleted";
-            this.pnlDeleted.Size = new System.Drawing.Size(522, 411);
-            this.pnlDeleted.TabIndex = 23;
-            this.pnlDeleted.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(197, 199);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(219, 73);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Deleted";
-            // 
-            // roundedPanel6
-            // 
-            this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundedPanel6.BorderRadius = 40;
-            this.roundedPanel6.Controls.Add(this.pictureBox3);
-            this.roundedPanel6.Location = new System.Drawing.Point(24, 120);
-            this.roundedPanel6.Name = "roundedPanel6";
-            this.roundedPanel6.Size = new System.Drawing.Size(172, 172);
-            this.roundedPanel6.TabIndex = 15;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(23, 23);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label10.Location = new System.Drawing.Point(197, 140);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(321, 73);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Successfully";
-            // 
             // roundedPanel1
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
@@ -655,11 +655,11 @@ namespace SavexTracker.forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDeleteCon.ResumeLayout(false);
             this.pnlDeleteCon.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlDeleted.ResumeLayout(false);
             this.pnlDeleted.PerformLayout();
             this.roundedPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

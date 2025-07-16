@@ -201,7 +201,7 @@ namespace SavexTracker.forms
             pnlRestoreCon.Visible = false;            
         }
 
-        private void rjButton5_Click(object sender, EventArgs e)
+        private async void rjButton5_Click(object sender, EventArgs e)
         {
             if (dgv_Archive.SelectedRows.Count == 0)
             {
@@ -209,16 +209,27 @@ namespace SavexTracker.forms
                 return;
             }
 
+            var itemsToRestore = new List<(int id, string type)>();
             foreach (DataGridViewRow row in dgv_Archive.SelectedRows)
             {
                 string type = row.Cells["colType"].Value?.ToString();
                 int id = Convert.ToInt32(row.Cells["colId"].Value);
-                CRUD.RestoreArchiveItem(id, type);
+                itemsToRestore.Add((id, type));
             }
+            CRUD.RestoreArchiveItems(itemsToRestore);
 
             GlobalData.AllArchive = CRUD.GetAllArchive();
             LoadArchiveData();
-            RefreshRecord();
+
+            // Replace RefreshRecord with async refresh
+            Form1 mainForm = null;
+            if (Application.OpenForms["Form1"] is Form1 form)
+                mainForm = form;
+            if (mainForm != null)
+            {
+                await mainForm.RefreshDataAsync();
+            }
+
             pnlRestored.Visible = true;
 
             Timer hideTimer = new Timer();

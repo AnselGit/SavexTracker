@@ -738,6 +738,72 @@ namespace SavexTracker.Database
             return results;
         }
 
+        public static void RestoreArchiveItems(List<(int id, string type)> items)
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                foreach (var (id, type) in items)
+                {
+                    // 1. Read the archive row and store values
+                    string query = "SELECT * FROM archive WHERE sid = @id OR eid = @id";
+                    string timestamp = null, note = null;
+                    double? amount = null;
+                    bool isSavings = type == "Savings";
+                    using (var cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                if (isSavings)
+                                {
+                                    timestamp = reader["timestamp1"].ToString();
+                                    amount = reader["amount1"] != DBNull.Value ? Convert.ToDouble(reader["amount1"]) : 0.0;
+                                }
+                                else
+                                {
+                                    timestamp = reader["timestamp2"].ToString();                                    
+                                    amount = reader["amount2"] != DBNull.Value ? Convert.ToDouble(reader["amount2"]) : 0.0;
+                                    note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
+                                }
+                            }
+                        }
+                    }
+                    // 2. Now insert and delete (reader is closed)
+                    if (isSavings && timestamp != null && amount.HasValue)
+                    {
+                        using (var insertCmd = new SQLiteCommand("INSERT INTO savings (timestamp, amount) VALUES (@timestamp, @amount)", conn))
+                        {
+                            insertCmd.Parameters.AddWithValue("@timestamp", timestamp);
+                            insertCmd.Parameters.AddWithValue("@amount", amount.Value);
+                            insertCmd.ExecuteNonQuery();
+                        }
+                        LogHistory("Restored savings", amount.Value, DateTime.Now);
+                    }
+                    else if (!isSavings && timestamp != null && amount.HasValue)
+                    {
+                        using (var insertCmd = new SQLiteCommand("INSERT INTO expenses (timestamp, amount, note) VALUES (@timestamp, @amount, @note)", conn))
+                        {
+                            insertCmd.Parameters.AddWithValue("@timestamp", timestamp);
+                            insertCmd.Parameters.AddWithValue("@amount", amount.Value);
+                            insertCmd.Parameters.AddWithValue("@note", note);
+                            insertCmd.ExecuteNonQuery();
+                        }
+                        LogHistory("Restored expense", amount.Value, DateTime.Now);
+                    }
+                    // 3. Delete from archive
+                    string deleteQuery = "DELETE FROM archive WHERE sid = @id OR eid = @id";
+                    using (var deleteCmd = new SQLiteCommand(deleteQuery, conn))
+                    {
+                        deleteCmd.Parameters.AddWithValue("@id", id);
+                        deleteCmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
         // Add more CRUD methods as needed (AddSaving, AddExpense, UpdateSaving, etc.)
         // ...
     }

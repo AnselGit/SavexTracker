@@ -23,7 +23,7 @@ namespace SavexTracker.CustomClasses
         private int _rowHeight = 45;
         private int _rowSpacing = 8;
         private int _leftPad = 10;
-        private int _dateWidth = 90;
+        private int _dateWidth = 90;        
         private Font _font = new Font("Microsoft Sans Serif", 12F);
         private Font _buttonFont = new Font("Noto Sans", 10F);
         private Color _rowBack = Color.White;
@@ -93,7 +93,7 @@ namespace SavexTracker.CustomClasses
                     Color btnColor = _hoveredButton ? Color.FromArgb(106, 90, 205) : Color.LightGray;
                     using (Brush bb = new SolidBrush(btnColor))
                         g.FillRectangle(bb, _buttonRect);
-                    // Removed border drawing
+                    // No border (to match ExpensesOwnerDrawPanel)
                     using (StringFormat sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center })
                         g.DrawString("Modify", _buttonFont, Brushes.White, _buttonRect, sf);
                 }
