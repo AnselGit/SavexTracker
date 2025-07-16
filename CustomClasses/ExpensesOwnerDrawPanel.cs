@@ -9,42 +9,41 @@ using SavexTracker.Models;
 
 namespace SavexTracker.CustomClasses
 {
-    public class SavingsOwnerDrawPanel : Panel
+    public class ExpensesOwnerDrawPanel : Panel
     {
-        public class SavingsRow
+        public class ExpensesRow
         {
-            public int Sid { get; set; }
+            public int Eid { get; set; }
             public string Timestamp { get; set; }
             public double Amount { get; set; }
+            public string Note { get; set; }
         }
 
-        private List<SavingsRow> _rows = new List<SavingsRow>();
+        private List<ExpensesRow> _rows = new List<ExpensesRow>();
         private int? _selectedIndex = null;
         private int _rowHeight = 45;
         private int _rowSpacing = 8;
         private int _leftPad = 10;
         private int _dateWidth = 90;
+        private int _amountWidth = 110;        
         private Font _font = new Font("Microsoft Sans Serif", 12F);
         private Font _buttonFont = new Font("Noto Sans", 10F);
         private Color _rowBack = Color.White;
         private Color _rowFore = Color.FromArgb(64, 64, 64);
-        private Color _rowBorder = Color.FromArgb(224, 224, 224);
-        private Color _rowUnderline = Color.MediumSlateBlue;
         private Color _selectedBack = Color.FromArgb(74, 183, 255);
         private Color _selectedFore = Color.White;
         private int? _hoveredRow = null;
         private bool _hoveredButton = false;
         private Rectangle _buttonRect = Rectangle.Empty;
-        public event EventHandler<int> RowModifyRequested; // int = row index
-
+        public event EventHandler<int> RowModifyRequested;
         public event EventHandler SelectedRowChanged;
 
         [Browsable(false)]
         public int? SelectedIndex => _selectedIndex;
         [Browsable(false)]
-        public SavingsRow SelectedRow => (_selectedIndex != null && _selectedIndex >= 0 && _selectedIndex < _rows.Count) ? _rows[_selectedIndex.Value] : null;
+        public ExpensesRow SelectedRow => (_selectedIndex != null && _selectedIndex >= 0 && _selectedIndex < _rows.Count) ? _rows[_selectedIndex.Value] : null;
 
-        public SavingsOwnerDrawPanel()
+        public ExpensesOwnerDrawPanel()
         {
             this.DoubleBuffered = true;
             this.AutoScroll = true;
@@ -53,11 +52,18 @@ namespace SavexTracker.CustomClasses
             this.Cursor = Cursors.Hand;
         }
 
-        public void SetRows(IEnumerable<SavingsRow> rows)
+        public void SetRows(IEnumerable<ExpensesRow> rows)
         {
             _rows = rows.ToList();
             _selectedIndex = null;
             Invalidate();
+        }
+
+        public ExpensesRow GetRow(int index)
+        {
+            if (index >= 0 && index < _rows.Count)
+                return _rows[index];
+            return null;
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -82,7 +88,9 @@ namespace SavexTracker.CustomClasses
                     g.DrawString(row.Timestamp, _font, b, rowRect.Left + 10, rowRect.Top + 10);
                 // Amount
                 string amt = "₱" + row.Amount.ToString("0.00");
-                g.DrawString(amt, _font, selected ? Brushes.White : new SolidBrush(_rowFore), rowRect.Left + _dateWidth + 30, rowRect.Top + 10);
+                g.DrawString(amt, _font, selected ? Brushes.White : new SolidBrush(_rowFore), rowRect.Left + _dateWidth + 20, rowRect.Top + 10);
+                // Note
+                g.DrawString(row.Note, _font, selected ? Brushes.White : new SolidBrush(_rowFore), rowRect.Left + _dateWidth + _amountWidth + 30, rowRect.Top + 10);
                 // Draw Modify button if hovered
                 if (_hoveredRow == i)
                 {
@@ -93,7 +101,7 @@ namespace SavexTracker.CustomClasses
                     Color btnColor = _hoveredButton ? Color.FromArgb(106, 90, 205) : Color.LightGray;
                     using (Brush bb = new SolidBrush(btnColor))
                         g.FillRectangle(bb, _buttonRect);
-                    // Removed border drawing
+                    // No border
                     using (StringFormat sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center })
                         g.DrawString("Modify", _buttonFont, Brushes.White, _buttonRect, sf);
                 }
@@ -174,25 +182,6 @@ namespace SavexTracker.CustomClasses
                 SelectedRowChanged?.Invoke(this, EventArgs.Empty);
                 Invalidate();
             }
-        }
-
-        // Deselect if clicked outside panel
-        protected override void OnLostFocus(EventArgs e)
-        {
-            base.OnLostFocus(e);
-            if (_selectedIndex != null)
-            {
-                _selectedIndex = null;
-                SelectedRowChanged?.Invoke(this, EventArgs.Empty);
-                Invalidate();
-            }
-        }
-
-        public SavingsRow GetRow(int index)
-        {
-            if (index >= 0 && index < _rows.Count)
-                return _rows[index];
-            return null;
         }
     }
 } 

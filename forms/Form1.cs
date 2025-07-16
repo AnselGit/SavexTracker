@@ -19,6 +19,7 @@ namespace SavexTracker
         private bool isPnl1Dirty = true;
         private bool isPnl3Dirty = true;
         private SavingsOwnerDrawPanel savingsPanel;
+        // private ExpensesOwnerDrawPanel expensesPanel; // Remove this duplicate declaration
 
         public Form1()
         {
@@ -29,10 +30,19 @@ namespace SavexTracker
             savingsPanel.Size = new Size(254, 484);    // Match previous tblSave size
             savingsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
             savingsPanel.SelectedRowChanged += SavingsPanel_SelectedRowChanged;
+            savingsPanel.RowModifyRequested += SavingsPanel_RowModifyRequested;
             pnlSave.Controls.Add(savingsPanel);
-            btnModify.Enabled = false;
-            btnModify.Click -= btnRefresh_Click; // Remove old event if any
-            btnModify.Click += BtnModify_Click;
+            // Expenses panel
+            expensesPanel = new ExpensesOwnerDrawPanel();
+            expensesPanel.Location = new Point(14, 39); // Match old tbl_Spend
+            expensesPanel.Size = new Size(437, 484);
+            expensesPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
+            expensesPanel.SelectedRowChanged += ExpensesPanel_SelectedRowChanged;
+            expensesPanel.RowModifyRequested += ExpensesPanel_RowModifyRequested;
+            roundedPanel4.Controls.Add(expensesPanel);
+            btnRefresh.Enabled = false;
+            btnRefresh.Click -= btnRefresh_Click; // Remove old event if any
+            btnRefresh.Click += BtnRefresh_Click;
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -45,13 +55,13 @@ namespace SavexTracker
 
         public async Task RefreshDataAsync()
         {
-            btnModify.Text = "Refreshing";
-            btnModify.Enabled = false;
+            btnRefresh.Text = "Refreshing";
+            btnRefresh.Enabled = false;
 
             CRUD.EnsureDatabaseAndTables();
             CRUD.LoadAllDataToGlobals();
             UpdateGoalLabel();
-            UpdateTotalLabels();
+            UpdateTotalLabels();    
             LoadGoal();
             LoadExpensesToPanel();
             LoadSavingsToPanel();
@@ -61,8 +71,8 @@ namespace SavexTracker
             DonutChartGoalVsTotalBuilder.Build(pnlPie3);
 
             await Task.Delay(500);
-            btnModify.Text = "Refresh";
-            btnModify.Enabled = true;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.Enabled = true;
         }
 
         private void UpdateGoalLabel()
@@ -116,21 +126,28 @@ namespace SavexTracker
 
         private void SavingsPanel_SelectedRowChanged(object sender, EventArgs e)
         {
-            btnModify.Enabled = (savingsPanel.SelectedRow != null);
+            btnRefresh.Enabled = (savingsPanel.SelectedRow != null);
         }
 
-        private void BtnModify_Click(object sender, EventArgs e)
+        private void SavingsPanel_RowModifyRequested(object sender, int rowIndex)
         {
-            var row = savingsPanel.SelectedRow;
+            var row = ((SavingsOwnerDrawPanel)sender).SelectedRow;
+            if (row == null)
+                row = ((SavingsOwnerDrawPanel)sender).GetRow(rowIndex);
             if (row != null)
             {
                 GlobalData.CurrentID = row.Sid;
                 GlobalData.CurrentTimestamp = row.Timestamp;
                 GlobalData.CurrentAmount = row.Amount;
                 GlobalData.CurrentType = "Savings";
-                var updateForm = new UpdateDeleteForm();
+                var updateForm = new UpdateDeleteForm(this);
                 updateForm.Show();
             }
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshPnl3();
         }
 
         private void LoadSavingsToPanel()
@@ -149,120 +166,15 @@ namespace SavexTracker
 
         private void LoadExpensesToPanel()
         {
-            tbl_Spend.Controls.Clear();
-            tbl_Spend.RowStyles.Clear();
-            tbl_Spend.RowCount = 0;
-            tbl_Spend.AutoScroll = true;
-
             var expensesList = GlobalData.AllExpenses ?? new List<Expense>();
-            int row = 0;
-            foreach (var expense in expensesList)
+            var rows = expensesList.Select(e => new ExpensesOwnerDrawPanel.ExpensesRow
             {
-                int eid = expense.Eid;
-                string timestamp = expense.Timestamp;
-                double amount = expense.Amount;
-                string note = expense.Note ?? "";
-
-                string txtNameDate = $"edate_{eid}";
-                string txtNameAmount = $"eamt_{eid}";
-                string txtNameNote = $"enote_{eid}";
-
-                // Create RJTextBoxes
-                var dateBox = new RJCodeAdvance.RJControls.RJTextBox
-                {
-                    Name = txtNameDate,
-                    Texts = timestamp,
-                    BackColor = Color.White,
-                    BorderColor = Color.FromArgb(224, 224, 224),
-                    BorderFocusColor = Color.MediumSlateBlue,
-                    BorderRadius = 0,
-                    BorderSize = 1,
-                    ForeColor = Color.FromArgb(64, 64, 64),
-                    UnderlinedStyle = true,
-                    Size = new Size(107, 31),
-                    Font = new Font("Microsoft Sans Serif", 12F),
-                    Margin = new Padding(5)
-                };
-
-                var amtBox = new RJCodeAdvance.RJControls.RJTextBox
-                {
-                    Name = txtNameAmount,
-                    Texts = "₱" + amount.ToString("0.00"),
-                    BackColor = Color.White,
-                    BorderColor = Color.FromArgb(224, 224, 224),
-                    BorderFocusColor = Color.MediumSlateBlue,
-                    BorderRadius = 0,
-                    BorderSize = 1,
-                    ForeColor = Color.FromArgb(64, 64, 64),
-                    UnderlinedStyle = true,
-                    Size = new Size(124, 31),
-                    Font = new Font("Microsoft Sans Serif", 12F),
-                    Margin = new Padding(5)
-                };
-
-                var noteBox = new RJCodeAdvance.RJControls.RJTextBox
-                {
-                    Name = txtNameNote,
-                    Texts = note,
-                    BackColor = Color.White,
-                    BorderColor = Color.FromArgb(224, 224, 224),
-                    BorderFocusColor = Color.MediumSlateBlue,
-                    BorderRadius = 0,
-                    BorderSize = 1,
-                    ForeColor = Color.FromArgb(64, 64, 64),
-                    UnderlinedStyle = true,
-                    Size = new Size(182, 31),
-                    Font = new Font("Microsoft Sans Serif", 12F),
-                    Margin = new Padding(5)
-                };
-
-                // Add to row
-                tbl_Spend.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-                tbl_Spend.Controls.Add(dateBox, 0, tbl_Spend.RowCount);
-                tbl_Spend.Controls.Add(amtBox, 1, tbl_Spend.RowCount);
-                tbl_Spend.Controls.Add(noteBox, 2, tbl_Spend.RowCount);
-                tbl_Spend.RowCount++;
-
-                // Modify button
-                Button btnModify = new Button
-                {
-                    Text = "Modify",
-                    Name = "btnModify_" + row,
-                    FlatStyle = FlatStyle.Flat,
-                    BackColor = Color.White,
-                    ForeColor = Color.White,
-                    Font = new Font("Noto Sans", 9, FontStyle.Bold),
-                    Cursor = Cursors.Hand,
-                    Anchor = AnchorStyles.Top | AnchorStyles.Left,
-                    Dock = DockStyle.None,
-                    Size = new Size(430, 25),
-                    Margin = new Padding(0)
-                };
-
-                btnModify.MouseEnter += (s, e) => btnModify.BackColor = Color.FromArgb(106, 90, 205);
-                btnModify.MouseLeave += (s, e) => btnModify.BackColor = Color.White;
-
-                btnModify.Click += (s, e) =>
-                {
-                    GlobalData.CurrentID = eid;
-                    GlobalData.CurrentTimestamp = timestamp;
-                    GlobalData.CurrentAmount = amount;
-                    GlobalData.CurrentNote = note;
-                    GlobalData.CurrentType = "Expenses";
-
-
-                    var updateForm = new UpdateDeleteForm();
-                    updateForm.Show();
-                    updateForm.ShowExpensePanel();
-                };
-
-                tbl_Spend.RowStyles.Add(new RowStyle(SizeType.Absolute, 25));
-                tbl_Spend.Controls.Add(btnModify, 0, tbl_Spend.RowCount);
-                tbl_Spend.SetColumnSpan(btnModify, 3);
-                tbl_Spend.RowCount++;
-
-                row++;
-            }
+                Eid = e.Eid,
+                Timestamp = e.Timestamp,
+                Amount = e.Amount,
+                Note = e.Note ?? ""
+            });
+            expensesPanel.SetRows(rows);
         }
 
         private void UpdateTotalLabels()
@@ -537,6 +449,44 @@ namespace SavexTracker
                 RefreshPnl3();
                 isPnl3Dirty = false;
             }
+        }
+
+        private void ExpensesPanel_SelectedRowChanged(object sender, EventArgs e)
+        {
+            // You can enable/disable a Modify button for expenses if needed
+        }
+
+        private void ExpensesPanel_RowModifyRequested(object sender, int rowIndex)
+        {
+            var row = ((ExpensesOwnerDrawPanel)sender).SelectedRow;
+            if (row == null)
+                row = ((ExpensesOwnerDrawPanel)sender).GetRow(rowIndex);
+            if (row != null)
+            {
+                GlobalData.CurrentID = row.Eid;
+                GlobalData.CurrentTimestamp = row.Timestamp;
+                GlobalData.CurrentAmount = row.Amount;
+                GlobalData.CurrentNote = row.Note;
+                GlobalData.CurrentType = "Expenses";
+                var updateForm = new UpdateDeleteForm(this);
+                updateForm.Show();
+                updateForm.ShowExpensePanel();
+            }
+        }
+
+        private void tbl_Spend_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public void TriggerRefreshPnl3()
+        {
+            RefreshPnl3();
+        }
+
+        public void TriggerBtnRefreshClick()
+        {
+            btnRefresh.PerformClick();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿
+﻿using System.Windows.Forms;
+
 namespace SavexTracker
 {
     public static class AppConfig

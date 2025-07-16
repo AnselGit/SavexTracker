@@ -15,9 +15,11 @@ namespace SavexTracker.forms
 {
     public partial class UpdateDeleteForm : Form
     {
-        public UpdateDeleteForm()
+        private Form1 mainForm;
+        public UpdateDeleteForm(Form1 form)
         {
             InitializeComponent();
+            mainForm = form;
         }
 
         public void ShowExpensePanel()
@@ -27,11 +29,11 @@ namespace SavexTracker.forms
 
         private void RefreshRecord()
         {
-            if (Application.OpenForms["Form1"] is Form1 mainForm)
+            if (mainForm != null)
             {
                 // Mark panels dirty
                 mainForm.GetType().GetMethod("MarkPanelsDirty", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
-                // Only refresh pnl_3
+                // Always refresh pnl_3
                 mainForm.GetType().GetMethod("RefreshPnl3", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
             }
         }
@@ -93,29 +95,53 @@ namespace SavexTracker.forms
         }
 
 
-        private void btnCon1_Click(object sender, EventArgs e)
+        private async void btnCon1_Click(object sender, EventArgs e)
         {
             string newDate = lblDate.Text.Trim();
 
-            string newSavingsAmountText = txtAmt.Texts.Trim().Replace("₱", "").Trim();
-            if (double.TryParse(newSavingsAmountText, out double newSavingsAmount) && newSavingsAmount > 0)
+            if (GlobalData.CurrentType == "Savings")
             {
-                CRUD.UpdateSaving(GlobalData.CurrentID, newDate, newSavingsAmount);
-                GlobalData.AllSavings = CRUD.GetAllSavings();
+                string newSavingsAmountText = txtAmt.Texts.Trim().Replace("₱", "").Trim();
+                if (double.TryParse(newSavingsAmountText, out double newSavingsAmount) && newSavingsAmount > 0)
+                {
+                    CRUD.UpdateSaving(GlobalData.CurrentID, newDate, newSavingsAmount);
+                    GlobalData.AllSavings = CRUD.GetAllSavings();
+                    if (mainForm != null)
+                    {
+                        await mainForm.RefreshDataAsync();
+                    }
+                    ShowSuccessPanel();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid amount. Please enter a valid number greater than 0.");
+                    return;
+                }
+            }
+            else if (GlobalData.CurrentType == "Expenses")
+            {
+                string newExpenseAmountText = txtEamt.Texts.Trim().Replace("₱", "").Trim();
+                string newNote = txtNote.Texts.Trim();
+                if (!double.TryParse(newExpenseAmountText, out double newExpenseAmount) || newExpenseAmount <= 0)
+                {
+                    MessageBox.Show("Invalid amount. Please enter a valid number greater than 0.");
+                    return;
+                }
+                CRUD.UpdateExpense(GlobalData.CurrentID, newDate, newExpenseAmount, newNote);
+                GlobalData.AllExpenses = CRUD.GetAllExpenses();
+                if (mainForm != null)
+                {
+                    await mainForm.RefreshDataAsync();
+                }
                 ShowSuccessPanel();
                 return;
             }
-
-            string newExpenseAmountText = txtEamt.Texts.Trim().Replace("₱", "").Trim();
-            string newNote = txtNote.Texts.Trim();
-            if (!double.TryParse(newExpenseAmountText, out double newExpenseAmount) || newExpenseAmount <= 0)
+            else
             {
-                MessageBox.Show("Invalid amount. Please enter a valid number greater than 0.");
+                MessageBox.Show("Unknown record type. Please try again.");
                 return;
             }
-            CRUD.UpdateExpense(GlobalData.CurrentID, newDate, newExpenseAmount, newNote);
-            GlobalData.AllExpenses = CRUD.GetAllExpenses();
-            ShowSuccessPanel();
         }
 
 
@@ -138,16 +164,19 @@ namespace SavexTracker.forms
             CRUD.ArchiveItem(id, type);
         }
 
-        private void rjButton4_Click(object sender, EventArgs e)
+        private async void rjButton4_Click(object sender, EventArgs e)
         {
-            MoveToArchive();            
+            MoveToArchive();
+            if (mainForm != null)
+            {
+                await mainForm.RefreshDataAsync();
+            }
             pnlDeleted.Visible = true;            
 
             Timer hideTimer = new Timer();
             hideTimer.Interval = 1500; 
             hideTimer.Tick += (s, args) =>
             {
-                RefreshRecord();
                 this.Close();
                 hideTimer.Stop();
                 hideTimer.Dispose();

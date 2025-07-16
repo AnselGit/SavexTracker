@@ -57,12 +57,8 @@ namespace SavexTracker.forms
             {
                 // Mark panels dirty
                 mainForm.GetType().GetMethod("MarkPanelsDirty", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
-                // Only refresh the visible panel
-                if (mainForm.Controls["pnl_1"].Visible)
-                {
-                    mainForm.GetType().GetMethod("RefreshPnl1", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
-                }
-                else if (mainForm.Controls["pnl_3"].Visible)
+                // Always refresh pnl_3 if visible
+                if (mainForm.Controls["pnl_3"].Visible)
                 {
                     mainForm.GetType().GetMethod("RefreshPnl3", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
                 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
 using SavexTracker.Models;
+using System.Windows.Forms;
 
 namespace SavexTracker.Database
 {
@@ -394,22 +395,33 @@ namespace SavexTracker.Database
         // Update an expense and log history
         public static void UpdateExpense(int id, string date, double amount, string note)
         {
-            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            try
             {
-                conn.Open();
-                string updateQuery = "UPDATE expenses SET timestamp = @timestamp, amount = @amount, note = @note WHERE eid = @eid";
-                using (var cmd = new SQLiteCommand(updateQuery, conn))
+                using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
                 {
-                    cmd.Parameters.AddWithValue("@timestamp", date);
-                    cmd.Parameters.AddWithValue("@amount", amount);
-                    cmd.Parameters.AddWithValue("@note", note);
-                    cmd.Parameters.AddWithValue("@eid", id);
-                    int affected = cmd.ExecuteNonQuery();
-                    if (affected > 0)
+                    conn.Open();
+                    string updateQuery = "UPDATE expenses SET [timestamp] = @timestamp, amount = @amount, note = @note WHERE eid = @eid";
+                    using (var cmd = new SQLiteCommand(updateQuery, conn))
                     {
-                        LogHistory("Updated expense", amount, DateTime.Now);
+                        cmd.Parameters.AddWithValue("@timestamp", date);
+                        cmd.Parameters.AddWithValue("@amount", amount);
+                        cmd.Parameters.AddWithValue("@note", note);
+                        cmd.Parameters.AddWithValue("@eid", id);
+                        int affected = cmd.ExecuteNonQuery();
+                        if (affected > 0)
+                        {
+                            LogHistory("Updated expense", amount, DateTime.Now);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"No expense record was updated. ID={id} may not exist.", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating expense: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -422,6 +434,7 @@ namespace SavexTracker.Database
                 string timestamp = "";
                 double amount = 0;
                 string note = "";
+                bool found = false;
                 if (type == "Savings")
                 {
                     using (var cmd = new SQLiteCommand("SELECT timestamp, amount FROM savings WHERE sid = @id", conn))
@@ -433,6 +446,7 @@ namespace SavexTracker.Database
                             {
                                 timestamp = reader["timestamp"].ToString();
                                 amount = Convert.ToDouble(reader["amount"]);
+                                found = true;
                             }
                         }
                     }
@@ -449,9 +463,15 @@ namespace SavexTracker.Database
                                 timestamp = reader["timestamp"].ToString();
                                 amount = Convert.ToDouble(reader["amount"]);
                                 note = reader["note"]?.ToString();
+                                found = true;
                             }
                         }
                     }
+                }
+                if (!found)
+                {
+                    LogHistory($"Tried to archive non-existent {type}", 0, DateTime.Now);
+                    return;
                 }
                 // Insert into archive
                 string insertQuery = @"INSERT INTO archive (sid, eid, name, timestamp1, amount1, timestamp2, amount2, note) VALUES (@sid, @eid, @name, @timestamp1, @amount1, @timestamp2, @amount2, @note);";

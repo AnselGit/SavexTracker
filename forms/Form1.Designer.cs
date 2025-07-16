@@ -41,18 +41,17 @@ namespace SavexTracker
             this.btnDelAll_S = new RJCodeAdvance.RJControls.RJButton();
             this.btnDelAll_E = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton9 = new RJCodeAdvance.RJControls.RJButton();
-            this.btnModify = new RJCodeAdvance.RJControls.RJButton();
-            this.gradientPanelRound6 = new GradientPanelRound();
+            this.btnRefresh = new RJCodeAdvance.RJControls.RJButton();
+            this.gradientPanelRound6 = new SavexTracker.CustomClasses.GradientPanelRound();
             this.rjButton15 = new RJCodeAdvance.RJControls.RJButton();
-            this.roundedPanel4 = new RoundedPanel();
+            this.roundedPanel4 = new SavexTracker.CustomClasses.RoundedPanel();
             this.label12 = new System.Windows.Forms.Label();
-            this.tbl_Spend = new System.Windows.Forms.TableLayoutPanel();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.gradientPanelRound5 = new GradientPanelRound();
+            this.gradientPanelRound5 = new SavexTracker.CustomClasses.GradientPanelRound();
             this.rjButton14 = new RJCodeAdvance.RJControls.RJButton();
-            this.pnlSave = new RoundedPanel();
+            this.pnlSave = new SavexTracker.CustomClasses.RoundedPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -63,82 +62,82 @@ namespace SavexTracker
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
-            this.roundedPanel7 = new RoundedPanel();
+            this.roundedPanel7 = new SavexTracker.CustomClasses.RoundedPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rjButton10 = new RJCodeAdvance.RJControls.RJButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.gradientPanelRound1 = new GradientPanelRound();
+            this.gradientPanelRound1 = new SavexTracker.CustomClasses.GradientPanelRound();
             this.rjButton11 = new RJCodeAdvance.RJControls.RJButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.pnlHistory = new RoundedPanel();
+            this.pnlHistory = new SavexTracker.CustomClasses.RoundedPanel();
             this.rtbHistory = new System.Windows.Forms.RichTextBox();
-            this.pnlEmpty = new RoundedPanel();
+            this.pnlEmpty = new SavexTracker.CustomClasses.RoundedPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pnlDeleteCon = new RoundedPanel();
+            this.pnlDeleteCon = new SavexTracker.CustomClasses.RoundedPanel();
             this.rjButton12 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton13 = new RJCodeAdvance.RJControls.RJButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.gradientPanelRound2 = new GradientPanelRound();
-            this.gradientPanelRound3 = new GradientPanelRound();
+            this.gradientPanelRound2 = new SavexTracker.CustomClasses.GradientPanelRound();
+            this.gradientPanelRound3 = new SavexTracker.CustomClasses.GradientPanelRound();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.rjButton6 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton5 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton7 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton8 = new RJCodeAdvance.RJControls.RJButton();
-            this.gradientPanelRound4 = new GradientPanelRound();
+            this.gradientPanelRound4 = new SavexTracker.CustomClasses.GradientPanelRound();
             this.label22 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.roundedPanel11 = new RoundedPanel();
+            this.roundedPanel11 = new SavexTracker.CustomClasses.RoundedPanel();
             this.lblTotalSpent = new System.Windows.Forms.Label();
-            this.roundedPanel10 = new RoundedPanel();
+            this.roundedPanel10 = new SavexTracker.CustomClasses.RoundedPanel();
             this.lblTotalSave = new System.Windows.Forms.Label();
-            this.roundedPanel9 = new RoundedPanel();
+            this.roundedPanel9 = new SavexTracker.CustomClasses.RoundedPanel();
             this.lblGrand = new System.Windows.Forms.Label();
-            this.roundedPanel1 = new RoundedPanel();
-            this.roundedPanel8 = new RoundedPanel();
+            this.roundedPanel1 = new SavexTracker.CustomClasses.RoundedPanel();
+            this.roundedPanel8 = new SavexTracker.CustomClasses.RoundedPanel();
             this.btnNav_1 = new RJCodeAdvance.RJControls.RJButton();
             this.btnNav_2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnNav_3 = new RJCodeAdvance.RJControls.RJButton();
             this.pnl_2 = new System.Windows.Forms.Panel();
-            this.roundedPanel13 = new RoundedPanel();
-            this.roundedPanel14 = new RoundedPanel();
+            this.roundedPanel13 = new SavexTracker.CustomClasses.RoundedPanel();
+            this.roundedPanel14 = new SavexTracker.CustomClasses.RoundedPanel();
             this.dgv_Search = new System.Windows.Forms.DataGridView();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roundedPanel12 = new RoundedPanel();
+            this.roundedPanel12 = new SavexTracker.CustomClasses.RoundedPanel();
             this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
             this.btnSearch = new RJCodeAdvance.RJControls.RJButton();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.roundedPanel2 = new RoundedPanel();
+            this.roundedPanel2 = new SavexTracker.CustomClasses.RoundedPanel();
             this.label24 = new System.Windows.Forms.Label();
             this.lblDashSpend = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblGoal = new System.Windows.Forms.Label();
             this.pnl_1 = new System.Windows.Forms.Panel();
-            this.roundedPanel6 = new RoundedPanel();
+            this.roundedPanel6 = new SavexTracker.CustomClasses.RoundedPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pnlPie2 = new RoundedPanel();
-            this.roundedPanel5 = new RoundedPanel();
+            this.pnlPie2 = new SavexTracker.CustomClasses.RoundedPanel();
+            this.roundedPanel5 = new SavexTracker.CustomClasses.RoundedPanel();
             this.btnSet = new RJCodeAdvance.RJControls.RJButton();
-            this.pnlPie3 = new RoundedPanel();
+            this.pnlPie3 = new SavexTracker.CustomClasses.RoundedPanel();
             this.txtGoal = new System.Windows.Forms.TextBox();
-            this.roundedPanel3 = new RoundedPanel();
+            this.roundedPanel3 = new SavexTracker.CustomClasses.RoundedPanel();
             this.label23 = new System.Windows.Forms.Label();
             this.lblDashSave = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pnlLine = new RoundedPanel();
-            this.pnlPie = new RoundedPanel();
+            this.pnlLine = new SavexTracker.CustomClasses.RoundedPanel();
+            this.pnlPie = new SavexTracker.CustomClasses.RoundedPanel();
             this.pnl_3.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -182,7 +181,7 @@ namespace SavexTracker
             this.pnl_3.Controls.Add(this.btnDelAll_S);
             this.pnl_3.Controls.Add(this.btnDelAll_E);
             this.pnl_3.Controls.Add(this.rjButton9);
-            this.pnl_3.Controls.Add(this.btnModify);
+            this.pnl_3.Controls.Add(this.btnRefresh);
             this.pnl_3.Controls.Add(this.gradientPanelRound6);
             this.pnl_3.Controls.Add(this.gradientPanelRound5);
             this.pnl_3.Controls.Add(this.label15);
@@ -257,26 +256,26 @@ namespace SavexTracker
             this.rjButton9.UseVisualStyleBackColor = false;
             this.rjButton9.Click += new System.EventHandler(this.rjButton9_Click);
             // 
-            // btnModify
+            // btnRefresh
             // 
-            this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnModify.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModify.BorderColor = System.Drawing.Color.White;
-            this.btnModify.BorderRadius = 33;
-            this.btnModify.BorderSize = 0;
-            this.btnModify.FlatAppearance.BorderSize = 0;
-            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModify.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModify.ForeColor = System.Drawing.Color.White;
-            this.btnModify.Location = new System.Drawing.Point(695, 28);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(133, 65);
-            this.btnModify.TabIndex = 16;
-            this.btnModify.Text = "Modify";
-            this.btnModify.TextColor = System.Drawing.Color.White;
-            this.btnModify.UseVisualStyleBackColor = false;
-            this.btnModify.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnRefresh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.BorderColor = System.Drawing.Color.White;
+            this.btnRefresh.BorderRadius = 33;
+            this.btnRefresh.BorderSize = 0;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(695, 28);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(133, 65);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.Text = "Modify";
+            this.btnRefresh.TextColor = System.Drawing.Color.White;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // gradientPanelRound6
             // 
@@ -321,7 +320,6 @@ namespace SavexTracker
             this.roundedPanel4.BackColor = System.Drawing.Color.White;
             this.roundedPanel4.BorderRadius = 60;
             this.roundedPanel4.Controls.Add(this.label12);
-            this.roundedPanel4.Controls.Add(this.tbl_Spend);
             this.roundedPanel4.Controls.Add(this.label20);
             this.roundedPanel4.Controls.Add(this.label21);
             this.roundedPanel4.Location = new System.Drawing.Point(5, 60);
@@ -340,20 +338,6 @@ namespace SavexTracker
             this.label12.Size = new System.Drawing.Size(46, 24);
             this.label12.TabIndex = 14;
             this.label12.Text = "Date";
-            // 
-            // tbl_Spend
-            // 
-            this.tbl_Spend.AutoScroll = true;
-            this.tbl_Spend.ColumnCount = 3;
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tbl_Spend.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
-            this.tbl_Spend.Location = new System.Drawing.Point(14, 39);
-            this.tbl_Spend.Name = "tbl_Spend";
-            this.tbl_Spend.RowCount = 1;
-            this.tbl_Spend.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39F));
-            this.tbl_Spend.Size = new System.Drawing.Size(437, 484);
-            this.tbl_Spend.TabIndex = 14;
             // 
             // label20
             // 
@@ -1782,9 +1766,8 @@ namespace SavexTracker
         private RoundedPanel roundedPanel4;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private RJCodeAdvance.RJControls.RJButton btnModify;
+        private RJCodeAdvance.RJControls.RJButton btnRefresh;
         private RJCodeAdvance.RJControls.RJButton rjButton9;
-        private System.Windows.Forms.TableLayoutPanel tbl_Spend;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblGrand;
         private System.Windows.Forms.Label lblTotalSpent;
@@ -1841,6 +1824,7 @@ namespace SavexTracker
         private System.Windows.Forms.DataGridViewTextBoxColumn colType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNote;
+        private ExpensesOwnerDrawPanel expensesPanel;
     }
 }
 

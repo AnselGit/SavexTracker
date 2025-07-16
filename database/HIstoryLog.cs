@@ -6,13 +6,13 @@ namespace SavexTracker.Database
 {
     public static class History
     {
-        public static void LogHistory(string action, double amount, System.Data.SQLite.SQLiteConnection sharedConn = null)
+        public static void LogHistory(string action, double amount, SQLiteConnection sharedConn = null)
         {
             string timestamp = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             bool shouldClose = false;
 
-            var conn = sharedConn ?? new System.Data.SQLite.SQLiteConnection(AppConfig.ConnectionString);
+            var conn = sharedConn ?? new SQLiteConnection(AppConfig.ConnectionString);
 
             if (sharedConn == null)
             {
@@ -21,7 +21,7 @@ namespace SavexTracker.Database
             }
 
             string query = "INSERT INTO history (action, amount, timestamp) VALUES (@action, @amount, @timestamp)";
-            using (var cmd = new System.Data.SQLite.SQLiteCommand(query, conn))
+            using (var cmd = new SQLiteCommand(query, conn))
             {
                 cmd.Parameters.AddWithValue("@action", action);
                 cmd.Parameters.AddWithValue("@amount", amount);

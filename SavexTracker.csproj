@@ -188,6 +188,9 @@
     <Compile Include="CustomClasses\VerticalFlowPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomClasses\ExpensesOwnerDrawPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="forms\addExpense.resx">
       <DependentUpon>addExpense.cs</DependentUpon>
     </EmbeddedResource>
