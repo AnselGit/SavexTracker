@@ -37,13 +37,13 @@ public static class DonutChartBuilder
         };
 
         pieSeries.Slices.Add(new PieSlice("Savings", savings)
-        {
-            Fill = OxyColor.FromRgb(207, 179, 255)
+        {            
+            Fill = OxyColor.FromRgb(179, 219, 255)
         });
 
         pieSeries.Slices.Add(new PieSlice("Expenses", expenses)
         {
-            Fill = OxyColor.FromRgb(179, 219, 255)
+            Fill = OxyColor.FromRgb(207, 179, 255)
         });
 
         model.Series.Add(pieSeries);

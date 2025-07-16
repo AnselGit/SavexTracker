@@ -23,11 +23,23 @@ namespace SavexTracker.Database
                 string createExpensesTable = @"CREATE TABLE IF NOT EXISTS expenses (eid INTEGER PRIMARY KEY AUTOINCREMENT, timestamp TEXT NOT NULL, amount REAL NOT NULL, note TEXT);";
                 string createHistoryTable = @"CREATE TABLE IF NOT EXISTS history (id INTEGER PRIMARY KEY AUTOINCREMENT, action TEXT NOT NULL, amount REAL, timestamp TEXT NOT NULL);";
                 string createGoalTable = @"CREATE TABLE IF NOT EXISTS goal (gid INTEGER PRIMARY KEY AUTOINCREMENT, amount REAL NOT NULL);";
+                // Add indexes for performance
+                string createSavingsTimestampIdx = @"CREATE INDEX IF NOT EXISTS idx_savings_timestamp ON savings(timestamp);";
+                string createSavingsAmountIdx = @"CREATE INDEX IF NOT EXISTS idx_savings_amount ON savings(amount);";
+                string createExpensesTimestampIdx = @"CREATE INDEX IF NOT EXISTS idx_expenses_timestamp ON expenses(timestamp);";
+                string createExpensesAmountIdx = @"CREATE INDEX IF NOT EXISTS idx_expenses_amount ON expenses(amount);";
+                string createExpensesNoteIdx = @"CREATE INDEX IF NOT EXISTS idx_expenses_note ON expenses(note);";
                 new SQLiteCommand(createSavingsTable, conn).ExecuteNonQuery();
                 new SQLiteCommand(createArchiveTable, conn).ExecuteNonQuery();
                 new SQLiteCommand(createExpensesTable, conn).ExecuteNonQuery();
                 new SQLiteCommand(createHistoryTable, conn).ExecuteNonQuery();
                 new SQLiteCommand(createGoalTable, conn).ExecuteNonQuery();
+                // Create indexes
+                new SQLiteCommand(createSavingsTimestampIdx, conn).ExecuteNonQuery();
+                new SQLiteCommand(createSavingsAmountIdx, conn).ExecuteNonQuery();
+                new SQLiteCommand(createExpensesTimestampIdx, conn).ExecuteNonQuery();
+                new SQLiteCommand(createExpensesAmountIdx, conn).ExecuteNonQuery();
+                new SQLiteCommand(createExpensesNoteIdx, conn).ExecuteNonQuery();
             }
         }
 
@@ -65,6 +77,34 @@ namespace SavexTracker.Database
             return list;
         }
 
+        public static List<Saving> GetAllSavings(int limit, int offset)
+        {
+            var list = new List<Saving>();
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT sid, timestamp, amount FROM savings ORDER BY sid DESC LIMIT @limit OFFSET @offset";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@limit", limit);
+                    cmd.Parameters.AddWithValue("@offset", offset);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new Saving
+                            {
+                                Sid = Convert.ToInt32(reader["sid"]),
+                                Timestamp = reader["timestamp"].ToString(),
+                                Amount = Convert.ToDouble(reader["amount"])
+                            });
+                        }
+                    }
+                }
+            }
+            return list;
+        }
+
         public static List<Expense> GetAllExpenses()
         {
             var list = new List<Expense>();
@@ -84,6 +124,35 @@ namespace SavexTracker.Database
                             Amount = Convert.ToDouble(reader["amount"]),
                             Note = reader["note"] != DBNull.Value ? reader["note"].ToString() : ""
                         });
+                    }
+                }
+            }
+            return list;
+        }
+
+        public static List<Expense> GetAllExpenses(int limit, int offset)
+        {
+            var list = new List<Expense>();
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT eid, timestamp, amount, note FROM expenses ORDER BY eid DESC LIMIT @limit OFFSET @offset";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@limit", limit);
+                    cmd.Parameters.AddWithValue("@offset", offset);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new Expense
+                            {
+                                Eid = Convert.ToInt32(reader["eid"]),
+                                Timestamp = reader["timestamp"].ToString(),
+                                Amount = Convert.ToDouble(reader["amount"]),
+                                Note = reader["note"] != DBNull.Value ? reader["note"].ToString() : ""
+                            });
+                        }
                     }
                 }
             }
@@ -522,60 +591,65 @@ namespace SavexTracker.Database
         {
             var results = new List<SearchResultItem>();
             string lowerTerm = searchTerm?.ToLower() ?? string.Empty;
+            bool hasSearch = !string.IsNullOrWhiteSpace(lowerTerm);
+
+            // Prepare SQL LIKE pattern
+            string likePattern = "%" + lowerTerm.Replace("'", "''") + "%";
 
             // Search Savings
             using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
-                string query = "SELECT sid, timestamp, amount FROM savings ORDER BY sid DESC";
+                string query = hasSearch ?
+                    "SELECT sid, timestamp, amount FROM savings WHERE lower(timestamp) LIKE @pattern OR CAST(amount AS TEXT) LIKE @pattern ORDER BY sid DESC" :
+                    "SELECT sid, timestamp, amount FROM savings ORDER BY sid DESC";
                 using (var cmd = new SQLiteCommand(query, conn))
-                using (var reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (hasSearch)
+                        cmd.Parameters.AddWithValue("@pattern", likePattern);
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        string timestamp = reader["timestamp"].ToString();
-                        double amount = Convert.ToDouble(reader["amount"]);
-                        string monthName = "";
-                        string monthAbbr = "";
-                        string year = "";
-                        string monthYear = "";
-                        string monthAbbrYear = "";
-                        try {
-                            var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
-                            monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
-                            monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture);
-                            year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                            monthYear = monthName + " " + year;
-                            monthAbbrYear = monthAbbr + " " + year;
-                        } catch {
-                            try {
-                                var dt = DateTime.Parse(timestamp);
-                                monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
-                                monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture);
-                                year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                                monthYear = monthName + " " + year;
-                                monthAbbrYear = monthAbbr + " " + year;
-                            } catch { }
-                        }
-                        if (
-                            (!string.IsNullOrEmpty(lowerTerm) &&
-                                (timestamp.ToLower().Contains(lowerTerm) ||
-                                 monthName.ToLower().Contains(lowerTerm) ||
-                                 monthAbbr.ToLower().Contains(lowerTerm) ||
-                                 year.Contains(lowerTerm) ||
-                                 monthYear.ToLower().Contains(lowerTerm) ||
-                                 monthAbbrYear.ToLower().Contains(lowerTerm) ||
-                                 amount.ToString("N2").Contains(lowerTerm)))
-                            || string.IsNullOrEmpty(lowerTerm)
-                        )
+                        while (reader.Read())
                         {
-                            results.Add(new SearchResultItem
+                            string timestamp = reader["timestamp"].ToString();
+                            double amount = Convert.ToDouble(reader["amount"]);
+                            // Month/year parsing for advanced search
+                            bool match = true;
+                            if (hasSearch)
                             {
-                                Date = timestamp,
-                                Type = "Savings",
-                                Amount = amount,
-                                Note = ""
-                            });
+                                match = false;
+                                try {
+                                    var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
+                                    string monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                    string monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                    string year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                                    string monthYear = monthName + " " + year;
+                                    string monthAbbrYear = monthAbbr + " " + year;
+                                    if (monthName.Contains(lowerTerm) || monthAbbr.Contains(lowerTerm) || year.Contains(lowerTerm) || monthYear.Contains(lowerTerm) || monthAbbrYear.Contains(lowerTerm))
+                                        match = true;
+                                } catch {
+                                    try {
+                                        var dt = DateTime.Parse(timestamp);
+                                        string monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                        string monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                        string year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                                        string monthYear = monthName + " " + year;
+                                        string monthAbbrYear = monthAbbr + " " + year;
+                                        if (monthName.Contains(lowerTerm) || monthAbbr.Contains(lowerTerm) || year.Contains(lowerTerm) || monthYear.Contains(lowerTerm) || monthAbbrYear.Contains(lowerTerm))
+                                            match = true;
+                                    } catch { }
+                                }
+                            }
+                            if (match)
+                            {
+                                results.Add(new SearchResultItem
+                                {
+                                    Date = timestamp,
+                                    Type = "Savings",
+                                    Amount = amount,
+                                    Note = ""
+                                });
+                            }
                         }
                     }
                 }
@@ -585,57 +659,57 @@ namespace SavexTracker.Database
             using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
-                string query = "SELECT eid, timestamp, amount, note FROM expenses ORDER BY eid DESC";
+                string query = hasSearch ?
+                    "SELECT eid, timestamp, amount, note FROM expenses WHERE lower(timestamp) LIKE @pattern OR lower(note) LIKE @pattern OR CAST(amount AS TEXT) LIKE @pattern ORDER BY eid DESC" :
+                    "SELECT eid, timestamp, amount, note FROM expenses ORDER BY eid DESC";
                 using (var cmd = new SQLiteCommand(query, conn))
-                using (var reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (hasSearch)
+                        cmd.Parameters.AddWithValue("@pattern", likePattern);
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        string timestamp = reader["timestamp"].ToString();
-                        double amount = Convert.ToDouble(reader["amount"]);
-                        string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
-                        string monthName = "";
-                        string monthAbbr = "";
-                        string year = "";
-                        string monthYear = "";
-                        string monthAbbrYear = "";
-                        try {
-                            var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
-                            monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
-                            monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture);
-                            year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                            monthYear = monthName + " " + year;
-                            monthAbbrYear = monthAbbr + " " + year;
-                        } catch {
-                            try {
-                                var dt = DateTime.Parse(timestamp);
-                                monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture);
-                                monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture);
-                                year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                                monthYear = monthName + " " + year;
-                                monthAbbrYear = monthAbbr + " " + year;
-                            } catch { }
-                        }
-                        if (
-                            (!string.IsNullOrEmpty(lowerTerm) &&
-                                (timestamp.ToLower().Contains(lowerTerm) ||
-                                 monthName.ToLower().Contains(lowerTerm) ||
-                                 monthAbbr.ToLower().Contains(lowerTerm) ||
-                                 year.Contains(lowerTerm) ||
-                                 monthYear.ToLower().Contains(lowerTerm) ||
-                                 monthAbbrYear.ToLower().Contains(lowerTerm) ||
-                                 amount.ToString("N2").Contains(lowerTerm) ||
-                                 note.ToLower().Contains(lowerTerm)))
-                            || string.IsNullOrEmpty(lowerTerm)
-                        )
+                        while (reader.Read())
                         {
-                            results.Add(new SearchResultItem
+                            string timestamp = reader["timestamp"].ToString();
+                            double amount = Convert.ToDouble(reader["amount"]);
+                            string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
+                            // Month/year parsing for advanced search
+                            bool match = true;
+                            if (hasSearch)
                             {
-                                Date = timestamp,
-                                Type = "Expense",
-                                Amount = amount,
-                                Note = note
-                            });
+                                match = false;
+                                try {
+                                    var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
+                                    string monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                    string monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                    string year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                                    string monthYear = monthName + " " + year;
+                                    string monthAbbrYear = monthAbbr + " " + year;
+                                    if (monthName.Contains(lowerTerm) || monthAbbr.Contains(lowerTerm) || year.Contains(lowerTerm) || monthYear.Contains(lowerTerm) || monthAbbrYear.Contains(lowerTerm))
+                                        match = true;
+                                } catch {
+                                    try {
+                                        var dt = DateTime.Parse(timestamp);
+                                        string monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                        string monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                        string year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                                        string monthYear = monthName + " " + year;
+                                        string monthAbbrYear = monthAbbr + " " + year;
+                                        if (monthName.Contains(lowerTerm) || monthAbbr.Contains(lowerTerm) || year.Contains(lowerTerm) || monthYear.Contains(lowerTerm) || monthAbbrYear.Contains(lowerTerm))
+                                            match = true;
+                                    } catch { }
+                                }
+                            }
+                            if (match)
+                            {
+                                results.Add(new SearchResultItem
+                                {
+                                    Date = timestamp,
+                                    Type = "Expense",
+                                    Amount = amount,
+                                    Note = note
+                                });
+                            }
                         }
                     }
                 }

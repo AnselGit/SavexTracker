@@ -23,11 +23,21 @@ namespace SavexTracker.forms
             this.KeyDown += AddSavings_KeyDown;
         }
 
-        private async void RefreshRecord()
+        private void RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
             {
-                await mainForm.RefreshDataAsync();
+                // Mark panels dirty
+                mainForm.GetType().GetMethod("MarkPanelsDirty", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
+                // Only refresh the visible panel
+                if (mainForm.Controls["pnl_1"].Visible)
+                {
+                    mainForm.GetType().GetMethod("RefreshPnl1", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
+                }
+                else if (mainForm.Controls["pnl_3"].Visible)
+                {
+                    mainForm.GetType().GetMethod("RefreshPnl3", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
+                }
             }
         }
 

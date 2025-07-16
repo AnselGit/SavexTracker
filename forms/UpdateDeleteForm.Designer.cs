@@ -1,4 +1,6 @@
-﻿namespace SavexTracker.forms
+﻿using SavexTracker.CustomClasses;
+
+namespace SavexTracker.forms
 {
     partial class UpdateDeleteForm
     {
@@ -765,10 +767,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(816, 358);
-            this.Controls.Add(this.pnlDeleteCon);
-            this.Controls.Add(this.pnlUpdateCon);
             this.Controls.Add(this.pnlExpenseMod);
             this.Controls.Add(this.roundedPanel1);
+            this.Controls.Add(this.pnlDeleteCon);
+            this.Controls.Add(this.pnlUpdateCon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateDeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -9,27 +9,44 @@ using System.Windows.Forms;
 using SavexTracker.Database;
 using SavexTracker.Models;
 using System.Collections.Generic;
+using SavexTracker.CustomClasses;
 
 
 namespace SavexTracker
 {
     public partial class Form1 : SolidRoundedForm
     {
+        private bool isPnl1Dirty = true;
+        private bool isPnl3Dirty = true;
+        private SavingsOwnerDrawPanel savingsPanel;
+
         public Form1()
         {
             InitializeComponent();
+            // Replace tblSave with SavingsOwnerDrawPanel
+            savingsPanel = new SavingsOwnerDrawPanel();
+            savingsPanel.Location = new Point(15, 39); // Match previous tblSave location
+            savingsPanel.Size = new Size(254, 484);    // Match previous tblSave size
+            savingsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
+            savingsPanel.SelectedRowChanged += SavingsPanel_SelectedRowChanged;
+            pnlSave.Controls.Add(savingsPanel);
+            btnModify.Enabled = false;
+            btnModify.Click -= btnRefresh_Click; // Remove old event if any
+            btnModify.Click += BtnModify_Click;
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            pnl_1.VisibleChanged += pnl_1_VisibleChanged;
+            pnl_3.VisibleChanged += pnl_3_VisibleChanged;
             _ = RefreshDataAsync();
             btnNav_1_Click_1(btnNav_1, EventArgs.Empty);
         }
 
         public async Task RefreshDataAsync()
         {
-            btnRefresh.Text = "Refreshing";
-            btnRefresh.Enabled = false;
+            btnModify.Text = "Refreshing";
+            btnModify.Enabled = false;
 
             CRUD.EnsureDatabaseAndTables();
             CRUD.LoadAllDataToGlobals();
@@ -44,8 +61,8 @@ namespace SavexTracker
             DonutChartGoalVsTotalBuilder.Build(pnlPie3);
 
             await Task.Delay(500);
-            btnRefresh.Text = "Refresh";
-            btnRefresh.Enabled = true;
+            btnModify.Text = "Refresh";
+            btnModify.Enabled = true;
         }
 
         private void UpdateGoalLabel()
@@ -97,98 +114,36 @@ namespace SavexTracker
             await RefreshDataAsync();
         }
 
+        private void SavingsPanel_SelectedRowChanged(object sender, EventArgs e)
+        {
+            btnModify.Enabled = (savingsPanel.SelectedRow != null);
+        }
+
+        private void BtnModify_Click(object sender, EventArgs e)
+        {
+            var row = savingsPanel.SelectedRow;
+            if (row != null)
+            {
+                GlobalData.CurrentID = row.Sid;
+                GlobalData.CurrentTimestamp = row.Timestamp;
+                GlobalData.CurrentAmount = row.Amount;
+                GlobalData.CurrentType = "Savings";
+                var updateForm = new UpdateDeleteForm();
+                updateForm.Show();
+            }
+        }
+
         private void LoadSavingsToPanel()
         {
-            tblSave.Controls.Clear();
-            tblSave.RowStyles.Clear();
-            tblSave.RowCount = 0;
-            tblSave.AutoScroll = true;
-
+            // Remove dynamic controls logic, just set rows for owner-draw panel
             var savingsList = GlobalData.AllSavings ?? new List<Saving>();
-            int row = 0;
-            foreach (var saving in savingsList)
+            var rows = savingsList.Select(s => new SavingsOwnerDrawPanel.SavingsRow
             {
-                int sid = saving.Sid;
-                string timestamp = saving.Timestamp;
-                double amount = saving.Amount;
-
-                string txtNameDate = $"n{sid}";
-                string txtNameAmount = $"sa{sid}";
-
-                var dateBox = new RJCodeAdvance.RJControls.RJTextBox
-                {
-                    Name = txtNameDate,
-                    Texts = timestamp,
-                    BackColor = Color.White,
-                    BorderColor = Color.FromArgb(224, 224, 224),
-                    BorderFocusColor = Color.MediumSlateBlue,
-                    BorderRadius = 0,
-                    BorderSize = 1,
-                    ForeColor = Color.FromArgb(64, 64, 64),
-                    UnderlinedStyle = true,
-                    Size = new Size(82, 31),
-                    Font = new Font("Microsoft Sans Serif", 12F),
-                    Margin = new Padding(5)
-                };
-
-                var amtBox = new RJCodeAdvance.RJControls.RJTextBox
-                {
-                    Name = txtNameAmount,
-                    Texts = "₱" + amount.ToString("0.00"),
-                    BackColor = Color.White,
-                    BorderColor = Color.FromArgb(224, 224, 224),
-                    BorderFocusColor = Color.MediumSlateBlue,
-                    BorderRadius = 0,
-                    BorderSize = 1,
-                    ForeColor = Color.FromArgb(64, 64, 64),
-                    UnderlinedStyle = true,
-                    Size = new Size(120, 35),
-                    Font = new Font("Microsoft Sans Serif", 12F),
-                    Margin = new Padding(5)
-                };
-
-                tblSave.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-                tblSave.Controls.Add(dateBox, 0, tblSave.RowCount);
-                tblSave.Controls.Add(amtBox, 1, tblSave.RowCount);
-                tblSave.RowCount++;
-
-                Button btnModify = new Button
-                {
-                    Text = "Modify",
-                    Name = "btnModify_" + row,
-                    FlatStyle = FlatStyle.Flat,
-                    BackColor = Color.White,
-                    ForeColor = Color.White,
-                    Font = new Font("Noto Sans", 9, FontStyle.Bold),
-                    Cursor = Cursors.Hand,
-                    Anchor = AnchorStyles.Top | AnchorStyles.Left,
-                    Dock = DockStyle.None,
-                    Size = new Size(230, 25),
-                    Margin = new Padding(0)
-                };
-
-                btnModify.MouseEnter += (s, e) => btnModify.BackColor = Color.FromArgb(30, 144, 255);
-                btnModify.MouseLeave += (s, e) => btnModify.BackColor = Color.White;
-
-                btnModify.Click += (s, e) =>
-                {
-                    GlobalData.CurrentID = sid;
-                    GlobalData.CurrentTimestamp = timestamp;
-                    GlobalData.CurrentAmount = amount;
-                    GlobalData.CurrentType = "Savings";
-
-
-                    var updateForm = new UpdateDeleteForm();
-                    updateForm.Show();
-                };
-
-                tblSave.RowStyles.Add(new RowStyle(SizeType.Absolute, 25));
-                tblSave.Controls.Add(btnModify, 0, tblSave.RowCount);
-                tblSave.SetColumnSpan(btnModify, 2);
-                tblSave.RowCount++;
-
-                row++;
-            }
+                Sid = s.Sid,
+                Timestamp = s.Timestamp,
+                Amount = s.Amount
+            });
+            savingsPanel.SetRows(rows);
         }
 
 
@@ -476,7 +431,7 @@ namespace SavexTracker
             pnl_3.BringToFront();
 
             pnl_1.Visible = false;
-            pnl_2.Visible = true;
+            pnl_2.Visible = false;
         }
 
         private void HighlightNavButton(Button selectedButton)
@@ -497,7 +452,7 @@ namespace SavexTracker
             pnl_2.BringToFront();
 
             pnl_1.Visible = false;
-            pnl_3.Visible = true;
+            pnl_3.Visible = false;
         }
 
         private void btnNav_1_Click_1(object sender, EventArgs e)
@@ -507,7 +462,7 @@ namespace SavexTracker
             pnl_1.BringToFront();
 
             pnl_2.Visible = false;
-            pnl_3.Visible = true;
+            pnl_3.Visible = false;
         }
 
         private void btnSet_Click(object sender, EventArgs e)
@@ -517,6 +472,7 @@ namespace SavexTracker
             if (double.TryParse(input, out double newGoal))
             {
                 CRUD.UpdateGoalAmount(newGoal);
+                MarkPanelsDirty();
                 _ = RefreshDataAsync();
             }
             else
@@ -538,6 +494,49 @@ namespace SavexTracker
         private void txtSearch_Enter(object sender, EventArgs e)
         {
             PerformSearch();
+        }
+
+        private void MarkPanelsDirty()
+        {
+            isPnl1Dirty = true;
+            isPnl3Dirty = true;
+        }
+
+        private void RefreshPnl1()
+        {
+            UpdateGoalLabel();
+            UpdateTotalLabels();
+            LoadGoal();
+            LoadHistory();
+            ChartBuilder.BuildLineGraph(pnlLine);
+            DonutChartBuilder.Build(pnlPie2);
+            DonutChartGoalVsTotalBuilder.Build(pnlPie3);
+        }
+
+        private void RefreshPnl3()
+        {
+            LoadExpensesToPanel();
+            LoadSavingsToPanel();
+            LoadHistory();
+            UpdateTotalLabels();
+        }
+
+        private void pnl_1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnl_1.Visible && isPnl1Dirty)
+            {
+                RefreshPnl1();
+                isPnl1Dirty = false;
+            }
+        }
+
+        private void pnl_3_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnl_3.Visible && isPnl3Dirty)
+            {
+                RefreshPnl3();
+                isPnl3Dirty = false;
+            }
         }
     }
 }

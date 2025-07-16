@@ -16,11 +16,11 @@ namespace SavexTracker.forms
             InitializeComponent();
             SetupArchiveGrid();
             LoadArchiveData();
+            dgv_Archive.ClearSelection();
         }
 
         private void ArchiveForm_Load(object sender, EventArgs e)
-        {
-            dgv_Archive.ClearSelection();
+        {            
             SetupArchiveGrid();
             LoadArchiveData();
             dgv_Archive.SelectionChanged += dgv_Archive_SelectionChanged_1;
@@ -28,11 +28,14 @@ namespace SavexTracker.forms
             btnDelete.Enabled = false;
         }
 
-        private async void RefreshRecord()
+        private void RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
             {
-                await mainForm.RefreshDataAsync();
+                // Mark panels dirty
+                mainForm.GetType().GetMethod("MarkPanelsDirty", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
+                // Only refresh pnl_3
+                mainForm.GetType().GetMethod("RefreshPnl3", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
             }
         }
 

@@ -1,4 +1,6 @@
-﻿namespace SavexTracker.forms
+﻿using SavexTracker.CustomClasses;
+
+namespace SavexTracker.forms
 {
     partial class addSavings
     {

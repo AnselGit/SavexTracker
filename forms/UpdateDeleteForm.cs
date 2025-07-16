@@ -25,11 +25,14 @@ namespace SavexTracker.forms
             pnlExpenseMod.Visible = true;
         }
 
-        private async void RefreshRecord()
+        private void RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
             {
-                await mainForm.RefreshDataAsync();
+                // Mark panels dirty
+                mainForm.GetType().GetMethod("MarkPanelsDirty", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
+                // Only refresh pnl_3
+                mainForm.GetType().GetMethod("RefreshPnl3", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
             }
         }
         private void UpdateDeleteForm_Load(object sender, EventArgs e)

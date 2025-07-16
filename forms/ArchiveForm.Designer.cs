@@ -1,4 +1,6 @@
-﻿namespace SavexTracker.forms
+﻿using SavexTracker.CustomClasses;
+
+namespace SavexTracker.forms
 {
     partial class ArchiveForm
     {
@@ -472,12 +474,12 @@
             // 
             this.pnlDeleteCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pnlDeleteCon.BorderRadius = 50;
-            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
             this.pnlDeleteCon.Controls.Add(this.label1);
             this.pnlDeleteCon.Controls.Add(this.rjButton3);
             this.pnlDeleteCon.Controls.Add(this.rjButton4);
             this.pnlDeleteCon.Controls.Add(this.label2);
             this.pnlDeleteCon.Controls.Add(this.pictureBox2);
+            this.pnlDeleteCon.Controls.Add(this.pnlDeleted);
             this.pnlDeleteCon.Location = new System.Drawing.Point(20, 22);
             this.pnlDeleteCon.Name = "pnlDeleteCon";
             this.pnlDeleteCon.Size = new System.Drawing.Size(736, 508);
@@ -620,9 +622,9 @@
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
             this.roundedPanel1.BorderRadius = 50;
+            this.roundedPanel1.Controls.Add(this.pnlDeleteCon);
             this.roundedPanel1.Controls.Add(this.pnlArchive);
             this.roundedPanel1.Controls.Add(this.pnlRestoreCon);
-            this.roundedPanel1.Controls.Add(this.pnlDeleteCon);
             this.roundedPanel1.Location = new System.Drawing.Point(12, 12);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(776, 553);
