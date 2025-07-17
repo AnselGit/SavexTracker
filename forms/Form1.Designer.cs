@@ -41,7 +41,6 @@ namespace SavexTracker
             this.btnDelAll_S = new RJCodeAdvance.RJControls.RJButton();
             this.btnDelAll_E = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton9 = new RJCodeAdvance.RJControls.RJButton();
-            this.btnRefresh = new RJCodeAdvance.RJControls.RJButton();
             this.gradientPanelRound6 = new SavexTracker.CustomClasses.GradientPanelRound();
             this.rjButton15 = new RJCodeAdvance.RJControls.RJButton();
             this.roundedPanel4 = new SavexTracker.CustomClasses.RoundedPanel();
@@ -181,7 +180,6 @@ namespace SavexTracker
             this.pnl_3.Controls.Add(this.btnDelAll_S);
             this.pnl_3.Controls.Add(this.btnDelAll_E);
             this.pnl_3.Controls.Add(this.rjButton9);
-            this.pnl_3.Controls.Add(this.btnRefresh);
             this.pnl_3.Controls.Add(this.gradientPanelRound6);
             this.pnl_3.Controls.Add(this.gradientPanelRound5);
             this.pnl_3.Controls.Add(this.label15);
@@ -247,7 +245,7 @@ namespace SavexTracker
             this.rjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton9.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton9.ForeColor = System.Drawing.Color.White;
-            this.rjButton9.Location = new System.Drawing.Point(695, 111);
+            this.rjButton9.Location = new System.Drawing.Point(695, 28);
             this.rjButton9.Name = "rjButton9";
             this.rjButton9.Size = new System.Drawing.Size(133, 65);
             this.rjButton9.TabIndex = 17;
@@ -255,27 +253,6 @@ namespace SavexTracker
             this.rjButton9.TextColor = System.Drawing.Color.White;
             this.rjButton9.UseVisualStyleBackColor = false;
             this.rjButton9.Click += new System.EventHandler(this.rjButton9_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnRefresh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRefresh.BorderColor = System.Drawing.Color.White;
-            this.btnRefresh.BorderRadius = 33;
-            this.btnRefresh.BorderSize = 0;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(695, 28);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(133, 65);
-            this.btnRefresh.TabIndex = 16;
-            this.btnRefresh.Text = "Modify";
-            this.btnRefresh.TextColor = System.Drawing.Color.White;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // gradientPanelRound6
             // 
@@ -1766,7 +1743,6 @@ namespace SavexTracker
         private RoundedPanel roundedPanel4;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private RJCodeAdvance.RJControls.RJButton btnRefresh;
         private RJCodeAdvance.RJControls.RJButton rjButton9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblGrand;

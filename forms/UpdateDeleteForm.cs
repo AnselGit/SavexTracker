@@ -27,14 +27,11 @@ namespace SavexTracker.forms
             pnlExpenseMod.Visible = true;
         }
 
-        private void RefreshRecord()
+        private async Task RefreshRecord()
         {
             if (mainForm != null)
             {
-                // Mark panels dirty
-                mainForm.GetType().GetMethod("MarkPanelsDirty", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
-                // Always refresh pnl_3
-                mainForm.GetType().GetMethod("RefreshPnl3", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
+                await mainForm.RefreshDataAsync();
             }
         }
         private void UpdateDeleteForm_Load(object sender, EventArgs e)
@@ -84,9 +81,9 @@ namespace SavexTracker.forms
 
             Timer hideTimer = new Timer();
             hideTimer.Interval = 1500;
-            hideTimer.Tick += (s, args) =>
+            hideTimer.Tick += async (s, args) =>
             {
-                RefreshRecord();
+                await RefreshRecord();
                 this.Close();
                 hideTimer.Stop();
                 hideTimer.Dispose();

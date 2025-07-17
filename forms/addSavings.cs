@@ -23,17 +23,11 @@ namespace SavexTracker.forms
             this.KeyDown += AddSavings_KeyDown;
         }
 
-        private void RefreshRecord()
+        private async Task RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
             {
-                // Mark panels dirty
-                mainForm.GetType().GetMethod("MarkPanelsDirty", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
-                // Always refresh pnl_3 if visible
-                if (mainForm.Controls["pnl_3"].Visible)
-                {
-                    mainForm.GetType().GetMethod("RefreshPnl3", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
-                }
+                await mainForm.RefreshDataAsync();
             }
         }
 
@@ -73,7 +67,7 @@ namespace SavexTracker.forms
             this.Close();
         }
 
-        private void btn_save_Click(object sender, EventArgs e)
+        private async void btn_save_Click(object sender, EventArgs e)
         {
             string amountText = txt_SA.Texts.Trim();
             string dateText = lbl_date.Text.Trim();
@@ -100,7 +94,7 @@ namespace SavexTracker.forms
             // Update global variable
             GlobalData.AllSavings = CRUD.GetAllSavings();
 
-            RefreshRecord();
+            await RefreshRecord();
             pnlAdded.Visible = true;
             pnlAdded.BringToFront();
 

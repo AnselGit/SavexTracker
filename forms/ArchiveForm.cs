@@ -6,6 +6,7 @@ using SavexTracker; // for AppConfig and GlobalData
 using SavexTracker.Models;
 using System.Collections.Generic;
 using SavexTracker.Database;
+using System.Threading.Tasks; // Added for Task
 
 namespace SavexTracker.forms
 {
@@ -28,14 +29,11 @@ namespace SavexTracker.forms
             btnDelete.Enabled = false;
         }
 
-        private void RefreshRecord()
+        private async Task RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
             {
-                // Mark panels dirty
-                mainForm.GetType().GetMethod("MarkPanelsDirty", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
-                // Only refresh pnl_3
-                mainForm.GetType().GetMethod("RefreshPnl3", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(mainForm, null);
+                await mainForm.RefreshDataAsync();
             }
         }
 
@@ -162,7 +160,7 @@ namespace SavexTracker.forms
         }
 
 
-        private void rjButton4_Click(object sender, EventArgs e)
+        private async void rjButton4_Click(object sender, EventArgs e)
         {
             if (dgv_Archive.SelectedRows.Count == 0)
                 return;
@@ -176,7 +174,7 @@ namespace SavexTracker.forms
 
             GlobalData.AllArchive = CRUD.GetAllArchive();
             LoadArchiveData();
-            RefreshRecord();
+            await RefreshRecord();
             pnlDeleted.Visible = true;
 
             Timer hideTimer = new Timer();

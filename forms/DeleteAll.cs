@@ -22,7 +22,7 @@ namespace SavexTracker.forms
             FlickerDeleteAllBackground();
         }
 
-        private async void RefreshRecord()
+        private async Task RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
             {
@@ -81,7 +81,7 @@ namespace SavexTracker.forms
             lblType.Text = $"{GlobalData.CurrentType}?";
         }
 
-        private void btnCon_Click(object sender, EventArgs e)
+        private async void btnCon_Click(object sender, EventArgs e)
         {
             string type = GlobalData.CurrentType;
 
@@ -175,7 +175,7 @@ namespace SavexTracker.forms
             GlobalData.AllExpenses = CRUD.GetAllExpenses();
             GlobalData.AllArchive = CRUD.GetAllArchive();
 
-            RefreshRecord();
+            await RefreshRecord();
             pnlDeleted.Visible = true;
             pnlDeleted.BringToFront();
 

@@ -145,9 +145,9 @@ namespace SavexTracker
             }
         }
 
-        private void BtnRefresh_Click(object sender, EventArgs e)
+        private async void BtnRefresh_Click(object sender, EventArgs e)
         {
-            RefreshPnl3();
+            await RefreshDataAsync();
         }
 
         private void LoadSavingsToPanel()
@@ -479,14 +479,14 @@ namespace SavexTracker
 
         }
 
-        public void TriggerRefreshPnl3()
+        public async void TriggerRefreshPnl3()
         {
-            RefreshPnl3();
+            await RefreshDataAsync();
         }
 
-        public void TriggerBtnRefreshClick()
+        public async void TriggerBtnRefreshClick()
         {
-            btnRefresh.PerformClick();
+            await RefreshDataAsync();
         }
     }
 }

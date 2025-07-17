@@ -37,16 +37,16 @@ namespace SavexTracker.forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlRestoreCon = new SavexTracker.CustomClasses.RoundedPanel();
-            this.pnlRestored = new SavexTracker.CustomClasses.RoundedPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.roundedPanel4 = new SavexTracker.CustomClasses.RoundedPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton5 = new RJCodeAdvance.RJControls.RJButton();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pnlRestored = new SavexTracker.CustomClasses.RoundedPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.roundedPanel4 = new SavexTracker.CustomClasses.RoundedPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlArchive = new SavexTracker.CustomClasses.RoundedPanel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
@@ -74,10 +74,10 @@ namespace SavexTracker.forms
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new SavexTracker.CustomClasses.RoundedPanel();
             this.pnlRestoreCon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlRestored.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlArchive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Archive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,75 +93,17 @@ namespace SavexTracker.forms
             // 
             this.pnlRestoreCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
             this.pnlRestoreCon.BorderRadius = 50;
+            this.pnlRestoreCon.Controls.Add(this.pnlRestored);
             this.pnlRestoreCon.Controls.Add(this.label5);
             this.pnlRestoreCon.Controls.Add(this.rjButton1);
             this.pnlRestoreCon.Controls.Add(this.rjButton5);
             this.pnlRestoreCon.Controls.Add(this.label7);
             this.pnlRestoreCon.Controls.Add(this.pictureBox5);
-            this.pnlRestoreCon.Controls.Add(this.pnlRestored);
             this.pnlRestoreCon.Location = new System.Drawing.Point(20, 22);
             this.pnlRestoreCon.Name = "pnlRestoreCon";
             this.pnlRestoreCon.Size = new System.Drawing.Size(736, 508);
             this.pnlRestoreCon.TabIndex = 28;
             this.pnlRestoreCon.Visible = false;
-            // 
-            // pnlRestored
-            // 
-            this.pnlRestored.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.pnlRestored.BorderRadius = 40;
-            this.pnlRestored.Controls.Add(this.label3);
-            this.pnlRestored.Controls.Add(this.roundedPanel4);
-            this.pnlRestored.Controls.Add(this.label4);
-            this.pnlRestored.Location = new System.Drawing.Point(111, 52);
-            this.pnlRestored.Name = "pnlRestored";
-            this.pnlRestored.Size = new System.Drawing.Size(522, 411);
-            this.pnlRestored.TabIndex = 23;
-            this.pnlRestored.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label3.Location = new System.Drawing.Point(197, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 73);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Restored";
-            // 
-            // roundedPanel4
-            // 
-            this.roundedPanel4.BackColor = System.Drawing.Color.LimeGreen;
-            this.roundedPanel4.BorderRadius = 40;
-            this.roundedPanel4.Controls.Add(this.pictureBox4);
-            this.roundedPanel4.Location = new System.Drawing.Point(24, 120);
-            this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.Size = new System.Drawing.Size(172, 172);
-            this.roundedPanel4.TabIndex = 15;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(23, 23);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label4.Location = new System.Drawing.Point(197, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(321, 73);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Successfully";
             // 
             // label5
             // 
@@ -236,6 +178,64 @@ namespace SavexTracker.forms
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 22;
             this.pictureBox5.TabStop = false;
+            // 
+            // pnlRestored
+            // 
+            this.pnlRestored.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.pnlRestored.BorderRadius = 40;
+            this.pnlRestored.Controls.Add(this.label3);
+            this.pnlRestored.Controls.Add(this.roundedPanel4);
+            this.pnlRestored.Controls.Add(this.label4);
+            this.pnlRestored.Location = new System.Drawing.Point(111, 52);
+            this.pnlRestored.Name = "pnlRestored";
+            this.pnlRestored.Size = new System.Drawing.Size(522, 411);
+            this.pnlRestored.TabIndex = 23;
+            this.pnlRestored.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label3.Location = new System.Drawing.Point(197, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(246, 73);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Restored";
+            // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.BackColor = System.Drawing.Color.LimeGreen;
+            this.roundedPanel4.BorderRadius = 40;
+            this.roundedPanel4.Controls.Add(this.pictureBox4);
+            this.roundedPanel4.Location = new System.Drawing.Point(24, 120);
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.Size = new System.Drawing.Size(172, 172);
+            this.roundedPanel4.TabIndex = 15;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(23, 23);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label4.Location = new System.Drawing.Point(197, 140);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(321, 73);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Successfully";
             // 
             // pnlArchive
             // 
@@ -644,11 +644,11 @@ namespace SavexTracker.forms
             this.Load += new System.EventHandler(this.ArchiveForm_Load);
             this.pnlRestoreCon.ResumeLayout(false);
             this.pnlRestoreCon.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlRestored.ResumeLayout(false);
             this.pnlRestored.PerformLayout();
             this.roundedPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlArchive.ResumeLayout(false);
             this.pnlArchive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Archive)).EndInit();
