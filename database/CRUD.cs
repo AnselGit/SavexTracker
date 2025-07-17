@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.IO;
 using SavexTracker.Models;
 using System.Windows.Forms;
+using System.Linq; // Added for .Any()
 
 namespace SavexTracker.Database
 {
@@ -613,51 +614,60 @@ namespace SavexTracker.Database
             string lowerTerm = searchTerm?.ToLower() ?? string.Empty;
             bool hasSearch = !string.IsNullOrWhiteSpace(lowerTerm);
 
-            // Prepare SQL LIKE pattern
-            string likePattern = "%" + lowerTerm.Replace("'", "''") + "%";
+            // Split into words for AND search
+            var terms = lowerTerm.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            // Helper for month names/abbr
+            string[] monthNames = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.MonthNames;
+            string[] monthAbbrs = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.AbbreviatedMonthNames;
 
             // Search Savings
             using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
                 string query = hasSearch ?
-                    "SELECT sid, timestamp, amount FROM savings WHERE lower(timestamp) LIKE @pattern OR CAST(amount AS TEXT) LIKE @pattern ORDER BY sid DESC" :
+                    "SELECT sid, timestamp, amount FROM savings ORDER BY sid DESC" :
                     "SELECT sid, timestamp, amount FROM savings ORDER BY sid DESC";
                 using (var cmd = new SQLiteCommand(query, conn))
                 {
-                    if (hasSearch)
-                        cmd.Parameters.AddWithValue("@pattern", likePattern);
                     using (var reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             string timestamp = reader["timestamp"].ToString();
                             double amount = Convert.ToDouble(reader["amount"]);
-                            // Month/year parsing for advanced search
-                            bool match = true;
-                            if (hasSearch)
-                            {
-                                match = false;
+                            string type = "savings";
+                            string amountStr = amount.ToString("0.##");
+                            string dateStr = timestamp.ToLower();
+                            string monthName = "", monthAbbr = "", year = "";
+                            try {
+                                var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
+                                monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                            } catch {
                                 try {
-                                    var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
-                                    string monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
-                                    string monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
-                                    string year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                                    string monthYear = monthName + " " + year;
-                                    string monthAbbrYear = monthAbbr + " " + year;
-                                    if (monthName.Contains(lowerTerm) || monthAbbr.Contains(lowerTerm) || year.Contains(lowerTerm) || monthYear.Contains(lowerTerm) || monthAbbrYear.Contains(lowerTerm))
-                                        match = true;
-                                } catch {
-                                    try {
-                                        var dt = DateTime.Parse(timestamp);
-                                        string monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
-                                        string monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
-                                        string year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                                        string monthYear = monthName + " " + year;
-                                        string monthAbbrYear = monthAbbr + " " + year;
-                                        if (monthName.Contains(lowerTerm) || monthAbbr.Contains(lowerTerm) || year.Contains(lowerTerm) || monthYear.Contains(lowerTerm) || monthAbbrYear.Contains(lowerTerm))
-                                            match = true;
-                                    } catch { }
+                                    var dt = DateTime.Parse(timestamp);
+                                    monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                    monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                    year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                                } catch { }
+                            }
+                            bool match = true;
+                            if (hasSearch && terms.Length > 0)
+                            {
+                                foreach (var term in terms)
+                                {
+                                    bool termMatch = false;
+                                    // Type
+                                    if (type.Contains(term)) termMatch = true;
+                                    // Date
+                                    if (dateStr.Contains(term) || monthName.Contains(term) || monthAbbr.Contains(term) || year.Contains(term)) termMatch = true;
+                                    // Amount
+                                    if (amountStr.Contains(term)) termMatch = true;
+                                    // Month name/abbr
+                                    if (monthNames.Any(m => m.ToLower().StartsWith(term)) || monthAbbrs.Any(m => m.ToLower().StartsWith(term))) termMatch = true;
+                                    if (!termMatch) { match = false; break; }
                                 }
                             }
                             if (match)
@@ -680,12 +690,10 @@ namespace SavexTracker.Database
             {
                 conn.Open();
                 string query = hasSearch ?
-                    "SELECT eid, timestamp, amount, note FROM expenses WHERE lower(timestamp) LIKE @pattern OR lower(note) LIKE @pattern OR CAST(amount AS TEXT) LIKE @pattern ORDER BY eid DESC" :
+                    "SELECT eid, timestamp, amount, note FROM expenses ORDER BY eid DESC" :
                     "SELECT eid, timestamp, amount, note FROM expenses ORDER BY eid DESC";
                 using (var cmd = new SQLiteCommand(query, conn))
                 {
-                    if (hasSearch)
-                        cmd.Parameters.AddWithValue("@pattern", likePattern);
                     using (var reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -693,31 +701,40 @@ namespace SavexTracker.Database
                             string timestamp = reader["timestamp"].ToString();
                             double amount = Convert.ToDouble(reader["amount"]);
                             string note = reader["note"] != DBNull.Value ? reader["note"].ToString() : "";
-                            // Month/year parsing for advanced search
-                            bool match = true;
-                            if (hasSearch)
-                            {
-                                match = false;
+                            string type = "expense";
+                            string amountStr = amount.ToString("0.##");
+                            string dateStr = timestamp.ToLower();
+                            string monthName = "", monthAbbr = "", year = "";
+                            try {
+                                var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
+                                monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                            } catch {
                                 try {
-                                    var dt = DateTime.ParseExact(timestamp, "MM/dd/yy", System.Globalization.CultureInfo.InvariantCulture);
-                                    string monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
-                                    string monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
-                                    string year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                                    string monthYear = monthName + " " + year;
-                                    string monthAbbrYear = monthAbbr + " " + year;
-                                    if (monthName.Contains(lowerTerm) || monthAbbr.Contains(lowerTerm) || year.Contains(lowerTerm) || monthYear.Contains(lowerTerm) || monthAbbrYear.Contains(lowerTerm))
-                                        match = true;
-                                } catch {
-                                    try {
-                                        var dt = DateTime.Parse(timestamp);
-                                        string monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
-                                        string monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
-                                        string year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                                        string monthYear = monthName + " " + year;
-                                        string monthAbbrYear = monthAbbr + " " + year;
-                                        if (monthName.Contains(lowerTerm) || monthAbbr.Contains(lowerTerm) || year.Contains(lowerTerm) || monthYear.Contains(lowerTerm) || monthAbbrYear.Contains(lowerTerm))
-                                            match = true;
-                                    } catch { }
+                                    var dt = DateTime.Parse(timestamp);
+                                    monthName = dt.ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                    monthAbbr = dt.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+                                    year = dt.ToString("yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                                } catch { }
+                            }
+                            bool match = true;
+                            if (hasSearch && terms.Length > 0)
+                            {
+                                foreach (var term in terms)
+                                {
+                                    bool termMatch = false;
+                                    // Type
+                                    if (type.Contains(term)) termMatch = true;
+                                    // Date
+                                    if (dateStr.Contains(term) || monthName.Contains(term) || monthAbbr.Contains(term) || year.Contains(term)) termMatch = true;
+                                    // Amount
+                                    if (amountStr.Contains(term)) termMatch = true;
+                                    // Note
+                                    if (!string.IsNullOrEmpty(note) && note.ToLower().Contains(term)) termMatch = true;
+                                    // Month name/abbr
+                                    if (monthNames.Any(m => m.ToLower().StartsWith(term)) || monthAbbrs.Any(m => m.ToLower().StartsWith(term))) termMatch = true;
+                                    if (!termMatch) { match = false; break; }
                                 }
                             }
                             if (match)
