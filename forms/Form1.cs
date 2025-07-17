@@ -39,10 +39,7 @@ namespace SavexTracker
             expensesPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
             expensesPanel.SelectedRowChanged += ExpensesPanel_SelectedRowChanged;
             expensesPanel.RowModifyRequested += ExpensesPanel_RowModifyRequested;
-            roundedPanel4.Controls.Add(expensesPanel);
-            btnRefresh.Enabled = false;
-            btnRefresh.Click -= btnRefresh_Click; // Remove old event if any
-            btnRefresh.Click += BtnRefresh_Click;
+            roundedPanel4.Controls.Add(expensesPanel);            
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -54,9 +51,7 @@ namespace SavexTracker
         }
 
         public async Task RefreshDataAsync()
-        {
-            btnRefresh.Text = "Refreshing";
-            btnRefresh.Enabled = false;
+        {           
 
             CRUD.EnsureDatabaseAndTables();
             CRUD.LoadAllDataToGlobals();
@@ -71,8 +66,6 @@ namespace SavexTracker
             DonutChartGoalVsTotalBuilder.Build(pnlPie3);
 
             await Task.Delay(500);
-            btnRefresh.Text = "Refresh";
-            btnRefresh.Enabled = true;
         }
 
         private void UpdateGoalLabel()
@@ -126,7 +119,7 @@ namespace SavexTracker
 
         private void SavingsPanel_SelectedRowChanged(object sender, EventArgs e)
         {
-            btnRefresh.Enabled = (savingsPanel.SelectedRow != null);
+            
         }
 
         private void SavingsPanel_RowModifyRequested(object sender, int rowIndex)

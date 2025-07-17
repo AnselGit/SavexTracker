@@ -31,27 +31,27 @@ namespace SavexTracker.forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addSavings));
-            this.roundedPanel1 = new RoundedPanel();
-            this.pnlAdded = new RoundedPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.roundedPanel6 = new RoundedPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.roundedPanel1 = new SavexTracker.CustomClasses.RoundedPanel();
             this.lbl_date = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.btn_save = new RJCodeAdvance.RJControls.RJButton();
-            this.roundedPanel2 = new RoundedPanel();
+            this.roundedPanel2 = new SavexTracker.CustomClasses.RoundedPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_SA = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pnlAdded = new SavexTracker.CustomClasses.RoundedPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.roundedPanel6 = new SavexTracker.CustomClasses.RoundedPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.roundedPanel1.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAdded.SuspendLayout();
             this.roundedPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.roundedPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // roundedPanel1
@@ -71,64 +71,6 @@ namespace SavexTracker.forms
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(792, 334);
             this.roundedPanel1.TabIndex = 0;
-            // 
-            // pnlAdded
-            // 
-            this.pnlAdded.BackColor = System.Drawing.Color.AliceBlue;
-            this.pnlAdded.BorderRadius = 30;
-            this.pnlAdded.Controls.Add(this.label2);
-            this.pnlAdded.Controls.Add(this.label10);
-            this.pnlAdded.Controls.Add(this.roundedPanel6);
-            this.pnlAdded.Location = new System.Drawing.Point(0, 0);
-            this.pnlAdded.Name = "pnlAdded";
-            this.pnlAdded.Size = new System.Drawing.Size(792, 334);
-            this.pnlAdded.TabIndex = 19;
-            this.pnlAdded.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(334, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 73);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Successfully";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label10.Location = new System.Drawing.Point(334, 163);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(198, 73);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Added!";
-            // 
-            // roundedPanel6
-            // 
-            this.roundedPanel6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.roundedPanel6.BorderRadius = 40;
-            this.roundedPanel6.Controls.Add(this.pictureBox3);
-            this.roundedPanel6.Location = new System.Drawing.Point(145, 80);
-            this.roundedPanel6.Name = "roundedPanel6";
-            this.roundedPanel6.Size = new System.Drawing.Size(172, 172);
-            this.roundedPanel6.TabIndex = 17;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(23, 23);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // lbl_date
             // 
@@ -261,6 +203,64 @@ namespace SavexTracker.forms
             this.label3.Text = "Add";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // pnlAdded
+            // 
+            this.pnlAdded.BackColor = System.Drawing.Color.AliceBlue;
+            this.pnlAdded.BorderRadius = 30;
+            this.pnlAdded.Controls.Add(this.label2);
+            this.pnlAdded.Controls.Add(this.label10);
+            this.pnlAdded.Controls.Add(this.roundedPanel6);
+            this.pnlAdded.Location = new System.Drawing.Point(0, 0);
+            this.pnlAdded.Name = "pnlAdded";
+            this.pnlAdded.Size = new System.Drawing.Size(792, 334);
+            this.pnlAdded.TabIndex = 19;
+            this.pnlAdded.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(334, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(321, 73);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Successfully";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Noto Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label10.Location = new System.Drawing.Point(334, 163);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(198, 73);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Added!";
+            // 
+            // roundedPanel6
+            // 
+            this.roundedPanel6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.roundedPanel6.BorderRadius = 40;
+            this.roundedPanel6.Controls.Add(this.pictureBox3);
+            this.roundedPanel6.Location = new System.Drawing.Point(145, 80);
+            this.roundedPanel6.Name = "roundedPanel6";
+            this.roundedPanel6.Size = new System.Drawing.Size(172, 172);
+            this.roundedPanel6.TabIndex = 17;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(23, 23);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // addSavings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,18 +269,20 @@ namespace SavexTracker.forms
             this.ClientSize = new System.Drawing.Size(816, 358);
             this.Controls.Add(this.roundedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addSavings";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addSavings";
             this.Load += new System.EventHandler(this.addSavings_Load);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
+            this.roundedPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlAdded.ResumeLayout(false);
             this.pnlAdded.PerformLayout();
             this.roundedPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.roundedPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

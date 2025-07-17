@@ -30,6 +30,7 @@ namespace SavexTracker.forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Opening));
             this.lbl_Name = new System.Windows.Forms.Label();
             this.pgb_init = new RJCodeAdvance.RJControls.RJProgressBar();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@ namespace SavexTracker.forms
             this.lbl_Name.Size = new System.Drawing.Size(361, 124);
             this.lbl_Name.TabIndex = 0;
             this.lbl_Name.Text = "SAVEX";
+            this.lbl_Name.UseWaitCursor = true;
             // 
             // pgb_init
             // 
@@ -64,6 +66,7 @@ namespace SavexTracker.forms
             this.pgb_init.SymbolAfter = "";
             this.pgb_init.SymbolBefore = "";
             this.pgb_init.TabIndex = 1;
+            this.pgb_init.UseWaitCursor = true;
             // 
             // lblStatus
             // 
@@ -75,6 +78,7 @@ namespace SavexTracker.forms
             this.lblStatus.Size = new System.Drawing.Size(79, 20);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Initialing...";
+            this.lblStatus.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -86,6 +90,7 @@ namespace SavexTracker.forms
             this.label2.Size = new System.Drawing.Size(341, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Your Savings and Expenses Tracker\r\n";
+            this.label2.UseWaitCursor = true;
             // 
             // Opening
             // 
@@ -98,9 +103,13 @@ namespace SavexTracker.forms
             this.Controls.Add(this.pgb_init);
             this.Controls.Add(this.lbl_Name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Opening";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opening";
+            this.TopMost = true;
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.Opening_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

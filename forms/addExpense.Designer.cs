@@ -31,22 +31,22 @@ namespace SavexTracker.forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addExpense));
-            this.roundedPanel1 = new RoundedPanel();
+            this.roundedPanel1 = new SavexTracker.CustomClasses.RoundedPanel();
             this.txtNote = new RJCodeAdvance.RJControls.RJTextBox();
             this.lbl_date = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.btn_save = new RJCodeAdvance.RJControls.RJButton();
-            this.roundedPanel2 = new RoundedPanel();
+            this.roundedPanel2 = new SavexTracker.CustomClasses.RoundedPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_SA = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pnlAdded = new RoundedPanel();
+            this.pnlAdded = new SavexTracker.CustomClasses.RoundedPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.roundedPanel6 = new RoundedPanel();
+            this.roundedPanel6 = new SavexTracker.CustomClasses.RoundedPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
@@ -305,7 +305,9 @@ namespace SavexTracker.forms
             this.Controls.Add(this.pnlAdded);
             this.Controls.Add(this.roundedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addExpense";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addExpense";
             this.Load += new System.EventHandler(this.addExpense_Load);

@@ -1640,6 +1640,7 @@ namespace SavexTracker
             this.Controls.Add(this.pnl_1);
             this.Controls.Add(this.pnl_2);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
