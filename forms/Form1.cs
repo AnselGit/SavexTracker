@@ -64,7 +64,7 @@ namespace SavexTracker
             ChartBuilder.BuildLineGraph(pnlLine);
             DonutChartBuilder.Build(pnlPie2);
             DonutChartGoalVsTotalBuilder.Build(pnlPie3);
-
+            LoadRecordCount();
             await Task.Delay(500);
         }
 
@@ -480,6 +480,14 @@ namespace SavexTracker
         public async void TriggerBtnRefreshClick()
         {
             await RefreshDataAsync();
+        }
+
+        private void LoadRecordCount()
+        {
+            int savingsCount = CRUD.GetSavingsCount();
+            int expensesCount = CRUD.GetExpensesCount();
+            lblSavingsCnt.Text = savingsCount.ToString();
+            lblExpensesCnt.Text = expensesCount.ToString();
         }
     }
 }

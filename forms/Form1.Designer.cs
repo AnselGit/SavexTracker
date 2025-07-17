@@ -32,11 +32,11 @@ namespace SavexTracker
         private void InitializeComponent()
         {       
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_3 = new System.Windows.Forms.Panel();
             this.btnDelAll_S = new RJCodeAdvance.RJControls.RJButton();
             this.btnDelAll_E = new RJCodeAdvance.RJControls.RJButton();
@@ -137,6 +137,12 @@ namespace SavexTracker
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlLine = new SavexTracker.CustomClasses.RoundedPanel();
             this.pnlPie = new SavexTracker.CustomClasses.RoundedPanel();
+            this.roundedPanel15 = new SavexTracker.CustomClasses.RoundedPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblSavingsCnt = new System.Windows.Forms.Label();
+            this.roundedPanel16 = new SavexTracker.CustomClasses.RoundedPanel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.lblExpensesCnt = new System.Windows.Forms.Label();
             this.pnl_3.SuspendLayout();
             this.gradientPanelRound6.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -172,11 +178,15 @@ namespace SavexTracker
             this.roundedPanel5.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.roundedPanel15.SuspendLayout();
+            this.roundedPanel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_3
             // 
             this.pnl_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(254)))));
+            this.pnl_3.Controls.Add(this.roundedPanel16);
+            this.pnl_3.Controls.Add(this.roundedPanel15);
             this.pnl_3.Controls.Add(this.btnDelAll_S);
             this.pnl_3.Controls.Add(this.btnDelAll_E);
             this.pnl_3.Controls.Add(this.rjButton9);
@@ -239,15 +249,15 @@ namespace SavexTracker
             this.rjButton9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rjButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rjButton9.BorderColor = System.Drawing.Color.White;
-            this.rjButton9.BorderRadius = 33;
+            this.rjButton9.BorderRadius = 24;
             this.rjButton9.BorderSize = 0;
             this.rjButton9.FlatAppearance.BorderSize = 0;
             this.rjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton9.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton9.ForeColor = System.Drawing.Color.White;
-            this.rjButton9.Location = new System.Drawing.Point(695, 28);
+            this.rjButton9.Location = new System.Drawing.Point(695, 135);
             this.rjButton9.Name = "rjButton9";
-            this.rjButton9.Size = new System.Drawing.Size(133, 65);
+            this.rjButton9.Size = new System.Drawing.Size(133, 48);
             this.rjButton9.TabIndex = 17;
             this.rjButton9.Text = "Archive";
             this.rjButton9.TextColor = System.Drawing.Color.White;
@@ -1200,60 +1210,60 @@ namespace SavexTracker
             this.dgv_Search.AllowUserToOrderColumns = true;
             this.dgv_Search.AllowUserToResizeColumns = false;
             this.dgv_Search.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Search.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Search.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Search.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Search.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Search.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Search.ColumnHeadersHeight = 28;
             this.dgv_Search.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
             this.colType,
             this.colAmount,
             this.colNote});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Search.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Search.GridColor = System.Drawing.Color.White;
             this.dgv_Search.Location = new System.Drawing.Point(11, 12);
             this.dgv_Search.Name = "dgv_Search";
             this.dgv_Search.ReadOnly = true;
             this.dgv_Search.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Search.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Search.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Search.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Search.RowTemplate.Height = 30;
             this.dgv_Search.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_Search.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1611,6 +1621,74 @@ namespace SavexTracker
             this.pnlPie.Size = new System.Drawing.Size(429, 340);
             this.pnlPie.TabIndex = 18;
             // 
+            // roundedPanel15
+            // 
+            this.roundedPanel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.roundedPanel15.BorderRadius = 30;
+            this.roundedPanel15.Controls.Add(this.label5);
+            this.roundedPanel15.Controls.Add(this.lblSavingsCnt);
+            this.roundedPanel15.Location = new System.Drawing.Point(559, 28);
+            this.roundedPanel15.Name = "roundedPanel15";
+            this.roundedPanel15.Size = new System.Drawing.Size(269, 44);
+            this.roundedPanel15.TabIndex = 22;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label5.Location = new System.Drawing.Point(12, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(160, 24);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Total record (Savings)";
+            // 
+            // lblSavingsCnt
+            // 
+            this.lblSavingsCnt.BackColor = System.Drawing.Color.Transparent;
+            this.lblSavingsCnt.Font = new System.Drawing.Font("Noto Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSavingsCnt.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblSavingsCnt.Location = new System.Drawing.Point(169, 1);
+            this.lblSavingsCnt.Name = "lblSavingsCnt";
+            this.lblSavingsCnt.Size = new System.Drawing.Size(100, 43);
+            this.lblSavingsCnt.TabIndex = 19;
+            this.lblSavingsCnt.Text = "1000";
+            this.lblSavingsCnt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // roundedPanel16
+            // 
+            this.roundedPanel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
+            this.roundedPanel16.BorderRadius = 30;
+            this.roundedPanel16.Controls.Add(this.label27);
+            this.roundedPanel16.Controls.Add(this.lblExpensesCnt);
+            this.roundedPanel16.Location = new System.Drawing.Point(559, 78);
+            this.roundedPanel16.Name = "roundedPanel16";
+            this.roundedPanel16.Size = new System.Drawing.Size(269, 44);
+            this.roundedPanel16.TabIndex = 23;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label27.Location = new System.Drawing.Point(12, 10);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(171, 24);
+            this.label27.TabIndex = 19;
+            this.label27.Text = "Total record (Expenses)";
+            // 
+            // lblExpensesCnt
+            // 
+            this.lblExpensesCnt.BackColor = System.Drawing.Color.Transparent;
+            this.lblExpensesCnt.Font = new System.Drawing.Font("Noto Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpensesCnt.ForeColor = System.Drawing.Color.SlateBlue;
+            this.lblExpensesCnt.Location = new System.Drawing.Point(169, 1);
+            this.lblExpensesCnt.Name = "lblExpensesCnt";
+            this.lblExpensesCnt.Size = new System.Drawing.Size(100, 43);
+            this.lblExpensesCnt.TabIndex = 19;
+            this.lblExpensesCnt.Text = "1000";
+            this.lblExpensesCnt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1636,9 +1714,9 @@ namespace SavexTracker
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjCircularPictureBox1);
             this.Controls.Add(this.roundedPanel7);
-            this.Controls.Add(this.pnl_2);
             this.Controls.Add(this.pnl_3);
             this.Controls.Add(this.pnl_1);
+            this.Controls.Add(this.pnl_2);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -1694,6 +1772,10 @@ namespace SavexTracker
             this.roundedPanel3.ResumeLayout(false);
             this.roundedPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.roundedPanel15.ResumeLayout(false);
+            this.roundedPanel15.PerformLayout();
+            this.roundedPanel16.ResumeLayout(false);
+            this.roundedPanel16.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1802,6 +1884,12 @@ namespace SavexTracker
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNote;
         private ExpensesOwnerDrawPanel expensesPanel;
+        private RoundedPanel roundedPanel15;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSavingsCnt;
+        private RoundedPanel roundedPanel16;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblExpensesCnt;
     }
 }
 

@@ -258,6 +258,32 @@ namespace SavexTracker.Database
             }
         }
 
+        public static int GetSavingsCount()
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM savings";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+
+        public static int GetExpensesCount()
+        {
+            using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM expenses";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+
         public static void LogHistory(string action, double amount, DateTime? timestamp = null)
         {
             string ts = (timestamp ?? DateTime.Now).ToString("yyyy-MM-dd HH:mm:ss");
