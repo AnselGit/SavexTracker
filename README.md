@@ -4,10 +4,15 @@ SavexTracker is a C# WinForms application designed to help users track, analyze,
 
 ---
 
-## Screenshot
+## Screenshots
 
-<!-- Replace the image below with your own screenshot after publishing the app! -->
-![SavexTracker Screenshot](assets/screenshot.png)
+![Screenshot 7](assets/S%20(7).png)
+![Screenshot 6](assets/S%20(6).png)
+![Screenshot 5](assets/S%20(5).png)
+![Screenshot 4](assets/S%20(4).png)
+![Screenshot 3](assets/S%20(3).png)
+![Screenshot 2](assets/S%20(2).png)
+![Screenshot 1](assets/S%20(1).png)
 
 ---
 
