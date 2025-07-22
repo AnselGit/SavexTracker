@@ -788,8 +788,10 @@ namespace SavexTracker.Database
                 conn.Open();
                 foreach (var (id, type) in items)
                 {
-                    // 1. Read the archive row and store values
-                    string query = "SELECT * FROM archive WHERE sid = @id OR eid = @id";
+                    // Use type-specific query to avoid mismatches
+                    string query = type == "Savings"
+                        ? "SELECT * FROM archive WHERE sid = @id AND name = 'Savings'"
+                        : "SELECT * FROM archive WHERE eid = @id AND name = 'Expenses'";
                     string timestamp = null, note = null;
                     double? amount = null;
                     bool isSavings = type == "Savings";
@@ -846,8 +848,5 @@ namespace SavexTracker.Database
                 }
             }
         }
-
-        // Add more CRUD methods as needed (AddSaving, AddExpense, UpdateSaving, etc.)
-        // ...
     }
 } 

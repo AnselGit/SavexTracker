@@ -10,8 +10,14 @@ using System.Threading.Tasks; // Added for Task
 
 namespace SavexTracker.forms
 {
+    /// <summary>
+    /// ArchiveForm provides UI and logic for viewing, restoring, and deleting archived savings and expenses.
+    /// </summary>
     public partial class ArchiveForm : Form
     {
+        /// <summary>
+        /// Initializes the ArchiveForm, sets up the grid, and loads archive data.
+        /// </summary>
         public ArchiveForm()
         {
             InitializeComponent();
@@ -20,6 +26,9 @@ namespace SavexTracker.forms
             dgv_Archive.ClearSelection();
         }
 
+        /// <summary>
+        /// Handles the form load event. Sets up the grid, loads data, and attaches selection event.
+        /// </summary>
         private void ArchiveForm_Load(object sender, EventArgs e)
         {            
             SetupArchiveGrid();
@@ -29,6 +38,9 @@ namespace SavexTracker.forms
             btnDelete.Enabled = false;
         }
 
+        /// <summary>
+        /// Refreshes the main form's data asynchronously.
+        /// </summary>
         private async Task RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
@@ -37,6 +49,9 @@ namespace SavexTracker.forms
             }
         }
 
+        /// <summary>
+        /// Loads all archive data into the DataGridView for display.
+        /// </summary>
         private void LoadArchiveData()
         {
             dgv_Archive.Rows.Clear();
@@ -57,6 +72,7 @@ namespace SavexTracker.forms
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(dgv_Archive);
 
+                // Set cell values for each column if present
                 if (dgv_Archive.Columns.Contains("colId")) row.Cells[dgv_Archive.Columns["colId"].Index].Value = id;
                 if (dgv_Archive.Columns.Contains("colType")) row.Cells[dgv_Archive.Columns["colType"].Index].Value = type;
                 if (dgv_Archive.Columns.Contains("colDate")) row.Cells[dgv_Archive.Columns["colDate"].Index].Value = date;
@@ -67,6 +83,9 @@ namespace SavexTracker.forms
             }
         }
 
+        /// <summary>
+        /// Configures the DataGridView for archive display.
+        /// </summary>
         private void SetupArchiveGrid()
         {
             dgv_Archive.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -85,6 +104,9 @@ namespace SavexTracker.forms
             dgv_Archive.DefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
+        /// <summary>
+        /// Handles selection change in the archive DataGridView. Updates global state and enables buttons.
+        /// </summary>
         private void dgv_Archive_SelectionChanged_1(object sender, EventArgs e)
         {
             if (dgv_Archive.CurrentRow == null) return;
@@ -105,10 +127,14 @@ namespace SavexTracker.forms
             btnDelete.Enabled = true;
         }
 
+        // Flicker effect variables
         private int flickerCount = 0;
         private Timer flickerTimer;
         private Color originalColor;
 
+        /// <summary>
+        /// Triggers a flicker effect on the form background for delete confirmation.
+        /// </summary>
         private void FlickerDeleteAllBackground()
         {
             originalColor = this.BackColor; // Save original
@@ -120,6 +146,9 @@ namespace SavexTracker.forms
             flickerTimer.Start();
         }
 
+        /// <summary>
+        /// Handles the flicker timer tick event to alternate background color.
+        /// </summary>
         private void FlickerTimer_Tick(object sender, EventArgs e)
         {
             if (flickerCount % 2 == 0)
@@ -141,12 +170,18 @@ namespace SavexTracker.forms
             }
         }
 
+        /// <summary>
+        /// Shows the restore confirmation panel.
+        /// </summary>
         private void btnRestore_Click(object sender, EventArgs e)
         {
             pnlRestoreCon.Visible = true;
             pnlRestoreCon.BringToFront();
         }
 
+        /// <summary>
+        /// Shows the delete confirmation panel and triggers flicker effect.
+        /// </summary>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = true;
@@ -154,12 +189,17 @@ namespace SavexTracker.forms
             FlickerDeleteAllBackground();
         }
 
+        /// <summary>
+        /// Closes the ArchiveForm.
+        /// </summary>
         private void rjButton2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-
+        /// <summary>
+        /// Handles the delete confirmation. Deletes selected archive items and refreshes the view.
+        /// </summary>
         private async void rjButton4_Click(object sender, EventArgs e)
         {
             if (dgv_Archive.SelectedRows.Count == 0)
@@ -177,6 +217,7 @@ namespace SavexTracker.forms
             await RefreshRecord();
             pnlDeleted.Visible = true;
 
+            // Hide the confirmation panel after a short delay
             Timer hideTimer = new Timer();
             hideTimer.Interval = 1500;
             hideTimer.Tick += (s, args) =>
@@ -189,16 +230,25 @@ namespace SavexTracker.forms
             hideTimer.Start();
         }
 
+        /// <summary>
+        /// Cancels the delete confirmation panel.
+        /// </summary>
         private void rjButton3_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = false;            
         }
 
+        /// <summary>
+        /// Cancels the restore confirmation panel.
+        /// </summary>
         private void rjButton1_Click(object sender, EventArgs e)
         {
             pnlRestoreCon.Visible = false;            
         }
 
+        /// <summary>
+        /// Handles the restore confirmation. Restores selected archive items and refreshes the view.
+        /// </summary>
         private async void rjButton5_Click(object sender, EventArgs e)
         {
             if (dgv_Archive.SelectedRows.Count == 0)
@@ -230,6 +280,7 @@ namespace SavexTracker.forms
 
             pnlRestored.Visible = true;
 
+            // Hide the confirmation panel after a short delay
             Timer hideTimer = new Timer();
             hideTimer.Interval = 1500;
             hideTimer.Tick += (s, args) =>
@@ -242,6 +293,9 @@ namespace SavexTracker.forms
             hideTimer.Start();
         }
 
+        /// <summary>
+        /// Handles the select/deselect all link for the DataGridView.
+        /// </summary>
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //dgv_Archive.ClearSelection();

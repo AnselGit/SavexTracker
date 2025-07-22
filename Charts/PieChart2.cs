@@ -8,8 +8,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using SavexTracker.Database;
 
+// Provides methods to build a donut chart comparing grand total to goal amount.
 public static class DonutChartGoalVsTotalBuilder
 {
+    // Builds and displays a donut chart of grand total vs goal amount in the specified panel.
+    /// <param name="targetPanel">The panel to display the chart in.</param>
     public static void Build(Panel targetPanel)
     {
         double totalSavings = CRUD.GetTotalSavings();

@@ -14,6 +14,9 @@ using SavexTracker.CustomClasses;
 
 namespace SavexTracker
 {
+    
+    // Main application form for SavexTracker. Handles navigation, data loading, and user interactions for savings, expenses, goals, and history.
+    
     public partial class Form1 : SolidRoundedForm
     {
         private bool isPnl1Dirty = true;
@@ -21,6 +24,9 @@ namespace SavexTracker
         private SavingsOwnerDrawPanel savingsPanel;
         // private ExpensesOwnerDrawPanel expensesPanel; // Remove this duplicate declaration
 
+        
+        // Initializes the main form, sets up custom panels, and event handlers.
+        
         public Form1()
         {
             InitializeComponent();
@@ -42,6 +48,9 @@ namespace SavexTracker
             roundedPanel4.Controls.Add(expensesPanel);            
         }
 
+        
+        // Handles the form load event. Sets up panel visibility and triggers initial data refresh.
+        
         private void Form1_Load_1(object sender, EventArgs e)
         {
             pnl_1.VisibleChanged += pnl_1_VisibleChanged;
@@ -50,6 +59,9 @@ namespace SavexTracker
             btnNav_1_Click_1(btnNav_1, EventArgs.Empty);
         }
 
+        
+        // Asynchronously refreshes all data and updates UI components.
+        
         public async Task RefreshDataAsync()
         {           
 
@@ -68,6 +80,9 @@ namespace SavexTracker
             await Task.Delay(500);
         }
 
+        
+        // Updates the goal label based on current savings, expenses, and goal amount.
+        
         private void UpdateGoalLabel()
         {
             double totalSavings = CRUD.GetTotalSavings();
@@ -87,7 +102,9 @@ namespace SavexTracker
             lblGoal.Text = $"GOAL - {percent:0}%";
         }
 
-
+        
+        // Loads the latest goal amount into the goal textbox and updates global data.
+        
         private void LoadGoal()
         {
             double amount = CRUD.GetLatestGoalAmount();
@@ -95,33 +112,50 @@ namespace SavexTracker
             GlobalData.CurrentGoal = amount;
         }
 
-
+        
+        // Opens the add savings form.
+        
         private void rjButton1_Click(object sender, EventArgs e)
         {
             addSavings addForm = new addSavings();
             addForm.Show(); 
         }
 
+        
+        // Exits the application.
+        
         private void rjButton2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        
+        // Minimizes the application window.
+        
         private void rjButton4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        
+        // Refreshes all data when the refresh button is clicked.
+        
         private async void btnRefresh_Click(object sender, EventArgs e)
         {
             await RefreshDataAsync();
         }
 
+        
+        // Handles row selection change in the savings panel.
+        
         private void SavingsPanel_SelectedRowChanged(object sender, EventArgs e)
         {
             
         }
 
+        
+        // Handles request to modify a savings row.
+        
         private void SavingsPanel_RowModifyRequested(object sender, int rowIndex)
         {
             var row = ((SavingsOwnerDrawPanel)sender).SelectedRow;
@@ -138,11 +172,17 @@ namespace SavexTracker
             }
         }
 
+        
+        // Refreshes all data when the refresh button is clicked (duplicate handler).
+        
         private async void BtnRefresh_Click(object sender, EventArgs e)
         {
             await RefreshDataAsync();
         }
 
+        
+        // Loads all savings data into the custom savings panel.
+        
         private void LoadSavingsToPanel()
         {
             // Remove dynamic controls logic, just set rows for owner-draw panel
@@ -157,6 +197,9 @@ namespace SavexTracker
         }
 
 
+        
+        // Loads all expenses data into the custom expenses panel.
+        
         private void LoadExpensesToPanel()
         {
             var expensesList = GlobalData.AllExpenses ?? new List<Expense>();
@@ -170,6 +213,9 @@ namespace SavexTracker
             expensesPanel.SetRows(rows);
         }
 
+        
+        // Updates the total savings, expenses, and grand total labels.
+        
         private void UpdateTotalLabels()
         {
             double totalSave = CRUD.GetTotalSavings();
@@ -204,11 +250,17 @@ namespace SavexTracker
 
         }
 
+        
+        // Logs a history action with the specified amount.
+        
         public static void LogHistory(string action, double amount)
         {
             CRUD.LogHistory(action, amount);
         }
 
+        
+        // Loads all history records into the history rich text box.
+        
         private void LoadHistory()
         {
             rtbHistory.Clear();
@@ -234,6 +286,9 @@ namespace SavexTracker
             rtbHistory.ScrollToCaret();
         }
 
+        
+        // Performs a search for savings and expenses based on the search term.
+        
         private void PerformSearch()
         {
             string searchTerm = txtSearch.Texts; // RJTextBox uses .Texts
@@ -247,18 +302,27 @@ namespace SavexTracker
             }
         }
 
+        
+        // Opens the add expense form.
+        
         private void rjButton6_Click(object sender, EventArgs e)
         {
             addExpense addForm = new addExpense();
             addForm.Show();
         }
 
+        
+        // Opens the archive form.
+        
         private void rjButton9_Click(object sender, EventArgs e)
         {
             ArchiveForm addForm = new ArchiveForm();
             addForm.Show();
         }
 
+        
+        // Shows the delete confirmation panel for all records.
+        
         private void rjButton11_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = true;
@@ -267,6 +331,9 @@ namespace SavexTracker
 
         }
 
+        
+        // Deletes all history records and refreshes the history panel.
+        
         private void rjButton13_Click(object sender, EventArgs e)
         {
             CRUD.DeleteAllHistory();
@@ -276,31 +343,49 @@ namespace SavexTracker
             LoadHistory();
         }
 
+        
+        // Cancels the delete confirmation panel.
+        
         private void rjButton12_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = false;
         }
 
+        
+        // Handles click on the grand total label (currently unused).
+        
         private void lblGrand_Click(object sender, EventArgs e)
         {
 
         }
 
+        
+        // Toggles the visibility of the delete all savings button.
+        
         private void rjButton14_Click(object sender, EventArgs e)
         {
             btnDelAll_S.Visible = !btnDelAll_S.Visible;
         }
 
+        
+        // Toggles the visibility of the delete all expenses button.
+        
         private void rjButton15_Click(object sender, EventArgs e)
         {
             btnDelAll_E.Visible = !btnDelAll_E.Visible;
         }
 
+        
+        // Checks if a table is empty in the database.
+        
         private bool IsTableEmpty(string tableName)
         {
             return CRUD.IsTableEmpty(tableName);
         }
 
+        
+        // Handles click on the delete all savings button. Opens the delete all form for savings.
+        
         private void btnDelAll_S_Click(object sender, EventArgs e)
         {
             if (IsTableEmpty("savings"))
@@ -315,6 +400,9 @@ namespace SavexTracker
             btnDelAll_S.Visible = false;
         }
 
+        
+        // Handles click on the delete all expenses button. Opens the delete all form for expenses.
+        
         private void btnDelAll_E_Click(object sender, EventArgs e)
         {
             if (IsTableEmpty("expenses"))
@@ -329,6 +417,9 @@ namespace SavexTracker
             btnDelAll_E.Visible = false;
         }
 
+        
+        // Handles navigation to the history panel.
+        
         private void btnNav_3_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNav_3);
@@ -339,6 +430,9 @@ namespace SavexTracker
             pnl_2.Visible = false;
         }
 
+        
+        // Highlights the selected navigation button.
+        
         private void HighlightNavButton(Button selectedButton)
         {
             // Reset all nav buttons to white
@@ -350,6 +444,9 @@ namespace SavexTracker
             selectedButton.BackColor = Color.FromArgb(240, 245, 255);
         }
 
+        
+        // Handles navigation to the expenses panel.
+        
         private void btnNav_2_Click_1(object sender, EventArgs e)
         {
             HighlightNavButton(btnNav_2);
@@ -360,6 +457,9 @@ namespace SavexTracker
             pnl_3.Visible = false;
         }
 
+        
+        // Handles navigation to the savings panel.
+        
         private void btnNav_1_Click_1(object sender, EventArgs e)
         {
             HighlightNavButton(btnNav_1);
@@ -370,6 +470,9 @@ namespace SavexTracker
             pnl_3.Visible = false;
         }
 
+        
+        // Sets a new goal amount from the textbox input.
+        
         private void btnSet_Click(object sender, EventArgs e)
         {
             // Remove currency symbol and parse value
@@ -386,27 +489,42 @@ namespace SavexTracker
             }
         }        
 
+        
+        // Handles the search button click event.
+        
         private void btnSearch_Click(object sender, EventArgs e)
         {
             PerformSearch();
         }
 
+        
+        // Handles text changed event for the search textbox.
+        
         private void txtSearch__TextChanged(object sender, EventArgs e)
         {
             PerformSearch();
         }
 
+        
+        // Handles enter event for the search textbox.
+        
         private void txtSearch_Enter(object sender, EventArgs e)
         {
             PerformSearch();
         }
 
+        
+        // Marks panels as dirty to trigger refresh on next visibility change.
+        
         private void MarkPanelsDirty()
         {
             isPnl1Dirty = true;
             isPnl3Dirty = true;
         }
 
+        
+        // Refreshes the savings panel and related UI components.
+        
         private void RefreshPnl1()
         {
             UpdateGoalLabel();
@@ -418,6 +536,9 @@ namespace SavexTracker
             DonutChartGoalVsTotalBuilder.Build(pnlPie3);
         }
 
+        
+        // Refreshes the expenses panel and related UI components.
+        
         private void RefreshPnl3()
         {
             LoadExpensesToPanel();
@@ -426,6 +547,9 @@ namespace SavexTracker
             UpdateTotalLabels();
         }
 
+        
+        // Handles visibility change for the savings panel.
+        
         private void pnl_1_VisibleChanged(object sender, EventArgs e)
         {
             if (pnl_1.Visible && isPnl1Dirty)
@@ -435,6 +559,9 @@ namespace SavexTracker
             }
         }
 
+        
+        // Handles visibility change for the expenses panel.
+        
         private void pnl_3_VisibleChanged(object sender, EventArgs e)
         {
             if (pnl_3.Visible && isPnl3Dirty)
@@ -444,11 +571,17 @@ namespace SavexTracker
             }
         }
 
+        
+        // Handles row selection change in the expenses panel.
+        
         private void ExpensesPanel_SelectedRowChanged(object sender, EventArgs e)
         {
             // You can enable/disable a Modify button for expenses if needed
         }
 
+        
+        // Handles request to modify an expenses row.
+        
         private void ExpensesPanel_RowModifyRequested(object sender, int rowIndex)
         {
             var row = ((ExpensesOwnerDrawPanel)sender).SelectedRow;
@@ -467,21 +600,26 @@ namespace SavexTracker
             }
         }
 
+
         private void tbl_Spend_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
+        // Triggers a refresh of the expenses panel asynchronously.
         public async void TriggerRefreshPnl3()
         {
             await RefreshDataAsync();
         }
 
+        
+        // Triggers a refresh of the main form asynchronously.
         public async void TriggerBtnRefreshClick()
         {
             await RefreshDataAsync();
         }
 
+        // Loads the record count for savings and expenses and updates the UI.
         private void LoadRecordCount()
         {
             int savingsCount = CRUD.GetSavingsCount();

@@ -14,8 +14,10 @@ using SavexTracker.Models;
 
 namespace SavexTracker.forms
 {
+    // Form for adding a new savings record.
     public partial class addSavings : Form
     {
+        // Initializes the addSavings form and sets up key event handlers.
         public addSavings()
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace SavexTracker.forms
             this.KeyDown += AddSavings_KeyDown;
         }
 
+        // Refreshes the main form's data asynchronously.
         private async Task RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
@@ -31,13 +34,14 @@ namespace SavexTracker.forms
             }
         }
 
-
+        // Handles the form load event. Sets the date label and attaches keydown event to the amount textbox.
         private void addSavings_Load(object sender, EventArgs e)
         {
             lbl_date.Text = DateTime.Now.ToString("MM/dd/yy");
             txt_SA.KeyDown += txt_SA_KeyDown;
         }
 
+        // Handles Enter key in the amount textbox to trigger save.
         private void txt_SA_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -45,8 +49,9 @@ namespace SavexTracker.forms
                 e.SuppressKeyPress = true; // Prevents ding sound
                 btn_save.PerformClick();   // Simulate button click
             }
-        }        
+        }
 
+        // Handles Escape key to close the form.
         private void AddSavings_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -55,18 +60,18 @@ namespace SavexTracker.forms
             }
         }
 
-
-
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
+        // Handles click on the close button.
         private void rjButton2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Handles click on the save button. Validates input and adds a new savings record.
         private async void btn_save_Click(object sender, EventArgs e)
         {
             string amountText = txt_SA.Texts.Trim();
@@ -78,7 +83,7 @@ namespace SavexTracker.forms
                 return;
             }
 
-            if (amountText.StartsWith("₱"))
+            if (amountText.StartsWith("\u20b1"))
                 amountText = amountText.Substring(1);
 
             if (!double.TryParse(amountText, out double amount) || amount <= 0)
@@ -108,6 +113,5 @@ namespace SavexTracker.forms
             };
             hideTimer.Start();
         }
-    
     }
 }

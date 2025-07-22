@@ -8,8 +8,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using SavexTracker.Database;
 
+// Provides methods to build a donut chart comparing total savings and expenses.
 public static class DonutChartBuilder
 {
+    // Builds and displays a donut chart of total savings vs expenses in the specified panel.
+    /// <param name="targetPanel">The panel to display the chart in.</param>
     public static void Build(Panel targetPanel)
     {
         double savings = CRUD.GetTotalSavings();

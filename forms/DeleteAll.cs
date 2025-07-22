@@ -11,10 +11,13 @@ using System.Windows.Forms;
 using SavexTracker.Database;
 using SavexTracker.Models;
 
+// Form for deleting all savings or expenses records.
 namespace SavexTracker.forms
 {
+    // Form for deleting all savings or expenses records.
     public partial class DeleteAll : Form
     {
+        // Initializes the DeleteAll form and triggers flicker effect for confirmation.
         public DeleteAll()
         {
             InitializeComponent();
@@ -22,6 +25,7 @@ namespace SavexTracker.forms
             FlickerDeleteAllBackground();
         }
 
+        // Refreshes the main form's data asynchronously.
         private async Task RefreshRecord()
         {
             if (Application.OpenForms["Form1"] is Form1 mainForm)
@@ -30,10 +34,12 @@ namespace SavexTracker.forms
             }
         }
 
+        // Flicker effect variables for delete confirmation.
         private int flickerCount = 0;
         private Timer flickerTimer;
         private Color originalColor;
 
+        // Triggers a flicker effect on the form background for delete confirmation.
         private void FlickerDeleteAllBackground()
         {
             originalColor = this.BackColor; // Save original
@@ -45,6 +51,7 @@ namespace SavexTracker.forms
             flickerTimer.Start();
         }
 
+        // Handles the flicker timer tick event to alternate background color.
         private void FlickerTimer_Tick(object sender, EventArgs e)
         {
             if (flickerCount % 2 == 0)
@@ -66,21 +73,25 @@ namespace SavexTracker.forms
             }
         }
 
+        // Closes the form when cancel button is clicked.
         private void rjButton3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // (Unused button handler, can be used for additional logic if needed)
         private void rjButton4_Click(object sender, EventArgs e)
         {
            
         }
 
+        // Handles the form load event, sets the type label.
         private void DeleteAll_Load(object sender, EventArgs e)
         {
             lblType.Text = $"{GlobalData.CurrentType}?";
         }
 
+        // Handles the confirmation to delete all records of the selected type.
         private async void btnCon_Click(object sender, EventArgs e)
         {
             string type = GlobalData.CurrentType;
@@ -97,7 +108,7 @@ namespace SavexTracker.forms
 
                 if (type == "Savings")
                 {
-                    // Step 1: Move all savings to archive
+                    // Move all savings to archive
                     string selectQuery = "SELECT sid, timestamp, amount FROM savings";
                     using (var selectCmd = new SQLiteCommand(selectQuery, conn))
                     using (var reader = selectCmd.ExecuteReader())
@@ -123,7 +134,7 @@ namespace SavexTracker.forms
                         }
                     }
 
-                    // Step 2: Delete all from savings
+                    // Delete all from savings
                     using (var deleteCmd = new SQLiteCommand("DELETE FROM savings", conn))
                     {
                         deleteCmd.ExecuteNonQuery();
@@ -131,7 +142,7 @@ namespace SavexTracker.forms
                 }
                 else if (type == "Expenses")
                 {
-                    // Step 1: Move all expenses to archive
+                    // Move all expenses to archive
                     string selectQuery = "SELECT eid, timestamp, amount, note FROM expenses";
                     using (var selectCmd = new SQLiteCommand(selectQuery, conn))
                     using (var reader = selectCmd.ExecuteReader())
@@ -159,7 +170,7 @@ namespace SavexTracker.forms
                         }
                     }
 
-                    // Step 2: Delete all from expenses
+                    // Delete all from expenses
                     using (var deleteCmd = new SQLiteCommand("DELETE FROM expenses", conn))
                     {
                         deleteCmd.ExecuteNonQuery();
@@ -190,6 +201,7 @@ namespace SavexTracker.forms
             hideTimer.Start();
         }
 
+        // Closes the form when cancel button is clicked (alternate button).
         private void rjButton3_Click_1(object sender, EventArgs e)
         {
             this.Close();

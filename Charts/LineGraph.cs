@@ -12,8 +12,10 @@ using System.Linq;
 using System.Windows.Forms;
 using SavexTracker.Database;
 
+// Provides methods to build a line graph comparing savings and expenses for the current month.
 public static class ChartBuilder
 {
+    // Builds and displays a line graph of savings vs expenses for the current month in the specified panel.
     public static void BuildLineGraph(Panel targetPanel)
     {
         var savingsData = new Dictionary<int, double>();
@@ -175,6 +177,7 @@ public static class ChartBuilder
         targetPanel.Controls.Add(plotView);
     }
 
+    // Calculates a suitable step size for the Y axis based on the max value in the data.
     private static double CalculateStep(Dictionary<int, double> savings, Dictionary<int, double> expenses)
     {
         double maxVal = Math.Max(
@@ -185,5 +188,4 @@ public static class ChartBuilder
         double rawStep = Math.Ceiling(maxVal / 4);
         return rawStep > 0 ? rawStep : 1;
     }
-
 }
