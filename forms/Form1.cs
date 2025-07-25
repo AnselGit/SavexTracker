@@ -112,18 +112,28 @@ namespace SavexTracker
             GlobalData.CurrentGoal = amount;
         }
 
-        
+
         // Opens the add savings form.
-        
+
+        private addSavings addForm = null;
+
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            addSavings addForm = new addSavings();
-            addForm.Show(); 
+            if (addForm == null || addForm.IsDisposed)
+            {
+                addForm = new addSavings();
+                addForm.Show();
+            }
+            else
+            {
+                addForm.BringToFront();
+                addForm.Focus();
+            }
         }
 
-        
+
         // Exits the application.
-        
+
         private void rjButton2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -153,28 +163,39 @@ namespace SavexTracker
             
         }
 
-        
+
         // Handles request to modify a savings row.
-        
+
+        private UpdateDeleteForm updateForm6 = null;
         private void SavingsPanel_RowModifyRequested(object sender, int rowIndex)
         {
             var row = ((SavingsOwnerDrawPanel)sender).SelectedRow;
             if (row == null)
                 row = ((SavingsOwnerDrawPanel)sender).GetRow(rowIndex);
+
             if (row != null)
             {
                 GlobalData.CurrentID = row.Sid;
                 GlobalData.CurrentTimestamp = row.Timestamp;
                 GlobalData.CurrentAmount = row.Amount;
                 GlobalData.CurrentType = "Savings";
-                var updateForm = new UpdateDeleteForm(this);
-                updateForm.Show();
+
+                if (updateForm6 == null || updateForm6.IsDisposed)
+                {
+                    updateForm6 = new UpdateDeleteForm(this);
+                    updateForm6.Show();
+                }
+                else
+                {
+                    updateForm6.BringToFront();
+                    updateForm6.Focus();
+                }
             }
         }
 
-        
+
         // Refreshes all data when the refresh button is clicked (duplicate handler).
-        
+
         private async void BtnRefresh_Click(object sender, EventArgs e)
         {
             await RefreshDataAsync();
@@ -302,27 +323,45 @@ namespace SavexTracker
             }
         }
 
-        
+
         // Opens the add expense form.
-        
+
+        private addExpense addForm2 = null;
         private void rjButton6_Click(object sender, EventArgs e)
         {
-            addExpense addForm = new addExpense();
-            addForm.Show();
+            if (addForm2 == null || addForm2.IsDisposed)
+            {
+                addForm2 = new addExpense();
+                addForm2.Show();
+            }
+            else
+            {
+                addForm2.BringToFront();
+                addForm2.Focus();
+            }
         }
 
-        
+
         // Opens the archive form.
-        
+
+        private ArchiveForm addForm3 = null;
         private void rjButton9_Click(object sender, EventArgs e)
         {
-            ArchiveForm addForm = new ArchiveForm();
-            addForm.Show();
+            if (addForm3 == null || addForm3.IsDisposed)
+            {
+                addForm3 = new ArchiveForm();
+                addForm3.Show();
+            }
+            else
+            {
+                addForm3.BringToFront();
+                addForm3.Focus();
+            }
         }
 
-        
+
         // Shows the delete confirmation panel for all records.
-        
+
         private void rjButton11_Click(object sender, EventArgs e)
         {
             pnlDeleteCon.Visible = true;
@@ -383,9 +422,10 @@ namespace SavexTracker
             return CRUD.IsTableEmpty(tableName);
         }
 
-        
+
+        private DeleteAll deleteAllForm = null;
+
         // Handles click on the delete all savings button. Opens the delete all form for savings.
-        
         private void btnDelAll_S_Click(object sender, EventArgs e)
         {
             if (IsTableEmpty("savings"))
@@ -395,14 +435,22 @@ namespace SavexTracker
             }
 
             GlobalData.CurrentType = "Savings";
-            DeleteAll deleteForm = new DeleteAll();
-            deleteForm.Show();
+
+            if (deleteAllForm == null || deleteAllForm.IsDisposed)
+            {
+                deleteAllForm = new DeleteAll();
+                deleteAllForm.Show();
+            }
+            else
+            {
+                deleteAllForm.BringToFront();
+                deleteAllForm.Focus();
+            }
+
             btnDelAll_S.Visible = false;
         }
 
-        
         // Handles click on the delete all expenses button. Opens the delete all form for expenses.
-        
         private void btnDelAll_E_Click(object sender, EventArgs e)
         {
             if (IsTableEmpty("expenses"))
@@ -412,14 +460,24 @@ namespace SavexTracker
             }
 
             GlobalData.CurrentType = "Expenses";
-            DeleteAll deleteForm = new DeleteAll();
-            deleteForm.Show();
+
+            if (deleteAllForm == null || deleteAllForm.IsDisposed)
+            {
+                deleteAllForm = new DeleteAll();
+                deleteAllForm.Show();
+            }
+            else
+            {
+                deleteAllForm.BringToFront();
+                deleteAllForm.Focus();
+            }
+
             btnDelAll_E.Visible = false;
         }
 
-        
+
         // Handles navigation to the history panel.
-        
+
         private void btnNav_3_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNav_3);
@@ -579,14 +637,16 @@ namespace SavexTracker
             // You can enable/disable a Modify button for expenses if needed
         }
 
-        
+
         // Handles request to modify an expenses row.
-        
+
+        private UpdateDeleteForm addForm7 = null;
         private void ExpensesPanel_RowModifyRequested(object sender, int rowIndex)
         {
             var row = ((ExpensesOwnerDrawPanel)sender).SelectedRow;
             if (row == null)
                 row = ((ExpensesOwnerDrawPanel)sender).GetRow(rowIndex);
+
             if (row != null)
             {
                 GlobalData.CurrentID = row.Eid;
@@ -594,9 +654,18 @@ namespace SavexTracker
                 GlobalData.CurrentAmount = row.Amount;
                 GlobalData.CurrentNote = row.Note;
                 GlobalData.CurrentType = "Expenses";
-                var updateForm = new UpdateDeleteForm(this);
-                updateForm.Show();
-                updateForm.ShowExpensePanel();
+
+                if (addForm7 == null || addForm7.IsDisposed)
+                {
+                    addForm7 = new UpdateDeleteForm(this);
+                    addForm7.Show();
+                    addForm7.ShowExpensePanel();
+                }
+                else
+                {
+                    addForm7.BringToFront();
+                    addForm7.Focus();
+                }
             }
         }
 
