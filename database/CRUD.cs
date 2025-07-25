@@ -333,33 +333,48 @@ namespace SavexTracker.Database
             using (var conn = new SQLiteConnection(AppConfig.ConnectionString))
             {
                 conn.Open();
-                // Check if there is already a goal row
-                string countQuery = "SELECT COUNT(*) FROM goal";
-                long count = 0;
-                using (var countCmd = new SQLiteCommand(countQuery, conn))
+
+                // Check if a goal row exists and get the latest amount
+                string selectQuery = "SELECT gid, amount FROM goal ORDER BY gid DESC LIMIT 1";
+                long existingGid = -1;
+                double existingAmount = -1;
+
+                using (var selectCmd = new SQLiteCommand(selectQuery, conn))
+                using (var reader = selectCmd.ExecuteReader())
                 {
-                    count = (long)countCmd.ExecuteScalar();
+                    if (reader.Read())
+                    {
+                        existingGid = reader.GetInt64(0);
+                        existingAmount = reader.GetDouble(1);
+                    }
                 }
-                if (count == 0)
+
+                if (existingGid == -1)
                 {
-                    // Insert new goal
+                    // No existing goal, insert new
                     string insertQuery = "INSERT INTO goal (amount) VALUES (@amount)";
                     using (var insertCmd = new SQLiteCommand(insertQuery, conn))
                     {
                         insertCmd.Parameters.AddWithValue("@amount", newAmount);
                         insertCmd.ExecuteNonQuery();
                     }
+
+                    LogHistory("Inserted new goal", newAmount, DateTime.Now);
                 }
-                else
+                else if (existingAmount != newAmount)
                 {
-                    // Update the latest goal row
-                    string updateQuery = "UPDATE goal SET amount = @amount WHERE gid = (SELECT gid FROM goal ORDER BY gid DESC LIMIT 1)";
+                    // Update existing goal only if value changed
+                    string updateQuery = "UPDATE goal SET amount = @amount WHERE gid = @gid";
                     using (var updateCmd = new SQLiteCommand(updateQuery, conn))
                     {
                         updateCmd.Parameters.AddWithValue("@amount", newAmount);
+                        updateCmd.Parameters.AddWithValue("@gid", existingGid);
                         updateCmd.ExecuteNonQuery();
                     }
+
+                    LogHistory("Updated goal", newAmount, DateTime.Now);
                 }
+                // else: Do nothing — no change, no log
             }
         }
 

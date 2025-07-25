@@ -767,10 +767,10 @@ namespace SavexTracker.forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(816, 358);
-            this.Controls.Add(this.pnlExpenseMod);
-            this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.pnlDeleteCon);
             this.Controls.Add(this.pnlUpdateCon);
+            this.Controls.Add(this.pnlExpenseMod);
+            this.Controls.Add(this.roundedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateDeleteForm";
